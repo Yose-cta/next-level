@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEXT LEVEL · Workshop Presencial · 16 Mayo 2026</title>
+  <meta name="description" content="Workshop presencial intensivo de 6 horas. 3 mentores. IA aplicada con Claude, imagen y comunicacion. Te llevas un sistema operando — no apuntes. Sabado 16 de mayo, Santiago." />
+  <meta property="og:title" content="NEXT LEVEL · Workshop Presencial 16 Mayo 2026" />
+  <meta property="og:description" content="6 horas. 3 mentores. Sistema funcionando. Sabado 16 de mayo · Santiago." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700;800&family=Spline+Sans+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            noir:    { DEFAULT: '#0a0a0a', 2: '#141414', 3: '#1a1a1a', 4: '#22201d' },
+            cream:   '#f5f0e8',
+            mutedc:  '#8a8580',
+            champagne: '#d4b896',
+            gold:    '#c9a868',
+            electric:'#ffd23f',
+            magenta: '#ec4899',
+            blood:   '#dc2626',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['Spline Sans Mono', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root { --noir: #0a0a0a; --cream: #f5f0e8; --champagne: #d4b896; --electric: #ffd23f; --magenta: #ec4899; }
+    html, body { background: #0a0a0a; color: var(--cream); font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Fraunces', serif; font-optical-sizing: auto; }
+    .font-mono { font-family: 'Spline Sans Mono', monospace; }
+
+    /* Subtle film grain */
+    body::before {
+      content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 1;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.94  0 0 0 0 0.91  0 0 0 0.045 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+      opacity: .35; mix-blend-mode: overlay;
+    }
+    body > * { position: relative; z-index: 2; }
+
+    /* Editorial drop cap */
+    .dropcap::first-letter { font-family: 'Fraunces', serif; font-weight: 500; font-size: 4.5rem; line-height: .85; float: left; padding: .25rem .5rem 0 0; color: var(--champagne); }
+
+    /* Marquee ticker */
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee-track { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+    .marquee:hover .marquee-track { animation-play-state: paused; }
+
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .9s ease, transform .9s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Image / video slot defaults */
+    [data-image] {
+      background-color: #1a1a1a;
+      background-size: cover; background-position: center;
+      position: relative; overflow: hidden;
+    }
+    [data-image]:not([style*="background-image"])::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 20%, rgba(212,184,150,.18), transparent 60%),
+        radial-gradient(ellipse at 80% 80%, rgba(236,72,153,.12), transparent 65%),
+        linear-gradient(135deg, #1a1815 0%, #0a0a0a 100%);
+    }
+    [data-image]:not([style*="background-image"])::after {
+      content: attr(data-label);
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Fraunces', serif; font-style: italic;
+      color: rgba(212, 184, 150, .35); font-size: 1.1rem; letter-spacing: .05em;
+      text-align: center; padding: 1rem;
+    }
+    [data-video] { background: #1a1a1a; position: relative; overflow: hidden; }
+    [data-video] iframe { width: 100%; height: 100%; border: 0; display: block; }
+    [data-video]:not(.has-video)::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(236,72,153,.18), transparent 70%), #14110f;
+    }
+    [data-video]:not(.has-video)::after {
+      content: '▶  ' attr(data-label);
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Fraunces', serif; font-style: italic;
+      color: rgba(236, 72, 153, .55); font-size: 1.05rem; letter-spacing: .05em;
+    }
+
+    /* Edit mode visuals */
+    body.edit-mode [data-editable] {
+      outline: 1.5px dashed rgba(255, 210, 63, .55); outline-offset: 4px; cursor: text; border-radius: 2px;
+      transition: outline-color .15s ease, background .15s ease;
+    }
+    body.edit-mode [data-editable]:hover, body.edit-mode [data-editable]:focus {
+      outline-color: var(--electric); background: rgba(255, 210, 63, .07); outline-style: solid;
+    }
+    body.edit-mode [data-image] {
+      outline: 1.5px dashed rgba(212, 184, 150, .6); outline-offset: 4px; cursor: pointer;
+    }
+    body.edit-mode [data-image]:hover {
+      outline-color: var(--champagne); outline-style: solid;
+    }
+    body.edit-mode [data-image]::after {
+      content: '📷  Click para subir foto';
+      color: var(--electric); font-style: normal; font-weight: 500; font-family: 'Inter';
+      background: rgba(0,0,0,.55); inset: 0;
+    }
+    body.edit-mode [data-video] {
+      outline: 1.5px dashed rgba(236,72,153,.6); outline-offset: 4px; cursor: pointer;
+    }
+    body.edit-mode [data-video]::after {
+      content: '🎬  Click para conectar Wistia (URL o ID)';
+      color: var(--magenta); font-style: normal; font-weight: 500; font-family: 'Inter';
+      background: rgba(0,0,0,.55); inset: 0;
+    }
+
+    /* Edit FAB + bar */
+    .fab {
+      position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--electric); color: #0a0a0a;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.25rem; font-weight: 700; cursor: pointer;
+      box-shadow: 0 10px 30px rgba(255, 210, 63, .35), 0 0 0 1px rgba(0,0,0,.3) inset;
+      transition: transform .2s ease;
+    }
+    .fab:hover { transform: scale(1.07) rotate(-6deg); }
+    body.edit-mode .fab { background: var(--magenta); color: white; box-shadow: 0 10px 30px rgba(236,72,153,.45); }
+
+    .editbar {
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(120%);
+      z-index: 9998;
+      background: #1a1a1a; border: 1px solid rgba(212,184,150,.25);
+      border-radius: 999px;
+      padding: 10px 20px;
+      display: flex; align-items: center; gap: 16px;
+      font-size: .875rem; color: var(--cream);
+      box-shadow: 0 20px 50px rgba(0,0,0,.6);
+      transition: transform .35s cubic-bezier(.2,.8,.2,1);
+    }
+    body.edit-mode .editbar { transform: translateX(-50%) translateY(0); }
+    .editbar .pill { padding: 6px 14px; border-radius: 999px; cursor: pointer; transition: all .2s; font-weight: 500; }
+    .editbar .pill.ghost { color: var(--mutedc); }
+    .editbar .pill.ghost:hover { color: var(--electric); }
+    .editbar .pill.danger { background: rgba(220,38,38,.15); color: #fca5a5; }
+    .editbar .pill.danger:hover { background: rgba(220,38,38,.3); color: white; }
+    .editbar .pill.ok { background: var(--electric); color: #0a0a0a; }
+    .editbar .pill.ok:hover { background: #ffdd5e; }
+
+    /* Underline link */
+    .ulink { background-image: linear-gradient(currentColor, currentColor); background-size: 100% 1px; background-position: 0 100%; background-repeat: no-repeat; padding-bottom: 2px; transition: background-size .3s ease; }
+    .ulink:hover { background-size: 0 1px; }
+
+    /* Section number badge */
+    .secnum { font-family: 'Spline Sans Mono', monospace; font-size: .7rem; letter-spacing: .25em; color: var(--mutedc); }
+
+    /* Vertical timeline rail */
+    .timeline-rail { position: relative; }
+    .timeline-rail::before {
+      content: ''; position: absolute; left: 19px; top: 0; bottom: 0; width: 1px;
+      background: linear-gradient(to bottom, transparent 0%, rgba(212,184,150,.4) 6%, rgba(212,184,150,.4) 94%, transparent 100%);
+    }
+    @media (min-width: 1024px) { .timeline-rail::before { left: 50%; transform: translateX(-.5px); } }
+
+    /* Ticket card */
+    .ticket {
+      background: linear-gradient(180deg, rgba(212,184,150,.04) 0%, rgba(20,20,20,.6) 100%);
+      border: 1px solid rgba(212,184,150,.18);
+      transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+    }
+    .ticket:hover { transform: translateY(-4px); border-color: rgba(212,184,150,.4); box-shadow: 0 30px 60px rgba(0,0,0,.5); }
+    .ticket.vip {
+      border-color: rgba(255,210,63,.4);
+      background: linear-gradient(180deg, rgba(255,210,63,.07) 0%, rgba(20,20,20,.7) 100%);
+      position: relative;
+    }
+    .ticket.vip::before {
+      content: 'MAS VENDIDO'; position: absolute; top: 0; right: 24px;
+      background: var(--electric); color: #0a0a0a;
+      font-family: 'Spline Sans Mono', monospace; font-size: .65rem; letter-spacing: .2em;
+      padding: 6px 14px; border-radius: 0 0 4px 4px; font-weight: 700;
+    }
+
+    /* FAQ details */
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform .3s ease; }
+
+    /* CTA pulse */
+    @keyframes pulse-ring {
+      0% { box-shadow: 0 0 0 0 rgba(255,210,63,.5); }
+      70% { box-shadow: 0 0 0 14px rgba(255,210,63,0); }
+      100% { box-shadow: 0 0 0 0 rgba(255,210,63,0); }
+    }
+    .pulse-cta { animation: pulse-ring 2.4s infinite; }
+
+    /* Asymmetric editorial flourish */
+    .flourish-line { height: 1px; background: linear-gradient(90deg, transparent, rgba(212,184,150,.5), transparent); }
+
+    /* Hide scrollbar in marquee */
+    .marquee { overflow: hidden; }
+
+    /* Print-safe */
+    @media print { .fab, .editbar, .stickytop { display: none; } }
+  </style>
+</head>
+<body class="bg-noir text-cream">
+
+  <!-- ============ STICKY TOP BAR ============ -->
+  <div class="stickytop sticky top-0 z-40 bg-noir/90 backdrop-blur-md border-b border-champagne/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 flex items-center justify-between gap-4 text-xs sm:text-sm">
+      <div class="flex items-center gap-3 font-mono uppercase tracking-wider text-mutedc">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-electric animate-pulse"></span>
+        <span><span data-editable="topbar-text">SABADO 16 DE MAYO · 14H A 21H · SANTIAGO · CUPOS LIMITADOS</span></span>
+      </div>
+      <a href="#tickets" class="hidden sm:inline-block bg-electric text-noir font-semibold px-4 py-1.5 rounded-full hover:bg-yellow-300 transition">Reservar →</a>
+    </div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="relative pt-16 sm:pt-24 pb-20 sm:pb-32 overflow-hidden">
+    <div class="absolute inset-0 -z-10 opacity-50" style="background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255,210,63,.08), transparent 70%), radial-gradient(ellipse 60% 50% at 80% 70%, rgba(236,72,153,.06), transparent 70%);"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Top eyebrow -->
+      <div class="flex items-center justify-between mb-12 sm:mb-16 reveal">
+        <div class="font-mono text-xs uppercase tracking-[0.3em] text-champagne/80">
+          <span data-editable="hero-eyebrow">Workshop Presencial · Santiago · 2026</span>
+        </div>
+        <div class="hidden sm:block font-mono text-xs uppercase tracking-[0.3em] text-mutedc">
+          <span data-editable="hero-edition">Edicion 03 · Mayo</span>
+        </div>
+      </div>
+
+      <!-- Logo / wordmark -->
+      <div class="reveal">
+        <div class="font-display font-light text-[15vw] sm:text-[10vw] lg:text-[8.5vw] leading-[0.85] tracking-tight">
+          <span class="block text-cream" data-editable="hero-word-1">NEXT</span>
+          <span class="block text-electric italic" data-editable="hero-word-2">Level.</span>
+        </div>
+      </div>
+
+      <div class="mt-10 sm:mt-14 grid lg:grid-cols-12 gap-10 lg:gap-16">
+
+        <!-- Hero copy -->
+        <div class="lg:col-span-7 reveal">
+          <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl leading-[1.15] text-cream font-light">
+            <span data-editable="hero-headline">Libera tu tiempo. Pensa como lider. Vende como alguien que ya esta en su siguiente nivel.</span>
+          </h1>
+          <p class="mt-8 text-lg text-cream/75 max-w-2xl leading-relaxed" data-editable="hero-lead">
+            6 horas presenciales. 3 mentores. Una experiencia aplicada de IA, imagen y comunicacion. Te vas con un sistema funcionando — no con apuntes.
+          </p>
+
+          <div class="mt-10 flex flex-wrap gap-4 items-center">
+            <a href="#tickets" class="pulse-cta inline-flex items-center gap-2 bg-electric text-noir font-semibold px-7 py-4 rounded-full hover:bg-yellow-300 transition">
+              <span data-editable="hero-cta-1">Reservar mi cupo</span>
+              <span>→</span>
+            </a>
+            <a href="#experiencia" class="inline-flex items-center gap-2 text-cream/80 hover:text-electric transition font-medium px-5 py-3">
+              <span data-editable="hero-cta-2">Ver el programa hora por hora</span>
+              <span>↓</span>
+            </a>
+          </div>
+
+          <!-- Trust row -->
+          <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl">
+            <div>
+              <div class="font-display text-3xl text-champagne" data-editable="trust-1-num">6h</div>
+              <div class="text-xs uppercase tracking-wider text-mutedc mt-1" data-editable="trust-1-label">Presenciales</div>
+            </div>
+            <div>
+              <div class="font-display text-3xl text-champagne" data-editable="trust-2-num">3</div>
+              <div class="text-xs uppercase tracking-wider text-mutedc mt-1" data-editable="trust-2-label">Mentores en vivo</div>
+            </div>
+            <div>
+              <div class="font-display text-3xl text-champagne" data-editable="trust-3-num">35</div>
+              <div class="text-xs uppercase tracking-wider text-mutedc mt-1" data-editable="trust-3-label">Cupos maximo</div>
+            </div>
+            <div>
+              <div class="font-display text-3xl text-champagne" data-editable="trust-4-num">100%</div>
+              <div class="text-xs uppercase tracking-wider text-mutedc mt-1" data-editable="trust-4-label">Aplicado en vivo</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero visual + countdown -->
+        <div class="lg:col-span-5 reveal">
+          <div data-image="hero-photo" data-label="Foto del workshop · sube una imagen"
+               class="aspect-[4/5] w-full rounded-sm shadow-2xl"
+               style="background-image: linear-gradient(135deg, #1a1815 0%, #0a0a0a 100%);">
+          </div>
+
+          <!-- Countdown -->
+          <div class="mt-6 border-t border-champagne/20 pt-6">
+            <div class="font-mono text-[10px] uppercase tracking-[0.3em] text-mutedc mb-3">FALTA PARA LA EXPERIENCIA</div>
+            <div id="countdown" class="grid grid-cols-4 gap-2 text-center">
+              <div><div class="font-display text-2xl sm:text-3xl text-cream" id="cd-d">00</div><div class="text-[10px] uppercase tracking-wider text-mutedc mt-1">dias</div></div>
+              <div><div class="font-display text-2xl sm:text-3xl text-cream" id="cd-h">00</div><div class="text-[10px] uppercase tracking-wider text-mutedc mt-1">horas</div></div>
+              <div><div class="font-display text-2xl sm:text-3xl text-cream" id="cd-m">00</div><div class="text-[10px] uppercase tracking-wider text-mutedc mt-1">min</div></div>
+              <div><div class="font-display text-2xl sm:text-3xl text-electric" id="cd-s">00</div><div class="text-[10px] uppercase tracking-wider text-mutedc mt-1">seg</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TICKER MARQUEE ============ -->
+  <section class="marquee bg-electric text-noir py-4 border-y border-noir overflow-hidden">
+    <div class="marquee-track font-mono text-sm sm:text-base font-semibold uppercase tracking-[0.25em]">
+      <div class="flex items-center gap-12 pr-12 whitespace-nowrap">
+        <span>16 Mayo 2026</span><span>★</span>
+        <span>Condell 1337 · Providencia</span><span>★</span>
+        <span>14h a 21h · 6 horas presenciales</span><span>★</span>
+        <span>Cupos limitados a 35</span><span>★</span>
+        <span>IA aplicada · Imagen · Comunicacion</span><span>★</span>
+        <span>Te vas con sistema operando</span><span>★</span>
+      </div>
+      <div class="flex items-center gap-12 pr-12 whitespace-nowrap" aria-hidden="true">
+        <span>16 Mayo 2026</span><span>★</span>
+        <span>Condell 1337 · Providencia</span><span>★</span>
+        <span>14h a 21h · 6 horas presenciales</span><span>★</span>
+        <span>Cupos limitados a 35</span><span>★</span>
+        <span>IA aplicada · Imagen · Comunicacion</span><span>★</span>
+        <span>Te vas con sistema operando</span><span>★</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 01 · MIRROR (Problem) ============ -->
+  <section class="py-24 sm:py-32 border-b border-champagne/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-16">
+        <div class="lg:col-span-4 reveal">
+          <div class="secnum mb-4">01 — EL ESPEJO</div>
+          <h2 class="font-display text-4xl sm:text-5xl text-cream font-light leading-[1.05]">
+            <span data-editable="mirror-h">Trabajas duro.<br><em class="text-champagne">Eres bueno.</em><br>Pero algo no encaja.</span>
+          </h2>
+        </div>
+
+        <div class="lg:col-span-5 reveal">
+          <p class="text-lg text-cream/80 leading-relaxed dropcap" data-editable="mirror-body">
+            Tu mensaje no refleja lo que vales. Tu imagen no te representa. Y vender se siente como mendigar. Probaste cursos, reels y tips de Instagram. Y seguis en el mismo lugar — cargando un negocio que en realidad te carga a vos.
+          </p>
+
+          <blockquote class="mt-10 pl-6 border-l-2 border-electric">
+            <p class="font-display italic text-2xl text-cream leading-snug" data-editable="mirror-quote">
+              "El problema no es que falte trabajo. El problema es que sos vos quien lo esta cargando todo."
+            </p>
+          </blockquote>
+        </div>
+
+        <div class="lg:col-span-3 reveal">
+          <div data-image="mirror-photo" data-label="Foto editorial · solitaria, trabajando" class="aspect-[3/4] w-full rounded-sm"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 · COST OF INACTION ============ -->
+  <section class="py-24 sm:py-32 bg-noir-2 border-b border-champagne/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto reveal">
+        <div class="secnum mb-4">02 — EL COSTO DE NO ACTUAR</div>
+        <h2 class="font-display text-4xl sm:text-5xl text-cream font-light">
+          <span data-editable="cost-h">Cada mes que postergas, esto pasa:</span>
+        </h2>
+      </div>
+
+      <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="reveal p-7 border border-champagne/15 bg-noir-3 hover:border-champagne/40 transition">
+          <div class="font-display text-5xl text-electric mb-4">60h+</div>
+          <p class="text-cream/80 leading-snug" data-editable="cost-1">Horas al mes en operativa que la IA ya puede hacer por vos.</p>
+        </div>
+        <div class="reveal p-7 border border-champagne/15 bg-noir-3 hover:border-champagne/40 transition">
+          <div class="font-display text-5xl text-electric mb-4">∅</div>
+          <p class="text-cream/80 leading-snug" data-editable="cost-2">Tu marca sigue invisible para el cliente que si pagaria tu valor real.</p>
+        </div>
+        <div class="reveal p-7 border border-champagne/15 bg-noir-3 hover:border-champagne/40 transition">
+          <div class="font-display text-5xl text-electric mb-4">$$</div>
+          <p class="text-cream/80 leading-snug" data-editable="cost-3">Vendes desde la urgencia, no desde la autoridad. Cierras barato.</p>
+        </div>
+        <div class="reveal p-7 border border-champagne/15 bg-noir-3 hover:border-champagne/40 transition">
+          <div class="font-display text-5xl text-electric mb-4">⌛</div>
+          <p class="text-cream/80 leading-snug" data-editable="cost-4">Tu energia se gasta en tareas que no construyen tu siguiente nivel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 · PROMISE (En 6 horas vas a salir con) ============ -->
+  <section class="py-24 sm:py-32 border-b border-champagne/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 reveal">
+        <div class="lg:col-span-5">
+          <div class="secnum mb-4">03 — LA PROMESA</div>
+          <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl text-cream font-light leading-[1.05]">
+            <span data-editable="promise-h">En <em class="text-electric not-italic">6 horas</em> vas a salir con:</span>
+          </h2>
+          <div class="flourish-line my-8 max-w-xs"></div>
+          <p class="text-cream/70 text-lg" data-editable="promise-sub">
+            Todo se implementa en tiempo real. No te llevas teoria — te llevas sistema funcionando.
+          </p>
+        </div>
+
+        <div class="lg:col-span-7">
+          <ul class="space-y-5">
+            <li class="flex gap-5 items-start group">
+              <span class="font-mono text-champagne text-sm mt-1.5 shrink-0">01</span>
+              <div class="flex-1 border-b border-champagne/10 pb-5 group-hover:border-champagne/40 transition">
+                <p class="text-xl text-cream leading-snug" data-editable="promise-1">Tu mensaje de marca claro en <em class="text-champagne">3 niveles de voz</em></p>
+              </div>
+            </li>
+            <li class="flex gap-5 items-start group">
+              <span class="font-mono text-champagne text-sm mt-1.5 shrink-0">02</span>
+              <div class="flex-1 border-b border-champagne/10 pb-5 group-hover:border-champagne/40 transition">
+                <p class="text-xl text-cream leading-snug" data-editable="promise-2">Tu equipo IA de <em class="text-champagne">5 agentes operando</em> tu negocio (Operacion Inteligente)</p>
+              </div>
+            </li>
+            <li class="flex gap-5 items-start group">
+              <span class="font-mono text-champagne text-sm mt-1.5 shrink-0">03</span>
+              <div class="flex-1 border-b border-champagne/10 pb-5 group-hover:border-champagne/40 transition">
+                <p class="text-xl text-cream leading-snug" data-editable="promise-3">Imagen visual <em class="text-champagne">coherente con tu identidad</em></p>
+              </div>
+            </li>
+            <li class="flex gap-5 items-start group">
+              <span class="font-mono text-champagne text-sm mt-1.5 shrink-0">04</span>
+              <div class="flex-1 border-b border-champagne/10 pb-5 group-hover:border-champagne/40 transition">
+                <p class="text-xl text-cream leading-snug" data-editable="promise-4">Estrategia de comunicacion y ventas <em class="text-champagne">estructurada</em></p>
+              </div>
+            </li>
+            <li class="flex gap-5 items-start group">
+              <span class="font-mono text-champagne text-sm mt-1.5 shrink-0">05</span>
+              <div class="flex-1 border-b border-champagne/10 pb-5 group-hover:border-champagne/40 transition">
+                <p class="text-xl text-cream leading-snug" data-editable="promise-5">Protocolo de presencia que <em class="text-champagne">proyecta autoridad</em></p>
+              </div>
+            </li>
+            <li class="flex gap-5 items-start group">
+              <span class="font-mono text-champagne text-sm mt-1.5 shrink-0">06</span>
+              <div class="flex-1 pb-2">
+                <p class="text-xl text-cream leading-snug" data-editable="promise-6">Energia renovada para <em class="text-champagne">liderar tu siguiente nivel</em></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 · LIVE THE EXPERIENCE (TIMELINE) ============ -->
+  <section id="experiencia" class="py-24 sm:py-32 bg-noir-2 border-b border-champagne/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <div class="secnum mb-4">04 — VIVE LA EXPERIENCIA</div>
+        <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl text-cream font-light leading-[1.05]">
+          <span data-editable="exp-h">Vive el sabado <em class="text-electric not-italic">16 de mayo</em><br>antes de vivirlo.</span>
+        </h2>
+        <p class="mt-6 text-lg text-cream/70" data-editable="exp-sub">
+          Hora por hora. Para que sepas exactamente que sentis, que haces y que te llevas en cada bloque.
+        </p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline-rail max-w-5xl mx-auto space-y-12 lg:space-y-20">
+
+        <!-- 13:30 -->
+        <div class="reveal grid lg:grid-cols-[1fr_40px_1fr] gap-6 lg:gap-10 items-center">
+          <div class="lg:text-right order-2 lg:order-1">
+            <div class="font-mono text-electric text-sm tracking-widest mb-2" data-editable="t1-time">13:30 · ANTES DE EMPEZAR</div>
+            <h3 class="font-display text-2xl sm:text-3xl text-cream mb-3" data-editable="t1-title">Acreditacion + cafe</h3>
+            <p class="text-cream/75 leading-relaxed" data-editable="t1-body">
+              Llegas a Condell 1337. Recibes tu kit Next Level: workbook impreso, libreta de tinta gruesa, credencial con tu nombre escrito a mano. Cafe recien hecho. Conversaciones que ya empiezan a importar.
+            </p>
+          </div>
+          <div class="hidden lg:flex justify-center order-2"><div class="w-10 h-10 rounded-full bg-electric border-4 border-noir-2 z-10"></div></div>
+          <div class="order-1 lg:order-3">
+            <div data-image="t1-photo" data-label="Recepcion · cafe + kit" class="aspect-[4/3] w-full rounded-sm"></div>
+          </div>
+        </div>
+
+        <!-- 14:00 -->
+        <div class="reveal grid lg:grid-cols-[1fr_40px_1fr] gap-6 lg:gap-10 items-center">
+          <div class="order-1">
+            <div data-image="t2-photo" data-label="Apertura · marco mental" class="aspect-[4/3] w-full rounded-sm"></div>
+          </div>
+          <div class="hidden lg:flex justify-center order-2"><div class="w-10 h-10 rounded-full bg-cream border-4 border-noir-2 z-10"></div></div>
+          <div class="order-2 lg:order-3">
+            <div class="font-mono text-cream text-sm tracking-widest mb-2" data-editable="t2-time">14:00 · APERTURA</div>
+            <h3 class="font-display text-2xl sm:text-3xl text-cream mb-3" data-editable="t2-title">Marco mental: operar vs ser operado</h3>
+            <p class="text-cream/75 leading-relaxed" data-editable="t2-body">
+              Yoselvia abre el dia. No con teoria — con un marco. La diferencia entre OPERAR tu negocio y SER OPERADO por el. En 30 minutos entendes por que tu agenda no te alcanza.
+            </p>
+          </div>
+        </div>
+
+        <!-- 14:30 — MODULO 1 (YOSELVIA) -->
+        <div class="reveal grid lg:grid-cols-[1fr_40px_1fr] gap-6 lg:gap-10 items-center">
+          <div class="lg:text-right order-2 lg:order-1">
+            <div class="font-mono text-magenta text-sm tracking-widest mb-2" data-editable="t3-time">14:30 · MODULO 1 · 90 MIN</div>
+            <div class="inline-block bg-magenta/15 text-magenta border border-magenta/40 rounded-full px-3 py-1 text-xs font-mono uppercase tracking-wider mb-3">Yoselvia Adam</div>
+            <h3 class="font-display text-2xl sm:text-3xl text-cream mb-3" data-editable="t3-title">Operacion Inteligente con Claude</h3>
+            <p class="text-cream/75 leading-relaxed" data-editable="t3-body">
+              Abris tu laptop. Yoselvia te guia a construir EN VIVO tu CLAUDE.md, tu Director de Operaciones IA y tus 4 agentes especializados (Marketing · Ventas · Entrega · Administracion). A las 16:00 tu sistema ya esta operando. Te llevas tu tarjeta anti-sesgos para usarlo siempre bien.
+            </p>
+          </div>
+          <div class="hidden lg:flex justify-center order-2"><div class="w-10 h-10 rounded-full bg-magenta border-4 border-noir-2 z-10"></div></div>
+          <div class="order-1 lg:order-3">
+            <div data-image="t3-photo" data-label="Modulo IA · laptops + Claude" class="aspect-[4/3] w-full rounded-sm"></div>
+          </div>
+        </div>
+
+        <!-- 16:00 -->
+        <div class="reveal grid lg:grid-cols-[1fr_40px_1fr] gap-6 lg:gap-10 items-center">
+          <div class="order-1">
+            <div data-image="t4-photo" data-label="Coffee break · networking" class="aspect-[4/3] w-full rounded-sm"></div>
+          </div>
+          <div class="hidden lg:flex justify-center order-2"><div class="w-10 h-10 rounded-full bg-cream/40 border-4 border-noir-2 z-10"></div></div>
+          <div class="order-2 lg:order-3">
+            <div class="font-mono text-mutedc text-sm tracking-widest mb-2" data-editable="t4-time">16:00 · PAUSA</div>
+            <h3 class="font-display text-2xl sm:text-3xl text-cream mb-3" data-editable="t4-title">Coffee break + networking</h3>
+            <p class="text-cream/75 leading-relaxed" data-editable="t4-body">
+              30 minutos. Cafe. Conversacion real con personas que estan en tu mismo punto — o un nivel arriba. Aqui pasan colaboraciones inesperadas.
+            </p>
+          </div>
+        </div>
+
+        <!-- 16:30 — MODULO 2 (VALENTINA) -->
+        <div class="reveal grid lg:grid-cols-[1fr_40px_1fr] gap-6 lg:gap-10 items-center">
+          <div class="lg:text-right order-2 lg:order-1">
+            <div class="font-mono text-champagne text-sm tracking-widest mb-2" data-editable="t5-time">16:30 · MODULO 2 · 90 MIN</div>
+            <div class="inline-block bg-champagne/15 text-champagne border border-champagne/40 rounded-full px-3 py-1 text-xs font-mono uppercase tracking-wider mb-3">Valentina Silva</div>
+            <h3 class="font-display text-2xl sm:text-3xl text-cream mb-3" data-editable="t5-title">Presencia visual y color personal</h3>
+            <p class="text-cream/75 leading-relaxed" data-editable="t5-body">
+              Valentina te recibe con espejo en mano. Analisis colorimetrico en vivo. Descubris tu paleta de autoridad — los colores que abren puertas antes de que digas una palabra. Salis con tu carta de identidad visual.
+            </p>
+          </div>
+          <div class="hidden lg:flex justify-center order-2"><div class="w-10 h-10 rounded-full bg-champagne border-4 border-noir-2 z-10"></div></div>
+          <div class="order-1 lg:order-3">
+            <div data-image="t5-photo" data-label="Asesoria de imagen · color en vivo" class="aspect-[4/3] w-full rounded-sm"></div>
+          </div>
+        </div>
+
+        <!-- 18:00 -->
+        <div class="reveal grid lg:grid-cols-[1fr_40px_1fr] gap-6 lg:gap-10 items-center">
+          <div class="order-1">
+            <div data-image="t6-photo" data-label="Pausa · espejo + cambio interno" class="aspect-[4/3] w-full rounded-sm"></div>
+          </div>
+          <div class="hidden lg:flex justify-center order-2"><div class="w-10 h-10 rounded-full bg-cream/40 border-4 border-noir-2 z-10"></div></div>
+          <div class="order-2 lg:order-3">
+            <div class="font-mono text-mutedc text-sm tracking-widest mb-2" data-editable="t6-time">18:00 · PAUSA</div>
+            <h3 class="font-display text-2xl sm:text-3xl text-cream mb-3" data-editable="t6-title">15 minutos para asentarlo</h3>
+            <p class="text-cream/75 leading-relaxed" data-editable="t6-body">
+              Te observas en el espejo. Probaste un color que nunca usabas. Algo cambio en como te miras. Anotas lo que sentiste — eso vale mas que el apunte.
+            </p>
+          </div>
+        </div>
+
+        <!-- 18:30 — MODULO 3 (SEBASTIAN) -->
+        <div class="reveal grid lg:grid-cols-[1fr_40px_1fr] gap-6 lg:gap-10 items-center">
+          <div class="lg:text-right order-2 lg:order-1">
+            <div class="font-mono text-blood text-sm tracking-widest mb-2" data-editable="t7-time">18:30 · MODULO 3 · 90 MIN</div>
+            <div class="inline-block bg-blood/15 text-red-400 border border-blood/40 rounded-full px-3 py-1 text-xs font-mono uppercase tracking-wider mb-3">Sebastian Villar</div>
+            <h3 class="font-display text-2xl sm:text-3xl text-cream mb-3" data-editable="t7-title">Comunicacion y ventas autenticas</h3>
+            <p class="text-cream/75 leading-relaxed" data-editable="t7-body">
+              Sebastian te ensena a vender desde tu verdad. Practicas tu pitch en parejas. Recibis feedback en vivo. A las 20:00 tu mensaje suena distinto — porque por primera vez es realmente tuyo.
+            </p>
+          </div>
+          <div class="hidden lg:flex justify-center order-2"><div class="w-10 h-10 rounded-full bg-blood border-4 border-noir-2 z-10"></div></div>
+          <div class="order-1 lg:order-3">
+            <div data-image="t7-photo" data-label="Pitch en vivo · feedback real" class="aspect-[4/3] w-full rounded-sm"></div>
+          </div>
+        </div>
+
+        <!-- 20:00 INTEGRACION -->
+        <div class="reveal grid lg:grid-cols-[1fr_40px_1fr] gap-6 lg:gap-10 items-center">
+          <div class="order-1">
+            <div data-image="t8-photo" data-label="3 mentores resolviendo en vivo" class="aspect-[4/3] w-full rounded-sm"></div>
+          </div>
+          <div class="hidden lg:flex justify-center order-2"><div class="w-10 h-10 rounded-full bg-electric border-4 border-noir-2 z-10"></div></div>
+          <div class="order-2 lg:order-3">
+            <div class="font-mono text-electric text-sm tracking-widest mb-2" data-editable="t8-time">20:00 · INTEGRACION · 45 MIN</div>
+            <h3 class="font-display text-2xl sm:text-3xl text-cream mb-3" data-editable="t8-title">Los 3 mentores resolviendo TU caso</h3>
+            <p class="text-cream/75 leading-relaxed" data-editable="t8-body">
+              Los tres mentores en escenario. Vos con un caso real de tu negocio. Te resuelven en vivo: estrategia (Yoselvia), imagen (Valentina), venta (Sebastian). Oro puro.
+            </p>
+          </div>
+        </div>
+
+        <!-- 20:45 CIERRE -->
+        <div class="reveal grid lg:grid-cols-[1fr_40px_1fr] gap-6 lg:gap-10 items-center">
+          <div class="lg:text-right order-2 lg:order-1">
+            <div class="font-mono text-cream text-sm tracking-widest mb-2" data-editable="t9-time">20:45 · CIERRE</div>
+            <h3 class="font-display text-2xl sm:text-3xl text-cream mb-3" data-editable="t9-title">Vision a 90 dias + foto grupal</h3>
+            <p class="text-cream/75 leading-relaxed" data-editable="t9-body">
+              Foto grupal. Compromiso escrito de tu mano. El lunes empezas distinto — no porque te dimos motivacion, sino porque te dimos sistema.
+            </p>
+          </div>
+          <div class="hidden lg:flex justify-center order-2"><div class="w-10 h-10 rounded-full bg-cream border-4 border-noir-2 z-10"></div></div>
+          <div class="order-1 lg:order-3">
+            <div data-image="t9-photo" data-label="Foto grupal · cierre" class="aspect-[4/3] w-full rounded-sm"></div>
+          </div>
+        </div>
+
+        <!-- 21:00 VIP -->
+        <div class="reveal grid lg:grid-cols-[1fr_40px_1fr] gap-6 lg:gap-10 items-center">
+          <div class="order-1">
+            <div data-image="t10-photo" data-label="VIP · sesion exclusiva" class="aspect-[4/3] w-full rounded-sm"></div>
+          </div>
+          <div class="hidden lg:flex justify-center order-2"><div class="w-10 h-10 rounded-full bg-electric border-4 border-noir-2 z-10 ring-2 ring-electric/40"></div></div>
+          <div class="order-2 lg:order-3">
+            <div class="font-mono text-electric text-sm tracking-widest mb-2" data-editable="t10-time">21:00 · SOLO VIP · +60 MIN</div>
+            <h3 class="font-display text-2xl sm:text-3xl text-cream mb-3" data-editable="t10-title">Activo VIP: Mini Radiografia Operativa con Yoselvia</h3>
+            <p class="text-cream/75 leading-relaxed" data-editable="t10-body">
+              Si elegiste VIP, ahora empieza tu hora exclusiva. Aplicamos a TU negocio en vivo, con datos reales y Claude trabajando por vos. Te llevas tu informe personalizado y tu plan a 30-60-90 dias.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA mid -->
+      <div class="text-center mt-20 reveal">
+        <a href="#tickets" class="inline-flex items-center gap-2 bg-electric text-noir font-semibold px-7 py-4 rounded-full hover:bg-yellow-300 transition">
+          Quiero vivir esta experiencia
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 · MENTORS ============ -->
+  <section id="mentores" class="py-24 sm:py-32 border-b border-champagne/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid lg:grid-cols-12 gap-12 mb-16 reveal">
+        <div class="lg:col-span-5">
+          <div class="secnum mb-4">05 — LOS TRES MENTORES</div>
+          <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl text-cream font-light leading-[1.05]">
+            <span data-editable="mentors-h">Una experiencia. <em class="text-champagne">Tres mentes.</em> Cero teoria.</span>
+          </h2>
+        </div>
+        <div class="lg:col-span-6 lg:col-start-7">
+          <p class="text-lg text-cream/75 leading-relaxed" data-editable="mentors-body">
+            No te van a hablar desde la teoria. Te van a guiar EN VIVO mientras aplicas cada paso a tu propio negocio. Cada mentor trae 90 minutos de implementacion real — no de slides.
+          </p>
+        </div>
+      </div>
+
+      <!-- MENTOR 1 · YOSELVIA -->
+      <article class="grid lg:grid-cols-12 gap-10 lg:gap-14 mb-24 reveal items-start">
+        <div class="lg:col-span-5">
+          <div data-image="mentor-yoselvia" data-label="YOSELVIA ADAM · sube tu foto" class="aspect-[3/4] w-full rounded-sm"></div>
+          <div class="mt-4 flex items-center justify-between text-xs font-mono uppercase tracking-widest text-mutedc">
+            <span>Modulo 01</span>
+            <span>14:30 — 16:00 · 90 min</span>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="font-mono text-electric text-xs tracking-[0.3em] uppercase mb-3" data-editable="m1-tag">Mentora · IA aplicada</div>
+          <h3 class="font-display text-3xl sm:text-4xl lg:text-5xl text-cream font-light leading-[1.05]" data-editable="m1-name">Yoselvia Adam</h3>
+          <p class="font-display italic text-xl text-champagne mt-3" data-editable="m1-role">Mentora de negocios conscientes impulsados con IA</p>
+
+          <p class="mt-8 text-2xl font-display italic text-cream/90 leading-snug border-l-2 border-electric pl-6" data-editable="m1-lema">
+            "No te enseno a usar Claude. Te enseno a OPERAR con Claude."
+          </p>
+
+          <p class="mt-8 text-lg text-cream/80 leading-relaxed" data-editable="m1-body">
+            Construis en vivo tu OPERACION INTELIGENTE: un sistema operativo completo con 5 agentes IA coordinados + el mapa de las 5 etapas para construir cualquier negocio profesional.
+          </p>
+
+          <div class="mt-10 border-t border-champagne/20 pt-8">
+            <div class="font-mono text-xs uppercase tracking-[0.25em] text-champagne mb-5" data-editable="m1-deliverables-h">Vas a salir con</div>
+            <ul class="space-y-3">
+              <li class="flex gap-4 text-cream/85"><span class="text-electric mt-1">✓</span><span data-editable="m1-d1">Tu CLAUDE.md personalizado (el cerebro)</span></li>
+              <li class="flex gap-4 text-cream/85"><span class="text-electric mt-1">✓</span><span data-editable="m1-d2">Tu Director de Operaciones IA configurado</span></li>
+              <li class="flex gap-4 text-cream/85"><span class="text-electric mt-1">✓</span><span data-editable="m1-d3">4 Agentes especializados: Marketing · Ventas · Entrega · Administracion</span></li>
+              <li class="flex gap-4 text-cream/85"><span class="text-electric mt-1">✓</span><span data-editable="m1-d4">3 tareas programadas trabajando por vos</span></li>
+              <li class="flex gap-4 text-cream/85"><span class="text-electric mt-1">✓</span><span data-editable="m1-d5">El Mapa de las 5 Etapas del Sistema Operativo</span></li>
+              <li class="flex gap-4 text-cream/85"><span class="text-electric mt-1">✓</span><span data-editable="m1-d6">Tu tarjeta anti-sesgos fisica</span></li>
+            </ul>
+            <p class="mt-8 font-display italic text-xl text-electric" data-editable="m1-cierre">El lunes siguiente tu sistema ya esta operando.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- MENTOR 2 · VALENTINA -->
+      <article class="grid lg:grid-cols-12 gap-10 lg:gap-14 mb-24 reveal items-start">
+        <div class="lg:col-span-7 lg:order-1 order-2">
+          <div class="font-mono text-champagne text-xs tracking-[0.3em] uppercase mb-3" data-editable="m2-tag">Asesora · Imagen + Color</div>
+          <h3 class="font-display text-3xl sm:text-4xl lg:text-5xl text-cream font-light leading-[1.05]" data-editable="m2-name">Valentina Silva</h3>
+          <p class="font-display italic text-xl text-champagne mt-3" data-editable="m2-role">Asesora de imagen y color presencial</p>
+
+          <p class="mt-8 text-2xl font-display italic text-cream/90 leading-snug border-l-2 border-champagne pl-6" data-editable="m2-lema">
+            "Tu imagen no es solo como te ves. Es como habitas tu marca."
+          </p>
+
+          <p class="mt-8 text-lg text-cream/80 leading-relaxed" data-editable="m2-body">
+            En vivo, espejo en mano, descubris la paleta de colores y los estilos que potencian tu energia y comunican autoridad. Te vas con tu carta de identidad visual lista para usar.
+          </p>
+
+          <div class="mt-10 border-t border-champagne/20 pt-8">
+            <div class="font-mono text-xs uppercase tracking-[0.25em] text-champagne mb-5" data-editable="m2-deliverables-h">Vas a salir con</div>
+            <ul class="space-y-3">
+              <li class="flex gap-4 text-cream/85"><span class="text-champagne mt-1">✓</span><span data-editable="m2-d1">Tu paleta colorimetrica personal (analisis presencial)</span></li>
+              <li class="flex gap-4 text-cream/85"><span class="text-champagne mt-1">✓</span><span data-editable="m2-d2">Estilos que potencian tu energia y comunican autoridad</span></li>
+              <li class="flex gap-4 text-cream/85"><span class="text-champagne mt-1">✓</span><span data-editable="m2-d3">Reglas de vestir segun ocasion sin perder autenticidad</span></li>
+              <li class="flex gap-4 text-cream/85"><span class="text-champagne mt-1">✓</span><span data-editable="m2-d4">Presencia visual coherente con el nivel que queres proyectar</span></li>
+            </ul>
+            <p class="mt-8 font-display italic text-xl text-champagne" data-editable="m2-cierre">Tu imagen abre puertas antes de que digas una palabra.</p>
+          </div>
+        </div>
+        <div class="lg:col-span-5 lg:order-2 order-1">
+          <div data-image="mentor-valentina" data-label="VALENTINA SILVA · sube tu foto" class="aspect-[3/4] w-full rounded-sm"></div>
+          <div class="mt-4 flex items-center justify-between text-xs font-mono uppercase tracking-widest text-mutedc">
+            <span>Modulo 02</span>
+            <span>16:30 — 18:00 · 90 min</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- MENTOR 3 · SEBASTIAN -->
+      <article class="grid lg:grid-cols-12 gap-10 lg:gap-14 reveal items-start">
+        <div class="lg:col-span-5">
+          <div data-image="mentor-sebastian" data-label="SEBASTIAN VILLAR · sube tu foto" class="aspect-[3/4] w-full rounded-sm"></div>
+          <div class="mt-4 flex items-center justify-between text-xs font-mono uppercase tracking-widest text-mutedc">
+            <span>Modulo 03</span>
+            <span>18:30 — 20:00 · 90 min</span>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="font-mono text-red-400 text-xs tracking-[0.3em] uppercase mb-3" data-editable="m3-tag">Mentor · Comunicacion + Ventas</div>
+          <h3 class="font-display text-3xl sm:text-4xl lg:text-5xl text-cream font-light leading-[1.05]" data-editable="m3-name">Sebastian Villar</h3>
+          <p class="font-display italic text-xl text-champagne mt-3" data-editable="m3-role">Mentor en comunicacion y ventas</p>
+
+          <p class="mt-8 text-2xl font-display italic text-cream/90 leading-snug border-l-2 border-blood pl-6" data-editable="m3-lema">
+            "Cuando comunicas desde tu verdad, las ventas dejan de sentirse forzadas."
+          </p>
+
+          <p class="mt-8 text-lg text-cream/80 leading-relaxed" data-editable="m3-body">
+            Trabajas tu presencia y tu expresion autentica. Practicas pitch en parejas, con feedback en vivo. Sales con un mensaje que suena tuyo — porque por primera vez, lo es.
+          </p>
+
+          <div class="mt-10 border-t border-champagne/20 pt-8">
+            <div class="font-mono text-xs uppercase tracking-[0.25em] text-champagne mb-5" data-editable="m3-deliverables-h">Vas a salir con</div>
+            <ul class="space-y-3">
+              <li class="flex gap-4 text-cream/85"><span class="text-red-400 mt-1">✓</span><span data-editable="m3-d1">Conexion emocional antes de intentar convencer</span></li>
+              <li class="flex gap-4 text-cream/85"><span class="text-red-400 mt-1">✓</span><span data-editable="m3-d2">Voz, lenguaje corporal y emociones que generan confianza real</span></li>
+              <li class="flex gap-4 text-cream/85"><span class="text-red-400 mt-1">✓</span><span data-editable="m3-d3">Comunicacion desde tu historia, no desde la presion</span></li>
+              <li class="flex gap-4 text-cream/85"><span class="text-red-400 mt-1">✓</span><span data-editable="m3-d4">Persuasion natural y congruente con tu energia</span></li>
+            </ul>
+            <p class="mt-8 font-display italic text-xl text-red-400" data-editable="m3-cierre">Cuando te creen, compran. Sin rogar. Sin descuento.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 06 · TICKETS ============ -->
+  <section id="tickets" class="py-24 sm:py-32 bg-noir-2 border-b border-champagne/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <div class="secnum mb-4">06 — TU INVERSION</div>
+        <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl text-cream font-light leading-[1.05]">
+          <span data-editable="tickets-h">Dos formas de vivir <em class="text-electric not-italic">Next Level</em>.</span>
+        </h2>
+        <p class="mt-6 text-lg text-cream/70" data-editable="tickets-sub">
+          Una para implementar. Otra para acelerar. Eliges segun donde queres estar el lunes 18 de mayo.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+
+        <!-- GENERAL -->
+        <div class="ticket p-8 sm:p-10 rounded-lg flex flex-col">
+          <div class="font-mono text-xs uppercase tracking-[0.3em] text-mutedc mb-4" data-editable="tg-tag">PARA IMPLEMENTAR</div>
+          <h3 class="font-display text-3xl text-cream mb-2" data-editable="tg-name">Entrada General</h3>
+          <p class="text-cream/60 mb-6" data-editable="tg-sub">Acceso completo al taller de 6 horas.</p>
+
+          <div class="flex items-baseline gap-3 mb-8">
+            <span class="font-display text-6xl text-cream" data-editable="tg-price">$67</span>
+            <span class="text-cream/50 text-sm" data-editable="tg-price-sub">USD · pago unico</span>
+          </div>
+
+          <ul class="space-y-4 flex-1 mb-8">
+            <li class="flex gap-3 text-cream/85"><span class="text-champagne">✓</span><span data-editable="tg-1">Acceso presencial al Next Level Workshop (6 horas)</span></li>
+            <li class="flex gap-3 text-cream/85"><span class="text-champagne">✓</span><span data-editable="tg-2">Trabajo en vivo con los 3 expertos (IA · Imagen · Comunicacion)</span></li>
+            <li class="flex gap-3 text-cream/85"><span class="text-champagne">✓</span><span data-editable="tg-3">Materiales impresos para aplicar durante el evento</span></li>
+            <li class="flex gap-3 text-cream/85"><span class="text-champagne">✓</span><span data-editable="tg-4">Coffee break + networking</span></li>
+            <li class="flex gap-3 text-cream/85"><span class="text-champagne">✓</span><span data-editable="tg-5"><strong>Bonus:</strong> Gift Card $47.000 para tu proxima compra</span></li>
+            <li class="flex gap-3 text-cream/85"><span class="text-champagne">✓</span><span data-editable="tg-6"><strong>2x1:</strong> lleva un acompanante</span></li>
+          </ul>
+
+          <a href="#" data-editable="tg-cta" class="block text-center border border-champagne text-champagne font-semibold py-4 rounded-full hover:bg-champagne hover:text-noir transition">Reservar General</a>
+        </div>
+
+        <!-- VIP -->
+        <div class="ticket vip p-8 sm:p-10 rounded-lg flex flex-col">
+          <div class="font-mono text-xs uppercase tracking-[0.3em] text-electric mb-4" data-editable="tv-tag">PARA ACELERAR</div>
+          <h3 class="font-display text-3xl text-cream mb-2" data-editable="tv-name">Entrada VIP Next Level</h3>
+          <p class="text-cream/60 mb-6" data-editable="tv-sub">Todo lo de General + activo exclusivo con Yoselvia.</p>
+
+          <div class="flex items-baseline gap-3 mb-8">
+            <span class="font-display text-6xl text-electric" data-editable="tv-price">$147</span>
+            <span class="text-cream/50 text-sm" data-editable="tv-price-sub">USD · pago unico</span>
+          </div>
+
+          <ul class="space-y-4 flex-1 mb-8">
+            <li class="flex gap-3 text-cream/85"><span class="text-electric">★</span><span data-editable="tv-1"><strong>Todo lo incluido en la Entrada General</strong></span></li>
+
+            <li class="flex gap-3 text-cream/95 bg-electric/5 p-3 rounded border border-electric/20">
+              <span class="text-electric">★</span>
+              <span>
+                <strong data-editable="tv-2-h">+1 hora exclusiva con Yoselvia · Activo VIP</strong>
+                <p class="text-cream/70 text-sm mt-1" data-editable="tv-2-body">Mini Radiografia Operativa de TU negocio en vivo. Auditamos con datos reales y Claude trabajando por vos. Te llevas: informe personalizado, 5 Fugas Invisibles cuantificadas en dinero, Matriz EOAD y plan a 30-60-90 dias.</p>
+              </span>
+            </li>
+
+            <li class="flex gap-3 text-cream/85"><span class="text-electric">★</span><span data-editable="tv-3"><strong>Sesion grupal privada con Valentina:</strong> Colorimetria Presencial Next Level</span></li>
+            <li class="flex gap-3 text-cream/85"><span class="text-electric">★</span><span data-editable="tv-4"><strong>Sesion grupal privada con Sebastian:</strong> Comunicacion y expresion</span></li>
+            <li class="flex gap-3 text-cream/85"><span class="text-electric">★</span><span data-editable="tv-5"><strong>Comunidad VIP cerrada</strong> durante 15 dias para resolver dudas y mantener foco</span></li>
+            <li class="flex gap-3 text-cream/85"><span class="text-electric">★</span><span data-editable="tv-6">Acceso VIP a material exclusivo post-workshop</span></li>
+          </ul>
+
+          <a href="#" data-editable="tv-cta" class="block text-center bg-electric text-noir font-semibold py-4 rounded-full hover:bg-yellow-300 transition">Reservar VIP →</a>
+        </div>
+
+      </div>
+
+      <p class="text-center mt-10 text-sm text-mutedc font-mono uppercase tracking-widest reveal" data-editable="tickets-foot">
+        Pago seguro · Reserva tu cupo en menos de 60 segundos · Quedan plazas limitadas
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 07 · TESTIMONIALS ============ -->
+  <section class="py-24 sm:py-32 border-b border-champagne/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <div class="secnum mb-4">07 — ELLOS YA DIERON EL SALTO</div>
+        <h2 class="font-display text-4xl sm:text-5xl text-cream font-light">
+          <span data-editable="test-h">Lo que dicen quienes ya pasaron por <em class="text-champagne">Next Level</em>.</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+        <!-- TESTIMONIO 1 -->
+        <div class="reveal flex flex-col">
+          <div data-video="test-1-video" data-label="Conectar video Wistia" class="aspect-[4/5] w-full rounded-sm mb-6"></div>
+          <blockquote class="flex-1">
+            <p class="font-display italic text-xl text-cream/90 leading-snug" data-editable="test-1-quote">
+              "Llegue con un negocio que me consumia. Sali con un sistema que trabaja por mi y un mensaje que suena a mi. El lunes ya estaba operando distinto."
+            </p>
+          </blockquote>
+          <footer class="mt-6 pt-6 border-t border-champagne/20">
+            <div class="font-display text-lg text-cream" data-editable="test-1-name">Nombre del testimonio 1</div>
+            <div class="text-sm text-mutedc font-mono uppercase tracking-wider mt-1" data-editable="test-1-role">Cargo · Ciudad</div>
+          </footer>
+        </div>
+
+        <!-- TESTIMONIO 2 -->
+        <div class="reveal flex flex-col">
+          <div data-video="test-2-video" data-label="Conectar video Wistia" class="aspect-[4/5] w-full rounded-sm mb-6"></div>
+          <blockquote class="flex-1">
+            <p class="font-display italic text-xl text-cream/90 leading-snug" data-editable="test-2-quote">
+              "Pague por un workshop. Volvi con una empresa diferente. La parte de IA con Yoselvia me ahorra hoy 12 horas a la semana — literal."
+            </p>
+          </blockquote>
+          <footer class="mt-6 pt-6 border-t border-champagne/20">
+            <div class="font-display text-lg text-cream" data-editable="test-2-name">Nombre del testimonio 2</div>
+            <div class="text-sm text-mutedc font-mono uppercase tracking-wider mt-1" data-editable="test-2-role">Cargo · Ciudad</div>
+          </footer>
+        </div>
+
+        <!-- TESTIMONIO 3 -->
+        <div class="reveal flex flex-col">
+          <div data-video="test-3-video" data-label="Conectar video Wistia" class="aspect-[4/5] w-full rounded-sm mb-6"></div>
+          <blockquote class="flex-1">
+            <p class="font-display italic text-xl text-cream/90 leading-snug" data-editable="test-3-quote">
+              "Lo que mas me sorprendio: no salimos con teoria. Salimos con cosas hechas. Mi paleta de color, mi pitch, mis agentes IA — todo aterrizado el mismo dia."
+            </p>
+          </blockquote>
+          <footer class="mt-6 pt-6 border-t border-champagne/20">
+            <div class="font-display text-lg text-cream" data-editable="test-3-name">Nombre del testimonio 3</div>
+            <div class="text-sm text-mutedc font-mono uppercase tracking-wider mt-1" data-editable="test-3-role">Cargo · Ciudad</div>
+          </footer>
+        </div>
+
+      </div>
+
+      <!-- Photo strip from past event -->
+      <div class="mt-16 reveal">
+        <div class="font-mono text-xs uppercase tracking-[0.3em] text-mutedc mb-5 text-center" data-editable="past-event-h">Fotos de la edicion anterior</div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div data-image="past-1" data-label="Foto 1" class="aspect-square w-full rounded-sm"></div>
+          <div data-image="past-2" data-label="Foto 2" class="aspect-square w-full rounded-sm"></div>
+          <div data-image="past-3" data-label="Foto 3" class="aspect-square w-full rounded-sm"></div>
+          <div data-image="past-4" data-label="Foto 4" class="aspect-square w-full rounded-sm"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 08 · GUARANTEE ============ -->
+  <section class="py-24 sm:py-32 bg-noir-2 border-b border-champagne/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <div class="secnum mb-4">08 — LA GARANTIA</div>
+      <div class="inline-flex items-center justify-center w-20 h-20 rounded-full border-2 border-electric text-electric font-display text-3xl mb-8">60'</div>
+      <h2 class="font-display text-4xl sm:text-5xl text-cream font-light leading-[1.1]">
+        <span data-editable="guar-h">Garantia de los <em class="text-electric not-italic">primeros 60 minutos</em>.</span>
+      </h2>
+      <p class="mt-8 text-lg text-cream/80 leading-relaxed max-w-2xl mx-auto" data-editable="guar-body">
+        Si en la primera hora no sentis que esto va a cambiar tu negocio, te devolvemos el 100% — y te quedas con todo lo que aplicaste hasta ese momento. Sin preguntas. Sin formularios. El riesgo es nuestro, no tuyo.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 09 · FAQ ============ -->
+  <section class="py-24 sm:py-32 border-b border-champagne/10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <div class="secnum mb-4">09 — PREGUNTAS</div>
+        <h2 class="font-display text-4xl sm:text-5xl text-cream font-light">
+          <span data-editable="faq-h">Lo que la gente nos pregunta antes de reservar.</span>
+        </h2>
+      </div>
+
+      <div class="space-y-3 reveal">
+
+        <details class="border border-champagne/20 rounded-sm group">
+          <summary class="flex items-center justify-between gap-4 p-6 hover:bg-champagne/5 transition">
+            <span class="font-display text-xl text-cream" data-editable="faq-1-q">Y si no me sirve?</span>
+            <span class="faq-icon text-electric text-2xl font-light shrink-0">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-cream/75 leading-relaxed" data-editable="faq-1-a">
+            Este workshop esta disenado para que implementes en el momento. No vienes a escuchar teoria — vas a trabajar sobre tu propio negocio con ejercicios practicos guiados en vivo. Si en los primeros 60 minutos no sentis que va a cambiar tu negocio, te devolvemos el 100%.
+          </div>
+        </details>
+
+        <details class="border border-champagne/20 rounded-sm group">
+          <summary class="flex items-center justify-between gap-4 p-6 hover:bg-champagne/5 transition">
+            <span class="font-display text-xl text-cream" data-editable="faq-2-q">Por que solo un dia?</span>
+            <span class="faq-icon text-electric text-2xl font-light shrink-0">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-cream/75 leading-relaxed" data-editable="faq-2-a">
+            Porque lo que falta no es mas tiempo — es enfoque. En una jornada intensiva y bien estructurada lograras avances reales que llevas meses postergando. Este formato es para personas que necesitan claridad y resultados ya.
+          </div>
+        </details>
+
+        <details class="border border-champagne/20 rounded-sm group">
+          <summary class="flex items-center justify-between gap-4 p-6 hover:bg-champagne/5 transition">
+            <span class="font-display text-xl text-cream" data-editable="faq-3-q">Ya hice otros cursos. Esto me va a aportar algo?</span>
+            <span class="faq-icon text-electric text-2xl font-light shrink-0">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-cream/75 leading-relaxed" data-editable="faq-3-a">
+            Justamente por eso es para vos. Esto no es contenido para acumular — es implementacion real. Es para quien ya tiene un negocio activo y busca orden, claridad y una imagen coherente para escalar.
+          </div>
+        </details>
+
+        <details class="border border-champagne/20 rounded-sm group">
+          <summary class="flex items-center justify-between gap-4 p-6 hover:bg-champagne/5 transition">
+            <span class="font-display text-xl text-cream" data-editable="faq-4-q">Soy timido y me cuesta mostrarme. Es para mi?</span>
+            <span class="faq-icon text-electric text-2xl font-light shrink-0">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-cream/75 leading-relaxed" data-editable="faq-4-a">
+            Este espacio es seguro, humano y respetuoso. No se trata de exponerte — se trata de alinear tu negocio con tu esencia. Vas a sentirte acompanado en todo momento.
+          </div>
+        </details>
+
+        <details class="border border-champagne/20 rounded-sm group">
+          <summary class="flex items-center justify-between gap-4 p-6 hover:bg-champagne/5 transition">
+            <span class="font-display text-xl text-cream" data-editable="faq-5-q">Que pasa si no puedo asistir despues de pagar?</span>
+            <span class="faq-icon text-electric text-2xl font-light shrink-0">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-cream/75 leading-relaxed" data-editable="faq-5-a">
+            Al ser presencial con cupos limitados, tu lugar se reserva exclusivamente. No hay reembolsos, pero podes transferir tu entrada a otra persona si nos avisas con al menos 48 horas de anticipacion.
+          </div>
+        </details>
+
+        <details class="border border-champagne/20 rounded-sm group">
+          <summary class="flex items-center justify-between gap-4 p-6 hover:bg-champagne/5 transition">
+            <span class="font-display text-xl text-cream" data-editable="faq-6-q">Es teorico o practico?</span>
+            <span class="faq-icon text-electric text-2xl font-light shrink-0">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-cream/75 leading-relaxed" data-editable="faq-6-a">
+            Es practico. Todo lo que aprendes lo aplicas durante la jornada. Te llevas tu sistema IA funcionando, tu paleta colorimetrica, tu pitch refinado — y un compromiso escrito a 90 dias.
+          </div>
+        </details>
+
+        <details class="border border-champagne/20 rounded-sm group">
+          <summary class="flex items-center justify-between gap-4 p-6 hover:bg-champagne/5 transition">
+            <span class="font-display text-xl text-cream" data-editable="faq-7-q">Que pasa despues del 16 de mayo?</span>
+            <span class="faq-icon text-electric text-2xl font-light shrink-0">+</span>
+          </summary>
+          <div class="px-6 pb-6 text-cream/75 leading-relaxed" data-editable="faq-7-a">
+            Los lunes siguientes empezas distinto. Si elegiste VIP, ademas tenes tu Radiografia Operativa con plan personalizado y 15 dias de comunidad cerrada para resolver dudas y mantener el foco.
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10 · CLOSING CTA ============ -->
+  <section class="py-32 sm:py-40 relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 opacity-60" style="background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(255,210,63,.08), transparent 70%);"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <h2 class="font-display text-5xl sm:text-7xl lg:text-8xl text-cream font-light leading-[0.95]">
+        <span data-editable="close-h-1">Next Level no es un evento.</span><br>
+        <span class="text-electric italic" data-editable="close-h-2">Es una decision.</span>
+      </h2>
+
+      <p class="mt-10 text-xl text-cream/80 max-w-3xl mx-auto leading-relaxed" data-editable="close-body">
+        Es dejar de postergar lo importante. Volver a liderar tu negocio. Hacerlo desde la claridad, la presencia y la accion.
+      </p>
+
+      <div class="mt-12 font-mono text-sm uppercase tracking-[0.25em] text-champagne" data-editable="close-detail">
+        Sabado 16 de mayo · 14h a 21h · Condell 1337, Providencia · 35 cupos
+      </div>
+
+      <div class="mt-12">
+        <a href="#tickets" class="pulse-cta inline-flex items-center gap-3 bg-electric text-noir font-semibold px-10 py-5 rounded-full text-lg hover:bg-yellow-300 transition">
+          <span data-editable="close-cta">Quiero llevar mi negocio al siguiente nivel</span>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-champagne/15 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="font-display text-2xl text-cream"><span data-editable="footer-logo">NEXT <em class="text-electric">Level.</em></span></div>
+      <div class="text-sm text-mutedc font-mono uppercase tracking-widest text-center" data-editable="footer-meta">Workshop presencial · Santiago de Chile · 2026</div>
+      <div class="text-xs text-mutedc font-mono" data-editable="footer-copy">© 2026 Next Level Experience</div>
+    </div>
+  </footer>
+
+  <!-- ============ EDITABLE SYSTEM ============ -->
+  <button class="fab" id="editFab" title="Editar pagina (Ctrl/Cmd + E)">✏️</button>
+  <div class="editbar" id="editBar">
+    <span class="font-mono text-xs uppercase tracking-widest text-mutedc">Modo edicion</span>
+    <span class="text-cream/40">·</span>
+    <span class="text-xs text-cream/70">Texto + Fotos + Videos Wistia</span>
+    <span class="pill ghost" id="restoreBtn" title="Borra TODOS tus cambios">Restaurar</span>
+    <span class="pill ok" id="doneBtn">Listo ✓</span>
+  </div>
+
+  <script>
+  /* ===== EDITABLE SYSTEM ===== */
+  const STORAGE_PREFIX = 'nl_';
+  let editMode = false;
+
+  function $$(sel) { return document.querySelectorAll(sel); }
+  function $(sel) { return document.querySelector(sel); }
+
+  function restoreContent() {
+    $$('[data-editable]').forEach(el => {
+      const k = STORAGE_PREFIX + 'text_' + el.dataset.editable;
+      const v = localStorage.getItem(k);
+      if (v !== null) el.innerHTML = v;
+    });
+    $$('[data-image]').forEach(el => {
+      const k = STORAGE_PREFIX + 'img_' + el.dataset.image;
+      const v = localStorage.getItem(k);
+      if (v) el.style.backgroundImage = `url(${v})`;
+    });
+    $$('[data-video]').forEach(el => {
+      const k = STORAGE_PREFIX + 'vid_' + el.dataset.video;
+      const v = localStorage.getItem(k);
+      if (v) injectWistia(el, v);
+    });
+  }
+
+  function injectWistia(slot, mediaId) {
+    slot.innerHTML = '';
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://fast.wistia.net/embed/iframe/${mediaId}?videoFoam=true`;
+    iframe.allow = 'autoplay; fullscreen';
+    iframe.allowFullscreen = true;
+    iframe.style.cssText = 'width:100%;height:100%;border:0;display:block';
+    slot.appendChild(iframe);
+    slot.classList.add('has-video');
+  }
+
+  function extractWistiaId(input) {
+    if (!input) return null;
+    const m = input.match(/medias\/([a-z0-9]+)/i) || input.match(/embed\/iframe\/([a-z0-9]+)/i);
+    if (m) return m[1];
+    if (/^[a-z0-9]+$/i.test(input.trim())) return input.trim();
+    return null;
+  }
+
+  function toggleEdit(force) {
+    editMode = (typeof force === 'boolean') ? force : !editMode;
+    document.body.classList.toggle('edit-mode', editMode);
+    $('#editFab').textContent = editMode ? '✓' : '✏️';
+    $$('[data-editable]').forEach(el => {
+      el.contentEditable = editMode ? 'true' : 'false';
+      if (editMode) el.spellcheck = false;
+    });
+  }
+
+  /* Save text on blur */
+  document.addEventListener('blur', e => {
+    if (e.target?.dataset?.editable) {
+      const k = STORAGE_PREFIX + 'text_' + e.target.dataset.editable;
+      localStorage.setItem(k, e.target.innerHTML);
+    }
+  }, true);
+
+  /* Image upload + Wistia on click */
+  document.addEventListener('click', e => {
+    if (!editMode) return;
+
+    const imgSlot = e.target.closest('[data-image]');
+    if (imgSlot) {
+      e.preventDefault();
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*';
+      input.onchange = ev => {
+        const file = ev.target.files?.[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = re => {
+          const dataUrl = re.target.result;
+          imgSlot.style.backgroundImage = `url(${dataUrl})`;
+          try {
+            localStorage.setItem(STORAGE_PREFIX + 'img_' + imgSlot.dataset.image, dataUrl);
+          } catch(err) {
+            alert('La foto es muy pesada para guardar. Intenta una mas chica (<2MB).');
+          }
+        };
+        reader.readAsDataURL(file);
+      };
+      input.click();
+      return;
+    }
+
+    const vidSlot = e.target.closest('[data-video]');
+    if (vidSlot) {
+      e.preventDefault();
+      const url = prompt('Pega la URL de Wistia o el ID del video:\n\nEjemplo:\n• https://tucuenta.wistia.com/medias/abc123\n• abc123');
+      if (url) {
+        const id = extractWistiaId(url);
+        if (!id) { alert('No reconoci ese link. Pega un link de Wistia valido.'); return; }
+        injectWistia(vidSlot, id);
+        localStorage.setItem(STORAGE_PREFIX + 'vid_' + vidSlot.dataset.video, id);
+      }
+    }
+  });
+
+  /* Buttons */
+  $('#editFab').addEventListener('click', () => toggleEdit());
+  $('#doneBtn').addEventListener('click', () => toggleEdit(false));
+  $('#restoreBtn').addEventListener('click', () => {
+    if (confirm('Esto borra TODOS tus cambios (textos, fotos, videos) y vuelve al original. Continuar?')) {
+      Object.keys(localStorage).filter(k => k.startsWith(STORAGE_PREFIX)).forEach(k => localStorage.removeItem(k));
+      location.reload();
+    }
+  });
+
+  /* Keyboard shortcut */
+  document.addEventListener('keydown', e => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'e') {
+      e.preventDefault(); toggleEdit();
+    }
+    if (e.key === 'Escape' && editMode) toggleEdit(false);
+  });
+
+  /* ===== COUNTDOWN ===== */
+  const target = new Date('2026-05-16T14:00:00-04:00').getTime();
+  function tick() {
+    const now = Date.now();
+    let diff = Math.max(0, target - now);
+    const d = Math.floor(diff / 86400000); diff -= d * 86400000;
+    const h = Math.floor(diff / 3600000);  diff -= h * 3600000;
+    const m = Math.floor(diff / 60000);    diff -= m * 60000;
+    const s = Math.floor(diff / 1000);
+    const pad = n => String(n).padStart(2, '0');
+    const el = id => document.getElementById(id);
+    if (el('cd-d')) {
+      el('cd-d').textContent = pad(d);
+      el('cd-h').textContent = pad(h);
+      el('cd-m').textContent = pad(m);
+      el('cd-s').textContent = pad(s);
+    }
+  }
+  setInterval(tick, 1000); tick();
+
+  /* ===== REVEAL ON SCROLL ===== */
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+  $$('.reveal').forEach(el => io.observe(el));
+
+  /* ===== INIT ===== */
+  restoreContent();
+  </script>
+
+</body>
+</html>

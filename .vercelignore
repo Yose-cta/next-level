@@ -1,0 +1,10 @@
+# Excluir archivos del workflow local que no deben ir a producción
+.claude/
+.cursor/
+.windsurf/
+GEMINI.md
+README.md
+next-level.html
+*.log
+.env.local
+.env.local.example

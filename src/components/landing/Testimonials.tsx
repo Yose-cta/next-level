@@ -24,7 +24,9 @@ export function Testimonials() {
                 {isRecap && (
                   <div className="flex items-center gap-3 mb-4">
                     <div className="h-px w-6 bg-magenta" />
-                    <span className="eyebrow text-magenta">Cómo se vivió</span>
+                    <span className="eyebrow text-magenta whitespace-nowrap">
+                      Cómo se vivió la experiencia Next Level
+                    </span>
                     <div className="h-px flex-1 bg-magenta/30" />
                   </div>
                 )}
@@ -45,43 +47,33 @@ export function Testimonials() {
                   />
                 </div>
 
-                <blockquote className="flex-1">
-                  <p
-                    className={
-                      isRecap
-                        ? 'font-display text-xl sm:text-2xl text-ink leading-snug'
-                        : 'font-display italic text-xl sm:text-2xl text-ink leading-snug'
-                    }
-                    data-editable={`${t.id}-quote`}
-                  >
-                    {isRecap ? t.quote : `"${t.quote}"`}
-                  </p>
-                </blockquote>
+                {!isRecap && (
+                  <>
+                    <blockquote className="flex-1">
+                      <p
+                        className="font-display italic text-xl sm:text-2xl text-ink leading-snug"
+                        data-editable={`${t.id}-quote`}
+                      >
+                        &ldquo;{t.quote}&rdquo;
+                      </p>
+                    </blockquote>
 
-                <footer
-                  className={
-                    isRecap
-                      ? 'mt-6 pt-6 border-t border-magenta/40'
-                      : 'mt-6 pt-6 border-t border-ink/15'
-                  }
-                >
-                  <div
-                    className="font-display italic text-2xl text-ink leading-none"
-                    data-editable={`${t.id}-name`}
-                  >
-                    {t.name}
-                  </div>
-                  <div
-                    className={
-                      isRecap
-                        ? 'text-sm text-magenta font-medium uppercase tracking-[0.2em] mt-2'
-                        : 'text-sm text-ash font-medium uppercase tracking-[0.2em] mt-2'
-                    }
-                    data-editable={`${t.id}-role`}
-                  >
-                    {t.role}
-                  </div>
-                </footer>
+                    <footer className="mt-6 pt-6 border-t border-ink/15">
+                      <div
+                        className="font-display italic text-2xl text-ink leading-none"
+                        data-editable={`${t.id}-name`}
+                      >
+                        {t.name}
+                      </div>
+                      <div
+                        className="text-sm text-ash font-medium uppercase tracking-[0.2em] mt-2"
+                        data-editable={`${t.id}-role`}
+                      >
+                        {t.role}
+                      </div>
+                    </footer>
+                  </>
+                )}
               </article>
             )
           })}

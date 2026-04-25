@@ -235,7 +235,39 @@ Teléfono del acompañante:`
         )}
 
         {/* ============================================ */}
-        {/* 6. GRUPO DE WHATSAPP — comunidad de compradores */}
+        {/* 6. AGENDA VIP — link al HTML printable (solo VIP) */}
+        {/* ============================================ */}
+        {isVip && !isPending && (
+          <section className="mt-14 bg-electric/5 border border-electric/40 rounded-sm p-6 sm:p-8">
+            <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-electric mb-3">
+              Tu agenda completa · Imprimible
+            </div>
+
+            <h2 className="font-display text-2xl sm:text-3xl text-cream leading-tight">
+              Mira tu agenda VIP completa
+            </h2>
+
+            <p className="mt-4 text-cream/85 leading-relaxed">
+              Cronología hora a hora del 16 de mayo + detalle de tus 3 sesiones
+              privadas + cómo agendar con cada experto.{' '}
+              <strong className="text-cream">Puedes guardarla o imprimirla.</strong>
+            </p>
+
+            <a
+              href="/vip-agenda.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center justify-center gap-3 bg-electric text-noir font-semibold px-7 py-4 rounded-full hover:bg-yellow-300 transition"
+            >
+              <span aria-hidden>★</span>
+              <span>Ver mi agenda VIP</span>
+              <span aria-hidden>→</span>
+            </a>
+          </section>
+        )}
+
+        {/* ============================================ */}
+        {/* 7. GRUPO DE WHATSAPP — VIP o General según ticket */}
         {/* ============================================ */}
         {!isPending && (
           <section className="mt-14 bg-noir-2 border border-electric/25 rounded-sm p-6 sm:p-8 relative overflow-hidden">
@@ -250,28 +282,44 @@ Teléfono del acompañante:`
 
             <div className="relative">
               <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-electric mb-3">
-                Súmate al grupo · Solo para compradores
+                {isVip
+                  ? 'Súmate al grupo VIP · Solo para compradores VIP'
+                  : 'Súmate al grupo · Solo para compradores'}
               </div>
 
               <h2 className="font-display text-2xl sm:text-3xl text-cream leading-tight">
-                Te recibimos en el grupo de Next Level Experience
+                {isVip
+                  ? 'Te recibimos en el grupo VIP'
+                  : 'Te recibimos en el grupo de Next Level Experience'}
               </h2>
 
               <p className="mt-4 text-cream/85 leading-relaxed">
-                Ahí van los recordatorios, contenido pre-evento, ubicación
-                exacta del lugar y networking con el resto del grupo. Es{' '}
-                <strong className="text-cream">privado y exclusivo</strong>{' '}
-                para quienes ya reservaron su cupo.
+                {isVip ? (
+                  <>
+                    Ahí coordinas tus 3 sesiones 1:1 con Yoselvia, Valentina y
+                    Sebastián. También recibes recordatorios, contenido
+                    pre-evento y ubicación exacta del lugar.{' '}
+                    <strong className="text-cream">Privado y exclusivo</strong>{' '}
+                    para quienes compraron el VIP.
+                  </>
+                ) : (
+                  <>
+                    Ahí van los recordatorios, contenido pre-evento, ubicación
+                    exacta del lugar y networking con el resto del grupo. Es{' '}
+                    <strong className="text-cream">privado y exclusivo</strong>{' '}
+                    para quienes ya reservaron su cupo.
+                  </>
+                )}
               </p>
 
               <a
-                href={CONTACT.whatsappGroup}
+                href={isVip ? CONTACT.whatsappGroupVip : CONTACT.whatsappGroup}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center justify-center gap-3 bg-whatsapp text-white font-semibold px-7 py-4 rounded-full hover:opacity-90 transition"
               >
                 <WhatsAppIcon />
-                <span>Unirme al grupo</span>
+                <span>{isVip ? 'Entrar al grupo VIP' : 'Unirme al grupo'}</span>
               </a>
             </div>
           </section>

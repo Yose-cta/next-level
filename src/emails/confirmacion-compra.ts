@@ -41,7 +41,8 @@ Correo del acompañante:
 Teléfono del acompañante:`
   )
 
-  const waGroup = CONTACT.whatsappGroup
+  const waGroup = isVip ? CONTACT.whatsappGroupVip : CONTACT.whatsappGroup
+  const vipAgendaUrl = `${process.env.NEXT_PUBLIC_SITE_URL ?? CONTACT.url}/vip-agenda.html`
   const calendarUrl = googleCalendarUrl({
     title: 'Next Level Experience · 2nd Edition',
     startUtc: '20260516T180000Z', // 14:00 Santiago = 18:00 UTC
@@ -104,8 +105,43 @@ Teléfono del acompañante:`
       </td></tr>`
     : ''
 
-  // ============== GRUPO WHATSAPP (todos) ==============
-  const grupoBlock = `
+  // ============== AGENDA VIP (solo VIP) ==============
+  const agendaVipBlock = isVip
+    ? `
+      <tr><td style="padding:24px 32px 0">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fff8d6;border:2px solid #ffd23f;border-radius:8px">
+          <tr><td style="padding:24px">
+            <p style="margin:0 0 6px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8a7a30;font-weight:600">★ Tu agenda completa · Imprimible</p>
+            <p style="margin:0 0 12px;font-size:20px;line-height:1.25;color:#0a0a0a;font-family:Georgia,serif">
+              Mira tu agenda VIP completa
+            </p>
+            <p style="margin:0 0 18px;font-size:14px;line-height:1.65;color:#3a3a3a">
+              Cronología hora a hora del 16 de mayo + detalle de tus 3 sesiones privadas + cómo agendar con cada experto. <strong style="color:#0a0a0a">Puedes guardarla o imprimirla.</strong>
+            </p>
+            <a href="${vipAgendaUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:13px 26px;background:#ffd23f;color:#0a0a0a;text-decoration:none;font-weight:600;font-size:14px;border-radius:999px">★ Ver mi agenda VIP</a>
+          </td></tr>
+        </table>
+      </td></tr>`
+    : ''
+
+  // ============== GRUPO WHATSAPP (VIP o General) ==============
+  const grupoBlock = isVip
+    ? `
+      <tr><td style="padding:24px 32px 0">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:rgba(255,210,63,.08);border:1px solid rgba(255,210,63,.4);border-radius:8px">
+          <tr><td style="padding:24px">
+            <p style="margin:0 0 6px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#ffd23f;font-weight:600">Súmate al grupo VIP · Solo para compradores VIP</p>
+            <p style="margin:0 0 12px;font-size:20px;line-height:1.25;color:#f5f0e8;font-family:Georgia,serif">
+              Te recibimos en el grupo VIP
+            </p>
+            <p style="margin:0 0 18px;font-size:14px;line-height:1.65;color:rgba(245,240,232,.85)">
+              Ahí coordinas tus 3 sesiones 1:1 con Yoselvia, Valentina y Sebastián. También recibes recordatorios, contenido pre-evento y ubicación exacta del lugar. <strong style="color:#f5f0e8">Privado y exclusivo</strong> para quienes compraron el VIP.
+            </p>
+            <a href="${waGroup}" style="display:inline-block;padding:13px 26px;background:#25D366;color:#fff;text-decoration:none;font-weight:600;font-size:14px;border-radius:999px">💬 Entrar al grupo VIP</a>
+          </td></tr>
+        </table>
+      </td></tr>`
+    : `
       <tr><td style="padding:24px 32px 0">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:rgba(255,210,63,.08);border:1px solid rgba(255,210,63,.4);border-radius:8px">
           <tr><td style="padding:24px">
@@ -177,6 +213,7 @@ Teléfono del acompañante:`
         </td></tr>
 
         ${vipBlock}
+        ${agendaVipBlock}
         ${acompananteBlock}
         ${grupoBlock}
 
@@ -224,6 +261,9 @@ ${
 ★ Sebastián · Revisión personalizada de comunicación y ventas (60 min)
 Te contactaremos por WhatsApp después del 16 de mayo para coordinar.
 
+TU AGENDA VIP COMPLETA (cronología + sesiones + cómo agendar):
+${vipAgendaUrl}
+
 `
     : ''
 }${
@@ -234,9 +274,15 @@ ${waAcompanante}
 
 `
       : ''
-  }SÚMATE AL GRUPO EXCLUSIVO
+  }${
+    isVip
+      ? `SÚMATE AL GRUPO VIP (privado, solo para compradores VIP)
+Ahí coordinas tus 3 sesiones 1:1 con cada mentor:
+${waGroup}`
+      : `SÚMATE AL GRUPO EXCLUSIVO
 Recordatorios, ubicación exacta y networking con el resto del grupo:
-${waGroup}
+${waGroup}`
+  }
 
 Agregar a Google Calendar: ${calendarUrl}
 WhatsApp directo: ${waDudas}

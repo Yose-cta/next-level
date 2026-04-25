@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import { TESTIMONIALS } from '@/lib/constants'
 
 export function Testimonials() {
@@ -87,10 +89,17 @@ export function Testimonials() {
             {[1, 2, 3, 4].map((n) => (
               <div
                 key={n}
-                data-image={`past-${n}`}
-                data-label={`Foto ${n}`}
-                className="aspect-square w-full border border-ink/10"
-              />
+                className="aspect-square w-full overflow-hidden border border-ink/10 bg-ink/5"
+              >
+                <Image
+                  src={`/past-event/${n}.jpg`}
+                  alt={`Edición anterior · foto ${n}`}
+                  width={960}
+                  height={1280}
+                  className="w-full h-full object-cover"
+                  sizes="(max-width: 640px) 50vw, 25vw"
+                />
+              </div>
             ))}
           </div>
         </div>

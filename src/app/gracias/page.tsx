@@ -5,7 +5,7 @@ import { CONTACT, TICKETS, WORKSHOP } from '@/lib/constants'
 import { googleCalendarUrl, whatsappUrl } from '@/lib/utils'
 
 export const metadata: Metadata = {
-  title: 'Gracias por reservar · Next Level',
+  title: 'Gracias por reservar · Next Level Experience',
   description:
     'Tu cupo está reservado. Aquí tienes todos los datos del workshop, qué hacer ahora y cómo registrar a tu acompañante.',
   robots: { index: false, follow: false },
@@ -90,7 +90,7 @@ Teléfono del acompañante:`
               <>
                 Ya estás dentro de
                 <br />
-                <em className="text-electric not-italic">Next Level.</em>
+                <em className="text-electric not-italic">Next Level Experience.</em>
               </>
             )}
           </h1>
@@ -177,9 +177,9 @@ Teléfono del acompañante:`
             </h2>
 
             <p className="mt-4 text-cream/85 leading-relaxed">
-              Comparte Next Level con alguien que también esté en su próxima
-              etapa. Registramos a tu acompañante por WhatsApp con sus datos —
-              tarda 1 minuto y ya queda listo.
+              Comparte Next Level Experience con alguien que también esté en su
+              próxima etapa. Registramos a tu acompañante por WhatsApp con sus
+              datos — tarda 1 minuto y ya queda listo.
             </p>
 
             <a
@@ -258,7 +258,7 @@ Teléfono del acompañante:`
               </div>
 
               <h2 className="font-display text-2xl sm:text-3xl text-cream leading-tight">
-                Te recibimos en el grupo de Next Level
+                Te recibimos en el grupo de Next Level Experience
               </h2>
 
               <p className="mt-4 text-cream/85 leading-relaxed">

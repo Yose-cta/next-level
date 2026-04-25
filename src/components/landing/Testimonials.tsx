@@ -27,7 +27,7 @@ export function Testimonials() {
                   <div className="flex items-center gap-3 mb-4">
                     <div className="h-px w-6 bg-magenta" />
                     <span className="eyebrow text-magenta whitespace-nowrap">
-                      Cómo se vivió la experiencia Next Level
+                      Cómo se vivió Next Level Experience
                     </span>
                     <div className="h-px flex-1 bg-magenta/30" />
                   </div>

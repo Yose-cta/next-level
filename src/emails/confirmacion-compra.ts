@@ -21,12 +21,14 @@ export function buildConfirmacionEmail({ nombre, ticketType }: BuildArgs) {
   // ticketType solo puede ser 'general' | 'vip' (TicketType en db.ts).
   // El ticket de test se mapea a 'general' automáticamente en inferTicketType.
   const isGeneral = ticketType === 'general'
-  const ticketDisplayName = isVip ? 'Entrada VIP Next Level' : 'Entrada General'
+  const ticketDisplayName = isVip
+    ? 'Entrada VIP Next Level Experience'
+    : 'Entrada General'
   const greeting = nombre ? `Hola ${nombre.split(' ')[0]}` : 'Hola'
 
   const waDudas = whatsappUrl(
     CONTACT.whatsapp.number,
-    `Hola Yoselvia! Acabo de comprar mi ${ticketDisplayName} para Next Level. Tengo una consulta:`
+    `Hola Yoselvia! Acabo de comprar mi ${ticketDisplayName} para Next Level Experience. Tengo una consulta:`
   )
 
   const waAcompanante = whatsappUrl(
@@ -51,8 +53,8 @@ Teléfono del acompañante:`
   const home = process.env.NEXT_PUBLIC_SITE_URL ?? CONTACT.url
 
   const subject = isVip
-    ? '✓ Tu cupo VIP Next Level está confirmado'
-    : '✓ Tu cupo Next Level está confirmado'
+    ? '✓ Tu cupo VIP Next Level Experience está confirmado'
+    : '✓ Tu cupo Next Level Experience está confirmado'
 
   // ============== VIP BLOCK (3 sesiones 1:1) ==============
   const vipBlock = isVip
@@ -94,7 +96,7 @@ Teléfono del acompañante:`
               ¿Vienes con alguien?
             </p>
             <p style="margin:0 0 18px;font-size:14px;line-height:1.65;color:rgba(245,240,232,.85)">
-              Comparte Next Level con alguien que también esté en su próxima etapa. Registramos a tu acompañante por WhatsApp con sus datos — tarda 1 minuto.
+              Comparte Next Level Experience con alguien que también esté en su próxima etapa. Registramos a tu acompañante por WhatsApp con sus datos — tarda 1 minuto.
             </p>
             <a href="${waAcompanante}" style="display:inline-block;padding:13px 26px;background:#f3259a;color:#fff;text-decoration:none;font-weight:600;font-size:14px;border-radius:999px">💬 Registrar a mi acompañante</a>
           </td></tr>
@@ -109,7 +111,7 @@ Teléfono del acompañante:`
           <tr><td style="padding:24px">
             <p style="margin:0 0 6px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#ffd23f;font-weight:600">Súmate al grupo · Solo para compradores</p>
             <p style="margin:0 0 12px;font-size:20px;line-height:1.25;color:#f5f0e8;font-family:Georgia,serif">
-              Te recibimos en el grupo de Next Level
+              Te recibimos en el grupo de Next Level Experience
             </p>
             <p style="margin:0 0 18px;font-size:14px;line-height:1.65;color:rgba(245,240,232,.85)">
               Ahí van los recordatorios, contenido pre-evento, ubicación exacta del lugar y networking con el resto del grupo. <strong style="color:#f5f0e8">Privado y exclusivo.</strong>
@@ -131,7 +133,7 @@ Teléfono del acompañante:`
         <tr><td style="padding:40px 32px 0;text-align:center">
           <p style="margin:0;font-size:11px;letter-spacing:.3em;color:#d4b896;font-weight:600">TU LUGAR ESTÁ RESERVADO</p>
           <h1 style="margin:16px 0 0;font-size:34px;line-height:1.1;color:#f5f0e8;font-weight:400;font-family:Georgia,serif">
-            ${greeting},<br><span style="color:#ffd23f;font-style:italic">ya estás dentro de Next Level.</span>
+            ${greeting},<br><span style="color:#ffd23f;font-style:italic">ya estás dentro de Next Level Experience.</span>
           </h1>
         </td></tr>
 
@@ -205,7 +207,7 @@ Teléfono del acompañante:`
 </body></html>`
 
   // ============== TEXT FALLBACK ==============
-  const text = `${greeting}, ya estás dentro de Next Level.
+  const text = `${greeting}, ya estás dentro de Next Level Experience.
 
 Confirmamos tu ${ticketDisplayName}.
 
@@ -241,7 +243,7 @@ WhatsApp directo: ${waDudas}
 
 Nos vemos el 16 de mayo en Santiago. Ven a vivirlo.
 
-— Next Level · ${home}
+— Next Level Experience · ${home}
 `.trim()
 
   return { subject, html, text }

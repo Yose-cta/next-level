@@ -101,7 +101,7 @@ export const TICKETS = [
   },
   {
     id: 'vip',
-    name: 'Entrada VIP Next Level',
+    name: 'Entrada VIP Next Level Experience',
     tagline: 'Para tener una mirada más personalizada',
     price: { amount: 147000, currency: 'CLP', display: '$147.000' },
     badge: 'EXPERIENCIA COMPLETA',
@@ -452,7 +452,7 @@ export const TESTIMONIALS = [
   {
     id: 'testimonio-2',
     wistiaId: '0vp7qx25i2',
-    quote: 'Así se vivió la experiencia Next Level.',
+    quote: 'Así se vivió Next Level Experience.',
     name: 'Recorrido en video',
     role: 'Resumen del evento',
   },

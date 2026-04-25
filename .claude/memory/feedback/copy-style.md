@@ -34,6 +34,16 @@
 - Cliente: Yoselvia Adam (chilena, marca personal)
 - Compradores: emprendedores chilenos principalmente
 
+## Naming canónico del producto
+
+**SIEMPRE usar el nombre completo: "Next Level Experience"**
+
+- ❌ "Next Level" (suelto)
+- ❌ "Next Level Workshop"
+- ✅ "Next Level Experience"
+
+Excepción permitida: cuando ya hay "experiencia" antes (evitar doble palabra), reformular para que solo aparezca "Next Level Experience" una vez.
+
 ## Tono general
 
 - Editorial premium pero cercano

@@ -27,7 +27,7 @@ function getKey() {
 
 function getFrom() {
   const email = process.env.RESEND_FROM_EMAIL ?? 'onboarding@resend.dev'
-  const name = process.env.RESEND_FROM_NAME ?? 'Next Level'
+  const name = process.env.RESEND_FROM_NAME ?? 'Next Level Experience'
   return `${name} <${email}>`
 }
 

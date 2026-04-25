@@ -31,7 +31,7 @@ export async function GET(req: NextRequest) {
       items: [
         {
           id: ticket.id,
-          title: `Next Level Workshop · ${ticket.name}`,
+          title: `Next Level Experience · ${ticket.name}`,
           description: `${WORKSHOP.date.display} · ${WORKSHOP.venue.full}`,
           quantity: 1,
           currency_id: 'CLP',

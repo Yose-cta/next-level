@@ -14,33 +14,26 @@ export function Takeaways() {
       <div className="absolute top-12 left-8 hidden lg:block number-decor">04</div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid lg:grid-cols-12 gap-10 mb-16 sm:mb-20 reveal">
-          <div className="lg:col-span-5">
-            <div className="flex items-center gap-4 mb-7">
-              <div className="h-px w-8 bg-gold" />
-              <div className="eyebrow">En 6 horas vas a salir con...</div>
-            </div>
-            <h2 className="font-display text-display-lg text-ink">
-              <span data-editable="take-h">
-                6 cosas concretas.<br />
-                <span className="italic text-magenta">No promesas vacías.</span>
-              </span>
-            </h2>
-          </div>
-          <div className="lg:col-span-6 lg:col-start-7 self-end">
-            <p
-              className="text-lg text-charcoal leading-relaxed font-light"
-              data-editable="take-body"
-            >
-              No te vamos a prometer que en una jornada vas a resolver todo tu
-              negocio. Pero sí vas a salir con{' '}
-              <em className="text-ink not-italic font-medium">
-                claridad, herramientas y pasos concretos
-              </em>{' '}
-              para empezar a soltar carga, proyectarte mejor y comunicar con más
-              seguridad.
-            </p>
-          </div>
+        {/* Header centrado: eyebrow + headline + body — todo en columna, sin gap visual */}
+        <div className="text-center max-w-4xl mx-auto mb-16 sm:mb-20 reveal">
+          <h2 className="font-display text-display-lg text-ink">
+            <span data-editable="take-h">
+              6 cosas concretas.{' '}
+              <span className="italic text-magenta">No promesas vacías.</span>
+            </span>
+          </h2>
+          <p
+            className="mt-7 text-lg text-charcoal leading-relaxed font-light max-w-2xl mx-auto"
+            data-editable="take-body"
+          >
+            No te vamos a prometer que en una jornada vas a resolver todo tu
+            negocio. Pero sí vas a salir con{' '}
+            <em className="text-ink not-italic font-medium">
+              claridad, herramientas y pasos concretos
+            </em>{' '}
+            para empezar a soltar carga, proyectarte mejor y comunicar con más
+            seguridad.
+          </p>
         </div>
 
         <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

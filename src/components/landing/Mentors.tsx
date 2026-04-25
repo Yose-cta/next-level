@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import { MENTORS, type Mentor } from '@/lib/constants'
 
 /**
@@ -60,10 +62,18 @@ function MentorBlock({ mentor, index }: { mentor: Mentor; index: number }) {
       <div className={`lg:col-span-5 ${isOdd ? 'lg:order-last' : ''}`}>
         <div className="relative">
           <div
-            data-image={`mentor-${mentor.id}`}
-            data-label={`${mentor.name} · sube su foto`}
-            className={`aspect-[4/5] w-full ${index % 2 === 0 ? 'clip-corner-tr' : 'clip-corner-bl'}`}
-          />
+            className={`aspect-[4/5] w-full overflow-hidden bg-noir-3 ${index % 2 === 0 ? 'clip-corner-tr' : 'clip-corner-bl'}`}
+          >
+            <Image
+              src={`/mentors/${mentor.id}.png`}
+              alt={`${mentor.name} — ${mentor.role}`}
+              width={1080}
+              height={1080}
+              className="w-full h-full object-cover"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              priority={index === 0}
+            />
+          </div>
 
           {/* Etiqueta módulo */}
           <div className="absolute top-4 left-4 flex items-center gap-2 glass-dark px-3 py-1.5 z-10">

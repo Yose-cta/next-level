@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import { Instrument_Serif, Inter, JetBrains_Mono } from 'next/font/google'
-import { EditModeProvider } from '@/components/editable/EditModeProvider'
 import { LuxuryEffects } from '@/components/LuxuryEffects'
 import { RevealOnScroll } from '@/components/RevealOnScroll'
 import { WhatsAppFloating } from '@/components/landing/WhatsAppFloating'
@@ -90,7 +89,6 @@ export default function RootLayout({
       <body className="bg-midnight text-white font-sans antialiased">
         {children}
         <WhatsAppFloating />
-        <EditModeProvider />
         <RevealOnScroll />
         <LuxuryEffects />
         <Trackers />

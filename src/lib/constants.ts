@@ -45,7 +45,7 @@ export const CONTACT = {
 } as const
 
 export const BRAND = {
-  logoSrc: '/next-level-logo.png',
+  logoSrc: '/logo.png',
   logoAlt: 'NEXT LEVEL',
 } as const
 

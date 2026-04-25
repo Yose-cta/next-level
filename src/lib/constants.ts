@@ -424,7 +424,7 @@ export const FAQS = [
   },
   {
     q: '¿La entrada incluye acompañante?',
-    a: 'Sí. La entrada incluye modalidad 2x1: puedes llevar un acompañante. Las entradas son personales y no transferibles, pero el cupo de tu acompañante queda incluido sin costo adicional.',
+    a: 'Solo la Entrada General incluye 2x1: puedes llevar un acompañante sin costo adicional. La Entrada VIP no tiene 2x1 — es individual, pero a cambio recibes 3 sesiones privadas 1:1 online post-evento (1 hora con cada experto). Las entradas son personales y no transferibles.',
   },
   {
     q: '¿Qué pasa después de comprar mi entrada?',

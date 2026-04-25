@@ -1,4 +1,6 @@
+import Image from 'next/image'
 import Link from 'next/link'
+
 import { WORKSHOP } from '@/lib/constants'
 
 /**
@@ -119,12 +121,18 @@ export function Hero() {
                 aria-hidden
               />
 
-              {/* FOTO editable — la cliente sube con Cmd+E */}
-              <div
-                data-image="hero-photo"
-                data-label="Foto del equipo · sube tu imagen"
-                className="aspect-[4/5] w-full rounded-md border border-white/10 shadow-medium relative overflow-hidden"
-              />
+              {/* FOTO Hero — equipo Next Level */}
+              <div className="aspect-square w-full rounded-md border border-white/10 shadow-medium relative overflow-hidden bg-noir-3">
+                <Image
+                  src="/hero.png"
+                  alt="Equipo Next Level — Yoselvia, Sebastián y Valentina"
+                  width={1254}
+                  height={1254}
+                  className="w-full h-full object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  priority
+                />
+              </div>
 
               {/* Sello fecha flotante top-left */}
               <div className="absolute -top-4 -left-4 sm:-top-5 sm:-left-5 glass-dark px-5 py-4 z-10 shadow-glow-magenta">

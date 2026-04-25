@@ -197,6 +197,12 @@ NEXT_PUBLIC_WHATSAPP_MESSAGE=Hola Yoselvia! Quiero más información sobre Next 
 - **Fix**: Renombrar a `PromiseSection`.
 - **Aplicar en**: Nunca usar nombres de globales JS (Promise, Map, Set, Date, Error) como identificadores de componentes.
 
+### 2026-04-24: Reveal-on-scroll requiere IntersectionObserver client component
+- **Error**: HTML standalone tenía `IntersectionObserver` inline en `<script>` que activaba `.reveal → .visible`. Al portar a Next.js, los componentes server quedaron con `.reveal` (opacity 0) sin nada que los activara → página renderizó completamente "negra" (texto invisible).
+- **Síntoma**: Build pasa, deploy OK, HTTP 200, HTML válido con `text-cream` aplicado. Computed style del span dice `color: rgb(245,240,232)` y `opacity: 1` en el SPAN, pero el padre `.reveal` con opacity 0 lo oculta.
+- **Fix**: Crear `src/components/RevealOnScroll.tsx` ('use client') que monta IO una vez y observa `.reveal` elementos. Importar en layout.tsx después del children. Fallback: si no hay IO disponible, marcar todos como visible.
+- **Aplicar en**: Cualquier port de HTML standalone con `.reveal`/`.fade-in`/scroll animations a React. Server components no pueden ejecutar IO — necesitan un client wrapper.
+
 ### 2026-04-24: npx tsc detecta package fantasma cuando no encuentra local
 - **Error**: `npx tsc` cuando no hay `tsc` en PATH instala `tsc@2.0.4` (un package no relacionado al TypeScript real).
 - **Fix**: Llamar el binario directo: `node node_modules/typescript/bin/tsc --noEmit`.

@@ -5,7 +5,7 @@ import { createPreference } from '@/lib/mercadopago'
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
-const VALID_TICKETS = ['general', 'vip'] as const
+const VALID_TICKETS = ['general', 'vip', 'test'] as const
 type ValidTicket = (typeof VALID_TICKETS)[number]
 
 function isValidTicket(v: string): v is ValidTicket {
@@ -34,7 +34,7 @@ export async function GET(req: NextRequest) {
           title: `Next Level Workshop · ${ticket.name}`,
           description: `${WORKSHOP.date.display} · ${WORKSHOP.venue.full}`,
           quantity: 1,
-          currency_id: 'USD',
+          currency_id: 'CLP',
           unit_price: ticket.price.amount,
           category_id: 'tickets',
         },

@@ -1,15 +1,14 @@
 import {
   Closing,
   CostOfInaction,
-  ExperienceBlocks,
   FAQ,
   Footer,
   Guarantee,
   Hero,
   Mentors,
   Mirror,
-  PromiseSection,
   StickyBar,
+  Takeaways,
   Testimonials,
   Tickets,
   Ticker,
@@ -23,9 +22,8 @@ export default function HomePage() {
       <Ticker />
       <Mirror />
       <CostOfInaction />
-      <PromiseSection />
-      <ExperienceBlocks />
       <Mentors />
+      <Takeaways />
       <Tickets />
       <Testimonials />
       <Guarantee />

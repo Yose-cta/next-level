@@ -1,16 +1,20 @@
 /**
- * Next Level Workshop — fuente única de verdad para datos del evento.
- * Los componentes leen de aquí; cambios de fecha/precio/lugar viven en este archivo.
+ * Next Level Experience — fuente única de verdad para datos del evento.
+ * Lenguaje: español neutro chileno (tú, haces, sales, etc.)
  */
 
 export const WORKSHOP = {
-  name: 'Next Level',
-  edition: 'Edición 03 · Mayo 2026',
-  tagline: 'Workshop presencial · Santiago · 2026',
+  name: 'Next Level Experience',
+  edition: '2nd Edition',
+  tagline: 'Next Level Experience · Half-Day · Santiago 2026',
+  format: 'Half-Day Experience',
   date: {
     iso: '2026-05-16T14:00:00-04:00',
     display: 'Sábado 16 de mayo 2026',
     short: '16 Mayo · 14h–21h',
+    day: '16',
+    month: 'MAY',
+    year: '2026',
   },
   duration: '6 horas presenciales',
   venue: {
@@ -29,11 +33,16 @@ export const CONTACT = {
     number: '56935834551',
     display: '+56 9 3583 4551',
     message:
-      'Hola Yoselvia! Quiero más información sobre Next Level Workshop del 16 de mayo',
+      'Hola Yoselvia! Quiero más información sobre Next Level Experience del 16 de mayo',
   },
   email: 'hola@yosmentedigital.com',
   domain: 'nl.yosmentedigital.com',
   url: 'https://nl.yosmentedigital.com',
+} as const
+
+export const BRAND = {
+  logoSrc: '/next-level-logo.png',
+  logoAlt: 'NEXT LEVEL',
 } as const
 
 export const TICKETS = [
@@ -41,11 +50,11 @@ export const TICKETS = [
     id: 'general',
     name: 'Entrada General',
     tagline: 'Para implementar',
-    price: { amount: 67, currency: 'USD', display: '$67' },
+    price: { amount: 67000, currency: 'CLP', display: '$67.000' },
     badge: null,
-    description: 'Acceso completo al taller de 6 horas.',
+    description: 'Acceso completo al taller de 6 horas presenciales.',
     features: [
-      'Acceso presencial al Next Level Workshop (6 horas)',
+      'Acceso presencial al Next Level Experience (6 horas)',
       'Trabajo en vivo con los 3 expertos (IA · Imagen · Comunicación)',
       'Materiales impresos para aplicar durante el evento',
       'Coffee break + networking',
@@ -53,12 +62,13 @@ export const TICKETS = [
       '2x1: lleva un acompañante',
     ],
     cta: 'Reservar General',
+    hidden: false,
   },
   {
     id: 'vip',
     name: 'Entrada VIP Next Level',
     tagline: 'Para acelerar',
-    price: { amount: 147, currency: 'USD', display: '$147' },
+    price: { amount: 147000, currency: 'CLP', display: '$147.000' },
     badge: 'MÁS VENDIDO',
     description: 'Todo lo de General + sesión 1:1 online post-evento con Yoselvia.',
     features: [
@@ -71,9 +81,21 @@ export const TICKETS = [
     highlight: {
       title: '+1 hora exclusiva 1:1 ONLINE con Yoselvia · Activo VIP',
       body:
-        'Después del evento, agendamos tu sesión 1:1 online. Mini Radiografía Operativa de TU negocio en vivo: auditamos con datos reales y Claude trabajando por vos. Te llevas: informe personalizado, 5 Fugas Invisibles cuantificadas en dinero, Matriz EOAD y plan a 30-60-90 días.',
+        'Después del evento agendamos tu sesión 1:1 online. Mini Radiografía Operativa de TU negocio en vivo: auditamos con datos reales y Claude trabajando en tiempo real. Te llevas: informe personalizado, 5 Fugas Invisibles cuantificadas en dinero, Matriz EOAD y plan a 30-60-90 días.',
     },
     cta: 'Reservar VIP',
+    hidden: false,
+  },
+  {
+    id: 'test',
+    name: 'Test de Pago',
+    tagline: 'Solo testing — no es entrada real',
+    price: { amount: 1000, currency: 'CLP', display: '$1.000' },
+    badge: null,
+    description: 'Botón de prueba para validar el flujo end-to-end de Mercado Pago.',
+    features: ['Crea preference → checkout MP → webhook → Supabase → email Resend'],
+    cta: 'Probar pago $1.000',
+    hidden: true,
   },
 ] as const
 
@@ -81,127 +103,108 @@ export const MENTORS = [
   {
     id: 'yoselvia',
     name: 'Yoselvia Adam',
-    role: 'Mentora de negocios conscientes impulsados con IA',
-    tag: 'Mentora · IA aplicada',
+    role: 'Mentora de IA Aplicada',
+    expertise: 'Negocios conscientes impulsados con Claude',
+    tag: 'IA aplicada · Operación inteligente',
     moduleNumber: '01',
-    moduleTime: '14:30 — 16:00 · 90 min',
+    moduleTime: '14:30 — 16:00',
     accent: 'electric',
     lema: 'No te enseño a usar Claude. Te enseño a OPERAR con Claude.',
-    body:
-      'Construís en vivo tu OPERACIÓN INTELIGENTE: un sistema operativo completo con 5 agentes IA coordinados + el mapa de las 5 etapas para construir cualquier negocio profesional.',
+    bio: 'Estratega y consultora de negocios especializada en construir sistemas operativos con IA. Formó a +500 emprendedores latinoamericanos en pasar de operar su negocio a dirigirlo desde el sistema.',
+    teaches: 'Cómo construir tu Operación Inteligente con 5 agentes IA coordinados que trabajan por ti.',
     deliverables: [
       'Tu CLAUDE.md personalizado (el cerebro)',
-      'Tu Director de Operaciones IA configurado',
-      '4 Agentes especializados: Marketing · Ventas · Entrega · Administración',
-      '3 tareas programadas trabajando por vos',
+      'Director de Operaciones IA + 4 Agentes especializados',
+      '3 tareas programadas trabajando por ti',
       'El Mapa de las 5 Etapas del Sistema Operativo',
       'Tu tarjeta anti-sesgos física',
     ],
-    cierre: 'El lunes siguiente tu sistema ya está operando.',
   },
   {
     id: 'valentina',
     name: 'Valentina Silva',
-    role: 'Asesora de imagen y color presencial',
-    tag: 'Asesora · Imagen + Color',
+    role: 'Asesora de Imagen & Color',
+    expertise: 'Análisis colorimétrico presencial y autoridad visual',
+    tag: 'Imagen + Color · Presencia',
     moduleNumber: '02',
-    moduleTime: '16:30 — 18:00 · 90 min',
-    accent: 'champagne',
-    lema: 'Tu imagen no es solo cómo te ves. Es cómo habitás tu marca.',
-    body:
-      'En vivo, espejo en mano, descubrís la paleta de colores y los estilos que potencian tu energía y comunican autoridad. Te vas con tu carta de identidad visual lista para usar.',
+    moduleTime: '16:30 — 18:00',
+    accent: 'magenta',
+    lema: 'Tu imagen no es solo cómo te ves. Es cómo habitas tu marca.',
+    bio: 'Asesora de imagen presencial con +10 años de experiencia. Trabaja la presencia visual como herramienta de autoridad para emprendedoras y consultoras que quieren proyectar otro nivel.',
+    teaches: 'Cómo construir tu paleta colorimétrica personal y vestir desde tu identidad.',
     deliverables: [
-      'Tu paleta colorimétrica personal (análisis presencial)',
-      'Estilos que potencian tu energía y comunican autoridad',
-      'Reglas de vestir según ocasión sin perder autenticidad',
-      'Presencia visual coherente con el nivel que querés proyectar',
-    ],
-    cierre: 'Tu imagen abre puertas antes de que digas una palabra.',
-  },
-  {
-    id: 'sebastian',
-    name: 'Sebastián Villar',
-    role: 'Mentor en comunicación y ventas',
-    tag: 'Mentor · Comunicación + Ventas',
-    moduleNumber: '03',
-    moduleTime: '18:30 — 20:00 · 90 min',
-    accent: 'blood',
-    lema: 'Cuando comunicás desde tu verdad, las ventas dejan de sentirse forzadas.',
-    body:
-      'Trabajás tu presencia y tu expresión auténtica. Practicás pitch en parejas, con feedback en vivo. Salís con un mensaje que suena tuyo — porque por primera vez, lo es.',
-    deliverables: [
-      'Conexión emocional antes de intentar convencer',
-      'Voz, lenguaje corporal y emociones que generan confianza real',
-      'Comunicación desde tu historia, no desde la presión',
-      'Persuasión natural y congruente con tu energía',
-    ],
-    cierre: 'Cuando te creen, compran. Sin rogar. Sin descuento.',
-  },
-] as const
-
-export const EXPERIENCE_BLOCKS = [
-  {
-    id: 'block-1',
-    moduleNumber: '01',
-    mentor: 'Yoselvia Adam',
-    accent: 'electric',
-    title: 'Tu sistema operativo IA, construido en vivo',
-    learn: 'Cómo pensar tu negocio como una operación inteligente, no como una lista de tareas. Cuándo la IA te libera tiempo y cuándo te quita criterio.',
-    take: [
-      'Tu CLAUDE.md personalizado (el cerebro de tu operación)',
-      'Director de Operaciones IA + 4 agentes (Marketing · Ventas · Entrega · Administración)',
-      '3 tareas programadas trabajando por vos',
-      'Tu tarjeta anti-sesgos física',
-    ],
-    change:
-      'Salís con una empresa que opera sola en lo repetitivo. Vos lideras lo estratégico. El lunes ya está operando.',
-  },
-  {
-    id: 'block-2',
-    moduleNumber: '02',
-    mentor: 'Valentina Silva',
-    accent: 'champagne',
-    title: 'Tu identidad visual, alineada con tu autoridad',
-    learn: 'Por qué tu imagen comunica antes que tus palabras. Qué colores te abren puertas y cuáles te restan presencia.',
-    take: [
       'Tu paleta colorimétrica personal (análisis presencial con espejo)',
       'Tu carta de identidad visual lista para usar',
       'Reglas de vestir según ocasión sin perder esencia',
       'Estilos que comunican autoridad y energía',
     ],
-    change:
-      'Salís con una presencia visual que respalda tu mensaje. La gente te lee distinto antes de que abras la boca.',
   },
   {
-    id: 'block-3',
+    id: 'sebastian',
+    name: 'Sebastián Villar',
+    role: 'Mentor en Comunicación y Ventas',
+    expertise: 'Pitch auténtico, persuasión sin presión',
+    tag: 'Comunicación + Ventas · Voz',
     moduleNumber: '03',
-    mentor: 'Sebastián Villar',
-    accent: 'blood',
-    title: 'Tu comunicación de ventas, sin sentirse forzada',
-    learn: 'Cómo conectar antes de convencer. Por qué tu voz, tu cuerpo y tu historia venden más que cualquier técnica de cierre.',
-    take: [
+    moduleTime: '18:30 — 20:00',
+    accent: 'cyan',
+    lema: 'Cuando comunicas desde tu verdad, las ventas dejan de sentirse forzadas.',
+    bio: 'Mentor en ventas auténticas y comunicación humana. Acompañó a +300 profesionales a vender sus servicios sin scripts ni presión, desde su voz real.',
+    teaches: 'Cómo comunicar tu valor desde tu historia y vender sin sentirte forzado.',
+    deliverables: [
       'Tu pitch refinado y practicado con feedback en vivo',
       'Estructura de conversación de venta auténtica',
       'Mapa de tus historias clave para ventas',
       'Protocolo de presencia que proyecta autoridad',
     ],
-    change:
-      'Salís con un mensaje que suena tuyo. Vendés desde tu verdad, no desde la presión. Y cuando te creen, compran.',
+  },
+] as const
+
+export const TAKEAWAYS = [
+  {
+    n: '01',
+    title: 'Tu sistema operativo IA',
+    body: 'CLAUDE.md personalizado + Director de Operaciones + 4 agentes coordinados (Marketing · Ventas · Entrega · Administración) trabajando para ti desde el lunes.',
+  },
+  {
+    n: '02',
+    title: 'Tu mensaje de marca claro',
+    body: 'Tu propuesta en 3 niveles de voz: pitch corto, conversación de venta y narrativa larga. Lo que dices cuando te preguntan a qué te dedicas — finalmente claro.',
+  },
+  {
+    n: '03',
+    title: 'Tu paleta colorimétrica personal',
+    body: 'Análisis presencial con espejo. Tu carta de identidad visual con los colores que abren puertas y los que evitar. Listo para imprimir.',
+  },
+  {
+    n: '04',
+    title: 'Tu pitch refinado',
+    body: 'Practicas en parejas con feedback en vivo de Sebastián. Sales con tu mensaje pulido, tu lenguaje corporal alineado y tu historia ordenada.',
+  },
+  {
+    n: '05',
+    title: 'Protocolo de presencia',
+    body: 'Cómo entras a una reunión, cómo te sientas, cómo respiras antes de hablar. Las micro-decisiones que construyen autoridad antes de que digas la primera palabra.',
+  },
+  {
+    n: '06',
+    title: 'Tu plan a 90 días',
+    body: 'Compromiso escrito antes de irte. Las 3 acciones específicas que vas a ejecutar el lunes, el primer mes y el primer trimestre.',
   },
 ] as const
 
 export const FAQS = [
   {
     q: '¿Y si no me sirve?',
-    a: 'Este workshop está diseñado para que implementes en el momento. No vienes a escuchar teoría — vas a trabajar sobre tu propio negocio con ejercicios prácticos guiados en vivo. Si en los primeros 60 minutos no sentís que va a cambiar tu negocio, te devolvemos el 100%.',
+    a: 'Esta experiencia está diseñada para que implementes en el momento. No vienes a escuchar teoría — trabajas sobre tu propio negocio con ejercicios prácticos guiados en vivo. Si en los primeros 60 minutos no sientes que va a cambiar tu negocio, te devolvemos el 100%.',
   },
   {
-    q: '¿Por qué solo un día?',
-    a: 'Porque lo que falta no es más tiempo — es enfoque. En una jornada intensiva y bien estructurada lograrás avances reales que llevás meses postergando. Este formato es para personas que necesitan claridad y resultados ya.',
+    q: '¿Por qué solo medio día?',
+    a: 'Porque lo que falta no es más tiempo — es enfoque. En una jornada intensiva y bien estructurada logras avances reales que llevas meses postergando. Este formato es para personas que necesitan claridad y resultados ya.',
   },
   {
     q: 'Ya hice otros cursos. ¿Esto me va a aportar algo?',
-    a: 'Justamente por eso es para vos. Esto no es contenido para acumular — es implementación real. Es para quien ya tiene un negocio activo y busca orden, claridad y una imagen coherente para escalar.',
+    a: 'Justamente por eso es para ti. Esto no es contenido para acumular — es implementación real. Es para quien ya tiene un negocio activo y busca orden, claridad y una imagen coherente para escalar.',
   },
   {
     q: 'Soy tímido y me cuesta mostrarme. ¿Es para mí?',
@@ -209,15 +212,15 @@ export const FAQS = [
   },
   {
     q: '¿Qué pasa si no puedo asistir después de pagar?',
-    a: 'Al ser presencial con cupos limitados, tu lugar se reserva exclusivamente. No hay reembolsos, pero podés transferir tu entrada a otra persona si nos avisás con al menos 48 horas de anticipación.',
+    a: 'Al ser presencial con cupos limitados, tu lugar se reserva exclusivamente. No hay reembolsos, pero puedes transferir tu entrada a otra persona si nos avisas con al menos 48 horas de anticipación.',
   },
   {
     q: '¿Es teórico o práctico?',
-    a: 'Es práctico. Todo lo que aprendés lo aplicás durante la jornada. Te llevás tu sistema IA funcionando, tu paleta colorimétrica, tu pitch refinado — y un compromiso escrito a 90 días.',
+    a: 'Es práctico. Todo lo que aprendes lo aplicas durante la jornada. Te llevas tu sistema IA funcionando, tu paleta colorimétrica, tu pitch refinado — y un compromiso escrito a 90 días.',
   },
   {
     q: '¿Qué pasa después del 16 de mayo?',
-    a: 'Los lunes siguientes empezás distinto. Si elegiste VIP, además tenés tu sesión 1:1 online con Yoselvia (Mini Radiografía Operativa con plan personalizado a 30-60-90 días) y 15 días de comunidad VIP cerrada para resolver dudas y mantener el foco.',
+    a: 'Los lunes siguientes empiezas distinto. Si elegiste VIP, además tienes tu sesión 1:1 online con Yoselvia (Mini Radiografía Operativa con plan personalizado a 30-60-90 días) y 15 días de comunidad VIP cerrada para resolver dudas y mantener el foco.',
   },
 ] as const
 
@@ -232,7 +235,7 @@ export const TESTIMONIALS = [
   {
     id: 'testimonio-2',
     quote:
-      'Pagué por un workshop. Volví con una empresa diferente. La parte de IA con Yoselvia me ahorra hoy 12 horas a la semana — literal.',
+      'Pagué por una experiencia. Volví con una empresa diferente. La parte de IA con Yoselvia me ahorra hoy 12 horas a la semana — literal.',
     name: 'Nombre del testimonio 2',
     role: 'Cargo · Ciudad',
   },
@@ -246,14 +249,14 @@ export const TESTIMONIALS = [
 ] as const
 
 export const META = {
-  title: 'Next Level Workshop · Sábado 16 Mayo 2026 · Santiago',
+  title: 'Next Level Experience · 2nd Edition · 16 Mayo 2026 · Santiago',
   description:
-    'Workshop presencial de 6 horas. 3 mentores en vivo: IA aplicada con Claude, imagen y comunicación. Te llevas un sistema funcionando — no apuntes. Cupos limitados.',
-  ogImage: '/og-image.png',
+    'Half-Day Experience presencial. 3 mentores en vivo: IA aplicada con Claude, imagen y comunicación. Te llevas un sistema funcionando — no apuntes. Cupos limitados.',
+  ogImage: '/next-level-logo.png',
 } as const
 
 export type Mentor = (typeof MENTORS)[number]
 export type Ticket = (typeof TICKETS)[number]
-export type ExperienceBlock = (typeof EXPERIENCE_BLOCKS)[number]
+export type Takeaway = (typeof TAKEAWAYS)[number]
 export type Faq = (typeof FAQS)[number]
 export type Testimonial = (typeof TESTIMONIALS)[number]

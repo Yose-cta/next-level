@@ -10,85 +10,82 @@ const config: Config = {
     },
     extend: {
       colors: {
-        noir: {
-          DEFAULT: '#0a0a0a',
-          2: '#141414',
-          3: '#1a1a1a',
-          4: '#22201d',
-        },
-        cream: {
-          DEFAULT: '#f5f0e8',
-          dim: 'rgba(245, 240, 232, 0.75)',
-          mute: 'rgba(245, 240, 232, 0.55)',
-        },
-        mutedc: '#8a8580',
-        champagne: {
-          DEFAULT: '#d4b896',
-          dim: 'rgba(212, 184, 150, 0.75)',
-        },
-        gold: '#c9a868',
-        electric: {
-          DEFAULT: '#ffd23f',
-          soft: 'rgba(255, 210, 63, 0.15)',
-        },
-        magenta: {
-          DEFAULT: '#ec4899',
-          soft: 'rgba(236, 72, 153, 0.15)',
-        },
-        blood: {
-          DEFAULT: '#dc2626',
-          soft: 'rgba(220, 38, 38, 0.15)',
-        },
+        // ============ DARK theme (deep midnight purple) ============
+        midnight: { DEFAULT: '#0a0820', 2: '#100d36', 3: '#161236', 4: '#1f1845' },
+        cosmos: '#060418',
+
+        // ============ LIGHT theme (warm bone) ============
+        bone: { DEFAULT: '#f4f1ea', light: '#faf8f3', dark: '#ebe7dd' },
+        paper: '#faf8f3',
+        shell: '#ebe7dd',
+
+        // ============ Text colors ============
+        ink: { DEFAULT: '#1a1612', soft: '#2c2620' },
+        charcoal: '#44403c',
+        ash: '#78716c',          // ash for LIGHT bg
+        smoke: 'rgba(255, 255, 255, 0.7)',  // smoke for DARK bg
+        whisper: 'rgba(255, 255, 255, 0.45)',
+
+        // ============ Brand accents (SOLO 2: electric + magenta) ============
+        electric: { DEFAULT: '#f6cf2f', soft: 'rgba(246, 207, 47, 0.15)' },
+        magenta: { DEFAULT: '#f3259a', soft: 'rgba(243, 37, 154, 0.15)' },
+        gold: { DEFAULT: '#b08d4a', dark: '#8a6d3b', light: '#c9a967' },
+
+        white: '#ffffff',
         whatsapp: '#25D366',
       },
       fontFamily: {
-        display: ['var(--font-display)', 'Fraunces', 'serif'],
+        display: ['var(--font-display)', 'Instrument Serif', 'Georgia', 'serif'],
         sans: ['var(--font-sans)', 'Inter', 'ui-sans-serif', 'system-ui'],
-        mono: ['var(--font-mono)', 'Spline Sans Mono', 'ui-monospace', 'monospace'],
+        mono: ['var(--font-mono)', 'JetBrains Mono', 'ui-monospace', 'monospace'],
       },
       letterSpacing: {
         editorial: '0.25em',
+        wider2: '0.18em',
         tightest: '-0.04em',
+        tight2: '-0.02em',
       },
       fontSize: {
-        'display-xl': ['clamp(3.5rem, 12vw, 9rem)', { lineHeight: '0.85', letterSpacing: '-0.04em' }],
-        'display-lg': ['clamp(2.5rem, 7vw, 5rem)', { lineHeight: '0.95', letterSpacing: '-0.03em' }],
+        'display-xl': ['clamp(2.75rem, 7vw, 6rem)', { lineHeight: '1.02', letterSpacing: '-0.025em' }],
+        'display-lg': ['clamp(2rem, 5vw, 4.5rem)', { lineHeight: '1.05', letterSpacing: '-0.02em' }],
+        'display-md': ['clamp(1.5rem, 3.5vw, 2.75rem)', { lineHeight: '1.15', letterSpacing: '-0.015em' }],
+        'display-sm': ['clamp(1.25rem, 2.5vw, 2rem)', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
       },
       animation: {
         marquee: 'marquee 38s linear infinite',
-        'pulse-ring': 'pulse-ring 2.4s infinite',
-        'fade-up': 'fade-up 0.9s ease forwards',
-        shimmer: 'shimmer 2.6s linear infinite',
+        orbit: 'orbit 60s linear infinite',
+        'orbit-reverse': 'orbit-reverse 80s linear infinite',
+        'orb-magenta': 'orb-magenta 22s ease-in-out infinite',
+        'orb-electric': 'orb-electric 26s ease-in-out infinite',
+        'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
       },
       keyframes: {
-        marquee: {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-50%)' },
+        marquee: { from: { transform: 'translateX(0)' }, to: { transform: 'translateX(-50%)' } },
+        orbit: { from: { transform: 'rotate(0deg)' }, to: { transform: 'rotate(360deg)' } },
+        'orbit-reverse': { from: { transform: 'rotate(360deg)' }, to: { transform: 'rotate(0deg)' } },
+        'orb-magenta': {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '50%': { transform: 'translate(60px, -40px) scale(1.1)' },
         },
-        'pulse-ring': {
-          '0%': { boxShadow: '0 0 0 0 rgba(255, 210, 63, 0.5)' },
-          '70%': { boxShadow: '0 0 0 14px rgba(255, 210, 63, 0)' },
-          '100%': { boxShadow: '0 0 0 0 rgba(255, 210, 63, 0)' },
+        'orb-electric': {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '50%': { transform: 'translate(-50px, 50px) scale(1.05)' },
         },
-        'fade-up': {
-          from: { opacity: '0', transform: 'translateY(20px)' },
-          to: { opacity: '1', transform: 'translateY(0)' },
+        'pulse-soft': {
+          '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+          '50%': { opacity: '0.7', transform: 'scale(1.05)' },
         },
-        shimmer: {
-          '0%': { backgroundPosition: '-200% 0' },
-          '100%': { backgroundPosition: '200% 0' },
-        },
-      },
-      backgroundImage: {
-        'noise':
-          "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.94  0 0 0 0 0.91  0 0 0 0.045 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>\")",
-        'shimmer':
-          'linear-gradient(110deg, transparent 30%, rgba(255,210,63,0.2) 50%, transparent 70%)',
       },
       boxShadow: {
-        'glow-electric': '0 10px 30px rgba(255, 210, 63, 0.35)',
-        'glow-magenta': '0 10px 30px rgba(236, 72, 153, 0.45)',
-        'editorial': '0 30px 60px rgba(0, 0, 0, 0.5)',
+        'soft': '0 1px 2px rgba(10, 8, 32, 0.06), 0 4px 12px rgba(10, 8, 32, 0.04)',
+        'medium': '0 2px 4px rgba(10, 8, 32, 0.08), 0 12px 32px rgba(10, 8, 32, 0.10)',
+        'lift': '0 4px 8px rgba(10, 8, 32, 0.10), 0 20px 60px rgba(10, 8, 32, 0.15)',
+        'glow-electric': '0 10px 40px rgba(246, 207, 47, 0.3)',
+        'glow-magenta': '0 10px 40px rgba(243, 37, 154, 0.3)',
+      },
+      transitionTimingFunction: {
+        'apple': 'cubic-bezier(0.42, 0, 0.13, 1)',
+        'spring': 'cubic-bezier(0.34, 1.56, 0.64, 1)',
       },
     },
   },

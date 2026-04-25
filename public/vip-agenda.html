@@ -5,627 +5,988 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Tu agenda VIP · Next Level Experience · 16 Mayo 2026</title>
 <meta name="description" content="Cronología completa del 16 de mayo + tus 3 sesiones privadas 1:1 post-evento. Solo para VIPs.">
+
 <style>
-  /* ========== RESET / BASE ========== */
+  /* ============================================================
+   * FUENTES (serif premium con fallbacks system-safe)
+   * ========================================================== */
+  /* Display: Optima/Didot family — elegancia editorial */
+  /* Body: Garamond/Georgia — legibilidad clásica */
+
+  /* ============================================================
+   * VARIABLES — palette editorial papel & oro
+   * ========================================================== */
+  :root {
+    --paper:        #faf6ed;
+    --paper-warm:   #f5eedd;
+    --paper-deep:   #ebe1c7;
+    --ink:          #1a1612;
+    --ink-soft:     #2a2520;
+    --ink-mute:     #5e544a;
+    --ink-faint:    #8a7e6f;
+    --gold:         #b48a4a;
+    --gold-deep:    #8a6638;
+    --gold-pale:    #d4b884;
+    --hairline:     #d4c5a3;
+    --hairline-deep:#b89f6e;
+    --shadow:       rgba(120, 90, 50, 0.08);
+
+    --serif-display: 'Cormorant Garamond', 'Optima', 'Didot', 'Bodoni 72', Georgia, 'Times New Roman', serif;
+    --serif-body:    Georgia, 'Garamond', 'Times New Roman', serif;
+    --sans:          'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    --mono:          'JetBrains Mono', 'SF Mono', 'Monaco', 'Courier New', monospace;
+  }
+
+  /* Cargar Cormorant Garamond para display si hay internet (fallback elegante) */
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+
+  /* ============================================================
+   * RESET
+   * ========================================================== */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { -webkit-text-size-adjust: 100%; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background: #fdfcf8;
-    color: #1a1a1a;
-    line-height: 1.55;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif-body);
+    font-size: 15px;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
-  .display { font-family: Georgia, 'Times New Roman', serif; }
-  .mono { font-family: 'SFMono-Regular', Menlo, Monaco, 'Courier New', monospace; letter-spacing: 0.2em; text-transform: uppercase; font-size: 10px; }
 
-  /* ========== LAYOUT ========== */
-  .page {
-    max-width: 720px;
+  /* ============================================================
+   * TEXTURA SUTIL (papel)
+   * ========================================================== */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 1200px 600px at 50% 0%, rgba(180, 138, 74, 0.04), transparent 60%),
+      radial-gradient(ellipse 800px 400px at 100% 100%, rgba(180, 138, 74, 0.03), transparent 60%);
+    z-index: 0;
+  }
+
+  /* ============================================================
+   * LAYOUT
+   * ========================================================== */
+  .doc {
+    max-width: 760px;
     margin: 0 auto;
-    padding: 56px 48px 80px;
-    background: #fdfcf8;
+    padding: 0 56px;
+    position: relative;
+    z-index: 1;
   }
 
-  /* ========== HEADER ========== */
-  .hero {
-    text-align: center;
-    padding-bottom: 48px;
-    border-bottom: 1px solid #e0d8c8;
-    margin-bottom: 48px;
+  /* ============================================================
+   * UTILITIES
+   * ========================================================== */
+  .display { font-family: var(--serif-display); font-weight: 300; letter-spacing: -0.005em; }
+  .display-italic { font-family: var(--serif-display); font-style: italic; font-weight: 400; }
+  .mono { font-family: var(--mono); text-transform: uppercase; font-size: 10px; letter-spacing: 0.3em; font-weight: 500; }
+  .center { text-align: center; }
+  .gold { color: var(--gold); }
+  .gold-deep { color: var(--gold-deep); }
+  .ink-mute { color: var(--ink-mute); }
+
+  /* Hairline horizontal */
+  .hairline {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--hairline-deep), transparent);
+    margin: 0;
   }
-  .badge-vip {
+  .hairline-short {
+    display: block;
+    width: 80px;
+    height: 1px;
+    background: var(--hairline-deep);
+    margin: 0 auto;
+  }
+  .hairline-mini {
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--hairline-deep);
+    vertical-align: middle;
+  }
+
+  /* Ornament */
+  .ornament {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    text-align: center;
+  }
+
+  /* ============================================================
+   * COVER PAGE — invitación editorial
+   * ========================================================== */
+  .cover {
+    padding: 96px 0 80px;
+    text-align: center;
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: 80px;
+  }
+  .cover .top-ornament { margin-bottom: 36px; }
+  .cover .vip-mark {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: #fff8d6;
-    border: 1px solid #ffd23f;
-    border-radius: 999px;
-    padding: 8px 18px;
+    gap: 14px;
+    margin-bottom: 56px;
+  }
+  .cover .vip-mark .line {
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .cover .vip-mark .label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    font-weight: 600;
+  }
+
+  .cover h1 {
+    font-family: var(--serif-display);
+    font-size: 88px;
+    line-height: 0.95;
+    font-weight: 300;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-bottom: 18px;
+  }
+  .cover h1 .line2 {
+    display: block;
+    font-style: italic;
+    color: var(--gold-deep);
+    font-weight: 400;
+    margin-top: 8px;
+    font-size: 70px;
+  }
+
+  .cover .subtitle {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    color: var(--ink-mute);
+    margin-top: 40px;
+    margin-bottom: 8px;
+  }
+
+  .cover .roman-date {
+    font-family: var(--serif-display);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: 0.1em;
     margin-bottom: 24px;
   }
-  .badge-vip .star { color: #b08d4a; font-size: 14px; }
-  .badge-vip .label { font-family: 'SFMono-Regular', monospace; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #8a7a30; font-weight: 600; }
-  h1.display {
-    font-size: 46px;
-    line-height: 1.05;
-    font-weight: 400;
-    color: #1a1a1a;
-    margin-bottom: 22px;
+  .cover .roman-date .dot {
+    color: var(--gold);
+    margin: 0 12px;
+    font-style: normal;
   }
-  h1.display em { font-style: italic; color: #b08d4a; }
-  .lead {
-    font-size: 17px;
-    line-height: 1.65;
-    color: #4a4a4a;
-    max-width: 540px;
-    margin: 0 auto;
-  }
-  .lead strong { color: #1a1a1a; font-weight: 600; }
 
-  /* ========== EVENT META ========== */
+  .cover .meta-strip {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    color: var(--gold-deep);
+    text-transform: uppercase;
+  }
+  .cover .meta-strip .dot {
+    color: var(--gold);
+    font-size: 8px;
+  }
+
+  /* ============================================================
+   * CHAPTER (Sección numerada estilo libro)
+   * ========================================================== */
+  .chapter {
+    margin-bottom: 96px;
+  }
+  .chapter-mark {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .chapter-mark .roman {
+    font-family: var(--serif-display);
+    font-size: 16px;
+    font-style: italic;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+  }
+  .chapter-mark h2 {
+    font-family: var(--serif-display);
+    font-size: 44px;
+    line-height: 1.1;
+    font-weight: 300;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+    margin-bottom: 14px;
+  }
+  .chapter-mark h2 em {
+    font-style: italic;
+    color: var(--gold-deep);
+    font-weight: 400;
+  }
+  .chapter-mark .sub {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-mute);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.55;
+  }
+
+  /* ============================================================
+   * EVENT META — bloque editorial datos
+   * ========================================================== */
   .event-meta {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0;
-    background: #f7f2e6;
-    border: 1px solid #e0d8c8;
-    border-radius: 4px;
-    margin-bottom: 56px;
-    overflow: hidden;
-  }
-  .event-meta > div { padding: 20px 18px; border-right: 1px solid #e0d8c8; }
-  .event-meta > div:last-child { border-right: none; }
-  .event-meta .label { font-family: 'SFMono-Regular', monospace; font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: #8a7a30; margin-bottom: 6px; }
-  .event-meta .value { font-family: Georgia, serif; font-size: 16px; color: #1a1a1a; line-height: 1.3; }
-
-  /* ========== SECTION HEADERS ========== */
-  .section-header {
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+    padding: 32px 0;
+    margin: 0 0 40px;
     text-align: center;
-    margin-bottom: 36px;
   }
-  .section-header .eyebrow {
-    font-family: 'SFMono-Regular', monospace;
-    font-size: 10px;
-    letter-spacing: 0.3em;
+  .event-meta > div {
+    border-right: 1px solid var(--hairline);
+    padding: 0 24px;
+  }
+  .event-meta > div:last-child { border-right: none; }
+  .event-meta .label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.4em;
     text-transform: uppercase;
-    color: #b08d4a;
+    color: var(--gold-deep);
     margin-bottom: 12px;
     font-weight: 600;
   }
-  .section-header h2 {
-    font-family: Georgia, serif;
-    font-size: 32px;
-    line-height: 1.15;
-    color: #1a1a1a;
+  .event-meta .value {
+    font-family: var(--serif-display);
+    font-size: 19px;
     font-weight: 400;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .event-meta .value em {
+    font-style: italic;
+    color: var(--gold-deep);
   }
 
-  /* ========== TIMELINE ========== */
-  .timeline {
-    position: relative;
-    padding-left: 28px;
-    border-left: 2px solid #e0d8c8;
-    margin-bottom: 64px;
-  }
+  /* ============================================================
+   * TIMELINE EDITORIAL
+   * ========================================================== */
+  .timeline { list-style: none; }
   .slot {
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    gap: 32px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--hairline);
     position: relative;
-    padding-bottom: 36px;
   }
-  .slot:last-child { padding-bottom: 0; }
-  .slot .dot {
-    position: absolute;
-    left: -36px;
-    top: 4px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    border: 2px solid #fdfcf8;
+  .slot:last-child { border-bottom: none; }
+
+  .slot .number {
+    font-family: var(--serif-display);
+    font-size: 38px;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    text-align: right;
+    padding-top: 4px;
+    letter-spacing: -0.02em;
   }
+
+  .slot .body { padding-top: 0; }
+
   .slot .time {
-    font-family: 'SFMono-Regular', monospace;
-    font-size: 10px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-    font-weight: 600;
-  }
-  .slot h3 {
-    font-family: Georgia, serif;
-    font-size: 20px;
-    line-height: 1.25;
-    color: #1a1a1a;
-    margin-bottom: 4px;
-    font-weight: 400;
-  }
-  .slot .mentor {
-    font-family: 'SFMono-Regular', monospace;
-    font-size: 10px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: #6a6a6a;
-    margin-bottom: 12px;
-  }
-  .slot .body { font-size: 14px; color: #4a4a4a; line-height: 1.6; margin-bottom: 10px; }
-  .slot ul { list-style: none; padding: 0; margin: 0; }
-  .slot ul li {
-    font-size: 13px;
-    color: #5a5a5a;
-    padding-left: 14px;
-    position: relative;
-    margin-bottom: 4px;
-    line-height: 1.5;
-  }
-  .slot ul li::before { content: '·'; position: absolute; left: 0; font-weight: 700; }
-
-  /* Acentos por mentor */
-  .accent-electric .dot { background: #ffd23f; }
-  .accent-electric .time { color: #b08d4a; }
-  .accent-electric ul li::before { color: #b08d4a; }
-
-  .accent-magenta .dot { background: #f3259a; }
-  .accent-magenta .time { color: #b91c5c; }
-  .accent-magenta ul li::before { color: #b91c5c; }
-
-  .accent-gold .dot { background: #b08d4a; }
-  .accent-gold .time { color: #8a6f3a; }
-  .accent-gold ul li::before { color: #8a6f3a; }
-
-  .accent-neutral .dot { background: #c5b896; }
-  .accent-neutral .time { color: #8a7a30; }
-
-  /* ========== VIP SESSIONS BLOCK ========== */
-  .vip-block {
-    background: linear-gradient(180deg, #fff8d6 0%, #fdfcf8 100%);
-    border: 2px solid #ffd23f;
-    border-radius: 8px;
-    padding: 40px 32px;
-    margin-bottom: 56px;
-  }
-  .vip-block .header { text-align: center; margin-bottom: 28px; }
-  .vip-block .stars {
-    color: #b08d4a;
-    font-size: 16px;
-    letter-spacing: 8px;
-    margin-bottom: 10px;
-  }
-  .vip-block .eyebrow {
-    font-family: 'SFMono-Regular', monospace;
+    font-family: var(--mono);
     font-size: 10px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: #8a7a30;
-    margin-bottom: 12px;
+    color: var(--gold-deep);
+    margin-bottom: 8px;
     font-weight: 600;
   }
-  .vip-block h2 {
-    font-family: Georgia, serif;
-    font-size: 28px;
-    color: #1a1a1a;
-    margin-bottom: 12px;
+
+  .slot h3 {
+    font-family: var(--serif-display);
+    font-size: 26px;
     font-weight: 400;
     line-height: 1.2;
-  }
-  .vip-block .intro {
-    font-size: 14px;
-    color: #4a4a4a;
-    line-height: 1.65;
-    max-width: 480px;
-    margin: 0 auto;
-  }
-  .vip-block .intro strong { color: #1a1a1a; }
-  .session-card {
-    background: #fdfcf8;
-    border: 1px solid #e0d8c8;
-    border-radius: 6px;
-    padding: 22px 24px;
-    margin-top: 18px;
-    display: grid;
-    grid-template-columns: 36px 1fr;
-    gap: 14px;
-  }
-  .session-card .num {
-    font-family: 'SFMono-Regular', monospace;
-    font-size: 13px;
-    letter-spacing: 0.2em;
-    font-weight: 700;
-    padding-top: 4px;
-  }
-  .session-card .session-eyebrow {
-    font-family: 'SFMono-Regular', monospace;
-    font-size: 10px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-    font-weight: 600;
-  }
-  .session-card h3 {
-    font-family: Georgia, serif;
-    font-size: 18px;
-    color: #1a1a1a;
-    line-height: 1.3;
+    color: var(--ink);
     margin-bottom: 4px;
-    font-weight: 400;
+    letter-spacing: -0.01em;
   }
-  .session-card .mentor {
-    font-family: 'SFMono-Regular', monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #6a6a6a;
+  .slot h3 em {
+    font-style: italic;
+    color: var(--gold-deep);
+  }
+
+  .slot .with {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-mute);
     margin-bottom: 14px;
   }
-  .session-card ul { list-style: none; padding: 0; margin: 0; }
-  .session-card ul li {
-    font-size: 13px;
-    color: #4a4a4a;
-    padding-left: 16px;
-    position: relative;
-    margin-bottom: 5px;
-    line-height: 1.5;
-  }
-  .session-card ul li::before { content: '✓'; position: absolute; left: 0; font-weight: 700; }
-
-  .session-card.s1 .num, .session-card.s1 .session-eyebrow, .session-card.s1 ul li::before { color: #b08d4a; }
-  .session-card.s2 .num, .session-card.s2 .session-eyebrow, .session-card.s2 ul li::before { color: #b91c5c; }
-  .session-card.s3 .num, .session-card.s3 .session-eyebrow, .session-card.s3 ul li::before { color: #8a6f3a; }
-
-  /* ========== AGENDAR BLOCK ========== */
-  .agendar {
-    background: #f7f2e6;
-    border: 1px solid #e0d8c8;
-    border-radius: 8px;
-    padding: 36px 32px;
-    margin-bottom: 56px;
-  }
-  .agendar .eyebrow {
-    font-family: 'SFMono-Regular', monospace;
-    font-size: 10px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: #b08d4a;
-    margin-bottom: 12px;
+  .slot .with strong {
+    font-style: normal;
     font-weight: 600;
+    color: var(--ink-soft);
+    letter-spacing: 0.01em;
   }
-  .agendar h2 {
-    font-family: Georgia, serif;
-    font-size: 26px;
-    color: #1a1a1a;
+
+  .slot .lead-text {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
     margin-bottom: 14px;
-    font-weight: 400;
-    line-height: 1.25;
+    max-width: 540px;
   }
-  .agendar p { font-size: 14px; color: #4a4a4a; line-height: 1.65; margin-bottom: 18px; }
-  .agendar p strong { color: #1a1a1a; }
-  .agendar ol {
+  .slot .lead-text em {
+    color: var(--gold-deep);
+  }
+
+  .slot .points {
     list-style: none;
     padding: 0;
-    margin: 0 0 24px 0;
+    border-left: 1px solid var(--hairline);
+    padding-left: 18px;
+    margin-top: 12px;
+  }
+  .slot .points li {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--ink-mute);
+    padding: 4px 0;
+  }
+
+  .slot.is-break .number { color: var(--ink-faint); font-size: 28px; }
+  .slot.is-break h3 { color: var(--ink-soft); font-size: 22px; }
+  .slot.is-break .lead-text { color: var(--ink-mute); font-style: italic; max-width: 460px; }
+
+  /* ============================================================
+   * VIP SESSIONS
+   * ========================================================== */
+  .session {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 36px;
+    padding: 36px 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .session:last-child { border-bottom: none; }
+  .session:first-child { padding-top: 8px; }
+
+  .session .roman {
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--gold);
+    text-align: right;
+    line-height: 1;
+    padding-top: 6px;
+    letter-spacing: 0.02em;
+  }
+
+  .session .session-eyebrow {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .session h3 {
+    font-family: var(--serif-display);
+    font-size: 30px;
+    line-height: 1.18;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .session h3 em { font-style: italic; color: var(--gold-deep); }
+
+  .session .with-mentor {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-mute);
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .session .with-mentor strong {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--ink-soft);
+    letter-spacing: 0.005em;
+  }
+
+  .session ul.deliverables {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 24px;
+  }
+  .session ul.deliverables li {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    padding-left: 18px;
+    position: relative;
+  }
+  .session ul.deliverables li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 8px;
+    top: 6px;
+  }
+
+  /* ============================================================
+   * INVITACIÓN — cómo agendar
+   * ========================================================== */
+  .invitation {
+    background: var(--paper-warm);
+    border: 1px solid var(--hairline);
+    padding: 56px 56px;
+    margin: 16px 0 64px;
+    text-align: center;
+    position: relative;
+  }
+  .invitation::before, .invitation::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--hairline-deep);
+  }
+  .invitation::before { top: 12px; left: 12px; border-right: none; border-bottom: none; }
+  .invitation::after { bottom: 12px; right: 12px; border-left: none; border-top: none; }
+
+  .invitation .ornament-line {
+    color: var(--gold);
+    margin-bottom: 18px;
+    letter-spacing: 0.4em;
+  }
+
+  .invitation .eyebrow {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 18px;
+    font-weight: 600;
+  }
+  .invitation h2 {
+    font-family: var(--serif-display);
+    font-size: 38px;
+    line-height: 1.15;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 18px;
+    letter-spacing: -0.01em;
+  }
+  .invitation h2 em { font-style: italic; color: var(--gold-deep); }
+  .invitation .lead {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 520px;
+    margin: 0 auto 32px;
+  }
+  .invitation .lead strong { color: var(--ink); font-weight: 600; }
+
+  .steps {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 36px;
+    max-width: 480px;
+    text-align: left;
     counter-reset: step;
   }
-  .agendar ol li {
+  .steps li {
     counter-increment: step;
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--hairline);
     font-size: 14px;
-    color: #4a4a4a;
+    color: var(--ink-soft);
     line-height: 1.6;
-    padding: 14px 16px 14px 56px;
-    position: relative;
-    border-bottom: 1px solid #e8dec8;
   }
-  .agendar ol li:last-child { border-bottom: none; }
-  .agendar ol li::before {
-    content: '0' counter(step);
-    position: absolute;
-    left: 16px;
-    top: 14px;
-    font-family: 'SFMono-Regular', monospace;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    color: #b08d4a;
-    font-weight: 700;
+  .steps li:last-child { border-bottom: none; }
+  .steps li::before {
+    content: 'I' counter(step, lower-roman);
+    /* simulate: I, II, III via counter(roman) */
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--gold);
+    line-height: 1;
+    padding-top: 2px;
   }
-  .btn-wa {
+  .steps li:nth-child(1)::before { content: 'i'; }
+  .steps li:nth-child(2)::before { content: 'ii'; }
+  .steps li:nth-child(3)::before { content: 'iii'; }
+
+  /* ============================================================
+   * BUTTON — premium gold
+   * ========================================================== */
+  .btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    background: #25D366;
-    color: white;
+    gap: 12px;
+    background: var(--ink);
+    color: var(--paper);
     text-decoration: none;
-    padding: 14px 28px;
-    border-radius: 999px;
+    padding: 16px 36px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
     font-weight: 600;
-    font-size: 14px;
+    border: 1px solid var(--ink);
+    transition: opacity 0.2s;
   }
-  .btn-wa svg { width: 18px; height: 18px; fill: white; }
+  .btn:hover { opacity: 0.85; }
+  .btn .icon { display: inline-flex; }
+  .btn .icon svg { width: 14px; height: 14px; fill: currentColor; }
 
-  /* ========== FOOTER ========== */
+  /* ============================================================
+   * CIERRE editorial
+   * ========================================================== */
   .closing {
     text-align: center;
-    padding: 36px 0;
-    border-top: 1px solid #e0d8c8;
+    padding: 80px 0 56px;
+    border-top: 1px solid var(--hairline);
   }
-  .closing p {
-    font-family: Georgia, serif;
-    font-size: 22px;
-    line-height: 1.45;
+  .closing .ornament {
+    color: var(--gold);
+    margin-bottom: 28px;
+    font-size: 16px;
+    letter-spacing: 0.5em;
+  }
+  .closing .quote {
+    font-family: var(--serif-display);
     font-style: italic;
-    color: #4a4a4a;
+    font-size: 32px;
+    line-height: 1.4;
+    color: var(--ink-soft);
+    font-weight: 300;
+    max-width: 520px;
+    margin: 0 auto 24px;
+    letter-spacing: -0.005em;
   }
-  .closing p .accent { color: #b08d4a; font-style: normal; }
-
-  .footer-meta {
-    text-align: center;
+  .closing .quote .accent {
+    font-style: italic;
+    color: var(--gold-deep);
+    display: block;
+    margin-top: 4px;
+  }
+  .closing .signature {
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--gold);
     margin-top: 36px;
-    padding-top: 24px;
-    border-top: 1px solid #e8dec8;
+    font-weight: 400;
   }
-  .footer-meta p {
-    font-family: 'SFMono-Regular', monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #8a7a30;
-    margin-bottom: 6px;
-    font-weight: 500;
-  }
-  .footer-meta a { color: #8a7a30; text-decoration: underline; }
 
-  /* ========== PRINT ========== */
-  @page { size: A4; margin: 18mm 14mm; }
+  /* ============================================================
+   * FOOTER editorial
+   * ========================================================== */
+  .colophon {
+    text-align: center;
+    padding: 40px 0 60px;
+    border-top: 1px solid var(--hairline);
+  }
+  .colophon .brand {
+    font-family: var(--serif-display);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+  .colophon .brand em { font-style: italic; color: var(--gold-deep); }
+  .colophon .meta {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.4em;
+    color: var(--ink-faint);
+    margin-bottom: 12px;
+  }
+  .colophon a {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    color: var(--gold-deep);
+    text-decoration: none;
+    border-bottom: 1px solid var(--hairline-deep);
+    padding-bottom: 2px;
+  }
+
+  /* ============================================================
+   * PRINT
+   * ========================================================== */
+  @page { size: A4; margin: 16mm 14mm; }
   @media print {
-    body { background: white; }
-    .page { padding: 0; max-width: 100%; }
-    .btn-wa { background: #25D366 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .badge-vip, .vip-block, .agendar, .event-meta { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .slot { page-break-inside: avoid; }
-    .session-card { page-break-inside: avoid; }
-    .vip-block { page-break-inside: avoid; }
+    html, body { background: var(--paper) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body::before { display: none; }
+    .doc { padding: 0; }
+    .cover { padding: 40px 0; }
+    .chapter { margin-bottom: 60px; }
+    .slot, .session, .invitation, .closing { page-break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .btn { background: var(--ink) !important; color: var(--paper) !important; }
   }
 
-  /* ========== RESPONSIVE ========== */
-  @media (max-width: 600px) {
-    .page { padding: 32px 22px 56px; }
-    h1.display { font-size: 32px; }
-    .section-header h2 { font-size: 24px; }
-    .vip-block h2 { font-size: 22px; }
-    .agendar h2 { font-size: 20px; }
+  /* ============================================================
+   * RESPONSIVE
+   * ========================================================== */
+  @media (max-width: 720px) {
+    .doc { padding: 0 24px; }
+    .cover { padding: 64px 0 56px; }
+    .cover h1 { font-size: 56px; }
+    .cover h1 .line2 { font-size: 44px; }
+    .chapter { margin-bottom: 64px; }
+    .chapter-mark h2 { font-size: 32px; }
     .event-meta { grid-template-columns: 1fr; }
-    .event-meta > div { border-right: none; border-bottom: 1px solid #e0d8c8; }
+    .event-meta > div { border-right: none; border-bottom: 1px solid var(--hairline); padding: 16px 0; }
     .event-meta > div:last-child { border-bottom: none; }
+    .slot { grid-template-columns: 56px 1fr; gap: 16px; }
+    .slot .number { font-size: 28px; }
+    .slot h3 { font-size: 22px; }
+    .session { grid-template-columns: 56px 1fr; gap: 18px; }
+    .session .roman { font-size: 28px; }
+    .session h3 { font-size: 24px; }
+    .session ul.deliverables { grid-template-columns: 1fr; }
+    .invitation { padding: 40px 24px; }
+    .invitation h2 { font-size: 28px; }
+    .closing .quote { font-size: 22px; }
   }
 </style>
 </head>
 <body>
 
-<div class="page">
+<div class="doc">
 
-  <!-- ============== HERO ============== -->
-  <header class="hero">
-    <div class="badge-vip">
-      <span class="star">★</span>
+  <!-- ============================================================
+       COVER — Invitación editorial
+  ============================================================ -->
+  <header class="cover">
+    <div class="ornament top-ornament">❖</div>
+
+    <div class="vip-mark">
+      <span class="line"></span>
       <span class="label">Acceso VIP</span>
+      <span class="line"></span>
     </div>
+
     <h1 class="display">
-      Tu agenda<br>
-      <em>Next Level Experience.</em>
+      Tu Agenda
+      <span class="line2">Next Level Experience</span>
     </h1>
-    <p class="lead">
-      Bienvenido a tu espacio VIP. Aquí tienes todo lo que vas a vivir el
-      <strong>Sábado 16 de mayo 2026</strong> y cómo coordinar tus 3 sesiones
-      privadas 1:1 después del evento.
-    </p>
+
+    <div class="subtitle">— II Edición · Santiago —</div>
+
+    <div class="roman-date">
+      XVI <span class="dot">·</span> MAYO <span class="dot">·</span> MMXXVI
+    </div>
+
+    <div class="meta-strip">
+      <span>14h00</span>
+      <span class="dot">◆</span>
+      <span>Half-Day</span>
+      <span class="dot">◆</span>
+      <span>21h00</span>
+    </div>
   </header>
 
-  <!-- ============== EVENT META ============== -->
-  <div class="event-meta">
-    <div>
-      <div class="label">Fecha</div>
-      <div class="value">Sábado 16 de mayo 2026</div>
-    </div>
-    <div>
-      <div class="label">Horario</div>
-      <div class="value">14h a 21h · 6 horas</div>
-    </div>
-    <div>
-      <div class="label">Lugar</div>
-      <div class="value">Condell 1337, Providencia, Santiago</div>
-    </div>
-  </div>
-
-  <!-- ============== CRONOLOGÍA DEL DÍA ============== -->
-  <div class="section-header">
-    <div class="eyebrow">16 de mayo · Santiago</div>
-    <h2>Cronología del día</h2>
-  </div>
-
-  <ol class="timeline">
-
-    <li class="slot accent-neutral">
-      <span class="dot"></span>
-      <div class="time">14:00 — 14:30</div>
-      <h3>Apertura · Bienvenida y reconexión</h3>
-      <p class="body">
-        Llegada, registro y bienvenida grupal. Conectamos con quienes van a
-        compartir las próximas 6 horas y aterrizamos la intención de cada uno.
-      </p>
-    </li>
-
-    <li class="slot accent-electric">
-      <span class="dot"></span>
-      <div class="time">14:30 — 16:00</div>
-      <h3>Bloque 01 · Sal del modo operador con Claude</h3>
-      <div class="mentor">Con Yoselvia Adam · Mentora de IA Aplicada</div>
-      <p class="body">
-        Deja de sostener todo manualmente y empieza a crear apoyo real con IA.
-      </p>
-      <ul>
-        <li>Qué partes de tu negocio te tienen demasiado dentro del día a día</li>
-        <li>Qué deberías empezar a soltar primero</li>
-        <li>Cómo usar Claude con más claridad y evitar respuestas genéricas</li>
-      </ul>
-    </li>
-
-    <li class="slot accent-neutral">
-      <span class="dot"></span>
-      <div class="time">16:00 — 16:30</div>
-      <h3>Coffee break · Networking</h3>
-      <p class="body">
-        Pausa para reordenar lo recibido y conectar con el resto del grupo.
-        Café, té y conversaciones que suman.
-      </p>
-    </li>
-
-    <li class="slot accent-magenta">
-      <span class="dot"></span>
-      <div class="time">16:30 — 18:00</div>
-      <h3>Bloque 02 · Imagen, color y presencia</h3>
-      <div class="mentor">Con Valentina Silva · Asesora de Imagen &amp; Color</div>
-      <p class="body">
-        Proyecta una imagen que comunique seguridad, coherencia y autoridad.
-      </p>
-      <ul>
-        <li>Qué transmite tu imagen actual</li>
-        <li>Qué puede estar debilitando tu presencia</li>
-        <li>Qué necesitas reforzar para proyectar más autoridad</li>
-      </ul>
-    </li>
-
-    <li class="slot accent-neutral">
-      <span class="dot"></span>
-      <div class="time">18:00 — 18:30</div>
-      <h3>Coffee break · Pausa estratégica</h3>
-      <p class="body">
-        Espacio para procesar lo trabajado y prepararte para el último bloque
-        del día.
-      </p>
-    </li>
-
-    <li class="slot accent-gold">
-      <span class="dot"></span>
-      <div class="time">18:30 — 20:00</div>
-      <h3>Bloque 03 · Comunicación y ventas</h3>
-      <div class="mentor">Con Sebastián Villar · Mentor en Comunicación y Ventas</div>
-      <p class="body">
-        Comunica tu valor con claridad y vende con más seguridad.
-      </p>
-      <ul>
-        <li>Qué necesita escuchar tu cliente para entender mejor tu valor</li>
-        <li>Qué puede estar haciendo que tu mensaje suene débil o poco claro</li>
-        <li>Cómo vender con más presencia</li>
-      </ul>
-    </li>
-
-    <li class="slot accent-gold">
-      <span class="dot"></span>
-      <div class="time">20:00 — 21:00</div>
-      <h3>Cierre · Integración y networking final</h3>
-      <p class="body">
-        Síntesis de las 6 horas, claridad sobre tus próximos pasos y tiempo
-        para conectar con los mentores y el resto del grupo.
-      </p>
-    </li>
-
-  </ol>
-
-  <!-- ============== TUS 3 SESIONES VIP ============== -->
-  <div class="vip-block">
-    <div class="header">
-      <div class="stars">★ ★ ★</div>
-      <div class="eyebrow">Después del evento · Solo para VIPs</div>
-      <h2>Tus 3 sesiones privadas 1:1</h2>
-      <p class="intro">
-        Una hora con cada experto, en formato 1:1 online, para revisar tu caso
-        real. <strong>La experiencia VIP no termina cuando acaba el evento —
-        ahí recién empieza el trabajo aplicado a vos.</strong>
+  <!-- ============================================================
+       CHAPTER I — La Jornada
+  ============================================================ -->
+  <section class="chapter">
+    <div class="chapter-mark">
+      <div class="roman">— I —</div>
+      <h2>La <em>Jornada</em></h2>
+      <p class="sub">
+        Seis horas diseñadas con intención. Tres mentores, tres bloques,
+        un hilo conductor.
       </p>
     </div>
 
-    <div class="session-card s1">
-      <div class="num">01</div>
+    <div class="event-meta">
       <div>
-        <div class="session-eyebrow">★ Sesión VIP · 60 minutos · 1:1 online</div>
-        <h3>Auditoría VIP de tu negocio con Claude en vivo</h3>
-        <div class="mentor">Con Yoselvia Adam · Mentora de IA Aplicada</div>
-        <ul>
+        <div class="label">Fecha</div>
+        <div class="value">Sábado <em>16</em> de mayo</div>
+      </div>
+      <div>
+        <div class="label">Horario</div>
+        <div class="value">14h <em>—</em> 21h</div>
+      </div>
+      <div>
+        <div class="label">Lugar</div>
+        <div class="value">Condell <em>1337</em></div>
+      </div>
+    </div>
+
+    <ol class="timeline">
+
+      <li class="slot is-break">
+        <div class="number">01</div>
+        <div class="body">
+          <div class="time">14h00 — 14h10</div>
+          <h3>Apertura · <em>Bienvenida</em></h3>
+          <p class="lead-text">
+            Llegada y bienvenida grupal. Comenzamos puntuales para
+            aprovechar las seis horas completas. Diez minutos para
+            conectar con quienes van a vivir esta jornada contigo.
+          </p>
+        </div>
+      </li>
+
+      <li class="slot">
+        <div class="number">02</div>
+        <div class="body">
+          <div class="time">14h10 — 15h40</div>
+          <h3>Bloque uno · <em>Sal del modo operador</em></h3>
+          <p class="with">Con <strong>Yoselvia Adam</strong> · Mentora de IA Aplicada</p>
+          <p class="lead-text">
+            Deja de sostener todo manualmente y empieza a crear apoyo real
+            con IA. Aprendes a usar Claude con intención.
+          </p>
+          <ul class="points">
+            <li>Qué partes de tu negocio te tienen demasiado dentro del día a día</li>
+            <li>Qué deberías empezar a soltar primero</li>
+            <li>Cómo usar Claude con más claridad y evitar respuestas genéricas</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="slot is-break">
+        <div class="number">03</div>
+        <div class="body">
+          <div class="time">15h40 — 16h10</div>
+          <h3>Pausa · <em>Coffee &amp; networking</em></h3>
+          <p class="lead-text">
+            Un espacio para reordenar lo recibido y conectar con el resto
+            del grupo. Café, té y conversaciones que suman.
+          </p>
+        </div>
+      </li>
+
+      <li class="slot">
+        <div class="number">04</div>
+        <div class="body">
+          <div class="time">16h10 — 17h40</div>
+          <h3>Bloque dos · <em>Imagen, color y presencia</em></h3>
+          <p class="with">Con <strong>Valentina Silva</strong> · Asesora de Imagen &amp; Color</p>
+          <p class="lead-text">
+            Proyecta una imagen que comunique seguridad, coherencia y
+            autoridad. Decisiones de imagen con intención.
+          </p>
+          <ul class="points">
+            <li>Qué transmite tu imagen actual</li>
+            <li>Qué puede estar debilitando tu presencia</li>
+            <li>Qué necesitas reforzar para proyectar más autoridad</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="slot is-break">
+        <div class="number">05</div>
+        <div class="body">
+          <div class="time">17h40 — 18h10</div>
+          <h3>Pausa · <em>Reflexión</em></h3>
+          <p class="lead-text">
+            Espacio para procesar lo trabajado y prepararte para el último
+            bloque del día.
+          </p>
+        </div>
+      </li>
+
+      <li class="slot">
+        <div class="number">06</div>
+        <div class="body">
+          <div class="time">18h10 — 19h40</div>
+          <h3>Bloque tres · <em>Comunicación y ventas</em></h3>
+          <p class="with">Con <strong>Sebastián Villar</strong> · Mentor en Comunicación y Ventas</p>
+          <p class="lead-text">
+            Comunica tu valor con claridad y vende con más seguridad.
+            Pulir el mensaje y sostener conversaciones de venta sin
+            minimizar tu trabajo.
+          </p>
+          <ul class="points">
+            <li>Qué necesita escuchar tu cliente para entender mejor tu valor</li>
+            <li>Qué puede estar haciendo que tu mensaje suene débil o poco claro</li>
+            <li>Cómo vender con más presencia</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="slot is-break">
+        <div class="number">07</div>
+        <div class="body">
+          <div class="time">19h40 — 21h00</div>
+          <h3>Cierre · <em>Integración &amp; networking</em></h3>
+          <p class="lead-text">
+            Síntesis de las seis horas, claridad sobre tus próximos pasos
+            y tiempo extendido para conectar con los mentores y el resto
+            del grupo.
+          </p>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ============================================================
+       CHAPTER II — Sesiones VIP
+  ============================================================ -->
+  <section class="chapter">
+    <div class="chapter-mark">
+      <div class="roman">— II —</div>
+      <h2>Sesiones <em>1 : 1</em></h2>
+      <p class="sub">
+        Una hora privada con cada experto, después del evento. Aquí
+        comienza el trabajo aplicado a tu caso real.
+      </p>
+    </div>
+
+    <article class="session">
+      <div class="roman">i</div>
+      <div class="body">
+        <div class="session-eyebrow">— Sesión Privada · 60 minutos · Online —</div>
+        <h3>Auditoría VIP de tu negocio <em>con Claude en vivo</em></h3>
+        <p class="with-mentor">Con <strong>Yoselvia Adam</strong> · Mentora de IA Aplicada</p>
+        <ul class="deliverables">
           <li>Informe personalizado de tu negocio</li>
           <li>Tus principales fugas priorizadas</li>
           <li>Mapa claro de decisiones</li>
           <li>Plan de acción para los próximos 30 días</li>
         </ul>
       </div>
-    </div>
+    </article>
 
-    <div class="session-card s2">
-      <div class="num">02</div>
-      <div>
-        <div class="session-eyebrow">★ Sesión VIP · 60 minutos · 1:1 online</div>
-        <h3>Colorimetría VIP + revisión personalizada de imagen, color y presencia</h3>
-        <div class="mentor">Con Valentina Silva · Asesora de Imagen &amp; Color</div>
-        <ul>
-          <li>Tu paleta de colores personalizada (los que te activan, los que te apagan)</li>
-          <li>Diagnóstico claro de qué comunica tu presencia hoy</li>
-          <li>Guía de ajustes en color, silueta y estilo personal</li>
-          <li>Criterios para vestirte con intención y proyectar autoridad</li>
+    <article class="session">
+      <div class="roman">ii</div>
+      <div class="body">
+        <div class="session-eyebrow">— Sesión Privada · 60 minutos · Online —</div>
+        <h3>Colorimetría VIP <em>+ revisión de imagen y presencia</em></h3>
+        <p class="with-mentor">Con <strong>Valentina Silva</strong> · Asesora de Imagen &amp; Color</p>
+        <ul class="deliverables">
+          <li>Tu paleta de colores personalizada</li>
+          <li>Diagnóstico claro de tu presencia hoy</li>
+          <li>Guía de ajustes en color y silueta</li>
+          <li>Criterios para vestirte con intención</li>
         </ul>
       </div>
-    </div>
+    </article>
 
-    <div class="session-card s3">
-      <div class="num">03</div>
-      <div>
-        <div class="session-eyebrow">★ Sesión VIP · 60 minutos · 1:1 online</div>
-        <h3>Revisión personalizada de comunicación y ventas</h3>
-        <div class="mentor">Con Sebastián Villar · Mentor en Comunicación y Ventas</div>
-        <ul>
+    <article class="session">
+      <div class="roman">iii</div>
+      <div class="body">
+        <div class="session-eyebrow">— Sesión Privada · 60 minutos · Online —</div>
+        <h3>Revisión personalizada <em>de comunicación y ventas</em></h3>
+        <p class="with-mentor">Con <strong>Sebastián Villar</strong> · Mentor en Comunicación y Ventas</p>
+        <ul class="deliverables">
           <li>Feedback personalizado sobre tu comunicación</li>
-          <li>Ajustes concretos para presentar mejor tu oferta</li>
-          <li>Frases guía para hablar de tu valor con seguridad</li>
-          <li>Recomendaciones para vender sin minimizar tu trabajo</li>
+          <li>Ajustes para presentar mejor tu oferta</li>
+          <li>Frases guía para hablar de tu valor</li>
+          <li>Recomendaciones para vender sin minimizarte</li>
         </ul>
       </div>
+    </article>
+  </section>
+
+  <!-- ============================================================
+       CHAPTER III — Cómo agendar (Invitación)
+  ============================================================ -->
+  <section class="chapter">
+    <div class="chapter-mark">
+      <div class="roman">— III —</div>
+      <h2>Tu <em>invitación privada</em></h2>
+      <p class="sub">
+        Un grupo cerrado donde se coordinan tus tres sesiones. Solo para
+        compradores VIP.
+      </p>
     </div>
-  </div>
 
-  <!-- ============== CÓMO AGENDAR ============== -->
-  <div class="agendar">
-    <div class="eyebrow">Cómo agendar tus sesiones</div>
-    <h2>Un grupo privado solo para VIPs</h2>
-    <p>
-      Después del 16 de mayo, dentro del <strong>grupo VIP de WhatsApp</strong>
-      coordinas fecha y hora con cada mentor. Cada experto va a atender las
-      solicitudes ahí mismo. <strong>Es privado y exclusivo</strong> — solo para
-      los compradores VIP.
-    </p>
+    <div class="invitation">
+      <div class="ornament ornament-line">◆ &nbsp; ❖ &nbsp; ◆</div>
+      <div class="eyebrow">— Después del 16 de mayo —</div>
+      <h2>Coordinas <em>directamente</em> con cada mentor</h2>
+      <p class="lead">
+        Dentro del <strong>grupo VIP de WhatsApp</strong>, cada experto
+        atiende personalmente las solicitudes de agenda. Privado, exclusivo
+        y al ritmo de quienes ya están dentro.
+      </p>
 
-    <ol>
-      <li>Entra al grupo VIP de WhatsApp con el botón de abajo.</li>
-      <li>Después del 16 de mayo, escribe en el grupo qué mentor quieres agendar primero (Yoselvia, Valentina o Sebastián).</li>
-      <li>El mentor te coordina fecha y hora directo por el grupo. Repites el proceso para tus 3 sesiones.</li>
-    </ol>
+      <ol class="steps">
+        <li>Entras al grupo VIP con el botón inferior. Solo se accede con esta invitación.</li>
+        <li>Después del 16 de mayo, escribes en el grupo con qué mentor quieres comenzar.</li>
+        <li>El mentor coordina fecha y hora. Repites el proceso para tus tres sesiones.</li>
+      </ol>
 
-    <a href="https://chat.whatsapp.com/ICoU3xBTL07DBzBKHoT8M9?mode=gi_t" class="btn-wa" target="_blank" rel="noopener noreferrer">
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-      </svg>
-      Entrar al grupo VIP
-    </a>
-  </div>
+      <a href="https://chat.whatsapp.com/ICoU3xBTL07DBzBKHoT8M9?mode=gi_t" class="btn" target="_blank" rel="noopener noreferrer">
+        <span class="icon">
+          <svg viewBox="0 0 24 24" aria-hidden>
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+          </svg>
+        </span>
+        <span>Entrar al Grupo VIP</span>
+      </a>
+    </div>
+  </section>
 
-  <!-- ============== CIERRE ============== -->
-  <div class="closing">
-    <p>
-      Nos vemos el 16 de mayo.<br>
+  <!-- ============================================================
+       CIERRE — quote editorial
+  ============================================================ -->
+  <section class="closing">
+    <div class="ornament">❖ &nbsp;◆ &nbsp;❖</div>
+    <p class="quote">
+      Nos vemos el dieciséis de mayo.
       <span class="accent">Llegas como VIP.</span>
     </p>
-  </div>
+    <div class="signature">— Yoselvia, Valentina &amp; Sebastián</div>
+  </section>
 
-  <div class="footer-meta">
-    <p>Next Level Experience · 2nd Edition · Santiago 2026</p>
-    <p style="text-transform: none; letter-spacing: 0;">
-      <a href="https://nl.yosmentedigital.com">nl.yosmentedigital.com</a>
-    </p>
-  </div>
+  <!-- ============================================================
+       COLOPHON
+  ============================================================ -->
+  <footer class="colophon">
+    <div class="brand"><em>Next Level</em> Experience</div>
+    <div class="meta">II Edición · Santiago · MMXXVI</div>
+    <a href="https://nl.yosmentedigital.com">nl.yosmentedigital.com</a>
+  </footer>
 
 </div>
 

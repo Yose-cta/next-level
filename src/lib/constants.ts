@@ -197,7 +197,7 @@ export const MENTORS = [
     moduleTitle: 'Sal del modo operador con Claude',
     moduleSubtitle:
       'Deja de sostener todo manualmente y empieza a crear apoyo real con IA.',
-    moduleTime: '14:30 — 16:00',
+    moduleTime: '14:10 — 15:40',
     accent: 'electric',
     lema: 'No necesitas trabajar más. Necesitas dejar de ser el sistema.',
     bio:
@@ -243,7 +243,7 @@ export const MENTORS = [
     moduleTitle: 'Imagen, color y presencia',
     moduleSubtitle:
       'Proyecta una imagen que comunique seguridad, coherencia y autoridad.',
-    moduleTime: '16:30 — 18:00',
+    moduleTime: '16:10 — 17:40',
     accent: 'magenta',
     lema: 'Tu imagen también vende, incluso antes de que hables.',
     bio:
@@ -288,7 +288,7 @@ export const MENTORS = [
     moduleTitle: 'Comunicación y ventas',
     moduleSubtitle:
       'Comunica tu valor con claridad y vende con más seguridad.',
-    moduleTime: '18:30 — 20:00',
+    moduleTime: '18:10 — 19:40',
     accent: 'gold',
     lema:
       'Si no sabes comunicar tu valor, el mercado no puede percibirlo completo.',

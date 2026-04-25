@@ -1,6 +1,10 @@
 /**
  * Next Level Experience — fuente única de verdad para datos del evento.
  * Lenguaje: español neutro chileno (tú, haces, sales, etc.)
+ *
+ * Versión 2.0 — copy reposicionado:
+ *   "Deja de cargarlo todo tú y empieza a dirigir, proyectar y vender
+ *    desde tu siguiente nivel."
  */
 
 export const WORKSHOP = {
@@ -45,45 +49,79 @@ export const BRAND = {
   logoAlt: 'NEXT LEVEL',
 } as const
 
+/* ============================================================
+ * 3 PILARES — bloques principales del programa
+ * ============================================================ */
+export const PILLARS = [
+  {
+    n: '01',
+    name: 'IA con Claude',
+    headline: 'Sal del modo operador.',
+    sub: 'Deja de sostenerlo todo manualmente.',
+  },
+  {
+    n: '02',
+    name: 'Imagen y presencia',
+    headline: 'Proyecta autoridad real.',
+    sub: 'Coherencia visual con tu siguiente nivel.',
+  },
+  {
+    n: '03',
+    name: 'Comunicación y ventas',
+    headline: 'Vende con seguridad.',
+    sub: 'Comunica tu valor sin minimizarte.',
+  },
+] as const
+
+/* ============================================================
+ * TICKETS
+ * ============================================================ */
 export const TICKETS = [
   {
     id: 'general',
     name: 'Entrada General',
-    tagline: 'Para implementar',
+    tagline: 'Para vivir la experiencia completa',
     price: { amount: 67000, currency: 'CLP', display: '$67.000' },
     badge: null,
-    description: 'Acceso completo al taller de 6 horas presenciales.',
+    description:
+      'Acceso completo a Next Level Experience: 6 horas presenciales para dejar de improvisar, proyectarte con más autoridad y comunicar tu valor con más seguridad.',
     features: [
       'Acceso presencial al Next Level Experience (6 horas)',
-      'Trabajo en vivo con los 3 expertos (IA · Imagen · Comunicación)',
+      'Trabajo en vivo con los 3 expertos: IA, imagen y comunicación',
       'Materiales impresos para aplicar durante el evento',
-      'Coffee break + networking',
-      'Bonus: Gift Card $47.000 para tu próxima compra',
-      '2x1: lleva un acompañante',
+      'Coffee break + networking con personas en tu mismo nivel',
+      'Bonus: Gift Card de $47.000 para tu próxima compra',
+      '2x1: puedes llevar un acompañante',
     ],
-    cta: 'Reservar General',
+    forYou:
+      'Quieres vivir la experiencia completa, trabajar los 3 bloques principales y llevarte herramientas para aplicar por tu cuenta.',
+    cta: 'Reservar Entrada General',
     hidden: false,
   },
   {
     id: 'vip',
     name: 'Entrada VIP Next Level',
-    tagline: 'Para acelerar',
+    tagline: 'Para tener una mirada más personalizada',
     price: { amount: 147000, currency: 'CLP', display: '$147.000' },
-    badge: 'MÁS VENDIDO',
-    description: 'Todo lo de General + sesión 1:1 online post-evento con Yoselvia.',
+    badge: 'EXPERIENCIA COMPLETA',
+    description:
+      'Todo lo de la Entrada General + 3 sesiones privadas 1:1 online post-evento, una con cada experto, para aterrizar lo aprendido a tu caso real.',
     features: [
       'Todo lo incluido en la Entrada General',
-      'Sesión grupal privada con Valentina: Colorimetría Presencial Next Level',
-      'Sesión grupal privada con Sebastián: Comunicación y expresión',
+      '1 hora privada 1:1 online con Yoselvia: <strong>Auditoría VIP de tu negocio con Claude en vivo</strong>',
+      '1 hora privada 1:1 online con Valentina: <strong>revisión personalizada de imagen, color y presencia</strong>',
+      '1 hora privada 1:1 online con Sebastián: <strong>revisión personalizada de comunicación y ventas</strong>',
       'Comunidad VIP cerrada durante 15 días para resolver dudas',
       'Acceso VIP a material exclusivo post-workshop',
     ],
     highlight: {
-      title: '+1 hora exclusiva 1:1 ONLINE con Yoselvia · Activo VIP',
+      title: '3 horas privadas 1:1 después del evento',
       body:
-        'Después del evento agendamos tu sesión 1:1 online. Mini Radiografía Operativa de TU negocio en vivo: auditamos con datos reales y Claude trabajando en tiempo real. Te llevas: informe personalizado, 5 Fugas Invisibles cuantificadas en dinero, Matriz EOAD y plan a 30-60-90 días.',
+        'Una sesión online con cada experto para revisar tu negocio, tu imagen y tu mensaje. La experiencia VIP no termina cuando acaba el evento — ahí recién empieza el trabajo aplicado a tu caso real.',
     },
-    cta: 'Reservar VIP',
+    forYou:
+      'Quieres una mirada personalizada después del evento. Quieres que los 3 expertos revisen tu caso real y te den dirección para aterrizar lo aprendido.',
+    cta: 'Reservar Entrada VIP',
     hidden: false,
   },
   {
@@ -94,155 +132,330 @@ export const TICKETS = [
     badge: null,
     description: 'Botón de prueba para validar el flujo end-to-end de Mercado Pago.',
     features: ['Crea preference → checkout MP → webhook → Supabase → email Resend'],
+    forYou: '',
     cta: 'Probar pago $1.000',
     hidden: true,
   },
 ] as const
 
+/* ============================================================
+ * MENTORES — los 3 bloques de la experiencia
+ * ============================================================ */
 export const MENTORS = [
   {
     id: 'yoselvia',
     name: 'Yoselvia Adam',
     role: 'Mentora de IA Aplicada',
     expertise: 'Negocios conscientes impulsados con Claude',
-    tag: 'IA aplicada · Operación inteligente',
+    tag: 'IA aplicada · Claude',
     moduleNumber: '01',
+    moduleTitle: 'Sal del modo operador con Claude',
+    moduleSubtitle:
+      'Deja de sostener todo manualmente y empieza a crear apoyo real con IA.',
     moduleTime: '14:30 — 16:00',
     accent: 'electric',
-    lema: 'No te enseño a usar Claude. Te enseño a OPERAR con Claude.',
-    bio: 'Estratega y consultora de negocios especializada en construir sistemas operativos con IA. Formó a +500 emprendedores latinoamericanos en pasar de operar su negocio a dirigirlo desde el sistema.',
-    teaches: 'Cómo construir tu Operación Inteligente con 5 agentes IA coordinados que trabajan por ti.',
-    deliverables: [
-      'Tu CLAUDE.md personalizado (el cerebro)',
-      'Director de Operaciones IA + 4 Agentes especializados',
-      '3 tareas programadas trabajando por ti',
-      'El Mapa de las 5 Etapas del Sistema Operativo',
-      'Tu tarjeta anti-sesgos física',
+    lema: 'No necesitas trabajar más. Necesitas dejar de ser el sistema.',
+    bio:
+      'Yoselvia te guía a mirar tu negocio con más claridad para identificar qué partes dependen demasiado de ti y cómo empezar a usar IA como apoyo real para tomar mejores decisiones.',
+    teaches:
+      'A usar Claude con intención: dejar de repetir tareas, ordenar tus ideas y construir una forma de trabajar menos dependiente de ti.',
+    works: [
+      'Qué partes de tu negocio te tienen demasiado dentro del día a día',
+      'Qué deberías empezar a soltar primero',
+      'Cómo usar Claude con más claridad y evitar respuestas genéricas',
+      'Cómo convertir ideas sueltas en apoyo real para tu negocio',
     ],
+    deliverables: [
+      'Detector de tareas que te mantienen operando',
+      'Guía para convertir tareas repetidas en procesos delegables',
+      'Mapa inicial: qué soltar, simplificar o llevar a IA primero',
+    ],
+    vipSession: {
+      name: 'Auditoría VIP de tu negocio con Claude en vivo',
+      duration: '60 minutos · 1:1 online',
+      experience: [
+        'Mirada personalizada sobre tu negocio',
+        'Detección de tus principales fugas de tiempo, energía y dinero',
+        'Claridad sobre qué necesitas soltar primero',
+        'Recomendaciones aplicadas a tu caso real',
+        'Plan de acción claro para tus próximos pasos',
+      ],
+      takeaway: [
+        'Informe personalizado de tu negocio',
+        'Tus principales fugas priorizadas',
+        'Mapa claro de decisiones',
+        'Plan de acción para los próximos 30, 60 y 90 días',
+      ],
+    },
   },
   {
     id: 'valentina',
     name: 'Valentina Silva',
     role: 'Asesora de Imagen & Color',
-    expertise: 'Análisis colorimétrico presencial y autoridad visual',
+    expertise: 'Imagen, color y presencia con autoridad',
     tag: 'Imagen + Color · Presencia',
     moduleNumber: '02',
+    moduleTitle: 'Imagen, color y presencia',
+    moduleSubtitle:
+      'Proyecta una imagen que comunique seguridad, coherencia y autoridad.',
     moduleTime: '16:30 — 18:00',
     accent: 'magenta',
-    lema: 'Tu imagen no es solo cómo te ves. Es cómo habitas tu marca.',
-    bio: 'Asesora de imagen presencial con +10 años de experiencia. Trabaja la presencia visual como herramienta de autoridad para emprendedoras y consultoras que quieren proyectar otro nivel.',
-    teaches: 'Cómo construir tu paleta colorimétrica personal y vestir desde tu identidad.',
-    deliverables: [
-      'Tu paleta colorimétrica personal (análisis presencial con espejo)',
-      'Tu carta de identidad visual lista para usar',
-      'Reglas de vestir según ocasión sin perder esencia',
-      'Estilos que comunican autoridad y energía',
+    lema: 'Tu imagen también vende, incluso antes de que hables.',
+    bio:
+      'Valentina te ayuda a entender qué está comunicando tu imagen hoy y cómo alinear tu presencia con el nivel de autoridad, seguridad y coherencia que quieres proyectar.',
+    teaches:
+      'A leer qué transmite tu presencia hoy y a tomar decisiones de imagen con más intención: color, formas, presencia y coherencia visual.',
+    works: [
+      'Qué transmite tu imagen actual',
+      'Qué puede estar debilitando tu presencia',
+      'Qué necesitas reforzar para proyectar más autoridad',
+      'Cómo verte más coherente con la etapa de negocio que quieres construir',
     ],
+    deliverables: [
+      'Criterios para tomar decisiones de imagen con intención',
+      'Mapa de ajustes para elevar tu percepción visual',
+      'Guía base de coherencia visual aplicable de inmediato',
+    ],
+    vipSession: {
+      name: 'Revisión personalizada de imagen, color y presencia',
+      duration: '60 minutos · 1:1 online',
+      experience: [
+        'Mirada experta sobre tu presencia actual',
+        'Recomendaciones personalizadas para proyectarte mejor',
+        'Claridad sobre qué puede estar afectando tu autoridad visual',
+        'Criterios para tomar mejores decisiones sobre tu imagen',
+      ],
+      takeaway: [
+        'Recomendaciones personalizadas de imagen',
+        'Claridad sobre qué comunica tu presencia hoy',
+        'Guía de ajustes para elevar tu percepción visual',
+        'Criterios para proyectarte con más intención',
+      ],
+    },
   },
   {
     id: 'sebastian',
     name: 'Sebastián Villar',
     role: 'Mentor en Comunicación y Ventas',
-    expertise: 'Pitch auténtico, persuasión sin presión',
-    tag: 'Comunicación + Ventas · Voz',
+    expertise: 'Comunicación clara, persuasión sin presión',
+    tag: 'Comunicación + Ventas',
     moduleNumber: '03',
+    moduleTitle: 'Comunicación y ventas',
+    moduleSubtitle:
+      'Comunica tu valor con claridad y vende con más seguridad.',
     moduleTime: '18:30 — 20:00',
-    accent: 'cyan',
-    lema: 'Cuando comunicas desde tu verdad, las ventas dejan de sentirse forzadas.',
-    bio: 'Mentor en ventas auténticas y comunicación humana. Acompañó a +300 profesionales a vender sus servicios sin scripts ni presión, desde su voz real.',
-    teaches: 'Cómo comunicar tu valor desde tu historia y vender sin sentirte forzado.',
-    deliverables: [
-      'Tu pitch refinado y practicado con feedback en vivo',
-      'Estructura de conversación de venta auténtica',
-      'Mapa de tus historias clave para ventas',
-      'Protocolo de presencia que proyecta autoridad',
+    accent: 'gold',
+    lema:
+      'Si no sabes comunicar tu valor, el mercado no puede percibirlo completo.',
+    bio:
+      'Sebastián te enseña a comunicar tu oferta con más claridad, expresar tu valor con más seguridad y sostener conversaciones comerciales con mayor presencia.',
+    teaches:
+      'A pulir el mensaje con el que presentas tu oferta y a sostener conversaciones de venta sin minimizar tu trabajo.',
+    works: [
+      'Qué necesita escuchar tu cliente para entender mejor tu valor',
+      'Qué puede estar haciendo que tu mensaje suene débil o poco claro',
+      'Cómo vender con más presencia',
+      'Cómo explicar lo que haces con más seguridad',
     ],
+    deliverables: [
+      'Frases guía para hablar de tu valor con seguridad',
+      'Estructura clara para sostener una conversación de venta',
+      'Ajustes concretos para presentar mejor tu oferta',
+    ],
+    vipSession: {
+      name: 'Revisión personalizada de comunicación y ventas',
+      duration: '60 minutos · 1:1 online',
+      experience: [
+        'Mirada experta sobre tu mensaje actual',
+        'Recomendaciones para comunicar tu valor con más claridad',
+        'Ajustes para vender con más presencia y seguridad',
+        'Una guía más clara para presentar mejor tu oferta',
+      ],
+      takeaway: [
+        'Feedback personalizado sobre tu comunicación',
+        'Ajustes concretos para presentar mejor tu oferta',
+        'Frases guía para hablar de tu valor con seguridad',
+        'Recomendaciones para vender sin minimizar tu trabajo',
+      ],
+    },
   },
 ] as const
 
+/* ============================================================
+ * TAKEAWAYS — qué te llevas de las 6 horas
+ * ============================================================ */
 export const TAKEAWAYS = [
   {
     n: '01',
-    title: 'Tu sistema operativo IA',
-    body: 'CLAUDE.md personalizado + Director de Operaciones + 4 agentes coordinados (Marketing · Ventas · Entrega · Administración) trabajando para ti desde el lunes.',
+    title: 'Claridad sobre qué soltar',
+    body:
+      'Sales con la mirada limpia: sabes qué tareas necesitas dejar de cargar tú para liberar tiempo y energía real.',
   },
   {
     n: '02',
-    title: 'Tu mensaje de marca claro',
-    body: 'Tu propuesta en 3 niveles de voz: pitch corto, conversación de venta y narrativa larga. Lo que dices cuando te preguntan a qué te dedicas — finalmente claro.',
+    title: 'Una mirada más ordenada de tu negocio',
+    body:
+      'Vas a poder ver tus prioridades de forma estructurada — no como una lista mental que se te escapa entre la operación del día.',
   },
   {
     n: '03',
-    title: 'Tu paleta colorimétrica personal',
-    body: 'Análisis presencial con espejo. Tu carta de identidad visual con los colores que abren puertas y los que evitar. Listo para imprimir.',
+    title: '3 recursos de Claude listos para aplicar',
+    body:
+      'Tres herramientas concretas para empezar a usar IA como apoyo real desde la semana siguiente, sin tecnicismos innecesarios.',
   },
   {
     n: '04',
-    title: 'Tu pitch refinado',
-    body: 'Practicas en parejas con feedback en vivo de Sebastián. Sales con tu mensaje pulido, tu lenguaje corporal alineado y tu historia ordenada.',
+    title: 'Criterios de imagen y presencia',
+    body:
+      'Te llevas criterios claros para ajustar color, presencia y coherencia visual — para que tu imagen acompañe el valor de lo que haces.',
   },
   {
     n: '05',
-    title: 'Protocolo de presencia',
-    body: 'Cómo entras a una reunión, cómo te sientas, cómo respiras antes de hablar. Las micro-decisiones que construyen autoridad antes de que digas la primera palabra.',
+    title: 'Herramientas para comunicar tu valor',
+    body:
+      'Frases guía y ajustes específicos para presentar tu oferta con más seguridad y vender sin minimizarte.',
   },
   {
     n: '06',
-    title: 'Tu plan a 90 días',
-    body: 'Compromiso escrito antes de irte. Las 3 acciones específicas que vas a ejecutar el lunes, el primer mes y el primer trimestre.',
+    title: 'Una visión más clara de tu próxima etapa',
+    body:
+      'Cómo quieres verte, hablar y vender en este siguiente nivel — con dirección concreta, no buenas intenciones.',
   },
 ] as const
 
+/* ============================================================
+ * PARA TI SI — autodiagnóstico
+ * ============================================================ */
+export const PARA_TI_SI = [
+  'Sientes que todo depende de ti.',
+  'Trabajas mucho, pero no sientes que estés avanzando al nivel que quieres.',
+  'Quieres usar IA, pero no sabes cómo aplicarla de forma útil en tu negocio.',
+  'Sabes que necesitas soltar tareas, pero no tienes claro por dónde empezar.',
+  'Tu imagen no refleja todavía el valor real de lo que haces.',
+  'Te cuesta comunicar tu oferta con seguridad.',
+  'Quieres vender con más claridad, presencia y autoridad.',
+  'Ya no quieres seguir improvisando y necesitas empezar a dirigir con más intención.',
+] as const
+
+/* ============================================================
+ * COSTO DE NO ACTUAR — 4 fugas concretas
+ * ============================================================ */
+export const COSTS = [
+  {
+    id: 'cost-1',
+    metric: 'Tiempo',
+    body:
+      'Horas que se van en operativa repetida que ya no debería depender de ti.',
+  },
+  {
+    id: 'cost-2',
+    metric: 'Claridad',
+    body:
+      'Decides desde el agotamiento, no desde el enfoque. Y eso se nota en tus resultados.',
+  },
+  {
+    id: 'cost-3',
+    metric: 'Autoridad',
+    body:
+      'Tu imagen no acompaña el valor de lo que haces. El mercado percibe menos de lo que vales.',
+  },
+  {
+    id: 'cost-4',
+    metric: 'Dinero',
+    body:
+      'Vendes con duda y minimizando tu trabajo. Y la duda en quien comunica se convierte en menos cierres.',
+  },
+] as const
+
+/* ============================================================
+ * ANTES / DESPUÉS — comparación visual
+ * ============================================================ */
+export const SHIFTS = [
+  { before: 'Todo depende de ti', after: 'Sabes qué empezar a soltar' },
+  { before: 'Improvisas demasiado', after: 'Tienes más claridad para decidir' },
+  {
+    before: 'Quieres usar IA, pero no sabes por dónde empezar',
+    after: 'Tienes recursos listos para aplicar',
+  },
+  {
+    before: 'Tu imagen no refleja todo tu valor',
+    after: 'Sabes qué ajustar para proyectarte mejor',
+  },
+  { before: 'Te cuesta explicar tu oferta', after: 'Comunicas con más claridad' },
+  {
+    before: 'Vendes con dudas',
+    after: 'Vendes con más presencia y seguridad',
+  },
+  {
+    before: 'Trabajas mucho y avanzas poco',
+    after: 'Tienes una dirección más clara para tu siguiente etapa',
+  },
+] as const
+
+/* ============================================================
+ * FAQS
+ * ============================================================ */
 export const FAQS = [
   {
-    q: '¿Y si no me sirve?',
-    a: 'Esta experiencia está diseñada para que implementes en el momento. No vienes a escuchar teoría — trabajas sobre tu propio negocio con ejercicios prácticos guiados en vivo. Si en los primeros 60 minutos no sientes que va a cambiar tu negocio, te devolvemos el 100%.',
+    q: '¿Necesito saber usar Claude o tener experiencia con IA?',
+    a: 'No. La experiencia está pensada para emprendedoras y emprendedores que quieren aprender a usar la IA de forma práctica, sin tecnicismos. Vas a entender cómo aplicarla a tu negocio aunque hoy no tengas ninguna experiencia.',
   },
   {
-    q: '¿Por qué solo medio día?',
-    a: 'Porque lo que falta no es más tiempo — es enfoque. En una jornada intensiva y bien estructurada logras avances reales que llevas meses postergando. Este formato es para personas que necesitan claridad y resultados ya.',
+    q: '¿Esto es para mí si recién estoy empezando?',
+    a: 'Sí. Si estás empezando, esta experiencia te ayuda a construir con más claridad desde el inicio y evitar caer en años de improvisación.',
   },
   {
-    q: 'Ya hice otros cursos. ¿Esto me va a aportar algo?',
-    a: 'Justamente por eso es para ti. Esto no es contenido para acumular — es implementación real. Es para quien ya tiene un negocio activo y busca orden, claridad y una imagen coherente para escalar.',
+    q: 'Ya tengo un negocio funcionando. ¿Vale la pena para mí?',
+    a: 'También. Especialmente si ya vendes pero sientes que todo depende demasiado de ti, que tu imagen no refleja tu nivel o que tu comunicación podría ser mucho más clara.',
   },
   {
-    q: 'Soy tímido y me cuesta mostrarme. ¿Es para mí?',
-    a: 'Este espacio es seguro, humano y respetuoso. No se trata de exponerte — se trata de alinear tu negocio con tu esencia. Vas a sentirte acompañado en todo momento.',
+    q: '¿Voy a salir con todo resuelto?',
+    a: 'No vamos a prometerte que en 6 horas vas a resolver todo tu negocio. Pero sí vas a salir con claridad, herramientas y pasos concretos para empezar a soltar carga, proyectarte mejor y comunicar con más seguridad.',
   },
   {
-    q: '¿Qué pasa si no puedo asistir después de pagar?',
+    q: '¿La Entrada VIP vale la pena?',
+    a: 'Sí, si quieres una mirada más personalizada después del evento. La VIP incluye 3 sesiones privadas 1:1 online (1 hora con cada experto): auditoría de tu negocio con Claude, revisión de imagen y color, y revisión de comunicación y ventas. La General te da la experiencia completa. La VIP te da experiencia + dirección aplicada a tu caso.',
+  },
+  {
+    q: '¿Cuánto dura la experiencia presencial?',
+    a: '6 horas. De 14h a 21h, en Santiago. La idea no es saturarte de teoría — es darte el espacio para mirar tu negocio, tu imagen y tu mensaje con otros ojos y salir con dirección.',
+  },
+  {
+    q: '¿La entrada incluye acompañante?',
+    a: 'Sí. La entrada incluye modalidad 2x1: puedes llevar un acompañante. Las entradas son personales y no transferibles, pero el cupo de tu acompañante queda incluido sin costo adicional.',
+  },
+  {
+    q: '¿Qué pasa después de comprar mi entrada?',
+    a: 'Recibes inmediatamente la confirmación de tu compra y la información necesaria para asistir al evento (dirección exacta, qué llevar, agenda). Si compras la Entrada VIP, después del evento se coordinan tus 3 sesiones online 1:1 con cada experto.',
+  },
+  {
+    q: '¿Y si después no puedo asistir?',
     a: 'Al ser presencial con cupos limitados, tu lugar se reserva exclusivamente. No hay reembolsos, pero puedes transferir tu entrada a otra persona si nos avisas con al menos 48 horas de anticipación.',
-  },
-  {
-    q: '¿Es teórico o práctico?',
-    a: 'Es práctico. Todo lo que aprendes lo aplicas durante la jornada. Te llevas tu sistema IA funcionando, tu paleta colorimétrica, tu pitch refinado — y un compromiso escrito a 90 días.',
-  },
-  {
-    q: '¿Qué pasa después del 16 de mayo?',
-    a: 'Los lunes siguientes empiezas distinto. Si elegiste VIP, además tienes tu sesión 1:1 online con Yoselvia (Mini Radiografía Operativa con plan personalizado a 30-60-90 días) y 15 días de comunidad VIP cerrada para resolver dudas y mantener el foco.',
   },
 ] as const
 
+/* ============================================================
+ * TESTIMONIOS
+ * ============================================================ */
 export const TESTIMONIALS = [
   {
     id: 'testimonio-1',
     quote:
-      'Llegué con un negocio que me consumía. Salí con un sistema que trabaja por mí y un mensaje que suena a mí. El lunes ya estaba operando distinto.',
+      'Antes sentía que tenía mucho potencial, pero no sabía cómo comunicarlo. Después del workshop salí con claridad, seguridad y pasos concretos.',
     name: 'Nombre del testimonio 1',
     role: 'Cargo · Ciudad',
   },
   {
     id: 'testimonio-2',
     quote:
-      'Pagué por una experiencia. Volví con una empresa diferente. La parte de IA con Yoselvia me ahorra hoy 12 horas a la semana — literal.',
+      'Me di cuenta de que estaba haciendo demasiado sin dirección. Esta experiencia me ayudó a mirar mi negocio desde otro lugar.',
     name: 'Nombre del testimonio 2',
     role: 'Cargo · Ciudad',
   },
   {
     id: 'testimonio-3',
     quote:
-      'Lo que más me sorprendió: no salimos con teoría. Salimos con cosas hechas. Mi paleta de color, mi pitch, mis agentes IA — todo aterrizado el mismo día.',
+      'Lo que más me sirvió fue entender que mi imagen, mi mensaje y mi forma de vender tenían que estar alineados.',
     name: 'Nombre del testimonio 3',
     role: 'Cargo · Ciudad',
   },
@@ -251,7 +464,7 @@ export const TESTIMONIALS = [
 export const META = {
   title: 'Next Level Experience · 2nd Edition · 16 Mayo 2026 · Santiago',
   description:
-    'Half-Day Experience presencial. 3 mentores en vivo: IA aplicada con Claude, imagen y comunicación. Te llevas un sistema funcionando — no apuntes. Cupos limitados.',
+    'Half-Day Experience presencial. 3 expertos en vivo: IA con Claude, imagen y comunicación. Deja de cargarlo todo tú y empieza a dirigir, proyectar y vender desde tu siguiente nivel.',
   ogImage: '/next-level-logo.png',
 } as const
 
@@ -260,3 +473,6 @@ export type Ticket = (typeof TICKETS)[number]
 export type Takeaway = (typeof TAKEAWAYS)[number]
 export type Faq = (typeof FAQS)[number]
 export type Testimonial = (typeof TESTIMONIALS)[number]
+export type Pillar = (typeof PILLARS)[number]
+export type Cost = (typeof COSTS)[number]
+export type Shift = (typeof SHIFTS)[number]

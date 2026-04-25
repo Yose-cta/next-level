@@ -1,4 +1,5 @@
 import {
+  AntesDespues,
   Closing,
   CostOfInaction,
   FAQ,
@@ -7,11 +8,13 @@ import {
   Hero,
   Mentors,
   Mirror,
+  ParaTiSi,
   StickyBar,
   Takeaways,
   Testimonials,
-  Tickets,
   Ticker,
+  Tickets,
+  VIPDetail,
 } from '@/components/landing'
 
 export default function HomePage() {
@@ -22,9 +25,12 @@ export default function HomePage() {
       <Ticker />
       <Mirror />
       <CostOfInaction />
+      <ParaTiSi />
       <Mentors />
       <Takeaways />
+      <AntesDespues />
       <Tickets />
+      <VIPDetail />
       <Testimonials />
       <Guarantee />
       <FAQ />

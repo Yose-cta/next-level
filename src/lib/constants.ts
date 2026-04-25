@@ -128,15 +128,26 @@ export const TICKETS = [
     hidden: false,
   },
   {
+    // Ticket interno con precio reducido (mismo nombre/copy que General).
+    // Solo se accede via URL directa /api/checkout?ticket=test (hidden de la UI).
     id: 'test',
-    name: 'Test de Pago',
-    tagline: 'Solo testing — no es entrada real',
+    name: 'Entrada General',
+    tagline: 'Para vivir la experiencia completa',
     price: { amount: 1000, currency: 'CLP', display: '$1.000' },
     badge: null,
-    description: 'Botón de prueba para validar el flujo end-to-end de Mercado Pago.',
-    features: ['Crea preference → checkout MP → webhook → Supabase → email Resend'],
-    forYou: '',
-    cta: 'Probar pago $1.000',
+    description:
+      'Acceso completo a Next Level Experience: 6 horas presenciales para dejar de improvisar, proyectarte con más autoridad y comunicar tu valor con más seguridad.',
+    features: [
+      'Acceso presencial al Next Level Experience (6 horas)',
+      'Trabajo en vivo con los 3 expertos: IA, imagen y comunicación',
+      'Materiales impresos para aplicar durante el evento',
+      'Coffee break + networking con personas en tu mismo nivel',
+      'Bonus: Gift Card de $27.000 para usar en alguno de nuestros servicios',
+      '2x1: puedes llevar un acompañante',
+    ],
+    forYou:
+      'Quieres vivir la experiencia completa, trabajar los 3 bloques principales y llevarte herramientas para aplicar por tu cuenta.',
+    cta: 'Reservar Entrada General',
     hidden: true,
   },
 ] as const

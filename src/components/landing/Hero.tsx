@@ -134,12 +134,12 @@ export function Hero() {
                 />
               </div>
 
-              {/* Sello fecha flotante top-left */}
-              <div className="absolute -top-4 -left-4 sm:-top-5 sm:-left-5 glass-dark px-5 py-4 z-10 shadow-glow-magenta">
-                <div className="font-display italic text-4xl sm:text-5xl text-electric leading-none">
+              {/* Sello fecha flotante top-left — más arriba para no tapar la cara */}
+              <div className="absolute -top-10 -left-4 sm:-top-12 sm:-left-5 glass-dark px-4 py-3 z-10 shadow-glow-magenta">
+                <div className="font-display italic text-3xl sm:text-4xl text-electric leading-none">
                   {WORKSHOP.date.day}
                 </div>
-                <div className="eyebrow !text-white/70 mt-1.5">
+                <div className="eyebrow !text-white/70 mt-1">
                   {WORKSHOP.date.month} · {WORKSHOP.date.year}
                 </div>
               </div>

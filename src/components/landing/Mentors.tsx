@@ -62,7 +62,7 @@ function MentorBlock({ mentor, index }: { mentor: Mentor; index: number }) {
       <div className={`lg:col-span-5 ${isOdd ? 'lg:order-last' : ''}`}>
         <div className="relative">
           <div
-            className={`aspect-[4/5] w-full overflow-hidden bg-noir-3 ${index % 2 === 0 ? 'clip-corner-tr' : 'clip-corner-bl'}`}
+            className={`aspect-square w-full overflow-hidden bg-noir-3 ${index % 2 === 0 ? 'clip-corner-tr' : 'clip-corner-bl'}`}
           >
             <Image
               src={`/mentors/${mentor.id}.png`}

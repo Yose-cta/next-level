@@ -20,18 +20,14 @@ export default async function GraciasPage({ searchParams }: PageProps) {
   const ticketId = params.ticket ?? 'general'
   const ticket = TICKETS.find((t) => t.id === ticketId) ?? TICKETS[0]
   const isPending = params.status === 'pending'
-  const isVip = ticket.id === 'vip'
-  const isTest = ticket.id === 'test'
-  // El ticket de test se muestra como "Entrada General" para que la prueba refleje
-  // exactamente lo que va a ver el cliente real al comprar la General.
-  const displayTicket = isTest
-    ? TICKETS.find((t) => t.id === 'general') ?? ticket
-    : ticket
-  const isGeneral = ticket.id === 'general' || isTest
+  // 'vip' y 'test-vip' (test interno con precio reducido) ambos se tratan como VIP.
+  const isVip = ticket.id === 'vip' || ticket.id === 'test-vip'
+  // 'general' y 'test' (test interno con precio reducido) ambos se tratan como General.
+  const isGeneral = ticket.id === 'general' || ticket.id === 'test'
 
   const waUrlDudas = whatsappUrl(
     CONTACT.whatsapp.number,
-    `Hola Yoselvia! Acabo de reservar mi cupo ${displayTicket.name} para Next Level Experience del 16 de mayo. Tengo una consulta:`
+    `Hola Yoselvia! Acabo de reservar mi cupo ${ticket.name} para Next Level Experience del 16 de mayo. Tengo una consulta:`
   )
 
   const waUrlAcompanante = whatsappUrl(
@@ -98,7 +94,7 @@ Teléfono del acompañante:`
           <p className="mt-8 text-lg text-cream/85 leading-relaxed max-w-xl mx-auto">
             {isPending
               ? 'Cuando confirmemos el pago te llega un email con todos los detalles. Si tienes dudas, escríbenos directo por WhatsApp.'
-              : `Confirmamos tu ${displayTicket.name}. Acabas de tomar una decisión que pocos toman: parar, mirar tu negocio con otros ojos y empezar a dirigir desde tu siguiente nivel.`}
+              : `Confirmamos tu ${ticket.name}. Acabas de tomar una decisión que pocos toman: parar, mirar tu negocio con otros ojos y empezar a dirigir desde tu siguiente nivel.`}
           </p>
         </header>
 

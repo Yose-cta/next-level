@@ -5,15 +5,12 @@ export function Testimonials() {
     <section className="sec-light py-24 sm:py-36">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14 reveal">
-          <div className="flex items-center justify-center gap-4 mb-7">
-            <div className="h-px w-8 bg-gold" />
-            <div className="eyebrow">Edición anterior · Santiago 2025</div>
-            <div className="h-px w-8 bg-gold" />
-          </div>
           <h2 className="font-display text-display-lg text-ink">
             <span data-editable="test-h">
-              Mira cómo se vivió{' '}
-              <span className="italic text-magenta">y lo que dicen quienes ya pasaron.</span>
+              Así se vive Next Level:{' '}
+              <span className="italic text-magenta">
+                experiencias reales de quienes ya estuvieron.
+              </span>
             </span>
           </h2>
         </div>
@@ -33,14 +30,20 @@ export function Testimonials() {
                 )}
 
                 <div
-                  data-video={`${t.id}-video`}
-                  data-label={isRecap ? 'Video resumen del evento' : 'Conectar video Wistia'}
                   className={
                     isRecap
-                      ? 'aspect-[4/5] w-full mb-6 border-2 border-magenta/50'
-                      : 'aspect-[4/5] w-full mb-6 border border-ink/10'
+                      ? 'aspect-[4/5] w-full mb-6 border-2 border-magenta/50 overflow-hidden bg-ink/5'
+                      : 'aspect-[4/5] w-full mb-6 border border-ink/10 overflow-hidden bg-ink/5'
                   }
-                />
+                >
+                  <iframe
+                    src={`https://fast.wistia.net/embed/iframe/${t.wistiaId}?videoFoam=true`}
+                    allow="autoplay; fullscreen"
+                    allowFullScreen
+                    className="w-full h-full block border-0"
+                    title={t.name}
+                  />
+                </div>
 
                 <blockquote className="flex-1">
                   <p

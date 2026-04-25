@@ -442,23 +442,26 @@ export const FAQS = [
 export const TESTIMONIALS = [
   {
     id: 'testimonio-1',
+    wistiaId: '5pewa34xp9',
     quote:
-      'Antes sentía que tenía mucho potencial, pero no sabía cómo comunicarlo. Después del workshop salí con claridad, seguridad y pasos concretos.',
-    name: 'Nombre del testimonio 1',
-    role: 'Cargo · Ciudad',
+      'Fue un encuentro increíble. Aprendimos sobre inteligencia artificial, códigos de vestimenta para potenciar la imagen y habilidades comunicacionales. Me voy muy feliz; lo recomiendo mucho si quieres llevar tu negocio o marca al siguiente nivel.',
+    name: 'Ximena Nuñez',
+    role: 'Coach de marketing',
   },
   {
     id: 'testimonio-2',
-    quote: 'Así se vivió la primera edición.',
+    wistiaId: '0vp7qx25i2',
+    quote: 'Así se vivió la experiencia Next Level.',
     name: 'Recorrido en video',
-    role: 'Edición anterior · Santiago',
+    role: 'Resumen del evento',
   },
   {
     id: 'testimonio-3',
+    wistiaId: '98qm57bhon',
     quote:
-      'Lo que más me sirvió fue entender que mi imagen, mi mensaje y mi forma de vender tenían que estar alineados.',
-    name: 'Nombre del testimonio 3',
-    role: 'Cargo · Ciudad',
+      'Me ayudaron a ordenar la planificación de mi negocio, entender cómo proyectarme mejor con mi imagen y reforzar algo clave: la comunicación. Fue una experiencia muy valiosa; de verdad los invito a vivirla.',
+    name: 'Eliseo Navarro',
+    role: 'Fundador de ads semtis',
   },
 ] as const
 

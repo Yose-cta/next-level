@@ -13,4 +13,4 @@
 (vacio)
 
 ## reference/ — Donde encontrar cosas
-(vacio)
+- `git-vercel-config.md` — Email obligatorio para commits (`yoselviaadam@gmail.com`). Si vuelve a fallar deploy por "email could not be matched" o "no contributing access", leer este archivo.

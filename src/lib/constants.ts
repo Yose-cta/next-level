@@ -449,10 +449,9 @@ export const TESTIMONIALS = [
   },
   {
     id: 'testimonio-2',
-    quote:
-      'Me di cuenta de que estaba haciendo demasiado sin dirección. Esta experiencia me ayudó a mirar mi negocio desde otro lugar.',
-    name: 'Nombre del testimonio 2',
-    role: 'Cargo · Ciudad',
+    quote: 'Así se vivió la primera edición.',
+    name: 'Recorrido en video',
+    role: 'Edición anterior · Santiago',
   },
   {
     id: 'testimonio-3',

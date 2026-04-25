@@ -221,7 +221,50 @@ Teléfono del acompañante:`
         )}
 
         {/* ============================================ */}
-        {/* 6. CTAs principales                          */}
+        {/* 6. GRUPO DE WHATSAPP — comunidad de compradores */}
+        {/* ============================================ */}
+        {!isPending && (
+          <section className="mt-14 bg-noir-2 border border-electric/25 rounded-sm p-6 sm:p-8 relative overflow-hidden">
+            <div
+              className="absolute inset-0 -z-0 opacity-30 pointer-events-none"
+              style={{
+                background:
+                  'radial-gradient(closest-side, rgba(246, 207, 47, 0.18), transparent 70%)',
+              }}
+              aria-hidden
+            />
+
+            <div className="relative">
+              <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-electric mb-3">
+                Sumate al grupo · Solo para compradores
+              </div>
+
+              <h2 className="font-display text-2xl sm:text-3xl text-cream leading-tight">
+                Te recibimos en el grupo de Next Level
+              </h2>
+
+              <p className="mt-4 text-cream/85 leading-relaxed">
+                Ahí van los recordatorios, contenido pre-evento, ubicación
+                exacta del lugar y networking con el resto del grupo. Es{' '}
+                <strong className="text-cream">privado y exclusivo</strong>{' '}
+                para quienes ya reservaron su cupo.
+              </p>
+
+              <a
+                href={CONTACT.whatsappGroup}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center justify-center gap-3 bg-whatsapp text-white font-semibold px-7 py-4 rounded-full hover:opacity-90 transition"
+              >
+                <WhatsAppIcon />
+                <span>Unirme al grupo</span>
+              </a>
+            </div>
+          </section>
+        )}
+
+        {/* ============================================ */}
+        {/* 7. CTAs secundarios                          */}
         {/* ============================================ */}
         <section className="mt-14 grid sm:grid-cols-2 gap-4">
           <a
@@ -243,7 +286,7 @@ Teléfono del acompañante:`
         </section>
 
         {/* ============================================ */}
-        {/* 7. CIERRE EMOCIONAL                          */}
+        {/* 8. CIERRE EMOCIONAL                          */}
         {/* ============================================ */}
         {!isPending && (
           <section className="mt-16 text-center">

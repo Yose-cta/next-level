@@ -39,6 +39,7 @@ export const CONTACT = {
     message:
       'Hola Yoselvia! Quiero más información sobre Next Level Experience del 16 de mayo',
   },
+  whatsappGroup: 'https://chat.whatsapp.com/JQ9gyUXXywh2z2C0SjSrNj?mode=gi_t',
   email: 'hola@yosmentedigital.com',
   domain: 'nl.yosmentedigital.com',
   url: 'https://nl.yosmentedigital.com',

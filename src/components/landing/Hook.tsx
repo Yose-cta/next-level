@@ -51,7 +51,7 @@ export function Hook() {
           {ACTIONS.map((action, i) => (
             <li
               key={i}
-              className="group flex items-start gap-4 py-3 border-b border-ink/10 last:border-b-0"
+              className="flex items-start gap-4 py-3 border-b border-ink/10 last:border-b-0"
               data-editable={`hook-action-${i + 1}`}
             >
               <span className="font-mono text-xs tracking-[0.2em] text-gold-dark mt-1.5 shrink-0">
@@ -59,9 +59,6 @@ export function Hook() {
               </span>
               <span className="text-base sm:text-lg text-ink leading-relaxed font-light flex-1">
                 {action}
-              </span>
-              <span className="text-ash group-hover:text-magenta transition-colors duration-300 mt-1.5 shrink-0" aria-hidden>
-                →
               </span>
             </li>
           ))}

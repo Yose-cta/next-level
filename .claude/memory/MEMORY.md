@@ -10,7 +10,7 @@
 (vacio)
 
 ## feedback/ — Correcciones y preferencias
-(vacio)
+- `copy-style.md` — REGLA CRÍTICA. Todo el copy en español neutro/chileno (tú/tienes/quieres). NUNCA voseo argentino (vos/tenés/querés). La cliente lo pidió varias veces.
 
 ## reference/ — Donde encontrar cosas
 - `git-vercel-config.md` — Email obligatorio para commits (`yoselviaadam@gmail.com`). Si vuelve a fallar deploy por "email could not be matched" o "no contributing access", leer este archivo.

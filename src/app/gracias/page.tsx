@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import { CONTACT, TICKETS, WORKSHOP } from '@/lib/constants'
-import { whatsappUrl } from '@/lib/utils'
+import { googleCalendarUrl, whatsappUrl } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'Gracias por reservar · Next Level',
   description:
-    'Tu cupo está reservado. Acá tenés todos los datos del workshop, qué hacer ahora y cómo registrar a tu acompañante.',
+    'Tu cupo está reservado. Aquí tienes todos los datos del workshop, qué hacer ahora y cómo registrar a tu acompañante.',
   robots: { index: false, follow: false },
 }
 
@@ -21,11 +21,17 @@ export default async function GraciasPage({ searchParams }: PageProps) {
   const ticket = TICKETS.find((t) => t.id === ticketId) ?? TICKETS[0]
   const isPending = params.status === 'pending'
   const isVip = ticket.id === 'vip'
-  const isGeneral = ticket.id === 'general'
+  const isTest = ticket.id === 'test'
+  // El ticket de test se muestra como "Entrada General" para que la prueba refleje
+  // exactamente lo que va a ver el cliente real al comprar la General.
+  const displayTicket = isTest
+    ? TICKETS.find((t) => t.id === 'general') ?? ticket
+    : ticket
+  const isGeneral = ticket.id === 'general' || isTest
 
   const waUrlDudas = whatsappUrl(
     CONTACT.whatsapp.number,
-    `Hola Yoselvia! Acabo de reservar mi cupo ${ticket.name} para Next Level Experience del 16 de mayo. Tengo una consulta:`
+    `Hola Yoselvia! Acabo de reservar mi cupo ${displayTicket.name} para Next Level Experience del 16 de mayo. Tengo una consulta:`
   )
 
   const waUrlAcompanante = whatsappUrl(
@@ -37,6 +43,16 @@ Nombre del acompañante:
 Correo del acompañante:
 Teléfono del acompañante:`
   )
+
+  // URL para agregar a Google Calendar (16 mayo 2026, 14h-21h Chile = -04:00)
+  const googleCalUrl = googleCalendarUrl({
+    title: 'Next Level Experience · 2nd Edition',
+    startUtc: '20260516T180000Z', // 14:00 Santiago = 18:00 UTC
+    endUtc: '20260517T010000Z', // 21:00 Santiago = 01:00 UTC siguiente
+    details:
+      'Workshop presencial · 6 horas con Yoselvia, Valentina y Sebastián. Llegar 15 minutos antes.',
+    location: WORKSHOP.venue.full,
+  })
 
   return (
     <main className="min-h-screen py-16 px-4 sm:px-6 relative overflow-hidden">
@@ -81,8 +97,8 @@ Teléfono del acompañante:`
 
           <p className="mt-8 text-lg text-cream/85 leading-relaxed max-w-xl mx-auto">
             {isPending
-              ? 'Cuando confirmemos el pago te llega un email con todos los detalles. Si tenés dudas, escribinos directo por WhatsApp.'
-              : `Confirmamos tu ${ticket.name}. Acabás de tomar una decisión que pocos toman: parar, mirar tu negocio con otros ojos y empezar a dirigir desde tu siguiente nivel.`}
+              ? 'Cuando confirmemos el pago te llega un email con todos los detalles. Si tienes dudas, escríbenos directo por WhatsApp.'
+              : `Confirmamos tu ${displayTicket.name}. Acabas de tomar una decisión que pocos toman: parar, mirar tu negocio con otros ojos y empezar a dirigir desde tu siguiente nivel.`}
           </p>
         </header>
 
@@ -91,7 +107,7 @@ Teléfono del acompañante:`
         {/* ============================================ */}
         <section className="mt-14 bg-noir-2 border border-champagne/15 rounded-sm p-6 sm:p-8">
           <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-electric mb-5">
-            Guardá la fecha
+            Guarda la fecha
           </div>
 
           <div className="grid sm:grid-cols-3 gap-5 sm:gap-4">
@@ -105,7 +121,7 @@ Teléfono del acompañante:`
               En unos minutos vas a recibir el comprobante por email a la
               dirección que registraste.{' '}
               <strong className="text-cream">
-                Revisá también spam o promociones.
+                Revisa también spam o promociones.
               </strong>
             </p>
           )}
@@ -121,24 +137,26 @@ Teléfono del acompañante:`
             </div>
 
             <ol className="space-y-6">
-              <Step n="01" title="Revisá tu correo">
+              <Step n="01" title="Revisa tu correo">
                 Te llega un email con el comprobante y la agenda detallada del
-                workshop. Confirmá que recibiste todo —{' '}
-                <strong className="text-cream">si no, mirá spam.</strong>
+                workshop. Confirma que recibiste todo —{' '}
+                <strong className="text-cream">si no, revisa tu spam.</strong>
               </Step>
-              <Step n="02" title="Agregá la fecha a tu calendario">
+              <Step n="02" title="Agrega la fecha a tu calendario">
                 <a
-                  href="/api/calendar"
+                  href={googleCalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-electric hover:underline"
                 >
-                  Agregar al calendario →
+                  Agregar a Google Calendar →
                 </a>{' '}
-                Sábado 16 de mayo, 14h a 21h. Bloqueá el día completo: vas a
+                Sábado 16 de mayo, 14h a 21h. Bloquea el día completo: vas a
                 querer estar 100% presente.
               </Step>
-              <Step n="03" title="Vení con preguntas. Vas a salir con respuestas.">
-                Pensá en qué parte de tu negocio te tiene más operando, qué
-                imagen querés proyectar y dónde sentís que tu mensaje no llega
+              <Step n="03" title="Ven con preguntas. Vas a salir con respuestas.">
+                Piensa en qué parte de tu negocio te tiene más operando, qué
+                imagen quieres proyectar y dónde sientes que tu mensaje no llega
                 como debería. De ahí salimos.
               </Step>
             </ol>
@@ -155,11 +173,11 @@ Teléfono del acompañante:`
             </div>
 
             <h2 className="font-display text-2xl sm:text-3xl text-cream leading-tight">
-              ¿Vas a venir con alguien?
+              ¿Vienes con alguien?
             </h2>
 
             <p className="mt-4 text-cream/85 leading-relaxed">
-              Compartí Next Level con alguien que también esté en su próxima
+              Comparte Next Level con alguien que también esté en su próxima
               etapa. Registramos a tu acompañante por WhatsApp con sus datos —
               tarda 1 minuto y ya queda listo.
             </p>
@@ -236,7 +254,7 @@ Teléfono del acompañante:`
 
             <div className="relative">
               <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-electric mb-3">
-                Sumate al grupo · Solo para compradores
+                Súmate al grupo · Solo para compradores
               </div>
 
               <h2 className="font-display text-2xl sm:text-3xl text-cream leading-tight">
@@ -277,11 +295,13 @@ Teléfono del acompañante:`
             <span>Tengo una duda</span>
           </a>
           <a
-            href="/api/calendar"
+            href={googleCalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 border border-electric text-electric font-semibold px-6 py-4 rounded-full hover:bg-electric hover:text-noir transition"
           >
             <span aria-hidden>📅</span>
-            <span>Agregar al calendario</span>
+            <span>Agregar a Google Calendar</span>
           </a>
         </section>
 
@@ -293,7 +313,7 @@ Teléfono del acompañante:`
             <p className="font-display italic text-2xl sm:text-3xl text-cream/90 leading-snug">
               Nos vemos el 16 de mayo en Santiago.
               <br />
-              <span className="text-electric not-italic">Vení a vivirlo.</span>
+              <span className="text-electric not-italic">Ven a vivirlo.</span>
             </p>
           </section>
         )}

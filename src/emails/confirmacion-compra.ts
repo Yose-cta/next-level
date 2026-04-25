@@ -1,5 +1,5 @@
 import { CONTACT, WORKSHOP } from '@/lib/constants'
-import { whatsappUrl } from '@/lib/utils'
+import { googleCalendarUrl, whatsappUrl } from '@/lib/utils'
 import type { TicketType } from '@/lib/db'
 
 interface BuildArgs {
@@ -18,12 +18,15 @@ interface BuildArgs {
  */
 export function buildConfirmacionEmail({ nombre, ticketType }: BuildArgs) {
   const isVip = ticketType === 'vip'
+  // ticketType solo puede ser 'general' | 'vip' (TicketType en db.ts).
+  // El ticket de test se mapea a 'general' automáticamente en inferTicketType.
   const isGeneral = ticketType === 'general'
+  const ticketDisplayName = isVip ? 'Entrada VIP Next Level' : 'Entrada General'
   const greeting = nombre ? `Hola ${nombre.split(' ')[0]}` : 'Hola'
 
   const waDudas = whatsappUrl(
     CONTACT.whatsapp.number,
-    `Hola Yoselvia! Acabo de comprar mi entrada ${isVip ? 'VIP' : 'General'} para Next Level. Tengo una consulta:`
+    `Hola Yoselvia! Acabo de comprar mi ${ticketDisplayName} para Next Level. Tengo una consulta:`
   )
 
   const waAcompanante = whatsappUrl(
@@ -37,7 +40,14 @@ Teléfono del acompañante:`
   )
 
   const waGroup = CONTACT.whatsappGroup
-  const ics = `${process.env.NEXT_PUBLIC_SITE_URL ?? CONTACT.url}/api/calendar`
+  const calendarUrl = googleCalendarUrl({
+    title: 'Next Level Experience · 2nd Edition',
+    startUtc: '20260516T180000Z', // 14:00 Santiago = 18:00 UTC
+    endUtc: '20260517T010000Z', // 21:00 Santiago = 01:00 UTC siguiente
+    details:
+      'Workshop presencial · 6 horas con Yoselvia, Valentina y Sebastián. Llegar 15 minutos antes.',
+    location: WORKSHOP.venue.full,
+  })
   const home = process.env.NEXT_PUBLIC_SITE_URL ?? CONTACT.url
 
   const subject = isVip
@@ -66,7 +76,7 @@ Teléfono del acompañante:`
               </td></tr>
             </table>
             <p style="margin:16px 0 0;padding-top:14px;border-top:1px solid rgba(138,122,48,.2);font-size:13px;line-height:1.6;color:#5c5223">
-              Te contactamos por WhatsApp después del 16 de mayo para coordinar fechas y horarios.
+              Te contactaremos por WhatsApp después del 16 de mayo para coordinar fechas y horarios.
             </p>
           </td></tr>
         </table>
@@ -81,10 +91,10 @@ Teléfono del acompañante:`
           <tr><td style="padding:24px">
             <p style="margin:0 0 6px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#f3259a;font-weight:600">Tu entrada incluye 2×1</p>
             <p style="margin:0 0 12px;font-size:20px;line-height:1.25;color:#f5f0e8;font-family:Georgia,serif">
-              ¿Vas a venir con alguien?
+              ¿Vienes con alguien?
             </p>
             <p style="margin:0 0 18px;font-size:14px;line-height:1.65;color:rgba(245,240,232,.85)">
-              Compartí Next Level con alguien que también esté en su próxima etapa. Registramos a tu acompañante por WhatsApp con sus datos — tarda 1 minuto.
+              Comparte Next Level con alguien que también esté en su próxima etapa. Registramos a tu acompañante por WhatsApp con sus datos — tarda 1 minuto.
             </p>
             <a href="${waAcompanante}" style="display:inline-block;padding:13px 26px;background:#f3259a;color:#fff;text-decoration:none;font-weight:600;font-size:14px;border-radius:999px">💬 Registrar a mi acompañante</a>
           </td></tr>
@@ -97,7 +107,7 @@ Teléfono del acompañante:`
       <tr><td style="padding:24px 32px 0">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:rgba(255,210,63,.08);border:1px solid rgba(255,210,63,.4);border-radius:8px">
           <tr><td style="padding:24px">
-            <p style="margin:0 0 6px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#ffd23f;font-weight:600">Sumate al grupo · Solo para compradores</p>
+            <p style="margin:0 0 6px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#ffd23f;font-weight:600">Súmate al grupo · Solo para compradores</p>
             <p style="margin:0 0 12px;font-size:20px;line-height:1.25;color:#f5f0e8;font-family:Georgia,serif">
               Te recibimos en el grupo de Next Level
             </p>
@@ -128,7 +138,7 @@ Teléfono del acompañante:`
         <!-- BODY -->
         <tr><td style="padding:24px 32px 0">
           <p style="margin:0;font-size:16px;line-height:1.65;color:rgba(245,240,232,.85)">
-            Confirmamos tu <strong>${isVip ? 'Entrada VIP Next Level' : 'Entrada General'}</strong>. Acabás de tomar una decisión que pocos toman: parar, mirar tu negocio con otros ojos y empezar a dirigir desde tu siguiente nivel.
+            Confirmamos tu <strong>${ticketDisplayName}</strong>. Acabas de tomar una decisión que pocos toman: parar, mirar tu negocio con otros ojos y empezar a dirigir desde tu siguiente nivel.
           </p>
         </td></tr>
 
@@ -136,7 +146,7 @@ Teléfono del acompañante:`
         <tr><td style="padding:32px 32px 0">
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#1a1a1a;border:1px solid rgba(212,184,150,.2);border-radius:8px">
             <tr><td style="padding:24px">
-              <p style="margin:0 0 16px;font-size:10px;letter-spacing:.3em;color:#ffd23f;text-transform:uppercase;font-weight:600">Guardá la fecha</p>
+              <p style="margin:0 0 16px;font-size:10px;letter-spacing:.3em;color:#ffd23f;text-transform:uppercase;font-weight:600">Guarda la fecha</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                   <td style="padding:0 0 12px;border-bottom:1px solid rgba(212,184,150,.15)">
@@ -158,7 +168,7 @@ Teléfono del acompañante:`
                 </tr>
               </table>
               <p style="margin:18px 0 0;padding-top:14px;border-top:1px solid rgba(212,184,150,.15);font-size:13px;line-height:1.6;color:rgba(245,240,232,.65)">
-                Si no recibís comprobante en los próximos minutos, <strong style="color:#f5f0e8">revisá spam o promociones.</strong>
+                Si no recibes comprobante en los próximos minutos, <strong style="color:#f5f0e8">revisa spam o promociones.</strong>
               </p>
             </td></tr>
           </table>
@@ -170,7 +180,7 @@ Teléfono del acompañante:`
 
         <!-- CTAs -->
         <tr><td style="padding:32px 32px 0;text-align:center">
-          <a href="${ics}" style="display:inline-block;padding:14px 28px;background:#ffd23f;color:#0a0a0a;text-decoration:none;font-weight:600;font-size:14px;border-radius:999px;margin:0 4px 12px">📅 Agregar al calendario</a>
+          <a href="${calendarUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 28px;background:#ffd23f;color:#0a0a0a;text-decoration:none;font-weight:600;font-size:14px;border-radius:999px;margin:0 4px 12px">📅 Agregar a Google Calendar</a>
           <a href="${waDudas}" style="display:inline-block;padding:14px 28px;background:#1a1a1a;border:1px solid rgba(212,184,150,.3);color:#f5f0e8;text-decoration:none;font-weight:600;font-size:14px;border-radius:999px;margin:0 4px 12px">💬 Tengo una duda</a>
         </td></tr>
 
@@ -178,14 +188,14 @@ Teléfono del acompañante:`
         <tr><td style="padding:32px 32px 0;text-align:center">
           <p style="margin:0;font-size:18px;line-height:1.5;color:rgba(245,240,232,.9);font-style:italic;font-family:Georgia,serif">
             Nos vemos el 16 de mayo en Santiago.<br>
-            <span style="color:#ffd23f;font-style:normal">Vení a vivirlo.</span>
+            <span style="color:#ffd23f;font-style:normal">Ven a vivirlo.</span>
           </p>
         </td></tr>
 
         <!-- FOOTER -->
         <tr><td style="padding:32px;text-align:center">
           <p style="margin:32px 0 0;padding-top:24px;border-top:1px solid rgba(212,184,150,.15);font-size:11px;letter-spacing:.2em;color:#8a8580;text-transform:uppercase;font-weight:500">NEXT LEVEL · 2nd Edition · Santiago 2026</p>
-          <p style="margin:8px 0 0;font-size:11px;color:#8a8580">¿Dudas? Respondé este email o escribinos por <a href="${waDudas}" style="color:#ffd23f;text-decoration:underline">WhatsApp</a></p>
+          <p style="margin:8px 0 0;font-size:11px;color:#8a8580">¿Dudas? Responde este email o escríbenos por <a href="${waDudas}" style="color:#ffd23f;text-decoration:underline">WhatsApp</a></p>
           <p style="margin:8px 0 0;font-size:11px"><a href="${home}" style="color:#8a8580;text-decoration:underline">${CONTACT.domain}</a></p>
         </td></tr>
 
@@ -197,9 +207,9 @@ Teléfono del acompañante:`
   // ============== TEXT FALLBACK ==============
   const text = `${greeting}, ya estás dentro de Next Level.
 
-Confirmamos tu ${isVip ? 'Entrada VIP Next Level' : 'Entrada General'}.
+Confirmamos tu ${ticketDisplayName}.
 
-GUARDÁ LA FECHA
+GUARDA LA FECHA
 📅 ${WORKSHOP.date.display}
 🕐 14h a 21h · ${WORKSHOP.duration}
 📍 ${WORKSHOP.venue.full}
@@ -210,26 +220,26 @@ ${
 ★ Yoselvia · Auditoría VIP de tu negocio con Claude (60 min)
 ★ Valentina · Colorimetría VIP + revisión de imagen y presencia (60 min)
 ★ Sebastián · Revisión personalizada de comunicación y ventas (60 min)
-Te contactamos por WhatsApp después del 16 de mayo para coordinar.
+Te contactaremos por WhatsApp después del 16 de mayo para coordinar.
 
 `
     : ''
 }${
     isGeneral
       ? `TU ENTRADA INCLUYE 2×1
-¿Vas a venir con alguien? Registrá a tu acompañante por WhatsApp:
+¿Vienes con alguien? Registra a tu acompañante por WhatsApp:
 ${waAcompanante}
 
 `
       : ''
-  }SUMATE AL GRUPO EXCLUSIVO
+  }SÚMATE AL GRUPO EXCLUSIVO
 Recordatorios, ubicación exacta y networking con el resto del grupo:
 ${waGroup}
 
-Agregar al calendario: ${ics}
+Agregar a Google Calendar: ${calendarUrl}
 WhatsApp directo: ${waDudas}
 
-Nos vemos el 16 de mayo en Santiago. Vení a vivirlo.
+Nos vemos el 16 de mayo en Santiago. Ven a vivirlo.
 
 — Next Level · ${home}
 `.trim()

@@ -21,3 +21,24 @@ export function cn(...inputs: ClassValue[]): string {
 export function whatsappUrl(number: string, message: string): string {
   return `https://wa.me/${number}?text=${encodeURIComponent(message)}`
 }
+
+/**
+ * URL para agregar evento a Google Calendar (abre en pestaña nueva).
+ * No requiere descarga de archivo .ics — el usuario lo agrega con 1 click.
+ */
+export function googleCalendarUrl(opts: {
+  title: string
+  startUtc: string // formato: 20260516T180000Z
+  endUtc: string // formato: 20260517T010000Z
+  details: string
+  location: string
+}): string {
+  const params = new URLSearchParams({
+    action: 'TEMPLATE',
+    text: opts.title,
+    dates: `${opts.startUtc}/${opts.endUtc}`,
+    details: opts.details,
+    location: opts.location,
+  })
+  return `https://calendar.google.com/calendar/render?${params.toString()}`
+}

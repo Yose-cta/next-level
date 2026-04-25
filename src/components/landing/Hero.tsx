@@ -126,8 +126,8 @@ export function Hero() {
                 <Image
                   src="/hero.png"
                   alt="Equipo Next Level — Yoselvia, Sebastián y Valentina"
-                  width={1254}
-                  height={1254}
+                  width={1080}
+                  height={1080}
                   className="w-full h-full object-cover"
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   priority

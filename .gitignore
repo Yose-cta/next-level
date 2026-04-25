@@ -63,3 +63,9 @@ Thumbs.db
 # Supabase
 supabase/.branches
 supabase/.temp
+
+# Playwright screenshots/snapshots (locales, no se versionan)
+.playwright-mcp/
+
+# TS build cache
+tsconfig.tsbuildinfo

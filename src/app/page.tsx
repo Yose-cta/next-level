@@ -1,11 +1,11 @@
 import {
   AntesDespues,
   Closing,
-  CostOfInaction,
   FAQ,
   Footer,
   Guarantee,
   Hero,
+  Hook,
   Mentors,
   Mirror,
   ParaTiSi,
@@ -24,8 +24,8 @@ export default function HomePage() {
       <Hero />
       <Ticker />
       <Mirror />
-      <CostOfInaction />
       <ParaTiSi />
+      <Hook />
       <Mentors />
       <Takeaways />
       <AntesDespues />

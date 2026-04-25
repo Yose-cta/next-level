@@ -30,11 +30,6 @@ export function Tickets() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center max-w-3xl mx-auto mb-14 reveal">
-          <div className="flex items-center justify-center gap-4 mb-7">
-            <div className="h-px w-8 bg-electric" />
-            <div className="eyebrow">Elige tu entrada</div>
-            <div className="h-px w-8 bg-electric" />
-          </div>
           <h2 className="font-display text-display-lg text-white">
             <span data-editable="tickets-h">
               Dos formas de vivir<br />
@@ -182,19 +177,20 @@ function TicketCard({ ticket }: { ticket: (typeof TICKETS)[number] }) {
           </div>
         )}
 
-        <span data-magnetic="0.2" className="magnetic block">
-          <a
-            href={`/api/checkout?ticket=${ticket.id}`}
-            className={`block text-center font-medium py-5 rounded-full transition-colors duration-300 text-sm sm:text-base ${
-              isVip
-                ? 'bg-electric text-midnight hover:bg-yellow-300'
-                : 'bg-white text-midnight hover:bg-electric'
-            }`}
-            data-editable={`t${ticket.id}-cta`}
-          >
-            {ticket.cta} {isVip && <span aria-hidden>→</span>}
-          </a>
-        </span>
+        <a
+          href={`/api/checkout?ticket=${ticket.id}`}
+          className={`block w-full text-center font-semibold px-6 py-4 sm:py-5 rounded-full transition-all duration-300 ease-apple text-sm sm:text-base whitespace-nowrap hover:scale-[1.02] active:scale-[0.98] ${
+            isVip
+              ? 'bg-electric text-midnight hover:bg-yellow-300 shadow-glow-electric'
+              : 'bg-white text-midnight hover:bg-electric border border-white'
+          }`}
+          data-editable={`t${ticket.id}-cta`}
+        >
+          <span className="inline-flex items-center justify-center gap-2.5">
+            <span>{ticket.cta}</span>
+            <span aria-hidden className="text-lg">→</span>
+          </span>
+        </a>
       </div>
     </div>
   )
@@ -207,10 +203,9 @@ const COMPARISON_ROWS = [
   { label: 'Trabajo en vivo con los 3 expertos', general: true, vip: true },
   { label: 'Materiales impresos', general: true, vip: true },
   { label: 'Coffee break + networking', general: true, vip: true },
-  { label: 'Bonus: Gift Card $47.000', general: true, vip: true },
-  { label: '2x1: lleva un acompañante', general: true, vip: true },
+  { label: 'Bonus: Gift Card $27.000', general: true, vip: true },
+  { label: '2x1: lleva un acompañante', general: true, vip: false },
   { label: 'Comunidad VIP cerrada (15 días)', general: false, vip: true },
-  { label: 'Material exclusivo post-workshop', general: false, vip: true },
   { label: '1:1 con Yoselvia · Auditoría VIP con Claude', general: false, vip: true },
   { label: '1:1 con Valentina · Imagen, color, presencia', general: false, vip: true },
   { label: '1:1 con Sebastián · Comunicación y ventas', general: false, vip: true },

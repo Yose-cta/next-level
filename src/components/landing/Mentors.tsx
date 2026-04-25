@@ -15,11 +15,6 @@ export function Mentors() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24 reveal">
-          <div className="flex items-center justify-center gap-4 mb-7">
-            <div className="h-px w-8 bg-electric" />
-            <div className="eyebrow">Quiénes te guían</div>
-            <div className="h-px w-8 bg-electric" />
-          </div>
           <h2 className="font-display text-display-lg text-white leading-[1.05]">
             <span data-editable="mentors-h">
               Tres expertos. Una experiencia<br />

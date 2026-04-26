@@ -31,9 +31,7 @@ export interface CompraRow {
 }
 
 function inferTicketType(externalRef: string | undefined): TicketType {
-  if (!externalRef) return 'general'
-  // Match: 'vip-{timestamp}' (compra VIP real) o 'test-vip-{timestamp}' (compra VIP de test).
-  if (/^(test-)?vip-/.test(externalRef)) return 'vip'
+  if (externalRef?.startsWith('vip-')) return 'vip'
   return 'general'
 }
 

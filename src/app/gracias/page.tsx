@@ -20,10 +20,8 @@ export default async function GraciasPage({ searchParams }: PageProps) {
   const ticketId = params.ticket ?? 'general'
   const ticket = TICKETS.find((t) => t.id === ticketId) ?? TICKETS[0]
   const isPending = params.status === 'pending'
-  // 'vip' y 'test-vip' (test interno con precio reducido) ambos se tratan como VIP.
-  const isVip = ticket.id === 'vip' || ticket.id === 'test-vip'
-  // 'general' y 'test' (test interno con precio reducido) ambos se tratan como General.
-  const isGeneral = ticket.id === 'general' || ticket.id === 'test'
+  const isVip = ticket.id === 'vip'
+  const isGeneral = ticket.id === 'general'
 
   const waUrlDudas = whatsappUrl(
     CONTACT.whatsapp.number,

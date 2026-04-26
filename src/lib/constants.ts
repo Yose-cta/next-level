@@ -128,59 +128,6 @@ export const TICKETS = [
     cta: 'Reservar Entrada VIP',
     hidden: false,
   },
-  {
-    // Ticket interno con precio reducido (mismo nombre/copy que General).
-    // Solo se accede via URL directa /api/checkout?ticket=test (hidden de la UI).
-    id: 'test',
-    name: 'Entrada General',
-    tagline: 'Para vivir la experiencia completa',
-    price: { amount: 1000, currency: 'CLP', display: '$1.000' },
-    badge: null,
-    description:
-      'Acceso completo a Next Level Experience: 6 horas presenciales para dejar de improvisar, proyectarte con más autoridad y comunicar tu valor con más seguridad.',
-    features: [
-      'Acceso presencial al Next Level Experience (6 horas)',
-      'Trabajo en vivo con los 3 expertos: IA, imagen y comunicación',
-      'Materiales impresos para aplicar durante el evento',
-      'Coffee break + networking con personas en tu mismo nivel',
-      'Bonus: Gift Card de $27.000 para usar en alguno de nuestros servicios',
-      '2x1: puedes llevar un acompañante',
-    ],
-    forYou:
-      'Quieres vivir la experiencia completa, trabajar los 3 bloques principales y llevarte herramientas para aplicar por tu cuenta.',
-    cta: 'Reservar Entrada General',
-    hidden: true,
-  },
-  {
-    // Ticket interno VIP con precio reducido (mismo copy que VIP real).
-    // Solo se accede via URL directa /api/checkout?ticket=test-vip (hidden de la UI).
-    id: 'test-vip',
-    name: 'Entrada VIP Next Level Experience',
-    tagline: 'Para tener una mirada más personalizada',
-    price: { amount: 1000, currency: 'CLP', display: '$1.000' },
-    badge: 'EXPERIENCIA COMPLETA',
-    description:
-      'La experiencia presencial completa + 3 sesiones privadas 1:1 online post-evento con cada experto. (Sin promo 2x1 — solo para ti.)',
-    features: [
-      'Acceso presencial al Next Level Experience (6 horas)',
-      'Trabajo en vivo con los 3 expertos: IA, imagen y comunicación',
-      'Materiales impresos para aplicar durante el evento',
-      'Coffee break + networking con personas en tu mismo nivel',
-      '<strong class="text-electric">★ Solo VIP:</strong> 1 hora 1:1 online con Yoselvia · <strong>Auditoría VIP de tu negocio con Claude en vivo</strong>',
-      '<strong class="text-electric">★ Solo VIP:</strong> 1 hora 1:1 online con Valentina · <strong>Colorimetría VIP + revisión personalizada de imagen, color y presencia</strong>',
-      '<strong class="text-electric">★ Solo VIP:</strong> 1 hora 1:1 online con Sebastián · <strong>revisión personalizada de comunicación y ventas</strong>',
-      '<strong class="text-electric">★ Solo VIP:</strong> Comunidad VIP cerrada durante 15 días para resolver dudas',
-    ],
-    highlight: {
-      title: '3 horas privadas 1:1 después del evento',
-      body:
-        'Una sesión online con cada experto para revisar tu negocio, tu imagen y tu mensaje. La experiencia VIP no termina cuando acaba el evento — ahí recién empieza el trabajo aplicado a tu caso real.',
-    },
-    forYou:
-      'Quieres una mirada personalizada después del evento. Quieres que los 3 expertos revisen tu caso real y te den dirección para aterrizar lo aprendido.',
-    cta: 'Reservar Entrada VIP',
-    hidden: true,
-  },
 ] as const
 
 /* ============================================================

@@ -5,7 +5,7 @@ import { createPreference } from '@/lib/mercadopago'
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
-const VALID_TICKETS = ['general', 'vip', 'test', 'test-vip'] as const
+const VALID_TICKETS = ['general', 'vip'] as const
 type ValidTicket = (typeof VALID_TICKETS)[number]
 
 function isValidTicket(v: string): v is ValidTicket {

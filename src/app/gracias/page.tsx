@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { PurchaseTracker } from '@/components/tracking/PurchaseTracker'
@@ -211,6 +212,19 @@ Teléfono del acompañante:`
         {/* ============================================ */}
         {isVip && !isPending && (
           <section className="mt-14 bg-electric/10 border border-electric/30 rounded-sm p-6 sm:p-8">
+            {/* Imagen exclusiva VIP */}
+            <div className="-mx-6 sm:-mx-8 -mt-6 sm:-mt-8 mb-7 overflow-hidden">
+              <Image
+                src="/next-level-vip.png"
+                alt="Next Level VIP — Yoselvia, Sebastián y Valentina"
+                width={1254}
+                height={1254}
+                className="w-full h-auto block"
+                sizes="(max-width: 640px) 100vw, 640px"
+                priority
+              />
+            </div>
+
             <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-electric mb-3">
               Tu Activo VIP · 3 sesiones 1:1 post-evento
             </div>

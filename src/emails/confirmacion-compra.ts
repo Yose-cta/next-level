@@ -62,7 +62,10 @@ Teléfono del acompañante:`
   const vipBlock = isVip
     ? `
       <tr><td style="padding:24px 32px 0">
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fff8d6;border:1px solid #ffd23f;border-radius:8px">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fff8d6;border:1px solid #ffd23f;border-radius:8px;overflow:hidden">
+          <tr><td style="padding:0">
+            <img src="${baseUrl}/next-level-vip.png" alt="Next Level VIP" width="560" style="display:block;width:100%;max-width:560px;height:auto;border:0" />
+          </td></tr>
           <tr><td style="padding:24px">
             <p style="margin:0 0 6px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8a7a30;font-weight:600">Tu Activo VIP · 3 sesiones 1:1 post-evento</p>
             <p style="margin:0 0 16px;font-size:18px;line-height:1.3;color:#0a0a0a;font-family:Georgia,serif">

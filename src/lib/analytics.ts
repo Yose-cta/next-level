@@ -18,6 +18,11 @@ declare global {
       eventName: string,
       params?: Record<string, unknown>
     ) => void
+    gtag?: (
+      command: 'event' | 'config' | 'js' | 'set' | 'consent',
+      target: string,
+      params?: Record<string, unknown>
+    ) => void
   }
 }
 
@@ -47,6 +52,7 @@ function buildItem(ticket: Ticket) {
  * GA4: begin_checkout · Meta Pixel: InitiateCheckout
  */
 export function trackBeginCheckout(ticket: Ticket) {
+  // GTM dataLayer (en caso de que se configure cualquier tag adicional)
   pushDataLayer({
     event: 'begin_checkout',
     ecommerce: {
@@ -56,15 +62,23 @@ export function trackBeginCheckout(ticket: Ticket) {
     },
   })
 
-  if (typeof window !== 'undefined') {
-    window.fbq?.('track', 'InitiateCheckout', {
-      content_ids: [ticket.id],
-      content_name: ticket.name,
-      content_type: 'product',
-      value: ticket.price.amount,
-      currency: ticket.price.currency,
-    })
-  }
+  if (typeof window === 'undefined') return
+
+  // GA4 directo via gtag
+  window.gtag?.('event', 'begin_checkout', {
+    currency: ticket.price.currency,
+    value: ticket.price.amount,
+    items: [buildItem(ticket)],
+  })
+
+  // Meta Pixel
+  window.fbq?.('track', 'InitiateCheckout', {
+    content_ids: [ticket.id],
+    content_name: ticket.name,
+    content_type: 'product',
+    value: ticket.price.amount,
+    currency: ticket.price.currency,
+  })
 }
 
 /**
@@ -89,6 +103,7 @@ export function trackPurchase(ticket: Ticket) {
   // ID sintético. Mejora futura: pasar payment_id real desde el back_url de MP.
   const transactionId = `${ticket.id}-${Date.now()}`
 
+  // GTM dataLayer
   pushDataLayer({
     event: 'purchase',
     ecommerce: {
@@ -99,6 +114,15 @@ export function trackPurchase(ticket: Ticket) {
     },
   })
 
+  // GA4 directo via gtag
+  window.gtag?.('event', 'purchase', {
+    transaction_id: transactionId,
+    currency: ticket.price.currency,
+    value: ticket.price.amount,
+    items: [buildItem(ticket)],
+  })
+
+  // Meta Pixel
   window.fbq?.('track', 'Purchase', {
     content_ids: [ticket.id],
     content_name: ticket.name,

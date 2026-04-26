@@ -5,7 +5,8 @@ import Script from 'next/script'
  * Para activar después: agregar el ID en .env.local + Vercel y redeploy.
  *
  * Stack actual:
- * - GTM: Google Tag Manager (analytics + conversiones)
+ * - GTM: Google Tag Manager (hub para tags futuros)
+ * - GA4: Google Analytics 4 (instalado directo, NO también en GTM — evita duplicados)
  * - Meta Pixel: Facebook/Instagram tracking + ads optimization
  * - Microsoft Clarity: heatmaps + session recordings (free, sin límite)
  */
@@ -13,12 +14,41 @@ export function Trackers() {
   const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID
   const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID
+  const ga4Id = process.env.NEXT_PUBLIC_GA4_ID
 
   return (
     <>
       {clarityId && <Clarity id={clarityId} />}
       {metaPixelId && <MetaPixel id={metaPixelId} />}
       {gtmId && <GoogleTagManager id={gtmId} />}
+      {ga4Id && <GoogleAnalytics4 id={ga4Id} />}
+    </>
+  )
+}
+
+/**
+ * GA4 directo — usa gtag.js. Manda PageView automático y los eventos
+ * `begin_checkout` y `purchase` que disparamos desde lib/analytics.ts.
+ *
+ * IMPORTANTE: si querés agregar GA4 también dentro de GTM, remové de aquí
+ * o vas a tener eventos duplicados (cada pageview cuenta como 2).
+ */
+function GoogleAnalytics4({ id }: { id: string }) {
+  return (
+    <>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
+        strategy="afterInteractive"
+      />
+      <Script id="ga4-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = window.gtag || gtag;
+          gtag('js', new Date());
+          gtag('config', '${id}', { send_page_view: true });
+        `}
+      </Script>
     </>
   )
 }

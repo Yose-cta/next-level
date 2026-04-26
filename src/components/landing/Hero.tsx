@@ -92,9 +92,9 @@ export function Hero() {
               data-editable="hero-lead-3"
             >
               <span className="text-white">Tres expertos en vivo.</span> Tres áreas que cambian
-              cómo se <span className="text-white">sostiene</span>,
-              se <span className="text-white">percibe</span> y
-              se <span className="text-white">vende</span> tu negocio.
+              cómo <span className="text-white">ordenas tu operación</span>,
+              cómo <span className="text-white">proyectas tu imagen</span> y
+              cómo <span className="text-white">comunicas tu valor</span> para vender mejor.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3 sm:gap-5 items-center">

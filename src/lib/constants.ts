@@ -141,26 +141,30 @@ export const MENTORS = [
     expertise: 'Negocios conscientes impulsados con Claude',
     tag: 'IA aplicada · Claude',
     moduleNumber: '01',
-    moduleTitle: 'Sal del modo operador con Claude',
+    moduleTitle: 'Construye un negocio que no dependa solo de ti',
     moduleSubtitle:
-      'Deja de sostener todo desde tu cabeza y empieza a crear apoyo real con IA.',
+      'Ordena cómo vas a operar, vender y entregar antes de que el caos te cueste dinero.',
     moduleTime: '14:10 — 15:40',
     accent: 'electric',
-    lema: 'No necesitas hacerlo todo tú. Necesitas dejar de ser el sistema.',
+    lema:
+      'No necesitas hacerlo todo tú. Necesitas construir una operación que no se coma tu tiempo, tu energía ni tu margen.',
     bio:
-      'Yoselvia te guía a mirar tu negocio con más claridad — qué tareas, decisiones y procesos siguen dependiendo demasiado de ti — y a usar Claude como apoyo práctico para ordenar ideas, simplificar tareas y avanzar con menos carga.',
+      'Yoselvia te guía a mirar tu negocio por dentro para detectar qué está drenando tu tiempo, margen y energía — y a usar Claude e IA con criterio para ordenar tu operación. No se trata solo de vender más: se trata de construir algo que puedas sostener mejor.',
     teaches:
       'A usar Claude con intención: dejar de repetir tareas, ordenar tus ideas y construir una forma de trabajar menos dependiente de ti.',
     works: [
-      'Qué partes de tu negocio dependen demasiado de ti hoy',
-      'Qué simplificar, soltar o llevar a IA primero',
-      'Cómo usar Claude con más claridad para obtener mejores respuestas',
-      'Cómo convertir tareas repetidas en pasos simples y delegables',
+      'Cómo identificar las partes más débiles de tu negocio',
+      'Dónde estás perdiendo tiempo, dinero o energía sin darte cuenta',
+      'Qué herramientas realmente necesitas y cuáles son gasto innecesario',
+      'Cómo ordenar la forma en que vendes, entregas y das seguimiento',
+      'Qué eliminar, simplificar, automatizar o delegar — con criterio de IA',
     ],
     deliverables: [
-      'Claridad de las tareas que te mantienen operando',
-      'Guía para convertir tareas repetidas en instrucciones simples',
-      'Mapa inicial: qué soltar, simplificar o llevar a IA primero',
+      'Claridad de tu operación actual o futura',
+      'Mapa de cómo entregar mejor tu servicio, producto o experiencia',
+      'Identificación de fugas de tiempo, dinero y energía',
+      'Criterio para usar Claude e IA sin improvisar ni delegar a ciegas',
+      'Plan de acción para operar con más orden y menos carga',
     ],
     vipSession: {
       name: 'Auditoría VIP de tu negocio con Claude en vivo',

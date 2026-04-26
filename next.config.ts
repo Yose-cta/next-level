@@ -11,13 +11,13 @@ const cspDirectives: Record<string, string[]> = {
   'default-src': ["'self'"],
   'script-src': [
     "'self'",
-    "'unsafe-inline'", // Inline scripts del Trackers (GTM/Pixel/Hotjar bootstrap)
-    "'unsafe-eval'", // Hotjar y Wistia usan eval interno
+    "'unsafe-inline'", // Inline scripts del Trackers (GTM/Pixel/Clarity bootstrap)
+    "'unsafe-eval'", // Clarity y Wistia usan eval interno
     'https://www.googletagmanager.com',
     'https://www.google-analytics.com',
     'https://connect.facebook.net',
-    'https://*.hotjar.com',
-    'https://*.hotjar.io',
+    'https://www.clarity.ms',
+    'https://*.clarity.ms',
     'https://fast.wistia.net',
     'https://fast.wistia.com',
   ],
@@ -29,7 +29,7 @@ const cspDirectives: Record<string, string[]> = {
     'https://www.facebook.com',
     'https://www.googletagmanager.com',
     'https://*.google-analytics.com',
-    'https://*.hotjar.com',
+    'https://*.clarity.ms',
     'https://*.wistia.com',
     'https://embed-fastly.wistia.com',
     'https://embedwistia-a.akamaihd.net',
@@ -41,9 +41,8 @@ const cspDirectives: Record<string, string[]> = {
     'https://*.google-analytics.com',
     'https://www.facebook.com',
     'https://connect.facebook.net',
-    'https://*.hotjar.com',
-    'https://*.hotjar.io',
-    'wss://*.hotjar.com',
+    'https://www.clarity.ms',
+    'https://*.clarity.ms',
     'https://*.wistia.com',
     'https://fast.wistia.net',
     'https://embed-fastly.wistia.com',

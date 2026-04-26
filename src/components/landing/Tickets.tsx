@@ -1,3 +1,4 @@
+import { CheckoutButton } from '@/components/tracking/CheckoutButton'
 import { TICKETS } from '@/lib/constants'
 
 /**
@@ -177,8 +178,8 @@ function TicketCard({ ticket }: { ticket: (typeof TICKETS)[number] }) {
           </div>
         )}
 
-        <a
-          href={`/api/checkout?ticket=${ticket.id}`}
+        <CheckoutButton
+          ticket={ticket}
           className={`block w-full text-center font-semibold px-6 py-4 sm:py-5 rounded-full transition-all duration-300 ease-apple text-sm sm:text-base whitespace-nowrap hover:scale-[1.02] active:scale-[0.98] ${
             isVip
               ? 'bg-electric text-midnight hover:bg-yellow-300 shadow-glow-electric'
@@ -190,7 +191,7 @@ function TicketCard({ ticket }: { ticket: (typeof TICKETS)[number] }) {
             <span>{ticket.cta}</span>
             <span aria-hidden className="text-lg">→</span>
           </span>
-        </a>
+        </CheckoutButton>
       </div>
     </div>
   )

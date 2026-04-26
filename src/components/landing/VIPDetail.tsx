@@ -1,5 +1,7 @@
-import Link from 'next/link'
-import { MENTORS } from '@/lib/constants'
+import { CheckoutButton } from '@/components/tracking/CheckoutButton'
+import { MENTORS, TICKETS } from '@/lib/constants'
+
+const VIP_TICKET = TICKETS.find((t) => t.id === 'vip')!
 
 /**
  * VIPDetail — sección dedicada para detallar las 3 sesiones privadas
@@ -119,13 +121,13 @@ export function VIPDetail() {
         {/* CTA */}
         <div className="text-center mt-14 reveal">
           <span data-magnetic="0.2" className="magnetic">
-            <Link
-              href="/api/checkout?ticket=vip"
+            <CheckoutButton
+              ticket={VIP_TICKET}
               className="inline-flex items-center gap-3 bg-magenta text-white font-semibold px-8 py-4 rounded-full hover:bg-ink transition-colors duration-300 ease-apple text-sm sm:text-base shadow-glow-magenta"
             >
               <span data-editable="vip-cta">Reservar Entrada VIP — $147.000</span>
               <span aria-hidden>→</span>
-            </Link>
+            </CheckoutButton>
           </span>
           <p className="mt-4 text-xs text-ash font-mono uppercase tracking-[0.2em]">
             3 sesiones privadas 1:1 · post-evento · online

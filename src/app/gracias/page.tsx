@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import { PurchaseTracker } from '@/components/tracking/PurchaseTracker'
 import { CONTACT, TICKETS, WORKSHOP } from '@/lib/constants'
 import { googleCalendarUrl, whatsappUrl } from '@/lib/utils'
 
@@ -50,6 +51,9 @@ Teléfono del acompañante:`
 
   return (
     <main className="min-h-screen py-16 px-4 sm:px-6 relative overflow-hidden">
+      {/* Tracking de conversión: solo en pago confirmado, con dedupe interno */}
+      {!isPending && <PurchaseTracker ticket={ticket} />}
+
       {/* Glow ambient sutil */}
       <div
         className="absolute inset-0 -z-10 opacity-50 pointer-events-none"

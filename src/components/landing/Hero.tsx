@@ -74,7 +74,7 @@ export function Hero() {
               data-editable="hero-lead"
             >
               Una experiencia presencial de <span className="text-white">6 horas</span> para
-              emprendedores, expertos y coach que trabajan duro pero sienten que siguen
+              emprendedores, expertos, coach y marcas personales que trabajan duro pero sienten que siguen
               demasiado dentro del día a día. Tres expertos en vivo. Tres áreas que cambian
               cómo se sostiene, se percibe y se vende tu negocio.
             </p>

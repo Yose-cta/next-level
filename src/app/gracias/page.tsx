@@ -13,7 +13,13 @@ export const metadata: Metadata = {
 }
 
 interface PageProps {
-  searchParams: Promise<{ ticket?: string; status?: string }>
+  searchParams: Promise<{
+    ticket?: string
+    status?: string
+    payment_id?: string
+    collection_id?: string
+    preference_id?: string
+  }>
 }
 
 export default async function GraciasPage({ searchParams }: PageProps) {
@@ -21,6 +27,12 @@ export default async function GraciasPage({ searchParams }: PageProps) {
   const ticketId = params.ticket ?? 'general'
   const ticket = TICKETS.find((t) => t.id === ticketId) ?? TICKETS[0]
   const isPending = params.status === 'pending'
+  // Solo fire `purchase` event si hay evidencia de que MercadoPago realmente
+  // procesó un pago (alguno de payment_id, collection_id o preference_id).
+  // Esto evita Purchase events fantasma cuando alguien navega manualmente a /gracias.
+  const hasMpPayment = Boolean(
+    params.payment_id || params.collection_id || params.preference_id
+  )
   const isVip = ticket.id === 'vip'
   const isGeneral = ticket.id === 'general'
 
@@ -51,8 +63,10 @@ Teléfono del acompañante:`
 
   return (
     <main className="min-h-screen py-16 px-4 sm:px-6 relative overflow-hidden">
-      {/* Tracking de conversión: solo en pago confirmado, con dedupe interno */}
-      {!isPending && <PurchaseTracker ticket={ticket} />}
+      {/* Tracking de conversión: solo si MP realmente procesó un pago aprobado.
+          Sin esos params en la URL, no disparamos el evento — evita Purchase
+          fantasma cuando alguien navega manualmente a /gracias. */}
+      {!isPending && hasMpPayment && <PurchaseTracker ticket={ticket} />}
 
       {/* Glow ambient sutil */}
       <div

@@ -235,34 +235,85 @@ Teléfono del acompañante:`
         )}
 
         {/* ============================================ */}
-        {/* 6. AGENDA VIP — link al HTML printable (solo VIP) */}
+        {/* 6. AGENDA — link al HTML printable (VIP o General) */}
         {/* ============================================ */}
-        {isVip && !isPending && (
-          <section className="mt-14 bg-electric/5 border border-electric/40 rounded-sm p-6 sm:p-8">
+        {!isPending && (
+          <section
+            className={
+              isVip
+                ? 'mt-14 bg-electric/5 border border-electric/40 rounded-sm p-6 sm:p-8'
+                : 'mt-14 bg-noir-2 border border-champagne/30 rounded-sm p-6 sm:p-8'
+            }
+          >
             <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-electric mb-3">
-              Tu agenda completa · Imprimible
+              {isVip ? 'Tu agenda completa · Imprimible' : 'Tu agenda · Imprimible'}
             </div>
 
             <h2 className="font-display text-2xl sm:text-3xl text-cream leading-tight">
-              Mira tu agenda VIP completa
+              {isVip
+                ? 'Mira tu agenda VIP completa'
+                : 'Mira la cronología completa del día'}
             </h2>
 
             <p className="mt-4 text-cream/85 leading-relaxed">
-              Cronología hora a hora del 16 de mayo + detalle de tus 3 sesiones
-              privadas + cómo agendar con cada experto.{' '}
-              <strong className="text-cream">Puedes guardarla o imprimirla.</strong>
+              {isVip ? (
+                <>
+                  Cronología hora a hora del 16 de mayo + detalle de tus 3
+                  sesiones privadas + cómo agendar con cada experto.{' '}
+                  <strong className="text-cream">
+                    Puedes guardarla o imprimirla.
+                  </strong>
+                </>
+              ) : (
+                <>
+                  Hora a hora, qué vas a vivir el 16 de mayo.{' '}
+                  <strong className="text-cream">
+                    Puedes guardarla o imprimirla
+                  </strong>{' '}
+                  para llegar con foco al evento.
+                </>
+              )}
             </p>
 
             <a
-              href="/vip-agenda.html"
+              href={isVip ? '/vip-agenda.html' : '/general-agenda.html'}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center justify-center gap-3 bg-electric text-noir font-semibold px-7 py-4 rounded-full hover:bg-yellow-300 transition"
+              className={
+                isVip
+                  ? 'mt-6 inline-flex items-center justify-center gap-3 bg-electric text-noir font-semibold px-7 py-4 rounded-full hover:bg-yellow-300 transition'
+                  : 'mt-6 inline-flex items-center justify-center gap-3 bg-electric text-noir font-semibold px-7 py-4 rounded-full hover:bg-yellow-300 transition'
+              }
             >
-              <span aria-hidden>★</span>
-              <span>Ver mi agenda VIP</span>
+              {isVip && <span aria-hidden>★</span>}
+              <span>{isVip ? 'Ver mi agenda VIP' : 'Ver mi agenda'}</span>
               <span aria-hidden>→</span>
             </a>
+          </section>
+        )}
+
+        {/* ============================================ */}
+        {/* 6.5 BONUS VIP — 15 días post-evento (solo VIP)  */}
+        {/* ============================================ */}
+        {isVip && !isPending && (
+          <section className="mt-6 bg-electric/10 border-l-4 border-electric rounded-sm p-5 sm:p-6 flex gap-4 items-start">
+            <span className="text-electric text-xl shrink-0 leading-none mt-0.5" aria-hidden>
+              ★
+            </span>
+            <div>
+              <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-electric mb-1">
+                Bonus VIP · 15 días de comunidad
+              </div>
+              <p className="text-sm text-cream/85 leading-relaxed">
+                Tu acceso al grupo VIP se mantiene{' '}
+                <strong className="text-cream">
+                  15 días completos después del evento
+                </strong>{' '}
+                para que resuelvas dudas con cada mentor, profundices lo
+                aprendido y aterrices todo a tu caso real — sin presión y a tu
+                ritmo.
+              </p>
+            </div>
           </section>
         )}
 

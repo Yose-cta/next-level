@@ -42,7 +42,8 @@ Teléfono del acompañante:`
   )
 
   const waGroup = isVip ? CONTACT.whatsappGroupVip : CONTACT.whatsappGroup
-  const vipAgendaUrl = `${process.env.NEXT_PUBLIC_SITE_URL ?? CONTACT.url}/vip-agenda.html`
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? CONTACT.url
+  const agendaUrl = isVip ? `${baseUrl}/vip-agenda.html` : `${baseUrl}/general-agenda.html`
   const calendarUrl = googleCalendarUrl({
     title: 'Next Level Experience · 2nd Edition',
     startUtc: '20260516T180000Z', // 14:00 Santiago = 18:00 UTC
@@ -57,7 +58,7 @@ Teléfono del acompañante:`
     ? '✓ Tu cupo VIP Next Level Experience está confirmado'
     : '✓ Tu cupo Next Level Experience está confirmado'
 
-  // ============== VIP BLOCK (3 sesiones 1:1) ==============
+  // ============== VIP BLOCK (3 sesiones 1:1 + 15 días) ==============
   const vipBlock = isVip
     ? `
       <tr><td style="padding:24px 32px 0">
@@ -80,6 +81,9 @@ Teléfono del acompañante:`
             </table>
             <p style="margin:16px 0 0;padding-top:14px;border-top:1px solid rgba(138,122,48,.2);font-size:13px;line-height:1.6;color:#5c5223">
               Te contactaremos por WhatsApp después del 16 de mayo para coordinar fechas y horarios.
+            </p>
+            <p style="margin:14px 0 0;padding:12px 14px;background:rgba(255,210,63,.25);border-left:3px solid #ffd23f;font-size:13px;line-height:1.6;color:#0a0a0a">
+              <strong>★ Bonus VIP · 15 días de comunidad:</strong> tu acceso al grupo VIP se mantiene <strong>15 días completos después del evento</strong> para resolver dudas con cada mentor y aterrizar todo a tu caso real.
             </p>
           </td></tr>
         </table>
@@ -105,8 +109,8 @@ Teléfono del acompañante:`
       </td></tr>`
     : ''
 
-  // ============== AGENDA VIP (solo VIP) ==============
-  const agendaVipBlock = isVip
+  // ============== AGENDA IMPRIMIBLE (VIP o General) ==============
+  const agendaBlock = isVip
     ? `
       <tr><td style="padding:24px 32px 0">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fff8d6;border:2px solid #ffd23f;border-radius:8px">
@@ -118,11 +122,25 @@ Teléfono del acompañante:`
             <p style="margin:0 0 18px;font-size:14px;line-height:1.65;color:#3a3a3a">
               Cronología hora a hora del 16 de mayo + detalle de tus 3 sesiones privadas + cómo agendar con cada experto. <strong style="color:#0a0a0a">Puedes guardarla o imprimirla.</strong>
             </p>
-            <a href="${vipAgendaUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:13px 26px;background:#ffd23f;color:#0a0a0a;text-decoration:none;font-weight:600;font-size:14px;border-radius:999px">★ Ver mi agenda VIP</a>
+            <a href="${agendaUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:13px 26px;background:#ffd23f;color:#0a0a0a;text-decoration:none;font-weight:600;font-size:14px;border-radius:999px">★ Ver mi agenda VIP</a>
           </td></tr>
         </table>
       </td></tr>`
-    : ''
+    : `
+      <tr><td style="padding:24px 32px 0">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#1a1a1a;border:1px solid rgba(212,184,150,.2);border-radius:8px">
+          <tr><td style="padding:24px">
+            <p style="margin:0 0 6px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#ffd23f;font-weight:600">Tu agenda · Imprimible</p>
+            <p style="margin:0 0 12px;font-size:20px;line-height:1.25;color:#f5f0e8;font-family:Georgia,serif">
+              Mira la cronología completa del día
+            </p>
+            <p style="margin:0 0 18px;font-size:14px;line-height:1.65;color:rgba(245,240,232,.85)">
+              Hora a hora, qué vas a vivir el 16 de mayo. <strong style="color:#f5f0e8">Puedes guardarla o imprimirla</strong> para llegar con foco al evento.
+            </p>
+            <a href="${agendaUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:13px 26px;background:#ffd23f;color:#0a0a0a;text-decoration:none;font-weight:600;font-size:14px;border-radius:999px">Ver mi agenda</a>
+          </td></tr>
+        </table>
+      </td></tr>`
 
   // ============== GRUPO WHATSAPP (VIP o General) ==============
   const grupoBlock = isVip
@@ -213,7 +231,7 @@ Teléfono del acompañante:`
         </td></tr>
 
         ${vipBlock}
-        ${agendaVipBlock}
+        ${agendaBlock}
         ${acompananteBlock}
         ${grupoBlock}
 
@@ -261,12 +279,16 @@ ${
 ★ Sebastián · Revisión personalizada de comunicación y ventas (60 min)
 Te contactaremos por WhatsApp después del 16 de mayo para coordinar.
 
-TU AGENDA VIP COMPLETA (cronología + sesiones + cómo agendar):
-${vipAgendaUrl}
+★ BONUS VIP · 15 DÍAS DE COMUNIDAD
+Tu acceso al grupo VIP se mantiene 15 días completos después del evento para
+resolver dudas con cada mentor y aterrizar todo a tu caso real.
 
 `
     : ''
-}${
+}TU AGENDA COMPLETA (cronología hora a hora${isVip ? ' + sesiones + cómo agendar' : ''}):
+${agendaUrl}
+
+${
     isGeneral
       ? `TU ENTRADA INCLUYE 2×1
 ¿Vienes con alguien? Registra a tu acompañante por WhatsApp:

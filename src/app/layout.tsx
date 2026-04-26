@@ -3,7 +3,6 @@ import { Instrument_Serif, Inter, JetBrains_Mono } from 'next/font/google'
 import { LuxuryEffects } from '@/components/LuxuryEffects'
 import { RevealOnScroll } from '@/components/RevealOnScroll'
 import { WhatsAppFloating } from '@/components/landing/WhatsAppFloating'
-import { SelfXSSWarning } from '@/components/security/SelfXSSWarning'
 import { Trackers } from '@/components/tracking/Trackers'
 import { CONTACT, META, WORKSHOP } from '@/lib/constants'
 import './globals.css'
@@ -93,7 +92,6 @@ export default function RootLayout({
         <RevealOnScroll />
         <LuxuryEffects />
         <Trackers />
-        <SelfXSSWarning />
       </body>
     </html>
   )

@@ -1,13 +1,11 @@
 import type { NextConfig } from 'next'
 
 /**
- * Content Security Policy — modo REPORT-ONLY.
- * No bloquea nada todavía; solo loguea violaciones en la consola del navegador.
- * Tras 1 semana monitoreando: pasar el header a `Content-Security-Policy` para
- * empezar a bloquear de verdad.
+ * Content Security Policy — modo ENFORCING (bloquea, no solo avisa).
  *
  * Cubre los integradores actuales: GTM, Meta Pixel, Hotjar, Wistia, Google Fonts,
- * MercadoPago (form-action). Si agregás un servicio nuevo, recordá whitelistearlo.
+ * MercadoPago (form-action). Si agregás un servicio nuevo, recordá whitelistearlo
+ * o el navegador lo va a bloquear silenciosamente.
  */
 const cspDirectives: Record<string, string[]> = {
   'default-src': ["'self'"],
@@ -66,38 +64,70 @@ const cspDirectives: Record<string, string[]> = {
   'base-uri': ["'self'"],
   'object-src': ["'none'"],
   'frame-ancestors': ["'none'"],
+  // Fuerza HTTPS dentro de la página — bloquea cualquier recurso http://
+  'upgrade-insecure-requests': [],
+  // Bloquea inyección de mixed content
+  'block-all-mixed-content': [],
 }
 
 const cspString = Object.entries(cspDirectives)
-  .map(([directive, sources]) => `${directive} ${sources.join(' ')}`)
+  .map(([directive, sources]) =>
+    sources.length === 0 ? directive : `${directive} ${sources.join(' ')}`
+  )
   .join('; ')
 
 /**
- * Headers de seguridad globales.
+ * Headers de seguridad globales (enforcing).
  * Aplican a todas las rutas servidas por Next.js.
+ *
+ * Defensa en profundidad — múltiples capas porque ninguna sola es perfecta.
  */
 const securityHeaders = [
+  // ---- Transporte ----
   // Fuerza HTTPS en futuras visitas (1 año + subdominios + preload)
   {
     key: 'Strict-Transport-Security',
     value: 'max-age=63072000; includeSubDomains; preload',
   },
-  // Previene clickjacking (la página no se puede embeber en iframes externos)
+
+  // ---- Anti-clickjacking ----
+  // La página no se puede embeber en iframes externos (defensa legacy)
   { key: 'X-Frame-Options', value: 'DENY' },
-  // Previene MIME-sniffing — el navegador respeta el Content-Type declarado
+
+  // ---- Anti-MIME-sniffing ----
+  // El navegador respeta el Content-Type declarado, no adivina
   { key: 'X-Content-Type-Options', value: 'nosniff' },
-  // Limita la info de Referer enviada en navegación externa
+
+  // ---- Privacidad de Referer ----
   { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-  // Bloquea acceso a APIs sensibles del navegador (cámara, mic, geo, pagos web)
+
+  // ---- APIs sensibles del navegador ----
+  // Bloquea cámara, mic, geo, pagos web a menos que sea necesario
   {
     key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=(), payment=()',
+    value:
+      'camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), magnetometer=(), gyroscope=(), accelerometer=(), midi=(), interest-cohort=()',
   },
-  // CSP en modo report-only — no bloquea aún, solo loguea violaciones
-  {
-    key: 'Content-Security-Policy-Report-Only',
-    value: cspString,
-  },
+
+  // ---- CSP — bloqueo real (no más report-only) ----
+  // Bloquea ejecución de scripts y carga de recursos no whitelisted.
+  // Esta es la defensa principal contra XSS, code injection y data exfil.
+  { key: 'Content-Security-Policy', value: cspString },
+
+  // ---- Aislamiento de procesos (Spectre / cross-origin) ----
+  // Aísla el documento de cualquier ventana cross-origin
+  { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
+  // Solo recursos same-origin pueden embeber este documento
+  { key: 'Cross-Origin-Resource-Policy', value: 'same-origin' },
+
+  // ---- Bloqueo de Flash legacy / Adobe ----
+  { key: 'X-Permitted-Cross-Domain-Policies', value: 'none' },
+
+  // ---- DNS prefetch control (privacy + perf) ----
+  { key: 'X-DNS-Prefetch-Control', value: 'on' },
+
+  // ---- Anti-IE legacy (no XSS auditor — era buggy) ----
+  { key: 'X-XSS-Protection', value: '0' },
 ]
 
 const nextConfig: NextConfig = {
@@ -105,6 +135,28 @@ const nextConfig: NextConfig = {
   experimental: {
     mcpServer: true,
   },
+
+  /**
+   * Compiler hardening:
+   * - removeConsole: elimina console.* de los bundles de producción.
+   *   Reduce información expuesta a quien abra DevTools.
+   *   Mantiene console.error para visibilidad de errores reales.
+   */
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production'
+      ? { exclude: ['error', 'warn'] }
+      : false,
+  },
+
+  /**
+   * Producción: NO genera source maps (oculta el código fuente).
+   */
+  productionBrowserSourceMaps: false,
+
+  /**
+   * Oculta el header `X-Powered-By: Next.js`. Reduce info útil para fingerprinting.
+   */
+  poweredByHeader: false,
 
   async headers() {
     return [

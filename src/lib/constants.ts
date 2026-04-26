@@ -463,7 +463,7 @@ export const META = {
   title: 'Next Level Experience · 2nd Edition · 16 Mayo 2026 · Santiago',
   description:
     'Half-Day Experience presencial. 3 expertos en vivo: IA con Claude, imagen y comunicación. Deja de cargarlo todo tú y empieza a dirigir, proyectar y vender desde tu siguiente nivel.',
-  ogImage: '/next-level-logo.png',
+  ogImage: '/og-cover.png',
 } as const
 
 export type Mentor = (typeof MENTORS)[number]

@@ -6,7 +6,7 @@ import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
-const VALID_TICKETS = ['general', 'vip', 'test'] as const
+const VALID_TICKETS = ['general', 'vip'] as const
 type ValidTicket = (typeof VALID_TICKETS)[number]
 
 function isValidTicket(v: string): v is ValidTicket {

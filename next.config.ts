@@ -1,6 +1,78 @@
 import type { NextConfig } from 'next'
 
 /**
+ * Content Security Policy — modo REPORT-ONLY.
+ * No bloquea nada todavía; solo loguea violaciones en la consola del navegador.
+ * Tras 1 semana monitoreando: pasar el header a `Content-Security-Policy` para
+ * empezar a bloquear de verdad.
+ *
+ * Cubre los integradores actuales: GTM, Meta Pixel, Hotjar, Wistia, Google Fonts,
+ * MercadoPago (form-action). Si agregás un servicio nuevo, recordá whitelistearlo.
+ */
+const cspDirectives: Record<string, string[]> = {
+  'default-src': ["'self'"],
+  'script-src': [
+    "'self'",
+    "'unsafe-inline'", // Inline scripts del Trackers (GTM/Pixel/Hotjar bootstrap)
+    "'unsafe-eval'", // Hotjar y Wistia usan eval interno
+    'https://www.googletagmanager.com',
+    'https://www.google-analytics.com',
+    'https://connect.facebook.net',
+    'https://*.hotjar.com',
+    'https://*.hotjar.io',
+    'https://fast.wistia.net',
+    'https://fast.wistia.com',
+  ],
+  'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+  'img-src': [
+    "'self'",
+    'data:',
+    'blob:',
+    'https://www.facebook.com',
+    'https://www.googletagmanager.com',
+    'https://*.google-analytics.com',
+    'https://*.hotjar.com',
+    'https://*.wistia.com',
+    'https://embed-fastly.wistia.com',
+    'https://embedwistia-a.akamaihd.net',
+  ],
+  'font-src': ["'self'", 'data:', 'https://fonts.gstatic.com'],
+  'connect-src': [
+    "'self'",
+    'https://www.googletagmanager.com',
+    'https://*.google-analytics.com',
+    'https://www.facebook.com',
+    'https://connect.facebook.net',
+    'https://*.hotjar.com',
+    'https://*.hotjar.io',
+    'wss://*.hotjar.com',
+    'https://*.wistia.com',
+    'https://fast.wistia.net',
+    'https://embed-fastly.wistia.com',
+  ],
+  'frame-src': [
+    "'self'",
+    'https://fast.wistia.net',
+    'https://*.wistia.net',
+    'https://www.googletagmanager.com',
+    'https://www.facebook.com',
+    'https://td.doubleclick.net',
+  ],
+  'form-action': [
+    "'self'",
+    'https://www.mercadopago.cl',
+    'https://www.mercadopago.com',
+  ],
+  'base-uri': ["'self'"],
+  'object-src': ["'none'"],
+  'frame-ancestors': ["'none'"],
+}
+
+const cspString = Object.entries(cspDirectives)
+  .map(([directive, sources]) => `${directive} ${sources.join(' ')}`)
+  .join('; ')
+
+/**
  * Headers de seguridad globales.
  * Aplican a todas las rutas servidas por Next.js.
  */
@@ -20,6 +92,11 @@ const securityHeaders = [
   {
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=(), payment=()',
+  },
+  // CSP en modo report-only — no bloquea aún, solo loguea violaciones
+  {
+    key: 'Content-Security-Policy-Report-Only',
+    value: cspString,
   },
 ]
 

@@ -3,6 +3,8 @@
  * Cero dependencias externas. Server-side only (usa ACCESS_TOKEN).
  */
 
+import { timingSafeEqual } from 'node:crypto'
+
 const MP_BASE = 'https://api.mercadopago.com'
 
 export interface MpItem {
@@ -126,5 +128,13 @@ export async function verifyWebhookSignature(args: {
   const computed = Array.from(new Uint8Array(sigBuf))
     .map((b) => b.toString(16).padStart(2, '0'))
     .join('')
-  return computed === sig
+
+  // Comparación timing-safe — evita que un atacante deduzca el HMAC byte por byte
+  // midiendo el tiempo de respuesta a peticiones malformadas repetidas.
+  if (computed.length !== sig.length) return false
+  try {
+    return timingSafeEqual(Buffer.from(computed, 'hex'), Buffer.from(sig, 'hex'))
+  } catch {
+    return false
+  }
 }

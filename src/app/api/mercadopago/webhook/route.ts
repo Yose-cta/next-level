@@ -27,9 +27,21 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ ok: true, ignored: 'missing fields' })
     }
 
-    // Verificación de firma (recomendada en prod)
+    // Verificación de firma — fail-closed en producción.
+    // Si por error la env var se borra, NO procesamos el webhook (mejor perder
+    // un evento real que aceptar uno falso que marque pagos como aprobados).
     const secret = process.env.MERCADOPAGO_WEBHOOK_SECRET
-    if (secret) {
+    const isProd = process.env.NODE_ENV === 'production'
+
+    if (!secret) {
+      if (isProd) {
+        console.error(
+          '[webhook MP] CRITICAL: MERCADOPAGO_WEBHOOK_SECRET ausente en producción. Rechazando.'
+        )
+        return NextResponse.json({ error: 'webhook misconfigured' }, { status: 500 })
+      }
+      console.warn('[webhook MP] sin secret (modo dev) — saltando verificación')
+    } else {
       const valid = await verifyWebhookSignature({
         signatureHeader: req.headers.get('x-signature'),
         requestId: req.headers.get('x-request-id'),

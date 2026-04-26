@@ -443,7 +443,7 @@ export const SHIFTS = [
 export const FAQS = [
   {
     q: '¿Necesito saber usar Claude o tener experiencia con IA?',
-    a: 'No. La experiencia está pensada para emprendedoras y emprendedores que quieren aprender a usar la IA de forma práctica, sin tecnicismos. Vas a entender cómo aplicarla a tu negocio aunque hoy no tengas ninguna experiencia.',
+    a: 'No. La experiencia está pensada para emprendedores, expertos y coach que quieren aprender a usar la IA de forma práctica, sin tecnicismos. Vas a entender cómo aplicarla a tu negocio aunque hoy no tengas ninguna experiencia.',
   },
   {
     q: '¿Esto es para mí si recién estoy empezando?',

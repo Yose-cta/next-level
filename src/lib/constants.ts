@@ -128,6 +128,21 @@ export const TICKETS = [
     cta: 'Reservar Entrada VIP',
     hidden: false,
   },
+  {
+    // ⚠️ TICKET DE TEST — solo para verificar el flow end-to-end con un cobro mínimo.
+    // Hidden: no aparece en la landing. Acceso directo: /api/checkout?ticket=test
+    // Eliminar después de validar.
+    id: 'test',
+    name: 'TEST · No comprar',
+    tagline: 'Solo para verificación interna',
+    price: { amount: 500, currency: 'CLP', display: '$500' },
+    badge: null,
+    description: 'Ticket de prueba para validar el flow completo de pagos. No aparece en la landing.',
+    features: ['Verificación interna del flow de checkout y webhooks'],
+    forYou: 'Si te llegó este link sin que lo pidieras, ignóralo — es interno.',
+    cta: 'Comprar TEST',
+    hidden: true,
+  },
 ] as const
 
 /* ============================================================

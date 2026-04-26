@@ -143,23 +143,23 @@ export const MENTORS = [
     moduleNumber: '01',
     moduleTitle: 'Sal del modo operador con Claude',
     moduleSubtitle:
-      'Deja de sostener todo manualmente y empieza a crear apoyo real con IA.',
+      'Deja de sostener todo desde tu cabeza y empieza a crear apoyo real con IA.',
     moduleTime: '14:10 — 15:40',
     accent: 'electric',
-    lema: 'No necesitas trabajar más. Necesitas dejar de ser el sistema.',
+    lema: 'No necesitas hacerlo todo tú. Necesitas dejar de ser el sistema.',
     bio:
-      'Yoselvia te guía a mirar tu negocio con más claridad para identificar qué partes dependen demasiado de ti y cómo empezar a usar IA como apoyo real para tomar mejores decisiones.',
+      'Yoselvia te guía a mirar tu negocio con más claridad — qué tareas, decisiones y procesos siguen dependiendo demasiado de ti — y a usar Claude como apoyo práctico para ordenar ideas, simplificar tareas y avanzar con menos carga.',
     teaches:
       'A usar Claude con intención: dejar de repetir tareas, ordenar tus ideas y construir una forma de trabajar menos dependiente de ti.',
     works: [
-      'Qué partes de tu negocio te tienen demasiado dentro del día a día',
-      'Qué deberías empezar a soltar primero',
-      'Cómo usar Claude con más claridad y evitar respuestas genéricas',
-      'Cómo convertir ideas sueltas en apoyo real para tu negocio',
+      'Qué partes de tu negocio dependen demasiado de ti hoy',
+      'Qué simplificar, soltar o llevar a IA primero',
+      'Cómo usar Claude con más claridad para obtener mejores respuestas',
+      'Cómo convertir tareas repetidas en pasos simples y delegables',
     ],
     deliverables: [
-      'Detector de tareas que te mantienen operando',
-      'Guía para convertir tareas repetidas en procesos delegables',
+      'Claridad de las tareas que te mantienen operando',
+      'Guía para convertir tareas repetidas en instrucciones simples',
       'Mapa inicial: qué soltar, simplificar o llevar a IA primero',
     ],
     vipSession: {

@@ -66,7 +66,7 @@ export function Hero() {
               className="font-display italic text-display-md text-white/85 mt-5 max-w-2xl leading-snug"
               data-editable="hero-h3"
             >
-              Empieza a dirigir, proyectar y vender desde tu siguiente nivel.
+              Ordena tu negocio, eleva tu imagen y comunica tu valor para vender con más seguridad.
             </p>
 
             <p
@@ -82,11 +82,19 @@ export function Hero() {
               className="mt-4 text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-light"
               data-editable="hero-lead-2"
             >
-              No importa si estás dando tus primeros pasos o si ya vendes y sientes que
-              todo depende demasiado de ti. En esta jornada vas a trabajar en tres áreas clave:
-              cómo <span className="text-white">sostienes</span> tu negocio,
-              cómo te <span className="text-white">perciben</span> y
-              cómo <span className="text-white">comunicas</span> tu valor para vender con más seguridad.
+              Si estás <span className="text-white">empezando</span>: vas a crear bases más claras.
+              Si ya <span className="text-white">vendes</span>: vas a detectar qué ajustar,
+              qué soltar y cómo mostrarte con más fuerza.
+            </p>
+
+            <p
+              className="mt-4 text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-light"
+              data-editable="hero-lead-3"
+            >
+              <span className="text-white">Tres expertos en vivo.</span> Tres áreas que cambian
+              cómo se <span className="text-white">sostiene</span>,
+              se <span className="text-white">percibe</span> y
+              se <span className="text-white">vende</span> tu negocio.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3 sm:gap-5 items-center">

@@ -9,13 +9,31 @@ export const dynamic = 'force-dynamic'
 
 /**
  * MercadoPago webhook handler.
- * Setup en MP dashboard:
- * - URL: https://nl.yosmentedigital.com/api/mercadopago/webhook
- * - Eventos: Pagos
  *
- * Idempotente — MP reenvía hasta confirmación 200. El upsert por payment_id evita duplicados.
- * El email solo se envía una vez (chequea email_enviado_at).
+ * Setup en MP dashboard:
+ * - URL POST (modern):  https://nl.yosmentedigital.com/api/mercadopago/webhook
+ *                       Verificación: HMAC-SHA256 vía MERCADOPAGO_WEBHOOK_SECRET
+ *
+ * - URL GET (IPN legacy): https://nl.yosmentedigital.com/api/mercadopago/webhook?key=<token>
+ *                         MP no firma GETs, así que validamos un token compartido en URL.
+ *                         Generar con: openssl rand -hex 32
+ *                         Setear como MERCADOPAGO_IPN_KEY en .env.local + Vercel.
+ *
+ * Idempotente — MP reenvía hasta confirmación 200. Upsert por payment_id evita duplicados.
+ * Email se envía una sola vez (flag email_enviado_at en BD).
  */
+
+/**
+ * Enmascara un email para logs: yoselvia@gmail.com → yo***@gmail.com.
+ * Mantiene utilidad para debug sin exponer PII completa.
+ */
+function maskEmail(email: string | undefined | null): string {
+  if (!email) return 'unknown'
+  const [user, domain] = email.split('@')
+  if (!user || !domain) return 'malformed'
+  return `${user.slice(0, 2)}***@${domain}`
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = (await req.json().catch(() => ({}))) as Record<string, unknown>
@@ -24,12 +42,10 @@ export async function POST(req: NextRequest) {
     const dataId = data?.id ? String(data.id) : undefined
 
     if (!eventType || !dataId) {
-      return NextResponse.json({ ok: true, ignored: 'missing fields' })
+      return NextResponse.json({ ok: true })
     }
 
     // Verificación de firma — fail-closed en producción.
-    // Si por error la env var se borra, NO procesamos el webhook (mejor perder
-    // un evento real que aceptar uno falso que marque pagos como aprobados).
     const secret = process.env.MERCADOPAGO_WEBHOOK_SECRET
     const isProd = process.env.NODE_ENV === 'production'
 
@@ -59,28 +75,49 @@ export async function POST(req: NextRequest) {
       eventType !== 'payment.updated' &&
       eventType !== 'payment.created'
     ) {
-      return NextResponse.json({ ok: true, ignored: eventType })
+      return NextResponse.json({ ok: true })
     }
 
     return await processPayment(dataId)
   } catch (e) {
     console.error('[webhook MP POST] error:', e)
-    const message = e instanceof Error ? e.message : 'unknown'
-    return NextResponse.json({ error: 'webhook failed', detail: message }, { status: 500 })
+    return NextResponse.json({ error: 'webhook failed' }, { status: 500 })
   }
 }
 
 /**
- * MP también envía GET con query params en lugar de POST con body.
+ * MP también envía GET con query params (IPN legacy). Como MP no firma GETs,
+ * validamos un token compartido en la URL: ?key=<MERCADOPAGO_IPN_KEY>.
+ *
+ * Fail-closed en producción si la env var no está seteada.
  */
 export async function GET(req: NextRequest) {
   const sp = req.nextUrl.searchParams
+  const isProd = process.env.NODE_ENV === 'production'
+  const ipnKey = process.env.MERCADOPAGO_IPN_KEY
+
+  // Validar token compartido en URL
+  if (!ipnKey) {
+    if (isProd) {
+      console.error('[webhook MP GET] CRITICAL: MERCADOPAGO_IPN_KEY ausente en producción')
+      return NextResponse.json({ error: 'webhook misconfigured' }, { status: 500 })
+    }
+    console.warn('[webhook MP GET] sin IPN_KEY (modo dev) — saltando verificación')
+  } else {
+    const provided = sp.get('key')
+    if (!provided || provided !== ipnKey) {
+      console.warn('[webhook MP GET] key inválida o ausente')
+      return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
+    }
+  }
+
   const id = sp.get('id') ?? sp.get('data.id')
   const topic = sp.get('topic') ?? sp.get('type')
 
   if (!id || topic !== 'payment') {
-    return NextResponse.json({ ok: true, ignored: 'not-payment' })
+    return NextResponse.json({ ok: true })
   }
+
   try {
     return await processPayment(id)
   } catch (e) {
@@ -92,21 +129,18 @@ export async function GET(req: NextRequest) {
 async function processPayment(paymentId: string) {
   const payment = await getPayment(paymentId)
 
-  console.log('[webhook MP] payment received', {
+  // Log mínimo + mask de PII. No exponemos email completo, montos, ni external_reference
+  // (que puede contener datos sensibles del comprador).
+  console.log('[webhook MP] payment processed', {
     id: payment.id,
     status: payment.status,
-    external_reference: payment.external_reference,
-    amount: payment.transaction_amount,
-    payer_email: payment.payer.email,
+    payer_email: maskEmail(payment.payer?.email),
   })
 
   // 1. Upsert en Supabase (idempotente)
   const compra = await upsertCompraFromPayment(payment)
   if (!compra) {
-    return NextResponse.json(
-      { error: 'failed to persist compra', payment_id: payment.id },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'persist failed' }, { status: 500 })
   }
 
   // 2. Si está aprobado y no se envió email aún, enviarlo
@@ -127,21 +161,14 @@ async function processPayment(paymentId: string) {
         ],
       })
       await markEmailSent(compra.id)
-      console.log('[webhook MP] email sent', {
-        to: compra.comprador_email,
-        compra: compra.id,
-      })
+      console.log('[webhook MP] email sent', { to: maskEmail(compra.comprador_email) })
     } catch (mailErr) {
-      console.error('[webhook MP] email failed (compra guardada):', mailErr)
-      // No reventamos el webhook — la compra ya está en BD, podemos reenviar email manual
+      console.error('[webhook MP] email failed:', mailErr)
+      // No reventamos el webhook — la compra ya está en BD, podemos reenviar manual
     }
   }
 
-  return NextResponse.json({
-    ok: true,
-    received: payment.id,
-    status: payment.status,
-    compra_id: compra.id,
-    email_sent: payment.status === 'approved',
-  })
+  // Respuesta opaca — solo confirma que procesamos.
+  // No leakeamos compra_id, status, email_sent ni external_reference.
+  return NextResponse.json({ ok: true })
 }

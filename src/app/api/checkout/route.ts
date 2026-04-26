@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { CONTACT, TICKETS, WORKSHOP } from '@/lib/constants'
 import { createPreference } from '@/lib/mercadopago'
+import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -12,8 +13,44 @@ function isValidTicket(v: string): v is ValidTicket {
   return (VALID_TICKETS as readonly string[]).includes(v)
 }
 
+// Cookie para debounce de double-click (mismo browser)
+const DEBOUNCE_COOKIE = 'nl_checkout_at'
+const DEBOUNCE_MS = 3_000 // 3 segundos entre checkouts del mismo browser
+
 export async function GET(req: NextRequest) {
   try {
+    // 1. Debounce por cookie — evita double-click del usuario legítimo
+    const lastCheckoutCookie = req.cookies.get(DEBOUNCE_COOKIE)?.value
+    if (lastCheckoutCookie) {
+      const lastTs = parseInt(lastCheckoutCookie, 10)
+      if (!isNaN(lastTs) && Date.now() - lastTs < DEBOUNCE_MS) {
+        return NextResponse.json(
+          { error: 'Espera un momento antes de reintentar' },
+          { status: 429, headers: { 'Retry-After': '3' } }
+        )
+      }
+    }
+
+    // 2. Rate limit por IP — defensa contra bots simples (in-memory, ver lib/rate-limit.ts)
+    const ip = getClientIp(req.headers)
+    const rl = checkRateLimit({
+      key: `checkout:${ip}`,
+      windowMs: 60_000, // 1 minuto
+      max: 10, // 10 checkouts por IP por minuto
+    })
+    if (!rl.allowed) {
+      return NextResponse.json(
+        { error: 'Demasiados intentos. Intenta más tarde.' },
+        {
+          status: 429,
+          headers: {
+            'Retry-After': String(Math.ceil((rl.resetAt - Date.now()) / 1000)),
+            'X-RateLimit-Remaining': '0',
+          },
+        }
+      )
+    }
+
     const ticketId = req.nextUrl.searchParams.get('ticket') ?? ''
     if (!isValidTicket(ticketId)) {
       return NextResponse.json({ error: 'Ticket inválido' }, { status: 400 })
@@ -60,7 +97,16 @@ export async function GET(req: NextRequest) {
     const isProd = process.env.NODE_ENV === 'production'
     const redirectUrl = isProd ? pref.init_point : pref.sandbox_init_point ?? pref.init_point
 
-    return NextResponse.redirect(redirectUrl, 303)
+    const response = NextResponse.redirect(redirectUrl, 303)
+    // Setea cookie de debounce — bloquea reintentos rápidos del mismo browser
+    response.cookies.set(DEBOUNCE_COOKIE, String(Date.now()), {
+      httpOnly: true,
+      secure: isProd,
+      sameSite: 'lax',
+      maxAge: 10, // 10 segundos — solo necesitamos debounce corto
+      path: '/api/checkout',
+    })
+    return response
   } catch (e) {
     console.error('[checkout] error:', e)
     const message = e instanceof Error ? e.message : 'Error desconocido'

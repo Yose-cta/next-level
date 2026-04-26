@@ -74,9 +74,19 @@ export function Hero() {
               data-editable="hero-lead"
             >
               Una experiencia presencial de <span className="text-white">6 horas</span> para
-              emprendedores, expertos, coach y marcas personales que trabajan duro pero sienten que siguen
-              demasiado dentro del día a día. Tres expertos en vivo. Tres áreas que cambian
-              cómo se sostiene, se percibe y se vende tu negocio.
+              emprendedores, coaches, marcas personales y profesionales que quieren{' '}
+              <span className="text-white">construir, ordenar o llevar su negocio al siguiente nivel</span>.
+            </p>
+
+            <p
+              className="mt-4 text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-light"
+              data-editable="hero-lead-2"
+            >
+              No importa si estás dando tus primeros pasos o si ya vendes y sientes que
+              todo depende demasiado de ti. En esta jornada vas a trabajar en tres áreas clave:
+              cómo <span className="text-white">sostienes</span> tu negocio,
+              cómo te <span className="text-white">perciben</span> y
+              cómo <span className="text-white">comunicas</span> tu valor para vender con más seguridad.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3 sm:gap-5 items-center">

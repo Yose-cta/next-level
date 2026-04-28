@@ -56,17 +56,19 @@ export function Hero() {
             </div>
 
             <h1 className="font-display text-display-xl text-white leading-[0.98]">
-              <span className="block" data-editable="hero-h1">Deja de cargarlo</span>
+              <span className="block" data-editable="hero-h1">Deja de ser la persona que</span>
               <span className="block italic text-magenta -mt-1" data-editable="hero-h2">
-                todo tú.
+                sostiene todo, resuelve todo
               </span>
+              <span className="block" data-editable="hero-h2b">y vende con dudas.</span>
             </h1>
 
             <p
               className="font-display italic text-display-md text-white/85 mt-5 max-w-2xl leading-snug"
               data-editable="hero-h3"
             >
-              Ordena tu negocio, eleva tu imagen y comunica tu valor para vender con más seguridad.
+              Ordena tu negocio, eleva tu presencia y comunica tu valor con más seguridad para
+              dejar de operar desde la improvisación y empezar a dirigir desde tu siguiente nivel.
             </p>
 
             <p
@@ -74,27 +76,28 @@ export function Hero() {
               data-editable="hero-lead"
             >
               Una experiencia presencial de <span className="text-white">6 horas</span> para
-              emprendedores, coaches, marcas personales y profesionales que quieren{' '}
-              <span className="text-white">construir, ordenar o llevar su negocio al siguiente nivel</span>.
+              emprendedores, coaches, marcas personales y profesionales que sienten que su negocio
+              puede crecer más… pero no quieren seguir cargándolo todo con su tiempo, su energía
+              y su cabeza.
             </p>
 
             <p
               className="mt-4 text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-light"
               data-editable="hero-lead-2"
             >
-              Si estás <span className="text-white">empezando</span>: vas a crear bases más claras.
-              Si ya <span className="text-white">vendes</span>: vas a detectar qué ajustar,
-              qué soltar y cómo mostrarte con más fuerza.
+              Si estás <span className="text-white">empezando</span>: vas a construir bases más claras
+              desde el inicio. Si ya <span className="text-white">vendes</span>: vas a detectar qué
+              ajustar, qué soltar y qué ordenar para crecer con más intención.
             </p>
 
             <p
               className="mt-4 text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-light"
               data-editable="hero-lead-3"
             >
-              <span className="text-white">Tres expertos en vivo.</span> Tres áreas que cambian
-              cómo <span className="text-white">ordenas tu operación</span>,
-              cómo <span className="text-white">proyectas tu imagen</span> y
-              cómo <span className="text-white">comunicas tu valor</span> para vender mejor.
+              <span className="text-white">Tres expertos en vivo.</span> Tres áreas que impactan
+              directamente cómo <span className="text-white">sostienes tu negocio</span>,
+              cómo te <span className="text-white">perciben</span> y
+              cómo <span className="text-white">vendes tu valor</span>.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3 sm:gap-5 items-center">

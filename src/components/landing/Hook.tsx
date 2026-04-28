@@ -7,11 +7,11 @@ import Link from 'next/link'
  */
 const ACTIONS = [
   'soltar tareas que ya no deberían depender de ti',
-  'usar IA como apoyo real en tu negocio',
+  'usar IA como apoyo real, no como juguete ni como moda',
   'proyectar una imagen más alineada con tu valor',
   'comunicar lo que haces con más seguridad',
   'vender sin minimizarte',
-  'tomar decisiones desde claridad, no desde agotamiento',
+  'tomar decisiones desde criterio, no desde agotamiento',
 ] as const
 
 export function Hook() {
@@ -32,17 +32,19 @@ export function Hook() {
             className="mt-9 text-lg sm:text-xl text-charcoal max-w-2xl mx-auto leading-relaxed font-light"
             data-editable="hook-body"
           >
-            Next Level Experience no es un evento para llenarte de teoría. Es una
-            experiencia práctica para mirar tu negocio, tu imagen y tu comunicación con
-            otros ojos.
+            Next Level Experience no es un evento para llenarte de teoría, frases bonitas
+            o motivación que se queda en el salón. Es una experiencia práctica para mirar
+            tres áreas que hoy pueden estar frenando tu crecimiento: cómo está funcionando
+            tu negocio por dentro, cómo te estás mostrando hacia afuera, y cómo estás
+            comunicando y vendiendo tu valor.
           </p>
 
           <p
             className="mt-6 text-lg sm:text-xl text-ink max-w-2xl mx-auto leading-relaxed font-medium"
             data-editable="hook-body-2"
           >
-            Tu siguiente nivel no se sostiene solo con más esfuerzo. Se sostiene cuando
-            empiezas a:
+            Porque tu siguiente nivel no se sostiene solo con más esfuerzo. Se sostiene
+            cuando empiezas a:
           </p>
         </div>
 
@@ -71,7 +73,7 @@ export function Hook() {
               href="#tickets"
               className="inline-flex items-center gap-3 bg-midnight text-white font-medium px-7 py-4 rounded-full hover:bg-magenta transition-colors duration-300 ease-apple text-sm sm:text-base"
             >
-              <span data-editable="hook-cta">Reserva tu lugar</span>
+              <span data-editable="hook-cta">Quiero vivir esta experiencia</span>
               <span aria-hidden>→</span>
             </Link>
           </span>

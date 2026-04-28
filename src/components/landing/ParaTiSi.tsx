@@ -29,9 +29,9 @@ export function ParaTiSi() {
 
             <h2 className="font-display text-display-lg text-white leading-[1.05]">
               <span data-editable="paratisi-h">
-                Si te reconoces aquí,<br />
+                Esto es para ti<br />
                 <span className="italic text-electric">
-                  esta experiencia te está esperando.
+                  si te reconoces aquí.
                 </span>
               </span>
             </h2>
@@ -50,7 +50,7 @@ export function ParaTiSi() {
                   href="#tickets"
                   className="inline-flex items-center gap-3 bg-white text-midnight font-medium px-6 py-3.5 rounded-full hover:bg-electric transition-colors duration-300 ease-apple text-sm sm:text-base"
                 >
-                  <span data-editable="paratisi-cta">Reservar mi cupo</span>
+                  <span data-editable="paratisi-cta">Sí, quiero reservar mi cupo</span>
                   <span aria-hidden>→</span>
                 </Link>
               </span>

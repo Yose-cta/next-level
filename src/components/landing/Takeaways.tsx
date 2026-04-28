@@ -18,7 +18,7 @@ export function Takeaways() {
         <div className="text-center max-w-4xl mx-auto mb-16 sm:mb-20 reveal">
           <h2 className="font-display text-display-lg text-ink">
             <span data-editable="take-h">
-              6 cosas concretas.{' '}
+              6 cosas concretas que te llevas.{' '}
               <span className="italic text-magenta">No promesas vacías.</span>
             </span>
           </h2>
@@ -26,13 +26,12 @@ export function Takeaways() {
             className="mt-7 text-lg text-charcoal leading-relaxed font-light max-w-2xl mx-auto"
             data-editable="take-body"
           >
-            No te vamos a prometer que en una jornada vas a resolver todo tu
-            negocio. Pero sí vas a salir con{' '}
+            No te vamos a prometer que en una jornada vas a resolver todo tu negocio.
+            Pero sí vas a salir con{' '}
             <em className="text-ink not-italic font-medium">
-              claridad, herramientas y pasos concretos
+              dirección, herramientas y pasos concretos
             </em>{' '}
-            para empezar a soltar carga, proyectarte mejor y comunicar con más
-            seguridad.
+            para empezar a soltar carga, proyectarte mejor y comunicar con más seguridad.
           </p>
         </div>
 

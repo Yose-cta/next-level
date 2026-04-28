@@ -51,9 +51,11 @@ export function Guarantee() {
             className="mt-9 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl mx-auto font-light"
             data-editable="guar-body"
           >
-            No vas a salir con todo resuelto. Pero sí vas a salir con dirección clara,
-            recursos prácticos y la mirada distinta que necesitas para tomar decisiones
-            con más seguridad.
+            No vas a salir con todo resuelto. Pero sí vas a salir con una mirada distinta
+            sobre tu negocio, tu imagen y tu comunicación. Y eso importa, porque muchas
+            veces no estás estancada porque te falte capacidad — estás estancada porque
+            estás decidiendo desde el cansancio, mostrando menos de lo que vales y
+            comunicando sin la fuerza que tu oferta necesita.
           </p>
         </div>
 

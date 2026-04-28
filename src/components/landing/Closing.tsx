@@ -50,11 +50,15 @@ export function Closing() {
           className="mt-12 text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed font-light"
           data-editable="close-body"
         >
-          Cuando tu imagen refleja tu valor.
+          Cuando tu negocio deja de vivir solo en tu cabeza.
           <br />
-          Cuando comunicas con seguridad.
+          Cuando tu imagen refleja mejor tu valor.
           <br />
-          Cuando empiezas a dirigir tu negocio con claridad — no desde el agotamiento.
+          Cuando comunicas con más seguridad.
+          <br />
+          Cuando vendes sin minimizarte.
+          <br />
+          <span className="text-electric">Cuando empiezas a dirigir con más intención y menos agotamiento.</span>
         </p>
 
         <div

@@ -34,8 +34,11 @@ export function VIPDetail() {
             data-editable="vip-body"
           >
             La experiencia VIP no termina cuando acaba el evento. Después tendrás
-            una sesión online con cada experto para recibir una mirada
-            personalizada sobre tu negocio, tu presencia y tu forma de comunicar.
+            una sesión online con cada experto para recibir una mirada personalizada
+            sobre tu negocio, tu presencia y tu forma de comunicar. Es el espacio
+            para pasar de <em className="text-ink not-italic font-medium">"esto me
+            hizo sentido"</em> a <em className="text-ink not-italic font-medium">"esto
+            es lo que necesito hacer en mi caso"</em>.
           </p>
         </div>
 

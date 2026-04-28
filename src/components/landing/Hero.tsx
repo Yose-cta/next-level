@@ -55,49 +55,47 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="font-display text-display-xl text-white leading-[0.98]">
-              <span className="block" data-editable="hero-h1">Deja de ser la persona que</span>
+            <h1 className="font-display text-display-xl lg:text-display-lg text-white leading-[0.98]">
+              <span className="block" data-editable="hero-h1">Deja de sostener todo,</span>
               <span className="block italic text-magenta -mt-1" data-editable="hero-h2">
-                sostiene todo, resuelve todo
+                resolver todo
               </span>
-              <span className="block" data-editable="hero-h2b">y vende con dudas.</span>
+              <span className="block" data-editable="hero-h2b">y vender con dudas.</span>
             </h1>
 
             <p
-              className="font-display italic text-display-md text-white/85 mt-5 max-w-2xl leading-snug"
+              className="font-display italic text-display-md text-white/85 mt-5 max-w-xl leading-snug"
               data-editable="hero-h3"
             >
-              Ordena tu negocio, eleva tu presencia y comunica tu valor con más seguridad para
-              dejar de operar desde la improvisación y empezar a dirigir desde tu siguiente nivel.
+              Ordena tu negocio, eleva tu presencia y vende con más seguridad.
             </p>
 
             <p
-              className="mt-8 sm:mt-10 text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-light"
+              className="mt-8 text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-light"
               data-editable="hero-lead"
             >
-              Una experiencia presencial de <span className="text-white">6 horas</span> para
-              emprendedores, coaches, marcas personales y profesionales que sienten que su negocio
-              puede crecer más… pero no quieren seguir cargándolo todo con su tiempo, su energía
-              y su cabeza.
+              <span className="text-white">6 horas presenciales</span> para emprendedores, coaches,
+              marcas personales y profesionales que quieren crecer sin cargar todo con su tiempo,
+              su energía y su cabeza.
             </p>
 
             <p
               className="mt-4 text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-light"
               data-editable="hero-lead-2"
             >
-              Si estás <span className="text-white">empezando</span>: vas a construir bases más claras
-              desde el inicio. Si ya <span className="text-white">vendes</span>: vas a detectar qué
-              ajustar, qué soltar y qué ordenar para crecer con más intención.
+              Si <span className="text-white">empiezas</span>: bases más claras desde el inicio.
+              Si ya <span className="text-white">vendes</span>: criterio para ajustar, soltar y
+              ordenar lo que ya construiste.
             </p>
 
             <p
               className="mt-4 text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-light"
               data-editable="hero-lead-3"
             >
-              <span className="text-white">Tres expertos en vivo.</span> Tres áreas que impactan
-              directamente cómo <span className="text-white">sostienes tu negocio</span>,
+              <span className="text-white">Tres expertos en vivo.</span> Tres áreas que cambian
+              cómo <span className="text-white">sostienes</span> tu negocio,
               cómo te <span className="text-white">perciben</span> y
-              cómo <span className="text-white">vendes tu valor</span>.
+              cómo <span className="text-white">vendes</span> tu valor.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-3 sm:gap-5 items-center">

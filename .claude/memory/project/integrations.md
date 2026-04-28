@@ -43,10 +43,28 @@
 - `mcp__playwright__*` — testing visual y E2E
 - `mcp__4aebae86...vercel__*` — deploy, list projects, get deployment
 
-## Tracking pendientes (env vars vacías = no se renderizan)
+## Tracking activo (4 plataformas) — 2026-04-26
 
-- `NEXT_PUBLIC_HOTJAR_ID`
-- `NEXT_PUBLIC_META_PIXEL_ID`
-- `NEXT_PUBLIC_GTM_ID`
+| Tracker | env var | ID |
+|---|---|---|
+| Google Tag Manager | `NEXT_PUBLIC_GTM_ID` | `GTM-TVFBZP8N` |
+| Google Analytics 4 | `NEXT_PUBLIC_GA4_ID` | `G-1HD402XQ6V` |
+| Meta Pixel | `NEXT_PUBLIC_META_PIXEL_ID` | `1595688924875467` |
+| Microsoft Clarity | `NEXT_PUBLIC_CLARITY_ID` | `whv2dxsb09` |
 
-Ver `src/components/tracking/Trackers.tsx` — solo render si la env existe.
+**Eventos custom:** `begin_checkout` (click CTAs) y `purchase` (en /gracias con MP confirmation) — ver `src/lib/analytics.ts`. Disparan a GTM dataLayer + GA4 gtag + Meta Pixel fbq simultáneamente.
+
+**REGLA:** GA4 está instalado vía código (gtag.js en Trackers.tsx). NO configurar GA4 también dentro de GTM (causaría doble PageView).
+
+**Hotjar reemplazado por Clarity** — cuenta Hotjar migrada a Contentsquare con panel roto. Clarity es free unlimited.
+
+## Seguridad webhook MP
+
+- POST: HMAC-SHA256 timing-safe (`MERCADOPAGO_WEBHOOK_SECRET`) + fail-closed en producción
+- GET (legacy IPN): shared secret en URL via `MERCADOPAGO_IPN_KEY` — configurar en MP dashboard como `https://nl.yosmentedigital.com/api/mercadopago/webhook?key=<value>`
+- Respuesta opaca (no leakea compra_id ni email_sent)
+- PII enmascarada en logs
+
+## CSP enforcing en producción
+
+`next.config.ts` tiene CSP en modo bloqueante (no Report-Only) con whitelist específica para todos los dominios de los integradores. Si agregás un servicio nuevo, hay que whitelistearlo en `script-src`, `connect-src`, `img-src` y `frame-src` según corresponda.

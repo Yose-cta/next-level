@@ -83,9 +83,9 @@ export function Hero() {
               className="mt-4 text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-light"
               data-editable="hero-lead-2"
             >
-              Si <span className="text-white">empiezas</span>: bases más claras desde el inicio.
-              Si ya <span className="text-white">vendes</span>: criterio para ajustar, soltar y
-              ordenar lo que ya construiste.
+              Si <span className="text-white">recién empiezas</span>, vas a construir bases más
+              claras desde el inicio. Si ya <span className="text-white">vendes</span>, vas a
+              detectar qué ajustar y qué soltar para crecer con más intención.
             </p>
 
             <p

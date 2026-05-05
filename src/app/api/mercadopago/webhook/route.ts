@@ -172,7 +172,16 @@ async function processPayment(paymentId: string) {
   // 1. Upsert en Supabase (idempotente)
   const compra = await upsertCompraFromPayment(payment)
   if (!compra) {
-    return NextResponse.json({ error: 'persist failed' }, { status: 500 })
+    // ⚠️ Devolvemos 200 aunque la persistencia haya fallado. Si devolvemos
+    // 500, MP marca como "Falla en entrega" y nos perdemos el evento.
+    // Es preferible loguear el fallo y ACK al webhook (MP no reintenta tras 200).
+    // El error ya quedó en logs con detalles para investigación manual.
+    console.error('[webhook MP] persist failed — payment will be lost from DB', {
+      payment_id: payment.id,
+      status: payment.status,
+      live_mode: payment.live_mode,
+    })
+    return NextResponse.json({ ok: true, persisted: false })
   }
 
   // 2. Si está aprobado y no se envió email aún, enviarlo

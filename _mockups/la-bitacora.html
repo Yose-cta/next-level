@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Bitácora · Yos Mente Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --midnight: #0a0a0f;
+    --midnight-soft: #14141c;
+    --midnight-card: #16161f;
+    --bone: #f5f0e6;
+    --bone-soft: #faf6ed;
+    --yellow: #ffe44d;
+    --yellow-deep: #f4cf2b;
+    --magenta: #ff2d6d;
+    --text-dim: rgba(245, 240, 230, 0.55);
+    --text-dim-2: rgba(245, 240, 230, 0.35);
+    --text-dark-dim: rgba(10, 10, 15, 0.55);
+    --border: rgba(245, 240, 230, 0.08);
+    --border-strong: rgba(245, 240, 230, 0.15);
+    --border-dark: rgba(10, 10, 15, 0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--midnight);
+    color: var(--bone);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .serif { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10,10,15, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 0;
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand { display: flex; align-items: baseline; gap: 14px; }
+  .brand-mark {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 26px;
+    color: var(--bone);
+    letter-spacing: -0.01em;
+  }
+  .brand-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    color: var(--bone);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .nav-links a:hover { opacity: 1; }
+  .nav-cta {
+    background: var(--yellow);
+    color: var(--midnight);
+    padding: 10px 22px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .nav-cta:hover { transform: translateY(-1px); background: var(--yellow-deep); }
+
+  /* HERO */
+  .hero {
+    padding: 140px 0 120px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    right: -300px;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,228,77,0.07), transparent 60%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: -100px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,45,109,0.06), transparent 60%);
+    pointer-events: none;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
+    color: var(--text-dim);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-meta .sep {
+    width: 24px;
+    height: 1px;
+    background: var(--text-dim-2);
+  }
+  .hero-meta .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--yellow);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  .hero h1 {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: clamp(48px, 7vw, 102px);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-bottom: 40px;
+    max-width: 1120px;
+    position: relative;
+    z-index: 2;
+  }
+  .hero h1 .accent { color: var(--yellow); }
+  .hero h1 .strike { position: relative; }
+  .hero h1 .strike::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    top: 55%;
+    height: 4px;
+    background: var(--magenta);
+  }
+  .hero p.lead {
+    font-size: 19px;
+    line-height: 1.55;
+    max-width: 620px;
+    color: rgba(245,240,230, 0.78);
+    margin-bottom: 56px;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(245,240,230, 0.04);
+    border: 1px solid var(--border-strong);
+    padding: 8px 8px 8px 24px;
+    border-radius: 100px;
+    max-width: 540px;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-form input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--bone);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    outline: none;
+    padding: 12px 0;
+  }
+  .hero-form input::placeholder { color: var(--text-dim); }
+  .hero-form button {
+    background: var(--yellow);
+    color: var(--midnight);
+    border: none;
+    padding: 14px 28px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: background 0.2s;
+  }
+  .hero-form button:hover { background: var(--yellow-deep); }
+  .hero-mini {
+    margin-top: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    position: relative;
+    z-index: 2;
+  }
+
+  /* SECTION GENERIC */
+  section { padding: 120px 0; position: relative; }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 64px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .section-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--text-dim);
+  }
+  .section-title {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  /* CLASE DE HOY */
+  .today {
+    background: var(--midnight);
+    border-top: 1px solid var(--border);
+  }
+  .today-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .today-meta {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+    align-items: center;
+  }
+  .live-pulse {
+    background: var(--magenta);
+    color: var(--bone);
+    padding: 5px 12px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .live-pulse::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--bone);
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  .today-time {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+  .today h2 {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: clamp(36px, 4.5vw, 56px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 28px;
+    letter-spacing: -0.02em;
+  }
+  .today p {
+    color: var(--text-dim);
+    margin-bottom: 36px;
+    max-width: 480px;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  .today-stats {
+    display: flex;
+    gap: 48px;
+    margin-bottom: 40px;
+  }
+  .today-stat .num {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 64px;
+    color: var(--yellow);
+    line-height: 1;
+  }
+  .today-stat .lab {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-top: 10px;
+  }
+  .today-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .today-visual {
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(135deg, var(--midnight-card), rgba(255,228,77,0.04));
+    border: 1px solid var(--border-strong);
+    border-radius: 28px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .today-visual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(255,228,77,0.18), transparent 60%);
+  }
+  .today-visual::after {
+    content: 'YOSELVIA · VIVO';
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--yellow);
+  }
+  .play-btn {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--midnight);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  .play-btn:hover { transform: scale(1.05); }
+  .play-btn svg { width: 28px; height: 28px; margin-left: 4px; }
+  .btn-primary {
+    background: var(--yellow);
+    color: var(--midnight);
+    border: none;
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-primary:hover { background: var(--yellow-deep); transform: translateY(-1px); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--bone);
+    border: 1px solid var(--border-strong);
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .btn-ghost:hover { border-color: var(--bone); background: rgba(245,240,230,0.04); }
+
+  /* RUTAS */
+  .rutas {
+    background: var(--bone);
+    color: var(--midnight);
+  }
+  .rutas .section-title { color: var(--midnight); }
+  .rutas .section-num { color: var(--text-dark-dim); }
+  .rutas .section-header { border-bottom-color: var(--border-dark); }
+  .rutas-intro {
+    font-size: 19px;
+    color: var(--text-dark-dim);
+    max-width: 640px;
+    margin-bottom: 64px;
+    line-height: 1.55;
+  }
+  .rutas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .ruta-card {
+    background: var(--bone-soft);
+    border: 1px solid var(--border-dark);
+    padding: 56px 48px 48px;
+    border-radius: 28px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .ruta-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--midnight);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .ruta-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px rgba(10,10,15,0.08);
+  }
+  .ruta-card:hover::before { opacity: 1; }
+  .ruta-card:nth-child(1):hover { background: var(--yellow); }
+  .ruta-card:nth-child(2):hover { background: #faecd5; }
+  .ruta-card:nth-child(3):hover { background: #e8e3f5; }
+  .ruta-card:nth-child(4):hover { background: var(--magenta); color: var(--bone); }
+  .ruta-card:nth-child(4):hover .ruta-num,
+  .ruta-card:nth-child(4):hover .ruta-count { color: rgba(245,240,230,0.7); }
+  .ruta-card:nth-child(4):hover .ruta-meta { border-top-color: rgba(245,240,230,0.2); }
+  .ruta-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: var(--text-dark-dim);
+    margin-bottom: 32px;
+  }
+  .ruta-quote {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 32px;
+    line-height: 1.18;
+    margin-bottom: 40px;
+    letter-spacing: -0.015em;
+  }
+  .ruta-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 28px;
+    border-top: 1px solid var(--border-dark);
+    transition: border-top-color 0.3s;
+  }
+  .ruta-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    color: var(--text-dark-dim);
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  .ruta-arrow { font-size: 24px; transition: transform 0.3s; }
+  .ruta-card:hover .ruta-arrow { transform: translateX(4px); }
+
+  /* BIBLIOTECA */
+  .biblioteca { background: var(--midnight); }
+  .filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+  .filter-pill {
+    padding: 10px 20px;
+    background: var(--midnight-soft);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 13px;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
+  }
+  .filter-pill.active {
+    background: var(--yellow);
+    color: var(--midnight);
+    border-color: var(--yellow);
+    font-weight: 500;
+  }
+  .filter-pill:hover { color: var(--bone); border-color: var(--border-strong); }
+  .filter-pill.active:hover { color: var(--midnight); }
+  .recursos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .recurso {
+    background: var(--midnight-card);
+    border: 1px solid var(--border);
+    padding: 32px;
+    border-radius: 24px;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    min-height: 320px;
+  }
+  .recurso:hover {
+    border-color: var(--yellow);
+    transform: translateY(-3px);
+  }
+  .recurso-tags {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .recurso-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    border: 1px solid rgba(255,228,77,0.25);
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+  .recurso-tag.magenta {
+    color: var(--magenta);
+    border-color: rgba(255,45,109,0.3);
+  }
+  .recurso-title {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 26px;
+    line-height: 1.18;
+    margin-bottom: 16px;
+    letter-spacing: -0.015em;
+  }
+  .recurso-excerpt {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex: 1;
+  }
+  .recurso-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+
+  /* WALL */
+  .wall { background: var(--bone); color: var(--midnight); }
+  .wall .section-title { color: var(--midnight); }
+  .wall .section-num { color: var(--text-dark-dim); }
+  .wall .section-header { border-bottom-color: var(--border-dark); }
+  .testimonios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .testimonio {
+    background: var(--bone-soft);
+    border: 1px solid var(--border-dark);
+    padding: 40px;
+    border-radius: 28px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .testimonio:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(10,10,15,0.08);
+  }
+  .testimonio-result {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 36px;
+    line-height: 1.15;
+    margin-bottom: 28px;
+    color: var(--midnight);
+    letter-spacing: -0.02em;
+  }
+  .testimonio-result em { color: var(--magenta); font-style: italic; }
+  .testimonio-result .num {
+    color: var(--magenta);
+    font-style: italic;
+  }
+  .testimonio-quote {
+    font-size: 14px;
+    color: var(--text-dark-dim);
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+  .testimonio-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-dark);
+  }
+  .avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--midnight);
+    color: var(--bone);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .author-info .name { font-weight: 600; font-size: 14px; }
+  .author-info .role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-dark-dim);
+    margin-top: 2px;
+  }
+
+  /* MANIFIESTO */
+  .manifiesto {
+    background: var(--midnight);
+    text-align: center;
+    padding: 200px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .manifiesto::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    background: radial-gradient(circle, rgba(255,228,77,0.05), transparent 60%);
+    pointer-events: none;
+  }
+  .manifiesto-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    color: var(--yellow);
+    margin-bottom: 48px;
+    text-transform: uppercase;
+    position: relative;
+  }
+  .manifiesto-title {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: clamp(56px, 9vw, 130px);
+    font-weight: 400;
+    line-height: 0.98;
+    margin-bottom: 48px;
+    position: relative;
+    letter-spacing: -0.03em;
+  }
+  .manifiesto-title .yellow { color: var(--yellow); }
+  .manifiesto-sub {
+    font-size: 18px;
+    color: var(--text-dim);
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.7;
+    position: relative;
+  }
+  .manifiesto-sig {
+    margin-top: 64px;
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--bone);
+    position: relative;
+  }
+  .manifiesto-sig small {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-style: normal;
+    letter-spacing: 0.25em;
+    color: var(--text-dim);
+    margin-top: 8px;
+    text-transform: uppercase;
+  }
+
+  /* NEXT LEVEL BANNER */
+  .next-level-banner {
+    background: var(--bone);
+    color: var(--midnight);
+    padding: 80px 0 100px;
+  }
+  .nl-card {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 60px;
+    align-items: center;
+    background: var(--midnight);
+    color: var(--bone);
+    padding: 80px;
+    border-radius: 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  .nl-card::after {
+    content: '';
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,45,109,0.18), transparent 60%);
+    pointer-events: none;
+  }
+  .nl-content { position: relative; z-index: 2; }
+  .nl-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--yellow);
+    margin-bottom: 28px;
+    text-transform: uppercase;
+  }
+  .nl-title {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: clamp(36px, 4vw, 52px);
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+  }
+  .nl-desc {
+    color: var(--text-dim);
+    font-size: 16px;
+    margin-bottom: 36px;
+    max-width: 480px;
+    line-height: 1.6;
+  }
+  .nl-meta {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+  }
+  .nl-meta-item .lab {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .nl-meta-item .val {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .nl-cta {
+    color: var(--bone);
+    text-decoration: none;
+    border-bottom: 1px solid var(--bone);
+    padding-bottom: 4px;
+    font-size: 15px;
+    transition: color 0.2s, border-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+  }
+  .nl-cta:hover { color: var(--yellow); border-color: var(--yellow); }
+  .nl-visual {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--midnight-card), rgba(255,45,109,0.08));
+    border: 1px solid var(--border-strong);
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+  }
+  .nl-date {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 96px;
+    line-height: 1;
+    color: var(--yellow);
+    letter-spacing: -0.02em;
+  }
+  .nl-month {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    margin-top: 12px;
+    color: var(--bone);
+  }
+  .nl-year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--text-dim);
+    margin-top: 6px;
+  }
+
+  /* NEWSLETTER */
+  .newsletter {
+    background: var(--midnight);
+    padding: 140px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .newsletter::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,228,77,0.04), transparent 60%);
+    pointer-events: none;
+  }
+  .newsletter-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--yellow);
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    position: relative;
+  }
+  .newsletter h2 {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: clamp(48px, 6vw, 84px);
+    font-weight: 400;
+    line-height: 1.05;
+    margin-bottom: 28px;
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: -0.025em;
+    position: relative;
+  }
+  .newsletter p {
+    color: var(--text-dim);
+    max-width: 480px;
+    margin: 0 auto 56px;
+    font-size: 17px;
+    line-height: 1.6;
+    position: relative;
+  }
+  .newsletter-form {
+    display: flex;
+    gap: 12px;
+    max-width: 520px;
+    margin: 0 auto;
+    background: var(--midnight-card);
+    padding: 8px;
+    border-radius: 100px;
+    border: 1px solid var(--border-strong);
+    position: relative;
+  }
+  .newsletter-form input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--bone);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    outline: none;
+    padding: 12px 24px;
+  }
+  .newsletter-form input::placeholder { color: var(--text-dim); }
+  .newsletter-form button {
+    background: var(--yellow);
+    color: var(--midnight);
+    border: none;
+    padding: 14px 32px;
+    border-radius: 100px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    transition: background 0.2s;
+  }
+  .newsletter-form button:hover { background: var(--yellow-deep); }
+  .newsletter-trust {
+    margin-top: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--midnight);
+    border-top: 1px solid var(--border);
+    padding: 80px 0 40px;
+  }
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 80px;
+    align-items: flex-start;
+  }
+  .footer-brand .brand-mark { font-size: 36px; }
+  .footer-brand .brand-sub { font-size: 11px; margin-top: 4px; display: block; }
+  .footer-brand p {
+    font-size: 14px;
+    color: var(--text-dim);
+    margin-top: 20px;
+    max-width: 320px;
+    line-height: 1.6;
+  }
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  .footer-col h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  .footer-col a {
+    display: block;
+    color: var(--bone);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 12px;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+  }
+  .footer-col a:hover { opacity: 1; }
+  .footer-bottom {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 968px) {
+    .nav-links { display: none; }
+    .today-card,
+    .nl-card,
+    .rutas-grid,
+    .recursos-grid,
+    .testimonios,
+    .footer-inner,
+    .footer-links { grid-template-columns: 1fr; }
+    .nl-card { padding: 48px 32px; }
+    .footer-links { gap: 32px; }
+    .section-header { flex-direction: column; gap: 16px; align-items: flex-start; }
+    .hero { padding: 80px 0 60px; }
+    section { padding: 80px 0; }
+    .ruta-card, .recurso, .testimonio { padding: 32px 24px; }
+    .container { padding: 0 24px; }
+    .nl-meta { gap: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav>
+  <div class="container nav-inner">
+    <div class="brand">
+      <span class="brand-mark">La Bitácora</span>
+      <span class="brand-sub">Yos Mente Digital</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hoy">Hoy</a></li>
+      <li><a href="#rutas">Rutas</a></li>
+      <li><a href="#biblioteca">Biblioteca</a></li>
+      <li><a href="#manifiesto">Manifiesto</a></li>
+    </ul>
+    <a href="#newsletter" class="nav-cta">Suscribirme →</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-meta reveal">
+      <span><span class="dot"></span>Entrada #047</span>
+      <span class="sep"></span>
+      <span>Martes 29 · Abril 2026</span>
+      <span class="sep"></span>
+      <span>Editado en Santiago</span>
+    </div>
+    <h1 class="reveal">
+      Cada día, una herramienta menos<br>
+      para hacer crecer tu negocio<br>
+      <span class="accent">sin trabajar más</span>.
+    </h1>
+    <p class="lead reveal">
+      Soy Yoselvia. Curo cada día lo que importa para que multipliques tu negocio con IA — sin clonarte, sin contratar, sin programar. Empezamos por lo que tú estás buscando hoy.
+    </p>
+    <form class="hero-form reveal" onsubmit="event.preventDefault();">
+      <input type="email" placeholder="tu@correo.com" />
+      <button type="submit">Recibir cada entrada</button>
+    </form>
+    <div class="hero-mini reveal">3.247 emprendedoras ya leen · No spam · Cancelas cuando quieras</div>
+  </div>
+</header>
+
+<!-- ============ CLASE DE HOY ============ -->
+<section class="today" id="hoy">
+  <div class="container">
+    <div class="section-header">
+      <h3 class="section-title reveal">Lo que enseñé hoy.</h3>
+      <span class="section-num reveal">/ 01 — En vivo</span>
+    </div>
+    <div class="today-card">
+      <div class="reveal">
+        <div class="today-meta">
+          <span class="live-pulse">En vivo</span>
+          <span class="today-time">19:00 CL · 18:00 MX · 22:00 ES</span>
+        </div>
+        <h2>El sistema que reemplaza a 3 personas en tu agencia.</h2>
+        <p>Hoy te muestro cómo armé en 47 minutos un equipo invisible que responde clientes, califica leads y prepara propuestas — mientras yo grababa esto.</p>
+        <div class="today-stats">
+          <div class="today-stat">
+            <div class="num">47</div>
+            <div class="lab">Minutos</div>
+          </div>
+          <div class="today-stat">
+            <div class="num">312</div>
+            <div class="lab">Inscritas</div>
+          </div>
+          <div class="today-stat">
+            <div class="num">3×</div>
+            <div class="lab">De salida</div>
+          </div>
+        </div>
+        <div class="today-actions">
+          <a href="#" class="btn-primary">Reservar mi lugar →</a>
+          <a href="#" class="btn-ghost">Ver entradas anteriores</a>
+        </div>
+      </div>
+      <div class="today-visual reveal">
+        <div class="play-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RUTAS ============ -->
+<section class="rutas" id="rutas">
+  <div class="container">
+    <div class="section-header">
+      <h3 class="section-title reveal">¿Por dónde empiezas?</h3>
+      <span class="section-num reveal">/ 02 — Cuatro caminos</span>
+    </div>
+    <p class="rutas-intro reveal">No te doy un menú de herramientas. Te doy el camino que tu negocio necesita ahora — el resto se ve cuando llegues.</p>
+    <div class="rutas-grid">
+      <div class="ruta-card reveal">
+        <div class="ruta-num">Ruta 01</div>
+        <div class="ruta-quote">"Quiero usar IA pero no sé por dónde empezar."</div>
+        <div class="ruta-meta">
+          <span class="ruta-count">12 entradas · 4 herramientas</span>
+          <span class="ruta-arrow">→</span>
+        </div>
+      </div>
+      <div class="ruta-card reveal">
+        <div class="ruta-num">Ruta 02</div>
+        <div class="ruta-quote">"Estoy ahogada de trabajo y no avanzo."</div>
+        <div class="ruta-meta">
+          <span class="ruta-count">23 entradas · 7 herramientas</span>
+          <span class="ruta-arrow">→</span>
+        </div>
+      </div>
+      <div class="ruta-card reveal">
+        <div class="ruta-num">Ruta 03</div>
+        <div class="ruta-quote">"Tengo clientes pero no tengo vida."</div>
+        <div class="ruta-meta">
+          <span class="ruta-count">18 entradas · 9 herramientas</span>
+          <span class="ruta-arrow">→</span>
+        </div>
+      </div>
+      <div class="ruta-card reveal">
+        <div class="ruta-num">Ruta 04</div>
+        <div class="ruta-quote">"Quiero ganar mientras duermo."</div>
+        <div class="ruta-meta">
+          <span class="ruta-count">15 entradas · 6 herramientas</span>
+          <span class="ruta-arrow">→</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BIBLIOTECA ============ -->
+<section class="biblioteca" id="biblioteca">
+  <div class="container">
+    <div class="section-header">
+      <h3 class="section-title reveal">La biblioteca.</h3>
+      <span class="section-num reveal">/ 03 — 47 entradas activas</span>
+    </div>
+    <div class="filters reveal">
+      <span class="filter-pill active">Todas</span>
+      <span class="filter-pill">Agenda llena</span>
+      <span class="filter-pill">Cobrar más</span>
+      <span class="filter-pill">Recuperar tiempo</span>
+      <span class="filter-pill">Producto digital</span>
+      <span class="filter-pill">Equipo invisible</span>
+      <span class="filter-pill">Esta semana</span>
+    </div>
+    <div class="recursos-grid">
+      <div class="recurso reveal">
+        <div class="recurso-tags">
+          <span class="recurso-tag">Captación</span>
+          <span class="recurso-tag">WhatsApp</span>
+        </div>
+        <div class="recurso-title">La fórmula de los 7 mensajes que cierra al primer "hola".</div>
+        <div class="recurso-excerpt">El guion exacto que uso para que un lead pase de DM a cliente sin reuniones eternas. Probado con 340 conversaciones.</div>
+        <div class="recurso-meta">
+          <span>Entrada #047</span>
+          <span>4 min lectura</span>
+        </div>
+      </div>
+      <div class="recurso reveal">
+        <div class="recurso-tags">
+          <span class="recurso-tag magenta">Pricing</span>
+          <span class="recurso-tag">Cobrar</span>
+        </div>
+        <div class="recurso-title">Cómo subí mi pricing 3× sin perder clientes.</div>
+        <div class="recurso-excerpt">El movimiento de 90 días que llevó mi sesión de $80 a $300 — y qué dije exactamente cuando dudé.</div>
+        <div class="recurso-meta">
+          <span>Entrada #046</span>
+          <span>6 min lectura</span>
+        </div>
+      </div>
+      <div class="recurso reveal">
+        <div class="recurso-tags">
+          <span class="recurso-tag">Stack</span>
+          <span class="recurso-tag">Actualizado</span>
+        </div>
+        <div class="recurso-title">Mi stack de herramientas — actualizado hoy.</div>
+        <div class="recurso-excerpt">Las 7 plataformas que tengo abiertas en este momento y qué hace cada una. Lo edito cada vez que cambio algo.</div>
+        <div class="recurso-meta">
+          <span>Entrada #045</span>
+          <span>3 min lectura</span>
+        </div>
+      </div>
+      <div class="recurso reveal">
+        <div class="recurso-tags">
+          <span class="recurso-tag">Operación</span>
+          <span class="recurso-tag">Delegar</span>
+        </div>
+        <div class="recurso-title">El equipo invisible que me devolvió mis viernes.</div>
+        <div class="recurso-excerpt">Cómo armé en una tarde un asistente virtual que filtra clientes, agenda llamadas y prepara mis propuestas.</div>
+        <div class="recurso-meta">
+          <span>Entrada #044</span>
+          <span>9 min lectura</span>
+        </div>
+      </div>
+      <div class="recurso reveal">
+        <div class="recurso-tags">
+          <span class="recurso-tag magenta">Auditoría</span>
+          <span class="recurso-tag">Negocio</span>
+        </div>
+        <div class="recurso-title">La auditoría de 60 minutos que cambia tu negocio.</div>
+        <div class="recurso-excerpt">El cuestionario que le pongo a mis clientas premium en la primera sesión — y por qué la mayoría descubre el cuello de botella en 12 minutos.</div>
+        <div class="recurso-meta">
+          <span>Entrada #043</span>
+          <span>5 min lectura</span>
+        </div>
+      </div>
+      <div class="recurso reveal">
+        <div class="recurso-tags">
+          <span class="recurso-tag">Contenido</span>
+          <span class="recurso-tag">Reels</span>
+        </div>
+        <div class="recurso-title">Cómo publico todos los días sin estar pegada al celular.</div>
+        <div class="recurso-excerpt">La fábrica que arma mi contenido de la semana en 90 minutos. Plantilla descargable incluida.</div>
+        <div class="recurso-meta">
+          <span>Entrada #042</span>
+          <span>7 min lectura</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WALL DE RESULTADOS ============ -->
+<section class="wall" id="resultados">
+  <div class="container">
+    <div class="section-header">
+      <h3 class="section-title reveal">Lo que ya están haciendo.</h3>
+      <span class="section-num reveal">/ 04 — Resultados reales</span>
+    </div>
+    <div class="testimonios">
+      <div class="testimonio reveal">
+        <div class="testimonio-result">Subí mi precio de <em>$80</em> a <em>$300</em> por sesión en <em>4 meses</em>.</div>
+        <div class="testimonio-quote">"Lo que más me costó fue creérmelo. Las herramientas estaban ahí, lo que cambió fue cómo me presento. Hoy tengo lista de espera."</div>
+        <div class="testimonio-author">
+          <div class="avatar">M</div>
+          <div class="author-info">
+            <div class="name">María R.</div>
+            <div class="role">Coach de carrera · México</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio reveal">
+        <div class="testimonio-result">Recuperé <em>15 horas</em> a la semana sin bajar mis ingresos.</div>
+        <div class="testimonio-quote">"Ya no respondo WhatsApps los domingos. Mi agente filtra, agenda y prepara — yo solo cierro. Fue el mejor regalo que me hice."</div>
+        <div class="testimonio-author">
+          <div class="avatar">C</div>
+          <div class="author-info">
+            <div class="name">Carolina P.</div>
+            <div class="role">Consultora estratégica · Chile</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio reveal">
+        <div class="testimonio-result">Lancé mi producto digital en <em>22 días</em> sin programar nada.</div>
+        <div class="testimonio-quote">"Llevaba 2 años pensándolo. La Bitácora me dio el orden exacto y arranqué un domingo. Vendí 14 cupos en la primera semana."</div>
+        <div class="testimonio-author">
+          <div class="avatar">S</div>
+          <div class="author-info">
+            <div class="name">Sofía L.</div>
+            <div class="role">Mentora de líderes · Colombia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MANIFIESTO ============ -->
+<section class="manifiesto" id="manifiesto">
+  <div class="container">
+    <div class="manifiesto-label reveal">El manifiesto · La Bitácora</div>
+    <h2 class="manifiesto-title reveal">
+      La libertad no se compra.<br>
+      <span class="yellow">Se diseña.</span>
+    </h2>
+    <p class="manifiesto-sub reveal">
+      Aquí no vendemos atajos. Aquí mostramos que tu próximo nivel se construye con decisiones — y que la IA es la primera herramienta que respeta tu tiempo tanto como tú.
+    </p>
+    <div class="manifiesto-sig reveal">
+      Yoselvia Adam
+      <small>Estratega, fundadora · Yos Mente Digital</small>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEXT LEVEL BANNER ============ -->
+<section class="next-level-banner">
+  <div class="container">
+    <div class="nl-card reveal">
+      <div class="nl-content">
+        <div class="nl-label">Una vez al año · En persona</div>
+        <h3 class="nl-title">Cuando lo digital ya no basta — nos vemos en Santiago.</h3>
+        <p class="nl-desc">Next Level Experience es el único día del año donde abro mi sistema completo. Si llegaste hasta aquí leyendo, probablemente este es tu lugar.</p>
+        <div class="nl-meta">
+          <div class="nl-meta-item">
+            <div class="lab">Fecha</div>
+            <div class="val">16 Mayo 2026</div>
+          </div>
+          <div class="nl-meta-item">
+            <div class="lab">Lugar</div>
+            <div class="val">Condell 1337, Santiago</div>
+          </div>
+          <div class="nl-meta-item">
+            <div class="lab">Cupos</div>
+            <div class="val">Limitados</div>
+          </div>
+        </div>
+        <a href="#" class="nl-cta">Conocer la experiencia <span>→</span></a>
+      </div>
+      <div class="nl-visual">
+        <div class="nl-date">16</div>
+        <div class="nl-month">Mayo</div>
+        <div class="nl-year">2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="newsletter" id="newsletter">
+  <div class="container">
+    <div class="newsletter-label reveal">Cada domingo · 8 AM</div>
+    <h2 class="reveal">Lo que cambia el juego esta semana.</h2>
+    <p class="reveal">Una entrada destilada, sin relleno. La leo, la pruebo, te la mando — sin que tengas que perseguir nada.</p>
+    <form class="newsletter-form reveal" onsubmit="event.preventDefault();">
+      <input type="email" placeholder="tu@correo.com" />
+      <button type="submit">Quiero recibirla</button>
+    </form>
+    <div class="newsletter-trust reveal">3.247 lectoras · Sin spam · Sin cursos largos</div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div>
+          <span class="brand-mark">La Bitácora</span>
+        </div>
+        <span class="brand-sub">Yos Mente Digital</span>
+        <p>Curaduría diaria de IA aplicada al negocio — para emprendedoras que quieren multiplicarse sin clonarse.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Explora</h4>
+          <a href="#hoy">Hoy</a>
+          <a href="#rutas">Rutas</a>
+          <a href="#biblioteca">Biblioteca</a>
+          <a href="#resultados">Resultados</a>
+        </div>
+        <div class="footer-col">
+          <h4>Yos Mente</h4>
+          <a href="#">Sobre Yoselvia</a>
+          <a href="#">Next Level</a>
+          <a href="#">Mentorías 1:1</a>
+          <a href="#">Manifiesto</a>
+        </div>
+        <div class="footer-col">
+          <h4>Conecta</h4>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">YouTube</a>
+          <a href="#">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Yos Mente Digital · Hecho en Santiago</span>
+      <span>v0.1 — Mockup interno</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal sutil
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  reveals.forEach(r => io.observe(r));
+
+  // Filter pills (cosmetic)
+  document.querySelectorAll('.filter-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

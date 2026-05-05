@@ -50,6 +50,12 @@ export interface PaymentResponse {
   external_reference?: string
   transaction_amount: number
   currency_id: string
+  /**
+   * `true` cuando el pago es REAL (modo producción).
+   * `false` cuando el pago viene del entorno sandbox/prueba — NO hay cobro real.
+   * Si recibimos un webhook con live_mode=false en producción, hay que rechazarlo.
+   */
+  live_mode?: boolean
   payer: {
     id?: string
     email?: string
@@ -60,6 +66,16 @@ export interface PaymentResponse {
   metadata: Record<string, unknown>
   date_approved: string | null
   date_created: string
+}
+
+/**
+ * Detecta si el ACCESS_TOKEN es de TEST. MP usa el prefijo:
+ *   - APP_USR-... → producción
+ *   - TEST-...    → sandbox (cobros falsos, $0 efectivo)
+ */
+export function isTestAccessToken(token: string | undefined): boolean {
+  if (!token) return false
+  return token.startsWith('TEST-')
 }
 
 function getToken() {

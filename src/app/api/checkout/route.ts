@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { CONTACT, TICKETS, WORKSHOP } from '@/lib/constants'
-import { createPreference } from '@/lib/mercadopago'
+import { createPreference, isTestAccessToken } from '@/lib/mercadopago'
 import { checkRateLimit, getClientIp } from '@/lib/rate-limit'
 
 export const runtime = 'nodejs'
@@ -19,6 +19,21 @@ const DEBOUNCE_MS = 3_000 // 3 segundos entre checkouts del mismo browser
 
 export async function GET(req: NextRequest) {
   try {
+    // 🚨 GUARDIA CRÍTICA: detectar TEST tokens en producción.
+    // Si el ACCESS_TOKEN empieza con TEST- en producción, los cobros son falsos
+    // (el cliente ve el precio pero no se cobra dinero real). Bloqueamos el
+    // checkout antes de crear la preferencia para evitar ventas fantasma.
+    const isProd = process.env.NODE_ENV === 'production'
+    if (isProd && isTestAccessToken(process.env.MERCADOPAGO_ACCESS_TOKEN)) {
+      console.error(
+        '[checkout] CRITICAL: TEST access token detected in production. Payments would not charge real money. Update MERCADOPAGO_ACCESS_TOKEN to APP_USR-* in Vercel.'
+      )
+      return NextResponse.json(
+        { error: 'Sistema de pagos en mantenimiento. Intentá en unos minutos.' },
+        { status: 503 }
+      )
+    }
+
     // 1. Debounce por cookie — evita double-click del usuario legítimo
     const lastCheckoutCookie = req.cookies.get(DEBOUNCE_COOKIE)?.value
     if (lastCheckoutCookie) {
@@ -64,6 +79,8 @@ export async function GET(req: NextRequest) {
     const origin = req.nextUrl.origin
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? origin
 
+    // (isProd ya está declarado arriba en la guardia anti-TEST)
+
     const pref = await createPreference({
       items: [
         {
@@ -93,8 +110,7 @@ export async function GET(req: NextRequest) {
     })
 
     // Redirige al checkout de MercadoPago.
-    // En producción usá init_point. En sandbox usá sandbox_init_point.
-    const isProd = process.env.NODE_ENV === 'production'
+    // En producción usamos init_point. En desarrollo usamos sandbox_init_point.
     const redirectUrl = isProd ? pref.init_point : pref.sandbox_init_point ?? pref.init_point
 
     const response = NextResponse.redirect(redirectUrl, 303)

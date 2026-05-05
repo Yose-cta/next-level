@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "bitacora-mockup",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "5050", "--directory", "_mockups"],
+      "port": 5050
+    },
+    {
+      "name": "la-bitacora-app",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "../la_bitacora"],
+      "port": 5051
+    }
+  ]
+}

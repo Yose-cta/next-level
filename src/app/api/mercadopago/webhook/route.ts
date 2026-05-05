@@ -128,12 +128,44 @@ export async function GET(req: NextRequest) {
 
 async function processPayment(paymentId: string) {
   const payment = await getPayment(paymentId)
+  const isProd = process.env.NODE_ENV === 'production'
+
+  // 🚨 GUARDIA CRÍTICA: rechaza pagos en modo prueba si estamos en producción.
+  // Si llega aquí un payment con live_mode=false en prod, significa que la app
+  // de MercadoPago está mal configurada (sandbox en vez de producción) y los
+  // pagos están saliendo como falsos ($0 efectivo).
+  if (isProd && payment.live_mode === false) {
+    console.error('[webhook MP] CRITICAL: payment with live_mode=false in production', {
+      id: payment.id,
+      status: payment.status,
+      transaction_amount: payment.transaction_amount,
+    })
+    return NextResponse.json(
+      { error: 'sandbox payment rejected in production' },
+      { status: 422 }
+    )
+  }
+
+  // 🚨 GUARDIA SECUNDARIA: payments aprobados con monto $0 son sospechosos.
+  // En producción real un ticket cuesta $67k o $147k. Si llega un approved
+  // con monto < 100 CLP, lo flageamos pero NO lo bloqueamos (puede haber
+  // cupones/descuentos legítimos en el futuro).
+  if (isProd && payment.status === 'approved' && payment.transaction_amount < 100) {
+    console.error('[webhook MP] WARN: approved payment with suspicious amount', {
+      id: payment.id,
+      transaction_amount: payment.transaction_amount,
+      currency_id: payment.currency_id,
+      live_mode: payment.live_mode,
+    })
+  }
 
   // Log mínimo + mask de PII. No exponemos email completo, montos, ni external_reference
   // (que puede contener datos sensibles del comprador).
   console.log('[webhook MP] payment processed', {
     id: payment.id,
     status: payment.status,
+    live_mode: payment.live_mode,
+    transaction_amount: payment.transaction_amount,
     payer_email: maskEmail(payment.payer?.email),
   })
 

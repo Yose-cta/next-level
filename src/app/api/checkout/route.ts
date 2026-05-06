@@ -104,7 +104,6 @@ export async function GET(req: NextRequest) {
       statement_descriptor: 'NEXTLEVEL',
       payment_methods: {
         installments: 12,
-        default_installments: 1,
       },
       metadata: {
         ticket_id: ticket.id,

@@ -4,41 +4,34 @@ import { MENTORS, TICKETS } from '@/lib/constants'
 const VIP_TICKET = TICKETS.find((t) => t.id === 'vip')!
 
 /**
- * VIPDetail — sección dedicada para detallar las 3 sesiones privadas
- * 1:1 online que vienen con la entrada VIP.
- *
- * Justificación: el copy VIP es lo que justifica los $80.000 extra.
- * Mostrarlo bien (qué disfrutas + qué te llevas en cada sesión) eleva
- * percepción de valor sin sentirse pesado.
+ * VIPDetail — sección compacta que explica la diferencia VIP.
+ * Aparece DESPUÉS de Mentors para que el usuario ya conozca
+ * a los 3 expertos antes de entender por qué la VIP vale más.
  */
 export function VIPDetail() {
   return (
     <section className="sec-light py-24 sm:py-36 relative overflow-hidden">
-      <div className="absolute top-12 left-8 hidden lg:block number-decor">07</div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 reveal">
           <div className="flex items-center justify-center gap-4 mb-7">
             <div className="h-px w-8 bg-gold" />
-            <div className="eyebrow">Experiencia VIP · Post-evento</div>
+            <div className="eyebrow">La diferencia VIP</div>
             <div className="h-px w-8 bg-gold" />
           </div>
           <h2 className="font-display text-display-lg text-ink leading-[1.05]">
             <span data-editable="vip-h">
-              3 horas privadas 1:1<br />
-              <span className="italic text-magenta">para aterrizarlo todo a tu caso.</span>
+              3 sesiones privadas<br />
+              <span className="italic text-magenta">para aplicar todo a tu caso.</span>
             </span>
           </h2>
           <p
             className="mt-7 text-lg text-charcoal leading-relaxed font-light"
             data-editable="vip-body"
           >
-            La experiencia VIP no termina cuando acaba el evento. Después tendrás
-            una sesión online con cada experto para recibir una mirada personalizada
-            sobre tu negocio, tu presencia y tu forma de comunicar. Es el espacio
-            para pasar de <em className="text-ink not-italic font-medium">"esto me
-            hizo sentido"</em> a <em className="text-ink not-italic font-medium">"esto
-            es lo que necesito hacer en mi caso"</em>.
+            La Entrada VIP incluye la experiencia presencial completa + 3 sesiones
+            online 1:1 después del evento, una con cada experto. No es otra entrada
+            ni otro programa: es el beneficio premium de la VIP para aterrizar lo
+            aprendido a tu negocio, tu imagen y tu forma de vender.
           </p>
         </div>
 
@@ -67,7 +60,7 @@ export function VIPDetail() {
                   i % 2 === 0 ? 'clip-corner-tr' : 'clip-corner-bl'
                 }`}
               >
-                {/* Header: nombre + duración */}
+                {/* Header */}
                 <header className="mb-5">
                   <div className={`flex items-center gap-2 ${accentText} mb-3`}>
                     <span className={`w-1.5 h-1.5 rounded-full ${accentDot}`} />
@@ -81,31 +74,20 @@ export function VIPDetail() {
                   >
                     {m.vipSession.name}
                   </h3>
-                  <div className="mt-3 inline-flex items-center gap-2 bg-bone border border-ink/10 px-3 py-1.5 rounded-full">
-                    <ClockIcon />
-                    <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-ash">
-                      {m.vipSession.duration}
-                    </span>
-                  </div>
                 </header>
 
-                <div className="h-px bg-ink/10 my-2" />
-
-                {/* Vas a disfrutar */}
-                <div className="mt-5">
-                  <div className="eyebrow text-ash mb-3">Vas a disfrutar de</div>
-                  <ul className="space-y-2.5">
-                    {m.vipSession.experience.map((line, j) => (
-                      <li key={j} className="flex gap-3 text-sm text-charcoal leading-relaxed font-light">
-                        <span className={`mt-1.5 shrink-0 w-1 h-1 rounded-full ${accentDot}`} />
-                        <span data-editable={`vip-${m.id}-exp-${j}`}>{line}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {/* Descripción compacta */}
+                <p className="text-sm text-charcoal leading-relaxed font-light mb-5">
+                  {m.id === 'yoselvia' &&
+                    'Detectas fugas de tiempo, energía y dinero, y defines qué soltar, simplificar, automatizar o delegar primero.'}
+                  {m.id === 'valentina' &&
+                    'Revisas qué comunica tu imagen hoy y qué ajustes pueden ayudarte a proyectar más autoridad, coherencia y seguridad.'}
+                  {m.id === 'sebastian' &&
+                    'Ajustas cómo explicas tu oferta, cómo comunicas tu valor y cómo sostienes conversaciones comerciales con más seguridad.'}
+                </p>
 
                 {/* Te llevas */}
-                <div className="mt-7 pt-5 border-t border-ink/10">
+                <div className="mt-auto pt-5 border-t border-ink/10">
                   <div className="eyebrow text-ash mb-3">Te llevas</div>
                   <ul className="space-y-2.5">
                     {m.vipSession.takeaway.map((line, j) => (
@@ -138,14 +120,5 @@ export function VIPDetail() {
         </div>
       </div>
     </section>
-  )
-}
-
-function ClockIcon() {
-  return (
-    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M12 7v5l3 2" />
-    </svg>
   )
 }

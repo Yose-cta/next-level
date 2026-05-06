@@ -74,7 +74,16 @@ export function Takeaways() {
           })}
         </ul>
 
-        <div className="text-center mt-14 reveal">
+        <p
+          className="text-center mt-12 text-base text-charcoal/80 font-light max-w-2xl mx-auto leading-relaxed italic reveal"
+          data-editable="take-cierre"
+        >
+          No prometemos transformaciones mágicas. Prometemos claridad, herramientas
+          aplicables y dirección para que empieces a tomar mejores decisiones sobre
+          tu negocio, tu imagen y tu comunicación.
+        </p>
+
+        <div className="text-center mt-10 reveal">
           <span data-magnetic="0.2" className="magnetic">
             <Link
               href="#tickets"

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /home/yeag_/Developer/software/projects/next_level log --oneline -1)",
+      "Read(///wsl.localhost/Ubuntu/home/yeag_/Developer/software/projects/next_level/**)",
+      "mcp__Microsoft_Clarity__list-session-recordings",
+      "mcp__Claude_in_Chrome__navigate"
+    ]
+  }
+}

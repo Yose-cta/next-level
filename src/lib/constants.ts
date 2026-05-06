@@ -107,7 +107,7 @@ export const TICKETS = [
     price: { amount: 147000, currency: 'CLP', display: '$147.000' },
     badge: 'EXPERIENCIA COMPLETA',
     description:
-      'La experiencia presencial completa + 3 sesiones privadas 1:1 online post-evento con cada experto. La General te da dirección. La VIP te da dirección aplicada a tu caso.',
+      'Incluye la experiencia presencial completa + 3 sesiones online 1:1 después del evento, una con cada experto. La General te da la experiencia completa. La VIP te ayuda a aplicar lo aprendido a tu caso real.',
     features: [
       'Acceso presencial al Next Level Experience (6 horas)',
       'Trabajo en vivo con los 3 expertos: IA, imagen y comunicación',
@@ -124,7 +124,7 @@ export const TICKETS = [
         'Una sesión online con cada experto para revisar tu negocio, tu imagen y tu mensaje. La experiencia VIP no termina cuando acaba el evento — ahí recién empieza el trabajo aplicado a tu caso real.',
     },
     forYou:
-      'Quieres una mirada personalizada después del evento. Quieres que los 3 expertos revisen tu caso real. Quieres salir del evento y tener acompañamiento para aterrizar lo aprendido — sin quedarte con la pregunta "¿y ahora cómo aplico esto a mí?".',
+      'Quieres salir del evento con dirección, pero también tener una mirada personalizada después para aplicar lo aprendido a tu negocio, tu imagen y tu comunicación.',
     cta: 'Reservar Entrada VIP',
     hidden: false,
   },

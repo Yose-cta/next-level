@@ -210,7 +210,7 @@ const COMPARISON_ROWS = [
   { label: '1:1 con Yoselvia · Auditoría VIP con Claude', general: false, vip: true },
   { label: '1:1 con Valentina · Imagen, color, presencia', general: false, vip: true },
   { label: '1:1 con Sebastián · Comunicación y ventas', general: false, vip: true },
-  { label: 'Total horas privadas post-evento', general: '—', vip: '3 horas' },
+  { label: 'Sesiones privadas online después del evento', general: '—', vip: '3 sesiones 1:1' },
 ] as const
 
 function ComparisonTable() {

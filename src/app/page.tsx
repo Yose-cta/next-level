@@ -3,7 +3,6 @@ import {
   Closing,
   FAQ,
   Footer,
-  Guarantee,
   Hero,
   Hook,
   Mentors,
@@ -16,6 +15,7 @@ import {
   Tickets,
   VIPDetail,
 } from '@/components/landing'
+import { TicketsCTA } from '@/components/landing/TicketsCTA'
 
 export default function HomePage() {
   return (
@@ -27,12 +27,12 @@ export default function HomePage() {
       <ParaTiSi />
       <Hook />
       <Tickets />
-      <VIPDetail />
       <Mentors />
+      <VIPDetail />
       <Takeaways />
       <AntesDespues />
       <Testimonials />
-      <Guarantee />
+      <TicketsCTA />
       <FAQ />
       <Closing />
       <Footer />

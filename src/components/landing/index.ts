@@ -11,7 +11,7 @@ export { AntesDespues } from './AntesDespues'
 export { Tickets } from './Tickets'
 export { VIPDetail } from './VIPDetail'
 export { Testimonials } from './Testimonials'
-export { Guarantee } from './Guarantee'
+
 export { FAQ } from './FAQ'
 export { Closing } from './Closing'
 export { Footer } from './Footer'

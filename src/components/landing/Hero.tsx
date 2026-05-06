@@ -104,18 +104,25 @@ export function Hero() {
                   href="#tickets"
                   className="inline-flex items-center gap-3 bg-electric text-midnight font-semibold px-7 py-4 rounded-full hover:bg-yellow-300 transition-colors duration-300 ease-apple text-sm sm:text-base shadow-glow-electric"
                 >
-                  <span data-editable="hero-cta-1">Reserva tu lugar</span>
+                  <span data-editable="hero-cta-1">Reservar mi entrada</span>
                   <span aria-hidden>→</span>
                 </Link>
               </span>
               <Link
-                href="#programa"
+                href="#tickets"
                 className="inline-flex items-center gap-2 text-white/70 hover:text-electric transition font-medium px-3 py-3 ulink text-sm"
               >
-                <span data-editable="hero-cta-2">Ver el programa</span>
+                <span data-editable="hero-cta-2">Ver qué incluye</span>
                 <span aria-hidden>↓</span>
               </Link>
             </div>
+
+            <Link
+              href="#tickets"
+              className="mt-4 inline-block text-xs sm:text-sm font-mono uppercase tracking-[0.2em] text-white/50 hover:text-electric transition cursor-pointer"
+            >
+              General $67.000 · VIP $147.000 · Cupos limitados
+            </Link>
 
             {/* Detalles operativos */}
             <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-xs sm:text-sm text-white/70">

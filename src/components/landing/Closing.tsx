@@ -82,9 +82,12 @@ export function Closing() {
               <span aria-hidden>→</span>
             </Link>
           </span>
-          <span className="text-white/45 text-xs sm:text-sm font-mono uppercase tracking-[0.2em]">
+          <Link
+            href="#tickets"
+            className="text-white/45 hover:text-electric transition text-xs sm:text-sm font-mono uppercase tracking-[0.2em] cursor-pointer"
+          >
             General $67.000 · VIP $147.000
-          </span>
+          </Link>
         </div>
       </div>
     </section>

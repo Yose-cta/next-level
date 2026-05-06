@@ -26,11 +26,11 @@ export default function HomePage() {
       <Mirror />
       <ParaTiSi />
       <Hook />
+      <Tickets />
+      <VIPDetail />
       <Mentors />
       <Takeaways />
       <AntesDespues />
-      <Tickets />
-      <VIPDetail />
       <Testimonials />
       <Guarantee />
       <FAQ />

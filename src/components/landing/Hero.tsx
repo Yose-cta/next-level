@@ -164,9 +164,9 @@ export function Hero() {
               </div>
 
               {/* Cupos pill flotante bottom-right */}
-              <div className="absolute -bottom-4 -right-4 sm:-bottom-5 sm:-right-5 bg-electric text-midnight px-4 py-2.5 z-10 shadow-glow-electric">
-                <span className="font-mono text-[10px] tracking-[0.25em] uppercase font-semibold flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-midnight animate-pulse" />
+              <div className="absolute -bottom-4 -right-4 sm:-bottom-5 sm:-right-5 glass-dark border border-electric/30 px-4 py-2.5 z-10">
+                <span className="font-mono text-[10px] tracking-[0.25em] uppercase font-semibold flex items-center gap-2 text-electric/80">
+                  <span className="w-1.5 h-1.5 rounded-full bg-electric animate-pulse" />
                   Cupos limitados
                 </span>
               </div>

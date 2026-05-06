@@ -59,6 +59,12 @@
 - **Fix:** Advertir y guardar en `.env.local` (gitignored). Pedirle rotar después del go-live.
 - **Aplica a:** Cualquier client interaction con credenciales
 
+### 2026-05-05: NUNCA poner reveal/fade en el hero (LCP)
+- **Error:** Hero con clase `reveal` (opacity:0 + translateY + 1.1s transition) hacía que la foto tardara ~1.2s en aparecer
+- **Causa:** La animación reveal está diseñada para secciones que aparecen al hacer scroll, no para contenido above-the-fold
+- **Fix:** Quitar `reveal` y `reveal-delayed` del hero. La foto e imagen cargan instantáneamente.
+- **Aplica a:** Cualquier elemento above-the-fold / LCP. Las animaciones reveal son solo para secciones below-the-fold.
+
 ## Reglas derivadas
 
 1. **Nunca usar `next dev` con Turbopack en WSL fs** — usar `next build` o Vercel preview
@@ -67,3 +73,4 @@
 4. **MP Chile en CLP nativo** — nunca pasar USD esperando conversión
 5. **Sensitives Vercel solo en prod+preview** — nunca en development
 6. **Recordar a clientes rotar credenciales** después de pegarlas en chat
+7. **NUNCA poner `reveal` en hero/above-the-fold** — penaliza LCP y se siente lento. Reveal es solo para secciones que aparecen al scroll.

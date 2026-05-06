@@ -102,6 +102,10 @@ export async function GET(req: NextRequest) {
       },
       auto_return: 'approved',
       statement_descriptor: 'NEXTLEVEL',
+      payment_methods: {
+        installments: 12,
+        default_installments: 1,
+      },
       metadata: {
         ticket_id: ticket.id,
         workshop_date: WORKSHOP.date.iso,

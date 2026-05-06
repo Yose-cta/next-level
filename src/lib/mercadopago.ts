@@ -33,6 +33,11 @@ export interface CreatePreferenceArgs {
     email?: string
     phone?: { area_code?: string; number?: string }
   }
+  payment_methods?: {
+    installments?: number
+    default_installments?: number
+    excluded_payment_types?: { id: string }[]
+  }
   metadata?: Record<string, string | number>
 }
 

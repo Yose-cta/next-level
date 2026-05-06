@@ -14,9 +14,9 @@ export function Mirror() {
           <div className="lg:col-span-6 reveal">
             <h2 className="font-display text-display-lg text-ink leading-[1.05]">
               <span data-editable="mirror-h">
-                Estás trabajando mucho,{' '}
+                No te falta valor.{' '}
                 <span className="italic text-magenta">
-                  pero sigues demasiado dentro de todo.
+                  Te falta que ese valor sea evidente.
                 </span>
               </span>
             </h2>
@@ -25,18 +25,20 @@ export function Mirror() {
               className="mt-9 text-lg sm:text-xl text-charcoal leading-relaxed max-w-2xl font-light"
               data-editable="mirror-body"
             >
-              Respondes mensajes. Haces seguimiento. Corriges detalles. Explicas lo
-              mismo una y otra vez. Improvisas procesos. Apagas fuegos. Y encima
-              tienes que mostrarte, vender y comunicar tu valor.
+              Puede que tengas experiencia. Puede que tengas una buena oferta.
+              Puede que sepas ayudar a tus clientes. Puede que incluso ya hayas
+              tenido resultados. Pero aun así, algo no está cerrando.
             </p>
 
             <p
               className="mt-6 text-lg sm:text-xl text-charcoal leading-relaxed max-w-2xl font-light"
               data-editable="mirror-body-2"
             >
-              No es que te falte talento.{' '}
+              El problema no es solo vender más.{' '}
               <span className="text-ink font-medium">
-                Es que tu negocio todavía depende demasiado de ti.
+                El problema es que tu negocio todavía no está comunicando con
+                suficiente claridad lo que haces, el valor que entregas y por qué
+                deberían confiar en ti.
               </span>
             </p>
 
@@ -45,8 +47,9 @@ export function Mirror() {
                 className="font-display italic text-2xl sm:text-3xl text-ink leading-snug"
                 data-editable="mirror-quote"
               >
-                "Mientras tú sigas siendo quien lo sostiene todo, tu crecimiento
-                tendrá el mismo techo de siempre: tu tiempo, tu energía, tu claridad."
+                "La gente pregunta mucho y compra poco. Te cuesta explicar lo que
+                haces sin alargarte. Sientes que tienes que justificar tu precio.
+                Y cada venta depende demasiado de tu energía."
               </p>
             </blockquote>
           </div>

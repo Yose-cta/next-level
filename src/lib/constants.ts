@@ -82,11 +82,11 @@ export const TICKETS = [
   {
     id: 'general',
     name: 'Entrada General',
-    tagline: 'Para vivir la experiencia completa',
+    tagline: 'Para vivir la experiencia completa · 2x1',
     price: { amount: 67000, currency: 'CLP', display: '$67.000' },
     badge: null,
     description:
-      'Acceso completo a Next Level Experience: 6 horas presenciales para dejar de improvisar, mirar tu negocio con más criterio, proyectarte con más autoridad y comunicar tu valor con más seguridad.',
+      'Acceso completo a Next Level Experience: 6 horas presenciales para que tu negocio se perciba, se comunique y se venda al nivel del valor que realmente entregas.',
     features: [
       'Acceso presencial al Next Level Experience (6 horas)',
       'Trabajo en vivo con los 3 expertos: IA, imagen y comunicación',
@@ -96,8 +96,8 @@ export const TICKETS = [
       '2x1: puedes llevar un acompañante',
     ],
     forYou:
-      'Quieres vivir la experiencia completa, trabajar los 3 bloques principales y llevarte herramientas para aplicar por tu cuenta. También es ideal si quieres venir con alguien que esté construyendo, ordenando o elevando su negocio contigo.',
-    cta: 'Reservar Entrada General',
+      'Quieres vivir la experiencia completa, trabajar los 3 bloques y llevarte claridad para mejorar cómo te muestras, comunicas y sostienes tu negocio. Incluye 2x1 para venir con alguien que también quiera elevar su negocio.',
+    cta: 'Reservar Entrada General 2x1',
     hidden: false,
   },
   {
@@ -107,7 +107,7 @@ export const TICKETS = [
     price: { amount: 147000, currency: 'CLP', display: '$147.000' },
     badge: 'EXPERIENCIA COMPLETA',
     description:
-      'Incluye la experiencia presencial completa + 3 sesiones online 1:1 después del evento, una con cada experto. La General te da la experiencia completa. La VIP te ayuda a aplicar lo aprendido a tu caso real.',
+      'Incluye la experiencia presencial completa + 3 sesiones online 1:1 después del evento, una con cada experto, para aplicar lo trabajado a tu caso real.',
     features: [
       'Acceso presencial al Next Level Experience (6 horas)',
       'Trabajo en vivo con los 3 expertos: IA, imagen y comunicación',
@@ -124,7 +124,7 @@ export const TICKETS = [
         'Una sesión online con cada experto para revisar tu negocio, tu imagen y tu mensaje. La experiencia VIP no termina cuando acaba el evento — ahí recién empieza el trabajo aplicado a tu caso real.',
     },
     forYou:
-      'Quieres salir del evento con dirección, pero también tener una mirada personalizada después para aplicar lo aprendido a tu negocio, tu imagen y tu comunicación.',
+      'Quieres que después del evento revisemos tu caso con una mirada personalizada en IA y estructura, imagen y presencia, y comunicación y ventas.',
     cta: 'Reservar Entrada VIP',
     hidden: false,
   },
@@ -142,15 +142,15 @@ export const MENTORS = [
     tag: 'IA aplicada · Claude',
     moduleNumber: '01',
     moduleTitle:
-      'Encuentra las fugas que te mantienen operando y empieza a ordenar tu negocio con IA.',
+      'Deja de sostener todo desde tu cabeza y empieza a operar con más criterio.',
     moduleSubtitle:
-      'Antes de automatizar, delegar o vender más, necesitas ver qué partes de tu negocio siguen dependiendo demasiado de ti.',
+      'Muchas veces el problema no es que falten ideas. El problema es que sobran tareas repetidas, procesos improvisados y decisiones que dependen demasiado de ti.',
     moduleTime: '14:10 — 15:40',
     accent: 'electric',
     lema:
-      'No necesitas hacerlo todo tú. Necesitas construir una operación que no se coma tu tiempo, tu energía ni tu margen.',
+      'La IA no viene a reemplazar tu criterio. Viene a ayudarte a ordenar, documentar y mejorar lo que hoy te cuesta demasiado sostener.',
     bio:
-      'En este bloque vas a usar Claude como apoyo estratégico para mirar tu negocio con criterio, detectar dónde estás perdiendo tiempo, energía y margen, y decidir qué deberías eliminar, simplificar, automatizar o delegar primero. No se trata de aprender prompts bonitos — se trata de dejar de usar la IA como herramienta suelta y empezar a usarla como apoyo para pensar, ordenar y operar mejor.',
+      'En este bloque vas a revisar qué partes de tu negocio consumen tiempo, energía o margen sin que lo notes. Tareas que repites, mensajes que vuelves a escribir, seguimientos que haces tarde, cotizaciones que armas desde cero, contenido que improvisas y procesos que nadie más podría ejecutar porque solo viven en tu cabeza.',
     teaches:
       'A usar Claude con intención: dejar de repetir tareas, ordenar tus ideas y construir una forma de trabajar menos dependiente de ti.',
     works: [
@@ -195,14 +195,14 @@ export const MENTORS = [
     tag: 'Imagen + Color · Presencia',
     moduleNumber: '02',
     moduleTitle:
-      'Haz que tu imagen comunique el nivel al que quieres vender.',
+      'Haz que tu presencia comunique el nivel al que quieres que te perciban.',
     moduleSubtitle:
-      'Antes de que expliques tu oferta, antes de que hables de tu experiencia, tu presencia ya está comunicando algo.',
+      'Tu imagen ya está hablando por ti. La pregunta es si está diciendo lo que quieres que diga.',
     moduleTime: '16:10 — 17:40',
     accent: 'magenta',
-    lema: 'Tu imagen también vende, incluso antes de que hables.',
+    lema: 'No se trata de verte distinta. Se trata de que tu imagen deje de comunicar menos de lo que realmente eres capaz de entregar.',
     bio:
-      'En este bloque vas a mirar tu imagen con intención: qué estás proyectando hoy, qué puede estar debilitando tu presencia y qué ajustes necesitas hacer para que tu imagen acompañe la etapa de negocio que quieres construir. No se trata de verte "más producida" — se trata de verte más alineada con el valor que quieres que el mercado perciba de ti.',
+      'En este bloque vas a mirar tu presencia profesional desde la estrategia, no desde la superficialidad. Vas a trabajar qué comunica tu imagen actual, qué señales estás enviando en los primeros segundos, qué errores pueden restarte profesionalismo, y cómo usar color, estilo y presencia para proyectar mejor tu valor.',
     teaches:
       'A leer qué transmite tu presencia hoy y a tomar decisiones de imagen con más intención: color, formas, presencia y coherencia visual.',
     works: [
@@ -243,15 +243,15 @@ export const MENTORS = [
     tag: 'Comunicación + Ventas',
     moduleNumber: '03',
     moduleTitle:
-      'Aprende a comunicar tu valor sin minimizarte y vender con más seguridad.',
+      'Aprende a comunicar tu valor para que el cliente lo entienda, lo valore y actúe.',
     moduleSubtitle:
-      'Puedes tener una gran oferta, mucha experiencia y resultados reales… pero si no sabes comunicarlo con claridad, el mercado no lo percibe completo.',
+      'Puedes tener una gran oferta, pero si no sabes explicarla de forma clara, el cliente no la percibe completa.',
     moduleTime: '18:10 — 19:40',
     accent: 'gold',
     lema:
-      'Si no sabes comunicar tu valor, el mercado no puede percibirlo completo.',
+      'Vender no debería sentirse como empujar. Debería sentirse como ayudar a la persona correcta a entender por qué tu solución tiene sentido para ella.',
     bio:
-      'En este bloque vas a trabajar cómo presentar lo que haces con más claridad, cómo expresar tu valor con más seguridad y cómo sostener conversaciones comerciales con mayor presencia. No se trata de sonar perfecto — se trata de que tu mensaje tenga más intención, más estructura y más fuerza.',
+      'En este bloque vas a trabajar comunicación con intención. No solo qué dices, también cómo lo dices, con qué energía, con qué presencia, con qué estructura y con qué seguridad. Vas a revisar cómo conectar con tu audiencia, cómo identificar su problema, cómo presentar tu beneficio y cómo guiar a la acción.',
     teaches:
       'A pulir el mensaje con el que presentas tu oferta y a sostener conversaciones de venta sin minimizar tu trabajo.',
     works: [
@@ -292,39 +292,39 @@ export const MENTORS = [
 export const TAKEAWAYS = [
   {
     n: '01',
-    title: 'Un mapa de qué necesitas soltar',
+    title: 'Ver tu negocio con más precisión',
     body:
-      'Vas a detectar qué tareas, decisiones o procesos ya no deberían depender tanto de ti si quieres crecer con más orden.',
+      'Vas a entender qué está comunicando tu imagen antes de que expliques tu valor, y detectar dónde estás perdiendo claridad, tiempo o credibilidad sin notarlo.',
   },
   {
     n: '02',
-    title: 'Una mirada más clara de tu operación',
+    title: 'Detectar qué parte de tu mensaje está débil',
     body:
-      'Vas a ver tu negocio con más estructura, no como una lista mental infinita que intentas recordar mientras respondes mensajes, entregas, vendes y resuelves.',
+      'Vas a reconocer dónde estás vendiendo desde la duda o la justificación, y qué necesitas ajustar para que tu valor sea más fácil de entender y comprar.',
   },
   {
     n: '03',
-    title: 'Recursos de Claude listos para aplicar',
+    title: 'Identificar fugas invisibles de tiempo y margen',
     body:
-      'Te llevas herramientas concretas para empezar a usar IA como apoyo real desde la semana siguiente, sin tecnicismos innecesarios ni prompts genéricos que no sabes cómo adaptar.',
+      'Vas a ver qué tareas están consumiendo tu energía sin que las llames problema, y cómo la IA puede ayudarte a estructurar y sostener mejor partes de tu negocio.',
   },
   {
     n: '04',
-    title: 'Criterios de imagen y presencia',
+    title: 'Criterios para tomar mejores decisiones',
     body:
-      'Vas a entender qué ajustes pueden ayudarte a proyectar más seguridad, coherencia y autoridad visual.',
+      'Vas a salir con criterios claros sobre tu presencia, tu comunicación y tu forma de operar — no solo inspiración, sino dirección concreta.',
   },
   {
     n: '05',
-    title: 'Herramientas para comunicar tu valor',
+    title: 'Coherencia entre lo que eres y lo que proyectas',
     body:
-      'Te llevas frases guía y ajustes específicos para presentar tu oferta con más seguridad, vender sin minimizarte y explicar mejor por qué lo que haces vale.',
+      'Vas a dejar de mirar tu negocio como cosas sueltas y empezar a verlo como una experiencia completa que el cliente percibe antes de comprar.',
   },
   {
     n: '06',
-    title: 'Una dirección más clara para tu siguiente etapa',
+    title: 'Tu negocio más fácil de entender, confiar y comprar',
     body:
-      'Sales con más criterio sobre cómo quieres operar, verte, hablar y vender en esta nueva etapa de tu negocio.',
+      'Cuando tu presencia es coherente, tu comunicación es clara y tu estructura mejora, el cliente no solo ve lo que haces — empieza a percibir por qué vale lo que cobras.',
   },
 ] as const
 
@@ -332,15 +332,25 @@ export const TAKEAWAYS = [
  * PARA TI SI — autodiagnóstico
  * ============================================================ */
 export const PARA_TI_SI = [
-  'Sientes que todo depende de ti.',
-  'Trabajas mucho, pero no sientes que estés avanzando al nivel que quieres.',
-  'Quieres usar IA, pero no sabes cómo aplicarla de forma útil en tu negocio.',
-  'Sabes que necesitas soltar tareas, pero no tienes claro por dónde empezar.',
-  'Tu imagen no refleja todavía el nivel, la autoridad o el valor real de lo que haces.',
-  'Te cuesta comunicar tu oferta sin enredarte, minimizarte o sentir que tienes que justificar demasiado.',
-  'Quieres vender con más presencia, más seguridad y más intención.',
-  'Sientes que improvisas demasiado: procesos, contenido, seguimiento, conversaciones, decisiones.',
-  'Quieres dejar de operar como alguien que apenas sostiene el negocio y empezar a moverte como alguien que lo dirige.',
+  'Tienes experiencia, pero sientes que tu mercado todavía no percibe todo tu valor.',
+  'Te cuesta explicar tu oferta de forma simple, clara y segura.',
+  'Sientes que tu imagen no siempre refleja el nivel profesional que quieres proyectar.',
+  'Has sentido que necesitas justificar tu precio o demostrar demasiado para vender.',
+  'Quieres comunicar con más presencia, seguridad y autoridad.',
+  'Quieres usar IA de forma práctica, no desde la moda, sino para ahorrar tiempo y ordenar tu negocio.',
+  'Tienes procesos, mensajes o seguimientos que todavía dependen demasiado de tu memoria.',
+  'Quieres dejar de improvisar tanto en cómo te muestras, cómo vendes y cómo sostienes tu negocio.',
+  'Quieres que tu negocio se vea más claro, más profesional y más confiable para las personas correctas.',
+] as const
+
+export const NO_ES_PARA_TI = [
+  'Buscas motivación sin revisar nada de fondo.',
+  'Quieres una clase pasiva donde solo tomas apuntes.',
+  'Crees que la imagen no importa en los negocios.',
+  'No estás dispuesta a mirar cómo estás comunicando hoy.',
+  'Quieres usar IA solo porque está de moda, pero no quieres ordenar nada.',
+  'Esperas que una tarde haga todo el trabajo por ti.',
+  'Prefieres seguir vendiendo desde la improvisación antes que mirar qué necesita ajustarse.',
 ] as const
 
 /* ============================================================
@@ -349,27 +359,27 @@ export const PARA_TI_SI = [
 export const COSTS = [
   {
     id: 'cost-1',
-    metric: 'Tiempo',
+    metric: 'Precio',
     body:
-      'Horas que se van en operativa repetida que ya no debería depender de ti.',
+      'Lo pagas cuando bajas tu precio, cuando explicas demasiado y cuando te comparan con alguien más barato.',
   },
   {
     id: 'cost-2',
-    metric: 'Claridad',
+    metric: 'Tiempo',
     body:
-      'Decides desde el agotamiento, no desde el enfoque. Y eso se nota en tus resultados.',
+      'Lo pagas cuando una oportunidad se enfría por falta de seguimiento o cuando repites tareas que ya no deberían depender de ti.',
   },
   {
     id: 'cost-3',
-    metric: 'Autoridad',
+    metric: 'Percepción',
     body:
-      'Tu imagen no acompaña el valor de lo que haces. El mercado percibe menos de lo que vales.',
+      'Lo pagas cuando tu imagen comunica menos autoridad de la que tienes y tu mensaje no logra hacer evidente por qué deberían elegirte.',
   },
   {
     id: 'cost-4',
-    metric: 'Dinero',
+    metric: 'Energía',
     body:
-      'Vendes con duda y minimizando tu trabajo. Y la duda en quien comunica se convierte en menos cierres.',
+      'Lo pagas con cansancio, con improvisación, con tareas repetidas y con la sensación de que estás trabajando mucho más de lo que el negocio te devuelve.',
   },
 ] as const
 
@@ -377,28 +387,13 @@ export const COSTS = [
  * ANTES / DESPUÉS — comparación visual
  * ============================================================ */
 export const SHIFTS = [
-  { before: 'Todo depende de ti', after: 'Sabes qué empezar a soltar y qué ordenar primero' },
-  { before: 'Improvisas demasiado', after: 'Tienes más criterio para decidir dónde poner tu energía' },
-  {
-    before: 'Quieres usar IA, pero no sabes por dónde empezar',
-    after: 'Tienes recursos concretos para aplicarla a tu negocio',
-  },
-  {
-    before: 'Tu imagen no refleja todo tu valor',
-    after: 'Sabes qué ajustar para proyectarte con más coherencia y autoridad',
-  },
-  {
-    before: 'Te cuesta explicar tu oferta',
-    after: 'Comunicas con más claridad qué haces, para quién y por qué importa',
-  },
-  {
-    before: 'Vendes con dudas',
-    after: 'Sostienes conversaciones comerciales con más presencia y seguridad',
-  },
-  {
-    before: 'Trabajas mucho y avanzas poco',
-    after: 'Tienes una dirección más clara para moverte hacia tu siguiente etapa',
-  },
+  { before: 'Tu imagen comunica menos de lo que vales', after: 'Tu presencia refuerza tu mensaje y genera confianza más rápido' },
+  { before: 'Tu mensaje es confuso o demasiado largo', after: 'Comunicas tu valor de forma clara, directa y con seguridad' },
+  { before: 'Vendes desde la duda o la justificación', after: 'Guías la conversación con presencia y dirección' },
+  { before: 'Tus procesos viven en tu cabeza', after: 'Tienes estructura para sostener tu negocio sin desgastarte' },
+  { before: 'La IA es una herramienta suelta que no sabes aplicar', after: 'Usas IA con criterio para ordenar, simplificar y decidir mejor' },
+  { before: 'Tu negocio depende de tu energía para funcionar', after: 'Tu negocio empieza a funcionar con más independencia de ti' },
+  { before: 'El mercado no percibe todo tu valor', after: 'Tu valor es más visible, más creíble y más fácil de elegir' },
 ] as const
 
 /* ============================================================
@@ -406,40 +401,40 @@ export const SHIFTS = [
  * ============================================================ */
 export const FAQS = [
   {
-    q: '¿Necesito saber usar Claude o tener experiencia con IA?',
-    a: 'No. La experiencia está pensada para emprendedores, coaches, marcas personales y profesionales que quieren aprender a usar la IA de forma práctica, sin tecnicismos. Puedes estar empezando o ya vendiendo — lo importante es que quieras aplicar la IA con más criterio a tu negocio.',
+    q: 'Ya he ido a eventos y después todo sigue igual. ¿Qué hace diferente a este?',
+    a: 'Next Level no es una charla inspiracional. Está diseñado para trabajar tres áreas que afectan directamente cómo te percibe y te compra el mercado: tu presencia, tu comunicación y la estructura con la que sostienes tu negocio. No vienes solo a escuchar — vienes a mirar tu caso, reconocer brechas y tomar decisiones más claras.',
   },
   {
-    q: '¿Esto es para mí si recién estoy empezando?',
-    a: 'Sí. Si estás empezando, esta experiencia te ayuda a construir con más claridad desde el inicio y evitar caer en años de improvisación. Vas a poder ordenar mejor cómo quieres operar, cómo quieres presentarte y cómo quieres comunicar tu valor desde ahora.',
+    q: '¿Y si mi problema no es la operación?',
+    a: 'Probablemente tu problema no se siente como "operación". Se siente como falta de tiempo, seguimientos que se enfrían, mensajes que repites, ventas que te cuestan más de lo necesario, contenido que improvisas y tareas que solo tú sabes hacer. Eso también es estructura. No lo trabajamos desde lo técnico, sino desde cómo afecta tu tiempo, tu margen y tu capacidad de vender mejor.',
   },
   {
-    q: 'Ya tengo un negocio funcionando. ¿Vale la pena para mí?',
-    a: 'Sí. Especialmente si ya vendes, pero sientes que todo depende demasiado de ti, que tu imagen no refleja tu nivel o que tu comunicación podría ser mucho más clara. Esta experiencia no es solo para quien empieza — también es para quien necesita ordenar, ajustar y elevar lo que ya está construyendo.',
+    q: '¿Y si no sé usar IA?',
+    a: 'No necesitas saber usar IA de forma avanzada. La experiencia está pensada para que entiendas cómo usarla como apoyo para ordenar, simplificar y tomar mejores decisiones en tu negocio. No se trata de aprender herramientas por moda — se trata de entender qué parte de tu negocio puede mejorar con ayuda de IA.',
   },
   {
-    q: '¿Voy a salir con todo resuelto?',
-    a: 'No vamos a prometerte que en 6 horas vas a resolver todo tu negocio. Pero sí vas a salir con claridad, herramientas y pasos concretos para empezar a soltar carga, proyectarte mejor y comunicar con más seguridad.',
+    q: '¿La parte de imagen es solo sobre ropa?',
+    a: 'No. La imagen se trabaja como una herramienta de comunicación profesional. Tu presencia, tus colores, tu lenguaje corporal y tu coherencia visual influyen en cómo te perciben. No se trata de verte distinta — se trata de que tu imagen deje de comunicar menos de lo que realmente eres capaz de entregar.',
+  },
+  {
+    q: '¿La parte de comunicación es para hablar en público?',
+    a: 'También, pero no solo. Comunicar mejor te ayuda a vender, presentar tu oferta, conectar con clientes, contar tu historia y guiar a la acción. La comunicación no es solo escenario — también es una reunión, una historia en Instagram, una llamada de venta o una conversación con un cliente potencial.',
+  },
+  {
+    q: '¿Puedo ir sola?',
+    a: 'Sí. Y también puedes venir acompañada porque la Entrada General incluye 2x1. Puedes venir con una amiga, socia, colega o persona que también esté construyendo su negocio y quiera elevar cómo se muestra, comunica y vende.',
   },
   {
     q: '¿La Entrada VIP vale la pena?',
-    a: 'Sí, si quieres una mirada más personalizada después del evento. La VIP incluye 3 sesiones privadas 1:1 online: una auditoría de tu negocio con Claude, una revisión de imagen y color, y una revisión de comunicación y ventas. La General te da la experiencia completa. La VIP te da experiencia + dirección aplicada a tu caso real.',
+    a: 'Sí, si quieres una mirada más personalizada después del evento. La VIP incluye 3 sesiones privadas 1:1 online para aplicar lo trabajado a tu caso: una de IA y estructura, una de imagen y presencia, y una de comunicación y ventas. La General te da la experiencia completa. La VIP te da experiencia + dirección aplicada.',
   },
   {
-    q: '¿Cuánto dura la experiencia presencial?',
-    a: '6 horas. De 14h a 21h, en Santiago. La idea no es saturarte de teoría — es darte el espacio para mirar tu negocio, tu imagen y tu mensaje con otros ojos y salir con dirección.',
-  },
-  {
-    q: '¿La entrada incluye acompañante?',
-    a: 'Solo la Entrada General incluye 2x1: puedes llevar un acompañante sin costo adicional. La Entrada VIP no tiene 2x1 porque es individual, pero incluye 3 sesiones privadas 1:1 online post-evento, una con cada experto.',
+    q: '¿Cuánto dura la experiencia?',
+    a: '6 horas. De 14h a 21h, en Providencia, Santiago. No es para saturarte de teoría — es para mirar tu negocio, tu imagen y tu mensaje con otros ojos y salir con dirección.',
   },
   {
     q: '¿Qué pasa después de comprar mi entrada?',
-    a: 'Recibes la confirmación de tu compra y la información necesaria para asistir al evento: dirección exacta, qué llevar y agenda. Si compras la Entrada VIP, después del evento se coordinan tus 3 sesiones online 1:1 con cada experto.',
-  },
-  {
-    q: '¿Y si después no puedo asistir?',
-    a: 'Al ser una experiencia presencial con cupos limitados, tu lugar se reserva exclusivamente. No hay reembolsos, pero puedes transferir tu entrada a otra persona si nos avisas con al menos 48 horas de anticipación.',
+    a: 'Recibes la confirmación y la información para asistir: dirección exacta, qué llevar y agenda. Si compras la Entrada VIP, después del evento se coordinan tus 3 sesiones online 1:1 con cada experto.',
   },
 ] as const
 
@@ -475,7 +470,7 @@ export const TESTIMONIALS = [
 export const META = {
   title: 'Next Level Experience · 2nd Edition · 16 Mayo 2026 · Santiago',
   description:
-    'Half-Day Experience presencial. 3 expertos en vivo: IA con Claude, imagen y comunicación. Deja de cargarlo todo tú y empieza a dirigir, proyectar y vender desde tu siguiente nivel.',
+    'Experiencia presencial de 6 horas para emprendedores y profesionales que quieren que su negocio se perciba, se comunique y se venda al nivel del valor que realmente entregan.',
   ogImage: '/og-cover.png',
 } as const
 

@@ -24,12 +24,12 @@ export default function HomePage() {
       <Hero />
       <Ticker />
       <Mirror />
-      <ParaTiSi />
       <Hook />
       <Tickets />
       <Mentors />
       <VIPDetail />
       <Takeaways />
+      <ParaTiSi />
       <AntesDespues />
       <Testimonials />
       <TicketsCTA />

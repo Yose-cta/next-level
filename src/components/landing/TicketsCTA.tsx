@@ -24,13 +24,13 @@ export function TicketsCTA() {
         <h2 className="font-display text-display-md sm:text-display-lg text-white leading-[1.05]">
           <span data-editable="cta2-h">
             Ya viste lo que se trabaja.{' '}
-            <span className="italic text-electric">Ahora elige cómo quieres vivirlo.</span>
+            <span className="italic text-electric">Elige cómo quieres vivirlo.</span>
           </span>
         </h2>
 
         <p className="mt-6 text-base sm:text-lg text-white/70 font-light max-w-xl mx-auto leading-relaxed">
-          <span className="text-white">Entrada General</span> si quieres la experiencia completa.{' '}
-          <span className="text-electric">Entrada VIP</span> si quieres aplicar lo aprendido a tu caso
+          <span className="text-white">Entrada General 2x1</span> si quieres la experiencia completa y venir con alguien.{' '}
+          <span className="text-electric">Entrada VIP</span> si quieres aplicar lo trabajado a tu caso
           con 3 sesiones privadas después del evento.
         </p>
 
@@ -39,7 +39,7 @@ export function TicketsCTA() {
             ticket={GENERAL}
             className="inline-flex items-center justify-center gap-2.5 bg-white text-midnight font-semibold px-7 py-4 rounded-full hover:bg-electric transition-colors text-sm sm:text-base w-full sm:w-auto"
           >
-            <span>Reservar General — $67.000</span>
+            <span>Reservar General 2x1 — $67.000</span>
             <span aria-hidden>→</span>
           </CheckoutButton>
 

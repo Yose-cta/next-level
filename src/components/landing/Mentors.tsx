@@ -19,27 +19,26 @@ export function Mentors() {
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24 reveal">
           <h2 className="font-display text-display-lg text-white leading-[1.05]">
             <span data-editable="mentors-h">
-              Tres expertos.<br />
-              <span className="italic text-electric">Una experiencia diseñada para tu siguiente nivel.</span>
+              Tres frentes que impactan<br />
+              <span className="italic text-electric">en cómo te eligen.</span>
             </span>
           </h2>
           <p
             className="mt-7 text-lg text-white/70 leading-relaxed font-light"
             data-editable="mentors-body"
           >
-            No vienes a escuchar tres charlas sueltas. Vienes a trabajar tres piezas
-            que están conectadas: tu <span className="text-white">operación</span> (cómo se sostiene
-            tu negocio), tu <span className="text-white">presencia</span> (cómo te perciben) y tu{' '}
-            <span className="text-white">comunicación</span> (cómo explicas y vendes tu valor).
+            No vienes a escuchar tres charlas sueltas. Vienes a revisar tres piezas
+            que están conectadas y que impactan directamente en una sola pregunta:{' '}
+            <span className="text-white">¿por qué alguien debería confiar, elegir y pagar por lo que haces?</span>
           </p>
           <p
             className="mt-5 text-base text-white/65 leading-relaxed font-light max-w-2xl mx-auto"
             data-editable="mentors-body-2"
           >
-            Porque puedes tener una gran oferta, pero si tu operación es un caos, te vas a
-            desgastar. Puedes saber mucho, pero si tu imagen no acompaña tu nivel, te pueden
-            percibir por debajo de tu valor. Puedes ser excelente, pero si no sabes
-            comunicarlo, el mercado no lo entiende completo.
+            Tu <span className="text-white">presencia</span> influye en la confianza.
+            Tu <span className="text-white">comunicación</span> influye en la claridad.
+            Tu <span className="text-white">estructura</span> influye en la experiencia.
+            Cuando una de esas partes está débil, el cliente lo siente. Aunque no sepa explicarlo.
           </p>
         </div>
 

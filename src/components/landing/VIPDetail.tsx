@@ -15,23 +15,23 @@ export function VIPDetail() {
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 reveal">
           <div className="flex items-center justify-center gap-4 mb-7">
             <div className="h-px w-8 bg-gold" />
-            <div className="eyebrow">La diferencia VIP</div>
+            <div className="eyebrow">¿General o VIP?</div>
             <div className="h-px w-8 bg-gold" />
           </div>
           <h2 className="font-display text-display-lg text-ink leading-[1.05]">
             <span data-editable="vip-h">
-              3 sesiones privadas<br />
-              <span className="italic text-magenta">para aplicar todo a tu caso.</span>
+              La General te da la experiencia.<br />
+              <span className="italic text-magenta">La VIP te da dirección aplicada.</span>
             </span>
           </h2>
           <p
             className="mt-7 text-lg text-charcoal leading-relaxed font-light"
             data-editable="vip-body"
           >
-            La Entrada VIP incluye la experiencia presencial completa + 3 sesiones
-            online 1:1 después del evento, una con cada experto. No es otra entrada
-            ni otro programa: es el beneficio premium de la VIP para aterrizar lo
-            aprendido a tu negocio, tu imagen y tu forma de vender.
+            La <span className="font-medium text-ink">Entrada General</span> es para ti si quieres vivir la experiencia completa
+            y llevarte claridad. La <span className="font-medium text-ink">Entrada VIP</span> es para ti si además
+            quieres que revisemos tu caso después del evento con una mirada personalizada
+            en IA y estructura, imagen y presencia, y comunicación y ventas.
           </p>
         </div>
 

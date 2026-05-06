@@ -18,20 +18,20 @@ export function Takeaways() {
         <div className="text-center max-w-4xl mx-auto mb-16 sm:mb-20 reveal">
           <h2 className="font-display text-display-lg text-ink">
             <span data-editable="take-h">
-              6 cosas concretas que te llevas.{' '}
-              <span className="italic text-magenta">No promesas vacías.</span>
+              Lo que vas a lograr en Next Level{' '}
+              <span className="italic text-magenta">no es "aprender más".</span>
             </span>
           </h2>
           <p
             className="mt-7 text-lg text-charcoal leading-relaxed font-light max-w-2xl mx-auto"
             data-editable="take-body"
           >
-            No te vamos a prometer que en una jornada vas a resolver todo tu negocio.
-            Pero sí vas a salir con{' '}
+            No te vamos a prometer transformaciones mágicas. Pero sí vas a salir con{' '}
             <em className="text-ink not-italic font-medium">
-              dirección, herramientas y pasos concretos
+              más precisión, más criterio y más dirección
             </em>{' '}
-            para empezar a soltar carga, proyectarte mejor y comunicar con más seguridad.
+            para que tu negocio se perciba, se comunique y se sostenga al nivel
+            de lo que realmente vales.
           </p>
         </div>
 
@@ -78,9 +78,8 @@ export function Takeaways() {
           className="text-center mt-12 text-base text-charcoal/80 font-light max-w-2xl mx-auto leading-relaxed italic reveal"
           data-editable="take-cierre"
         >
-          No prometemos transformaciones mágicas. Prometemos claridad, herramientas
-          aplicables y dirección para que empieces a tomar mejores decisiones sobre
-          tu negocio, tu imagen y tu comunicación.
+          El objetivo no es que parezcas más profesional. Es que tu negocio sea
+          más fácil de entender, confiar y comprar.
         </p>
 
         <div className="text-center mt-10 reveal">
@@ -89,7 +88,7 @@ export function Takeaways() {
               href="#tickets"
               className="inline-flex items-center gap-3 bg-midnight text-white font-medium px-7 py-4 rounded-full hover:bg-magenta transition-colors duration-300 ease-apple text-sm sm:text-base"
             >
-              <span data-editable="take-cta">Quiero llevarme estas 6 cosas</span>
+              <span data-editable="take-cta">Reservar mi entrada</span>
               <span aria-hidden>→</span>
             </Link>
           </span>

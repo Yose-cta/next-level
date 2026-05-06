@@ -6,12 +6,12 @@ import Link from 'next/link'
  *   Tono: directo, empático, sin culpa. 6 acciones concretas.
  */
 const ACTIONS = [
-  'soltar tareas que ya no deberían depender de ti',
-  'usar IA como apoyo real, no como juguete ni como moda',
-  'proyectar una imagen más alineada con tu valor',
-  'comunicar lo que haces con más seguridad',
-  'vender sin minimizarte',
-  'tomar decisiones desde criterio, no desde agotamiento',
+  'qué señales está enviando tu negocio hoy',
+  'qué necesitas ajustar en tu presencia profesional',
+  'cómo comunicar tu valor con más claridad y seguridad',
+  'qué parte de tu estructura está drenando tiempo y margen',
+  'cómo usar IA con criterio, no como moda',
+  'cómo hacer que tu valor sea más fácil de ver, entender y comprar',
 ] as const
 
 export function Hook() {
@@ -22,9 +22,9 @@ export function Hook() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center reveal">
           <h2 className="font-display text-display-lg text-ink leading-[1.05]">
-            <span data-editable="hook-h-1">No necesitas hacer más.</span><br />
+            <span data-editable="hook-h-1">Esto es Next Level Experience.</span><br />
             <span className="italic text-magenta" data-editable="hook-h-2">
-              Necesitas dejar de cargarlo todo tú.
+              No vienes a una clase más.
             </span>
           </h2>
 
@@ -32,19 +32,18 @@ export function Hook() {
             className="mt-9 text-lg sm:text-xl text-charcoal max-w-2xl mx-auto leading-relaxed font-light"
             data-editable="hook-body"
           >
-            Next Level Experience no es un evento para llenarte de teoría, frases bonitas
-            o motivación que se queda en el salón. Es una experiencia práctica para mirar
-            tres áreas que hoy pueden estar frenando tu crecimiento: cómo está funcionando
-            tu negocio por dentro, cómo te estás mostrando hacia afuera, y cómo estás
-            comunicando y vendiendo tu valor.
+            Una experiencia presencial de 6 horas para mirar tu negocio desde tres
+            frentes que están conectados: tu <em className="not-italic text-ink font-medium">presencia</em> (lo que
+            proyectas antes de hablar), tu <em className="not-italic text-ink font-medium">comunicación</em> (cómo
+            explicas, conectas y vendes tu valor) y tu <em className="not-italic text-ink font-medium">estructura</em> (cómo
+            sostienes tu negocio sin que todo dependa de tu cabeza).
           </p>
 
           <p
             className="mt-6 text-lg sm:text-xl text-ink max-w-2xl mx-auto leading-relaxed font-medium"
             data-editable="hook-body-2"
           >
-            Porque tu siguiente nivel no se sostiene solo con más esfuerzo. Se sostiene
-            cuando empiezas a:
+            Vienes a revisar qué señales está enviando tu negocio hoy y qué necesitas ajustar para que tu valor sea más claro, más creíble y más fácil de comprar:
           </p>
         </div>
 
@@ -73,7 +72,7 @@ export function Hook() {
               href="#tickets"
               className="inline-flex items-center gap-3 bg-midnight text-white font-medium px-7 py-4 rounded-full hover:bg-magenta transition-colors duration-300 ease-apple text-sm sm:text-base"
             >
-              <span data-editable="hook-cta">Quiero vivir esta experiencia</span>
+              <span data-editable="hook-cta">Reservar mi entrada</span>
               <span aria-hidden>→</span>
             </Link>
           </span>

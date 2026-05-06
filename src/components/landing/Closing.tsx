@@ -30,19 +30,19 @@ export function Closing() {
 
         <h2 className="font-display text-display-xl text-white leading-[0.95]">
           <span data-editable="close-h-1" className="block">
-            Tu siguiente nivel
+            Puede que tu negocio ya tenga valor.
           </span>
           <span
             className="italic text-white/55 block text-display-md mt-3"
             data-editable="close-h-2"
           >
-            no empieza cuando trabajas más.
+            Ahora toca hacer que se note.
           </span>
           <span
             className="italic text-electric block mt-4"
             data-editable="close-h-3"
           >
-            Empieza cuando dejas de cargarlo todo tú.
+            Que se note, se entienda y se elija.
           </span>
         </h2>
 
@@ -50,15 +50,15 @@ export function Closing() {
           className="mt-12 text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed font-light"
           data-editable="close-body"
         >
-          Cuando tu negocio deja de vivir solo en tu cabeza.
+          Que se note en cómo te presentas.
           <br />
-          Cuando tu imagen refleja mejor tu valor.
+          Que se note en cómo comunicas.
           <br />
-          Cuando comunicas con más seguridad.
+          Que se note en cómo vendes.
           <br />
-          Cuando vendes sin minimizarte.
+          Que se note en cómo sostienes la experiencia.
           <br />
-          <span className="text-electric">Cuando empiezas a dirigir con más intención y menos agotamiento.</span>
+          <span className="text-electric">Next Level es para quienes quieren que su presencia, su mensaje y su negocio estén alineados con el nivel al que quieren jugar.</span>
         </p>
 
         <div
@@ -78,7 +78,7 @@ export function Closing() {
               href="#tickets"
               className="inline-flex items-center gap-3 bg-electric text-midnight font-semibold px-10 py-5 rounded-full hover:bg-yellow-300 transition-colors duration-300 ease-apple text-base shadow-glow-electric"
             >
-              <span data-editable="close-cta">Reservar mi cupo</span>
+              <span data-editable="close-cta">Reservar mi entrada para Next Level</span>
               <span aria-hidden>→</span>
             </Link>
           </span>

@@ -19,7 +19,7 @@ export function StickyBar() {
         </Link>
         <div className="hidden md:flex items-center gap-2 font-mono uppercase tracking-[0.2em] text-white/55 text-[10px]">
           <span className="inline-block w-1 h-1 rounded-full bg-electric" />
-          <span data-editable="topbar-text">16 Mayo · Cupos limitados</span>
+          <span data-editable="topbar-text">Sábado 16 de mayo · Providencia · Entrada General 2x1</span>
         </div>
         <Link
           href="#tickets"

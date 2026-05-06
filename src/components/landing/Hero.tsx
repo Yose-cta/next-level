@@ -51,52 +51,44 @@ export function Hero() {
             <div className="inline-flex items-center gap-3 glass-dark rounded-full px-4 py-2 mb-8">
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-electric animate-pulse" />
               <span className="eyebrow !text-white/75" data-editable="hero-eyebrow">
-                Next Level Experience · 2nd Edition · Half-Day
+                Experiencia presencial · Providencia, Santiago
               </span>
             </div>
 
             <h1 className="font-display text-display-xl lg:text-display-lg text-white leading-[0.98]">
-              <span className="block" data-editable="hero-h1">Deja de sostener todo,</span>
+              <span className="block" data-editable="hero-h1">Tu negocio puede tener valor…</span>
               <span className="block italic text-magenta -mt-1" data-editable="hero-h2">
-                resolver todo
+                pero si no se ve, no se entiende
               </span>
-              <span className="block" data-editable="hero-h2b">y vender con dudas.</span>
+              <span className="block" data-editable="hero-h2b">y no se sostiene, no se compra.</span>
             </h1>
 
             <p
               className="font-display italic text-display-md text-white/85 mt-5 max-w-xl leading-snug"
               data-editable="hero-h3"
             >
-              Ordena tu negocio, eleva tu presencia y vende con más seguridad.
+              Que el mercado por fin vea, entienda y valore lo que ya eres capaz de entregar.
             </p>
 
             <p
               className="mt-8 text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-light"
               data-editable="hero-lead"
             >
-              <span className="text-white">6 horas presenciales</span> para emprendedores, coaches,
-              marcas personales y profesionales que quieren crecer sin cargar todo con su tiempo,
-              su energía y su cabeza.
+              <span className="text-white">Una experiencia presencial</span> para emprendedores, coaches,
+              marcas personales y profesionales que quieren que su negocio se perciba, se comunique
+              y se venda al nivel del valor que realmente entregan.
             </p>
 
             <p
               className="mt-4 text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-light"
               data-editable="hero-lead-2"
             >
-              Si <span className="text-white">recién empiezas</span>, vas a construir bases más
-              claras desde el inicio. Si ya <span className="text-white">vendes</span>, vas a
-              detectar qué ajustar y qué soltar para crecer con más intención.
+              Durante una tarde vas a trabajar tres áreas que impactan directamente
+              en cómo te eligen: <span className="text-white">cómo funciona tu negocio por dentro</span>,
+              cómo te <span className="text-white">perciben</span> antes de que hables,
+              y cómo <span className="text-white">comunicas tu valor</span> para vender con más seguridad.
             </p>
 
-            <p
-              className="mt-4 text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-light"
-              data-editable="hero-lead-3"
-            >
-              <span className="text-white">Tres expertos en vivo.</span> Tres áreas que cambian
-              cómo <span className="text-white">sostienes</span> tu negocio,
-              cómo te <span className="text-white">perciben</span> y
-              cómo <span className="text-white">vendes</span> tu valor.
-            </p>
 
             <div className="mt-10 flex flex-wrap gap-3 sm:gap-5 items-center">
               <span data-magnetic="0.25" className="magnetic">
@@ -104,7 +96,7 @@ export function Hero() {
                   href="#tickets"
                   className="inline-flex items-center gap-3 bg-electric text-midnight font-semibold px-7 py-4 rounded-full hover:bg-yellow-300 transition-colors duration-300 ease-apple text-sm sm:text-base shadow-glow-electric"
                 >
-                  <span data-editable="hero-cta-1">Reservar mi entrada</span>
+                  <span data-editable="hero-cta-1">Reservar mi entrada 2x1</span>
                   <span aria-hidden>→</span>
                 </Link>
               </span>
@@ -121,7 +113,7 @@ export function Hero() {
               href="#tickets"
               className="mt-4 inline-block text-xs sm:text-sm font-mono uppercase tracking-[0.2em] text-white/50 hover:text-electric transition cursor-pointer"
             >
-              General $67.000 · VIP $147.000 · Cupos limitados
+              General $67.000 (2x1) · VIP $147.000 · Cupos limitados
             </Link>
 
             {/* Detalles operativos */}

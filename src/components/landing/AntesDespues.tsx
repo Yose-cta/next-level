@@ -14,13 +14,13 @@ export function AntesDespues() {
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 reveal">
           <div className="flex items-center justify-center gap-4 mb-7">
             <div className="h-px w-8 bg-gold" />
-            <div className="eyebrow">Antes y después</div>
+            <div className="eyebrow">El cambio</div>
             <div className="h-px w-8 bg-gold" />
           </div>
           <h2 className="font-display text-display-lg text-ink leading-[1.05]">
             <span data-editable="shifts-h">
               No vas a salir igual<br />
-              <span className="italic text-magenta">a como entraste.</span>
+              <span className="italic text-magenta">a como llegaste.</span>
             </span>
           </h2>
         </div>
@@ -81,10 +81,10 @@ export function AntesDespues() {
             data-editable="shifts-foot"
           >
             <em className="not-italic font-medium text-ink">
-              No prometemos transformaciones mágicas.
+              No es una clase de IA. No es una clase de imagen. No es una clase de comunicación.
             </em>{' '}
-            Prometemos claridad. Y la claridad es lo que hace que todo lo demás
-            empiece a moverse.
+            Es una experiencia para entender cómo esas tres cosas impactan en una sola
+            pregunta: ¿por qué alguien debería confiar, elegir y pagar por lo que haces?
           </p>
         </div>
       </div>

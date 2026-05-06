@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { PARA_TI_SI } from '@/lib/constants'
+import { PARA_TI_SI, NO_ES_PARA_TI } from '@/lib/constants'
 
 /**
  * ParaTiSi — autodiagnóstico. Lista de señales que ayudan al lector
@@ -29,9 +29,9 @@ export function ParaTiSi() {
 
             <h2 className="font-display text-display-lg text-white leading-[1.05]">
               <span data-editable="paratisi-h">
-                Esto es para ti<br />
+                Next Level Experience<br />
                 <span className="italic text-electric">
-                  si te reconoces aquí.
+                  es para ti si…
                 </span>
               </span>
             </h2>
@@ -40,8 +40,8 @@ export function ParaTiSi() {
               className="mt-8 text-lg text-white/70 leading-relaxed font-light max-w-md"
               data-editable="paratisi-body"
             >
-              Si marcas <span className="text-white">tres o más</span> de las señales
-              de la derecha, esta jornada está pensada exactamente para tu momento.
+              Si te reconoces en <span className="text-white">tres o más</span> de estas
+              señales, esta experiencia está diseñada exactamente para tu momento.
             </p>
 
             <div className="mt-9">
@@ -75,6 +75,30 @@ export function ParaTiSi() {
                 </li>
               ))}
             </ul>
+
+            {/* No es para ti */}
+            <div className="mt-12 pt-10 border-t border-white/10">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-white/45">
+                  No es para ti si…
+                </span>
+              </div>
+              <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
+                {NO_ES_PARA_TI.map((line, i) => (
+                  <li
+                    key={`no-${i}`}
+                    className="flex items-start gap-4 py-3"
+                  >
+                    <span className="shrink-0 mt-0.5 w-7 h-7 rounded-full bg-white/5 border border-white/15 flex items-center justify-center text-white/40">
+                      <XIcon />
+                    </span>
+                    <span className="text-base sm:text-lg text-white/50 leading-relaxed font-light">
+                      {line}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -86,6 +110,14 @@ function CheckIcon() {
   return (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       <path d="M5 12l5 5L20 7" />
+    </svg>
+  )
+}
+
+function XIcon() {
+  return (
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M18 6L6 18M6 6l12 12" />
     </svg>
   )
 }

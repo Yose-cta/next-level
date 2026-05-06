@@ -1,12 +1,12 @@
 const ITEMS = [
   '16 Mayo 2026',
   'Condell 1337 · Providencia',
-  '14h a 21h · Half-Day',
-  'Cupos Limitados',
-  'IA con Claude',
-  'Imagen y Color',
+  '14h a 21h',
+  'General 2x1',
+  'Presencia e Imagen',
   'Comunicación y Ventas',
-  'Te llevas un sistema operando',
+  'IA y Estructura',
+  'Que tu valor se note',
 ] as const
 
 export function Ticker() {

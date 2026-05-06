@@ -100,8 +100,34 @@
   - Resend API Key
   - Vercel API Token
 
-## Hitos finales del día (2026-04-26)
+## Hitos del 2026-04-26
 
-19 commits. Sistema de tracking + seguridad pro + copy nueva + visuales + mobile UX. Working tree clean. Production 100% live.
+19 commits. Sistema de tracking + seguridad pro + copy nueva + visuales + mobile UX. Working tree clean.
 
-**Último commit:** `98c853a ux(hero): mobile-first image — show team photo before copy on phones`
+## Hitos del 2026-05-06 — incidente crítico resuelto
+
+~10 commits adicionales. Resolución de incidente "cliente fantasma" + hardening webhook + performance + cleanup BD. Ver `.claude/skills/_daily-summaries/2026-05-06.md` para detalle completo.
+
+### Bugs reales arreglados
+- Webhook crasheaba HTTP 500 en `payment.payer.*` sin optional chaining (commit `c9f8b00`)
+- Webhook ahora devuelve 200 + log en fallos de DB (no 500)
+- TEST- access token detection in checkout
+- live_mode=false rechazado en producción
+
+### Infraestructura nueva
+- `/api/admin/db-check?key=<IPN_KEY>` — diagnóstico Supabase
+- `/api/admin/payment-recovery?key=<IPN_KEY>&id=<payment_id>[&resend_to=...]` — recovery manual de pagos
+- `/api/cron/keepalive` — ping diario para evitar auto-pause (vercel.json)
+- `scripts/compress-images.mjs` — compresor con sharp reusable
+
+### Performance
+- Imágenes /public: 8.01 MB → 1.87 MB (-77%)
+- Sitio 3-5x más rápido en mobile
+
+### Estado BD
+- Supabase upgradeado a **Pro** (no más auto-pause)
+- Tabla `compras` limpia: **0 registros** (los 12 viejos eran tests de dev)
+- Estructura, RLS, índices intactos
+
+### Último commit (cierre del 2026-05-06)
+`5ebbe86 perf(images): compress oversized PNGs in /public — 8 MB → 1.87 MB (-77%)`

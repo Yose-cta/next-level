@@ -56,38 +56,36 @@ export function Hero() {
             </div>
 
             <h1 className="font-display text-display-xl lg:text-display-lg text-white leading-[0.98]">
-              <span className="block" data-editable="hero-h1">Tu negocio puede tener valor…</span>
+              <span className="block" data-editable="hero-h1">No vienes a otra clase</span>
               <span className="block italic text-magenta -mt-1" data-editable="hero-h2">
-                pero si no se ve, no se entiende
+                de IA, imagen o comunicación.
               </span>
-              <span className="block" data-editable="hero-h2b">y no se sostiene, no se compra.</span>
             </h1>
 
             <p
               className="font-display italic text-display-md text-white/85 mt-5 max-w-xl leading-snug"
               data-editable="hero-h3"
             >
-              Que el mercado por fin vea, entienda y valore lo que ya eres capaz de entregar.
+              Vienes a trabajar las tres áreas que influyen en cómo te perciben y cómo deciden comprarte.
             </p>
 
-            <p
-              className="mt-8 text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-light"
-              data-editable="hero-lead"
-            >
-              <span className="text-white">Una experiencia presencial</span> para emprendedores, coaches,
-              marcas personales y profesionales que quieren que su negocio se perciba, se comunique
-              y se venda al nivel del valor que realmente entregan.
-            </p>
-
-            <p
-              className="mt-4 text-base sm:text-lg text-white/70 max-w-xl leading-relaxed font-light"
-              data-editable="hero-lead-2"
-            >
-              Durante una tarde vas a trabajar tres áreas que impactan directamente
-              en cómo te eligen: <span className="text-white">cómo funciona tu negocio por dentro</span>,
-              cómo te <span className="text-white">perciben</span> antes de que hables,
-              y cómo <span className="text-white">comunicas tu valor</span> para vender con más seguridad.
-            </p>
+            <div className="mt-8 space-y-4 max-w-xl" data-editable="hero-lead">
+              <p className="text-base sm:text-lg text-white/70 leading-relaxed font-light">
+                <span className="text-white font-medium">IA aplicada a tu negocio:</span>{' '}
+                para entender cómo convertir tareas y procesos repetidos en flujos más claros,
+                sin depender siempre de tu memoria o improvisación.
+              </p>
+              <p className="text-base sm:text-lg text-white/70 leading-relaxed font-light">
+                <span className="text-white font-medium">Imagen y presencia:</span>{' '}
+                para saber qué estás comunicando antes de hablar y cómo proyectar más
+                confianza desde el primer momento.
+              </p>
+              <p className="text-base sm:text-lg text-white/70 leading-relaxed font-light">
+                <span className="text-white font-medium">Comunicación y ventas:</span>{' '}
+                para explicar tu oferta con más claridad, usar tu voz y lenguaje corporal
+                con intención, y presentar tu valor de forma más persuasiva.
+              </p>
+            </div>
 
 
             <div className="mt-10 flex flex-wrap gap-3 sm:gap-5 items-center">
@@ -96,7 +94,7 @@ export function Hero() {
                   href="#tickets"
                   className="inline-flex items-center gap-3 bg-electric text-midnight font-semibold px-7 py-4 rounded-full hover:bg-yellow-300 transition-colors duration-300 ease-apple text-sm sm:text-base shadow-glow-electric"
                 >
-                  <span data-editable="hero-cta-1">Reservar mi entrada 2x1</span>
+                  <span data-editable="hero-cta-1">Quiero reservar mi entrada 2x1</span>
                   <span aria-hidden>→</span>
                 </Link>
               </span>

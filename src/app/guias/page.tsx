@@ -41,7 +41,7 @@ export default function GuiasHub() {
     <section className="sec-dark py-16 sm:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center mb-16 reveal">
+        <div className="text-center mb-16">
           <span className="eyebrow text-electric mb-4 block">Material del evento</span>
           <h1 className="font-display italic text-display-lg mb-4">
             Guías Interactivas
@@ -74,7 +74,7 @@ function GuideCard({ guide }: { guide: (typeof GUIDES)[number] }) {
   const accentGlow = guide.accent === 'magenta' ? 'group-hover:border-magenta/50' : 'group-hover:border-electric/50'
   const accentBg = guide.accent === 'magenta' ? 'bg-magenta/10' : 'bg-electric/10'
 
-  const cardClasses = `group relative flex flex-col bg-midnight-2 border ${accentBorder} ${accentGlow} rounded-2xl p-7 sm:p-8 transition-all duration-300 ${guide.ready ? 'cursor-pointer hover:-translate-y-1' : 'opacity-60'} reveal`
+  const cardClasses = `group relative flex flex-col bg-midnight-2 border ${accentBorder} ${accentGlow} rounded-2xl p-7 sm:p-8 transition-all duration-300 ${guide.ready ? 'cursor-pointer hover:-translate-y-1' : 'opacity-60'}`
 
   const inner = (
     <>

@@ -48,16 +48,19 @@ export interface HubData {
   capsule: string[]
   action: string
   prompt: { rol: string; contexto: string; tarea: string; formato: string; tono: number }
-  pitch: { who: string; what: string; diff: string; cta: string }
-  objections: Record<string, boolean>
-  carta: string
-  fears: string[]
-  voice: { volumen: number; tono: number; ritmo: number }
+  fears: Record<string, boolean>
+  beliefs: string[]
+  experiences: string[]
+  chainTable: Record<string, string>
+  newIdentity: string[]
+  voice: { intensidad: number; tono: number; velocidad: number }
+  bodyNotes: Record<string, string[]>
+  pauseNotes: string[]
   bodyPillar: number
   emotion: string | null
   story: { contexto: string; problema: string; aprendizaje: string }
-  audience: Record<string, boolean>
-  pibaFields: { problema: string; implicacion: string; beneficio: string; accion: string }
+  audience: Record<string, string>
+  piba: { problema: string; implicacion: string; beneficio: string; accion: string }
 }
 
 export interface ModuleProps {
@@ -108,7 +111,8 @@ const BLOCKS: Block[] = [
       { key: 'mindset', label: 'Mentalidad de Speaker', title: 'Mentalidad del Speaker', eyebrow: '01 / Bloque 1' },
       { key: 'nonverbal', label: 'No verbal y voz', title: 'Tu cuerpo · Tu instrumento', eyebrow: '02 / Bloque 2' },
       { key: 'storytelling', label: 'Storytelling C·P·A', title: 'Conecta · impacta · convence', eyebrow: '03 / Bloque 3' },
-      { key: 'piba', label: 'Pitch P.I.B.A.', title: 'Tu pitch irresistible', eyebrow: '04 / Cierre' },
+      { key: 'piba', label: 'Pitch P.I.B.A.', title: 'Tu pitch irresistible', eyebrow: '04 / Pitch' },
+      { key: 'download', label: 'Descargar Workbook', title: 'Tu workbook completado', eyebrow: '05 / Cierre' },
     ]
   },
 ]
@@ -121,15 +125,19 @@ const INITIAL_DATA: HubData = {
   season: null, seasonAnswers: {}, skinTone: 2,
   psychSeen: [], combine: { a: null, b: null }, capsule: [], action: '',
   prompt: { rol: 'asesor', contexto: '', tarea: '', formato: 'opciones', tono: 50 },
-  pitch: { who: '', what: '', diff: '', cta: '' },
-  objections: {}, carta: '',
-  fears: [],
-  voice: { volumen: 50, tono: 50, ritmo: 50 },
+  fears: {},
+  beliefs: ['', '', ''],
+  experiences: ['', '', ''],
+  chainTable: {},
+  newIdentity: ['', '', ''],
+  voice: { intensidad: 50, tono: 50, velocidad: 50 },
+  bodyNotes: { postura: ['', ''], ademanes: ['', '', ''], rostro: ['', '', ''] },
+  pauseNotes: ['', '', ''],
   bodyPillar: 0,
   emotion: null,
   story: { contexto: '', problema: '', aprendizaje: '' },
   audience: {},
-  pibaFields: { problema: '', implicacion: '', beneficio: '', accion: '' },
+  piba: { problema: '', implicacion: '', beneficio: '', accion: '' },
 }
 
 function renderTitle(t: string) {

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 interface ModuleProps {
   data: Record<string, any>
@@ -59,10 +59,26 @@ function voiceReading(v: Record<string, number>) {
 export function ModuleMindset({ data, setField }: ModuleProps) {
   const fears = data.fears || {}
   const newId = data.newIdentity || ['', '', '']
+  const beliefs = data.beliefs || ['', '', '']
+  const experiences = data.experiences || ['', '', '']
+  const chainTable = data.chainTable || { pensamientosRestan: '', pensamientosMultiplican: '', emocionesRestan: '', emocionesMultiplican: '', accionesRestan: '', accionesMultiplican: '' }
   const toggle = (id: string) => setField('fears', (f: any) => ({ ...(f || {}), [id]: !f?.[id] }))
   const setLine = (i: number, v: string) => setField('newIdentity', (arr: string[]) => {
     const next = [...(arr || ['', '', ''])]; next[i] = v; return next
   })
+  const setBelief = (i: number, v: string) => setField('beliefs', (arr: string[]) => {
+    const next = [...(arr || ['', '', ''])]; next[i] = v; return next
+  })
+  const setExp = (i: number, v: string) => setField('experiences', (arr: string[]) => {
+    const next = [...(arr || ['', '', ''])]; next[i] = v; return next
+  })
+  const setChain = (k: string, v: string) => setField('chainTable', (x: any) => ({ ...(x || chainTable), [k]: v }))
+
+  const inputStyle = {
+    width: '100%', padding: '10px 12px', borderRadius: 8,
+    background: 'var(--hub-bone)', border: '1px solid var(--hub-hairline)',
+    fontSize: 13, color: 'var(--hub-midnight)', outline: 'none', fontFamily: 'var(--sans)',
+  }
 
   return (
     <div>
@@ -99,6 +115,24 @@ export function ModuleMindset({ data, setField }: ModuleProps) {
           <div style={{ marginTop: 18, padding: '14px 16px', background: 'var(--hub-bone)', border: '1px solid var(--hub-hairline)', borderRadius: 10, fontSize: 12, color: 'var(--hub-smoke)', lineHeight: 1.55 }}>
             <strong style={{ color: 'var(--hub-midnight)' }}>Reconocer es el primer paso.</strong> No buscas eliminar el miedo, buscas atravesarlo con presencia.
           </div>
+
+          {/* Creencias y Experiencias — from workbook */}
+          <div className="hub-card" style={{ padding: 22, marginTop: 18 }}>
+            <div style={{ fontFamily: 'var(--mono-font)', fontSize: 10, letterSpacing: '0.24em', color: 'var(--hub-gold)', marginBottom: 10 }}>· TUS CREENCIAS LIMITANTES</div>
+            {[0, 1, 2].map(i => (
+              <input key={i} value={beliefs[i] || ''} onChange={e => setBelief(i, e.target.value)}
+                placeholder={['"No soy bueno hablando en público"', '"Se me nota el nervio"', '"No tengo nada interesante que decir"'][i]}
+                style={{ ...inputStyle, marginBottom: 8 }} />
+            ))}
+          </div>
+          <div className="hub-card" style={{ padding: 22, marginTop: 10 }}>
+            <div style={{ fontFamily: 'var(--mono-font)', fontSize: 10, letterSpacing: '0.24em', color: 'var(--hub-gold)', marginBottom: 10 }}>· TUS EXPERIENCIAS PASADAS</div>
+            {[0, 1, 2].map(i => (
+              <input key={i} value={experiences[i] || ''} onChange={e => setExp(i, e.target.value)}
+                placeholder={['Una presentación donde te quedaste en blanco...', 'Esa vez que sentiste que no conectaste...', 'El momento que te marcó como comunicador...'][i]}
+                style={{ ...inputStyle, marginBottom: 8 }} />
+            ))}
+          </div>
         </div>
         <div>
           <div style={{ padding: '24px 26px', borderRadius: 14, background: 'var(--hub-midnight)', color: 'var(--hub-paper)', marginBottom: 18 }}>
@@ -121,6 +155,22 @@ export function ModuleMindset({ data, setField }: ModuleProps) {
               </div>
             ))}
           </div>
+
+          {/* Que restan vs Que multiplican — from workbook */}
+          <div className="hub-card" style={{ padding: 22, marginBottom: 18 }}>
+            <div style={{ fontFamily: 'var(--mono-font)', fontSize: 10, letterSpacing: '0.24em', color: 'var(--hub-gold)', marginBottom: 14 }}>· QUE RESTAN vs QUE MULTIPLICAN</div>
+            <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr 1fr', gap: 8, fontSize: 12 }}>
+              <div /><div style={{ fontFamily: 'var(--mono-font)', fontSize: 9, letterSpacing: '0.18em', color: '#c0392b', textAlign: 'center' }}>RESTAN</div><div style={{ fontFamily: 'var(--mono-font)', fontSize: 9, letterSpacing: '0.18em', color: 'var(--hub-gold)', textAlign: 'center' }}>MULTIPLICAN</div>
+              {['pensamientos', 'emociones', 'acciones'].map(row => (
+                <React.Fragment key={row}>
+                  <div style={{ fontFamily: 'var(--mono-font)', fontSize: 10, letterSpacing: '0.18em', display: 'flex', alignItems: 'center' }}>{row.toUpperCase()}</div>
+                  <input value={chainTable[`${row}Restan`] || ''} onChange={e => setChain(`${row}Restan`, e.target.value)} placeholder="Lo que te frena..." style={{ ...inputStyle, fontSize: 12 }} />
+                  <input value={chainTable[`${row}Multiplican`] || ''} onChange={e => setChain(`${row}Multiplican`, e.target.value)} placeholder="Lo que te potencia..." style={{ ...inputStyle, fontSize: 12 }} />
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+
           <div className="hub-card" style={{ padding: 24, borderTop: '3px solid var(--hub-gold)' }}>
             <div style={{ fontFamily: 'var(--mono-font)', fontSize: 10, letterSpacing: '0.24em', color: 'var(--hub-gold)', marginBottom: 8 }}>· TU NUEVA IDENTIDAD COMO COMUNICADOR</div>
             <div style={{ fontSize: 13, color: 'var(--hub-smoke)', lineHeight: 1.5, marginBottom: 14 }}>Escribe tres declaraciones en presente. Empieza con <strong style={{ color: 'var(--hub-midnight)' }}>&ldquo;Yo soy…&rdquo;</strong>.</div>
@@ -155,6 +205,14 @@ export function ModuleNonverbal({ data, setField }: ModuleProps) {
   const setV = (k: string, val: number) => setField('voice', (x: any) => ({ ...(x || v), [k]: val }))
   const [emo, setEmo] = useState('alegria')
   const emo2 = EMOTIONS.find(e => e.id === emo)!
+  const bodyNotes = data.bodyNotes || { postura: ['', ''], ademanes: ['', '', ''], rostro: ['', '', ''] }
+  const setBodyNote = (pillar: string, i: number, v: string) => setField('bodyNotes', (x: any) => {
+    const next = { ...(x || bodyNotes) }; next[pillar] = [...(next[pillar] || bodyNotes[pillar as keyof typeof bodyNotes])]; next[pillar][i] = v; return next
+  })
+  const pauseNotes = data.pauseNotes || ['', '', '']
+  const setPauseNote = (i: number, v: string) => setField('pauseNotes', (arr: string[]) => {
+    const next = [...(arr || ['', '', ''])]; next[i] = v; return next
+  })
 
   return (
     <div>
@@ -174,6 +232,14 @@ export function ModuleNonverbal({ data, setField }: ModuleProps) {
             <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
               <div style={{ fontFamily: 'var(--mono-font)', fontSize: 9, letterSpacing: '0.18em', color: '#c0392b', fontWeight: 600, width: 38, flexShrink: 0, marginTop: 2 }}>EVITA</div>
               <div style={{ fontSize: 12, lineHeight: 1.5 }}>{p.avoid}</div>
+            </div>
+            <div style={{ marginTop: 14, borderTop: '1px solid var(--hub-hairline)', paddingTop: 12 }}>
+              <div style={{ fontFamily: 'var(--mono-font)', fontSize: 9, letterSpacing: '0.18em', color: 'var(--hub-whisper)', marginBottom: 8 }}>TUS NOTAS</div>
+              {(bodyNotes[p.id] || []).map((_: string, i: number) => (
+                <input key={i} value={bodyNotes[p.id]?.[i] || ''} onChange={e => setBodyNote(p.id, i, e.target.value)}
+                  placeholder={`Nota ${i + 1}...`}
+                  style={{ width: '100%', padding: '8px 10px', borderRadius: 6, background: 'var(--hub-bone)', border: '1px solid var(--hub-hairline)', fontSize: 12, outline: 'none', marginBottom: 6, fontFamily: 'var(--sans)', color: 'var(--hub-midnight)' }} />
+              ))}
             </div>
           </div>
         ))}
@@ -210,10 +276,14 @@ export function ModuleNonverbal({ data, setField }: ModuleProps) {
             { t: 'Procesar', d: 'La audiencia necesita milisegundos para asentar lo que dijiste.' },
             { t: 'Impactar', d: 'El silencio antes de la palabra clave la triplica de peso.' },
             { t: 'Anticipar', d: 'Una pausa larga genera expectativa y devuelve la atención.' },
-          ].map(b => (
-            <div key={b.t} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', marginBottom: 10 }}>
-              <div style={{ fontFamily: 'var(--mono-font)', fontSize: 10, color: 'var(--hub-gold)', letterSpacing: '0.16em', width: 74, flexShrink: 0, marginTop: 3 }}>· {b.t.toUpperCase()}</div>
-              <div style={{ fontSize: 12, color: 'var(--hub-smoke)', lineHeight: 1.5 }}>{b.d}</div>
+          ].map((b, i) => (
+            <div key={b.t} style={{ marginBottom: 12 }}>
+              <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start', marginBottom: 6 }}>
+                <div style={{ fontFamily: 'var(--mono-font)', fontSize: 10, color: 'var(--hub-gold)', letterSpacing: '0.16em', width: 74, flexShrink: 0, marginTop: 3 }}>· {b.t.toUpperCase()}</div>
+                <div style={{ fontSize: 12, color: 'var(--hub-smoke)', lineHeight: 1.5 }}>{b.d}</div>
+              </div>
+              <input value={pauseNotes[i] || ''} onChange={e => setPauseNote(i, e.target.value)} placeholder="Tu nota sobre esta pausa..."
+                style={{ width: '100%', padding: '7px 10px', borderRadius: 6, background: 'var(--hub-bone)', border: '1px solid var(--hub-hairline)', fontSize: 12, outline: 'none', fontFamily: 'var(--sans)', color: 'var(--hub-midnight)' }} />
             </div>
           ))}
         </div>
@@ -382,6 +452,187 @@ export function ModulePiba({ data, setField }: ModuleProps) {
           </div>
         </div>
       </div>
+    </div>
+  )
+}
+
+// ============================================================
+// COM · 05 DESCARGA — Workbook completado
+// ============================================================
+export function ModuleDownload({ data }: ModuleProps) {
+  const [copied, setCopied] = useState(false)
+
+  function buildWorkbook() {
+    const fears = data.fears || {}
+    const beliefs = data.beliefs || ['', '', '']
+    const experiences = data.experiences || ['', '', '']
+    const chainTable = data.chainTable || {}
+    const newId = data.newIdentity || ['', '', '']
+    const bodyNotes = data.bodyNotes || { postura: ['', ''], ademanes: ['', '', ''], rostro: ['', '', ''] }
+    const v = data.voice || { intensidad: 50, tono: 50, velocidad: 50 }
+    const pauseNotes = data.pauseNotes || ['', '', '']
+    const s = data.story || { contexto: '', problema: '', aprendizaje: '' }
+    const aud = data.audience || {}
+    const piba = data.piba || { problema: '', implicacion: '', beneficio: '', accion: '' }
+
+    const selectedFears = FEAR_TRIGGERS.filter(f => fears[f.id]).map(f => f.label)
+
+    const lines = [
+      '═══════════════════════════════════════════════',
+      '  DOMINA TU COMUNICACIÓN · NEXT LEVEL',
+      '  Workbook completado',
+      `  ${data.name ? `Nombre: ${data.name}` : ''}`,
+      `  Fecha: ${new Date().toLocaleDateString('es-CL')}`,
+      '═══════════════════════════════════════════════',
+      '',
+      '───────────────────────────────────────────────',
+      '  BLOQUE 1: MENTALIDAD DEL COMUNICADOR',
+      '───────────────────────────────────────────────',
+      '',
+      '¿Qué te detiene?',
+      selectedFears.length ? selectedFears.map(f => `  ✓ ${f}`).join('\n') : '  (ninguno seleccionado)',
+      '',
+      'Tus creencias limitantes:',
+      ...beliefs.map((b: string, i: number) => `  ${i + 1}. ${b || '—'}`),
+      '',
+      'Tus experiencias pasadas:',
+      ...experiences.map((e: string, i: number) => `  ${i + 1}. ${e || '—'}`),
+      '',
+      'Que restan vs Que multiplican:',
+      `  Pensamientos: ${chainTable.pensamientosRestan || '—'} → ${chainTable.pensamientosMultiplican || '—'}`,
+      `  Emociones:    ${chainTable.emocionesRestan || '—'} → ${chainTable.emocionesMultiplican || '—'}`,
+      `  Acciones:     ${chainTable.accionesRestan || '—'} → ${chainTable.accionesMultiplican || '—'}`,
+      '',
+      'Tu nueva identidad:',
+      ...newId.map((n: string, i: number) => `  ${i + 1}. ${n || '—'}`),
+      '',
+      '───────────────────────────────────────────────',
+      '  BLOQUE 2: LENGUAJE NO VERBAL Y VOZ',
+      '───────────────────────────────────────────────',
+      '',
+      'Postura y presencia:',
+      ...(bodyNotes.postura || []).map((n: string, i: number) => `  ${i + 1}. ${n || '—'}`),
+      '',
+      'Ademanes y movimientos:',
+      ...(bodyNotes.ademanes || []).map((n: string, i: number) => `  ${i + 1}. ${n || '—'}`),
+      '',
+      'Expresión facial y sonrisa:',
+      ...(bodyNotes.rostro || []).map((n: string, i: number) => `  ${i + 1}. ${n || '—'}`),
+      '',
+      'Tu configuración vocal:',
+      `  Intensidad: ${v.intensidad}% ${v.intensidad < 35 ? '(íntimo)' : v.intensidad > 65 ? '(fuerte)' : '(medio)'}`,
+      `  Tono:       ${v.tono}% ${v.tono < 35 ? '(grave)' : v.tono > 65 ? '(agudo)' : '(neutro)'}`,
+      `  Velocidad:  ${v.velocidad}% ${v.velocidad < 35 ? '(pausado)' : v.velocidad > 65 ? '(rápido)' : '(medio)'}`,
+      '',
+      'Notas sobre pausas:',
+      ...['Procesar', 'Impactar', 'Anticipar'].map((t, i) => `  ${t}: ${pauseNotes[i] || '—'}`),
+      '',
+      '───────────────────────────────────────────────',
+      '  BLOQUE 3: STORYTELLING Y PERSUASIÓN',
+      '───────────────────────────────────────────────',
+      '',
+      'Tu historia (C·P·A):',
+      '',
+      `  CONTEXTO:`,
+      `  ${s.contexto || '—'}`,
+      '',
+      `  PROBLEMA:`,
+      `  ${s.problema || '—'}`,
+      '',
+      `  APRENDIZAJE:`,
+      `  ${s.aprendizaje || '—'}`,
+      '',
+      'Conoce a tu audiencia:',
+      ...AUDIENCE_CARDS.map(a => `  ${a.label}: ${aud[a.id] || '—'}`),
+      '',
+      'Tu pitch P.I.B.A.:',
+      '',
+      `  [P] PROBLEMA:`,
+      `  ${piba.problema || '—'}`,
+      '',
+      `  [I] IMPLICACIÓN:`,
+      `  ${piba.implicacion || '—'}`,
+      '',
+      `  [B] BENEFICIO:`,
+      `  ${piba.beneficio || '—'}`,
+      '',
+      `  [A] ACCIÓN:`,
+      `  ${piba.accion || '—'}`,
+      '',
+      '═══════════════════════════════════════════════',
+      '  "Comunica con presencia y expresa',
+      '   tu verdadera esencia."',
+      '  — Sebastián Villar',
+      '═══════════════════════════════════════════════',
+      '',
+      '  NEXT LEVEL EXPERIENCE · 16 Mayo 2026',
+      '  Providencia, Santiago',
+    ]
+    return lines.join('\n')
+  }
+
+  function downloadTxt() {
+    const text = buildWorkbook()
+    const blob = new Blob([text], { type: 'text/plain;charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `Workbook-Comunicacion-NextLevel-${data.name || 'asistente'}.txt`
+    a.click()
+    URL.revokeObjectURL(url)
+  }
+
+  function copyAll() {
+    navigator.clipboard.writeText(buildWorkbook()).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    })
+  }
+
+  const hasContent = !!(
+    Object.values(data.fears || {}).some(Boolean) ||
+    (data.newIdentity || []).some((s: string) => s) ||
+    (data.story || {}).contexto ||
+    (data.piba || {}).problema
+  )
+
+  return (
+    <div>
+      <p style={{ fontSize: 16, color: 'var(--hub-smoke)', maxWidth: 560, lineHeight: 1.55, marginTop: 14 }}>
+        Todo lo que llenaste durante la clase se compila aquí. <em>Descárgalo o cópialo</em> para tener tu workbook personal.
+      </p>
+
+      {!hasContent && (
+        <div className="hub-card" style={{ padding: 28, marginTop: 24, textAlign: 'center', borderStyle: 'dashed' }}>
+          <div style={{ fontFamily: 'var(--serif)', fontSize: 22, fontWeight: 500, marginBottom: 8 }}>Aún no hay contenido</div>
+          <div style={{ fontSize: 14, color: 'var(--hub-smoke)' }}>Completa los módulos anteriores y vuelve aquí para descargar tu workbook.</div>
+        </div>
+      )}
+
+      {hasContent && (
+        <>
+          <div style={{ marginTop: 32, display: 'flex', gap: 14, flexWrap: 'wrap' }}>
+            <button onClick={downloadTxt} className="hub-btn hub-btn-primary" style={{ background: 'var(--hub-gold)', fontSize: 15, padding: '16px 28px' }}>
+              Descargar workbook .txt
+            </button>
+            <button onClick={copyAll} className="hub-btn hub-btn-ghost" style={{ fontSize: 15, padding: '16px 28px' }}>
+              {copied ? '✓ Copiado' : 'Copiar al portapapeles'}
+            </button>
+          </div>
+
+          <div style={{ marginTop: 32 }}>
+            <div style={{ fontFamily: 'var(--mono-font)', fontSize: 10, letterSpacing: '0.24em', color: 'var(--hub-whisper)', marginBottom: 12 }}>· VISTA PREVIA</div>
+            <pre style={{
+              padding: 28, borderRadius: 14, background: 'var(--hub-midnight)', color: 'var(--hub-paper)',
+              fontFamily: 'var(--mono-font)', fontSize: 12, lineHeight: 1.6, whiteSpace: 'pre-wrap',
+              maxHeight: 500, overflowY: 'auto',
+            }}>
+              {buildWorkbook()}
+            </pre>
+          </div>
+        </>
+      )}
+
       <div style={{ marginTop: 48, padding: '28px 32px', borderRadius: 14, background: 'var(--hub-gold)', color: '#fff' }}>
         <div style={{ fontFamily: 'var(--mono-font)', fontSize: 10, letterSpacing: '0.32em', opacity: 0.85, marginBottom: 12 }}>· CIERRE NEXT LEVEL</div>
         <div style={{ fontFamily: 'var(--serif)', fontSize: 36, fontStyle: 'italic', fontWeight: 500, letterSpacing: '-0.02em', lineHeight: 1.1 }}>
@@ -398,4 +649,5 @@ export const COM_MODULES = {
   nonverbal: ModuleNonverbal,
   storytelling: ModuleStorytelling,
   piba: ModulePiba,
+  download: ModuleDownload,
 }

@@ -1,0 +1,10 @@
+{
+  "sandbox": {
+    "network": {
+      "allowedDomains": [
+        "www.clarity.ms",
+        "api.telegram.org"
+      ]
+    }
+  }
+}

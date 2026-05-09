@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { createClient } from '@/lib/supabase/server'
+import { cookies } from 'next/headers'
 import { SignOutButton } from './sign-out-button'
 
 export const metadata: Metadata = {
@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 }
 
 export default async function GuiasLayout({ children }: { children: React.ReactNode }) {
-  const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const cookieStore = await cookies()
+  const hasAccess = cookieStore.get('guias-access')?.value === 'granted'
 
   return (
     <>
@@ -30,7 +30,7 @@ export default async function GuiasLayout({ children }: { children: React.ReactN
             >
               ← Volver al sitio
             </Link>
-            {user && <SignOutButton />}
+            {hasAccess && <SignOutButton />}
           </div>
         </div>
       </header>

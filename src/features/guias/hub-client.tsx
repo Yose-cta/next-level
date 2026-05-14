@@ -61,6 +61,20 @@ export interface HubData {
   story: { contexto: string; problema: string; aprendizaje: string }
   audience: Record<string, string>
   piba: { problema: string; implicacion: string; beneficio: string; accion: string }
+  diagAnswers: Record<number, number>
+  checklist: string[]
+  // IA modules
+  chain: { resultado: string; accion: string; emocion: string; pensamiento: string; creencia: string; nuevaCreencia: string }
+  areasScore: { marketing: number; ventas: number; entrega: number; operaciones: number }
+  areaAccion: string
+  fugasScore: { scopeCreep: number; retrabajo: number; tiempo: number; herramientas: number; sops: number }
+  matrizFuga: string
+  matrizAccion: string
+  matrizPlan: string
+  sesgosCheck: { control: boolean; confirmacion: boolean; impostor: boolean; esfuerzo: boolean }
+  sesgoPrincipal: string
+  sesgoCosto: string
+  kitAnswers: Record<string, number>
 }
 
 export interface ModuleProps {
@@ -74,14 +88,17 @@ export interface ModuleProps {
 const BLOCKS: Block[] = [
   {
     id: 'ia', num: '01',
-    expert: 'Yoselvia Adam', topic: 'IA Aplicada · Claude',
+    expert: 'Yoselvia Adam', topic: 'Mentalidad · Negocio · IA',
     accent: 'var(--hub-electric)', accentRgb: '246,207,47',
-    quote: '“La IA no te reemplaza — te libera tiempo para pensar mejor.”',
+    quote: '”La estrategia sin mentalidad es un plan que no se ejecuta.”',
     modules: [
-      { key: 'aiIntro', label: '¿Qué es Claude?', title: 'Tu copiloto invisible', eyebrow: '01 / Apertura' },
-      { key: 'aiPrompt', label: 'Anatomía del prompt', title: 'Cómo hablarle a la IA', eyebrow: '02 / Prompt' },
-      { key: 'aiUseCases', label: 'Casos de uso', title: 'Tu semana con Claude', eyebrow: '03 / Aplicación' },
-      { key: 'aiPlayground', label: 'Playground', title: 'Pruébala ahora', eyebrow: '04 / Práctica' },
+      { key: 'cadena', label: 'La Cadena', title: 'Cómo se construye un resultado', eyebrow: '01 / Mentalidad' },
+      { key: 'areas', label: 'Las 4 Áreas', title: 'Los pilares de tu negocio', eyebrow: '02 / Negocio' },
+      { key: 'fugas', label: 'Las 5 Fugas', title: 'Dónde se fuga tu dinero', eyebrow: '03 / Diagnóstico' },
+      { key: 'matriz', label: 'Matriz de Liberación', title: 'Eliminar · Optimizar · Automatizar · Delegar', eyebrow: '04 / Acción' },
+      { key: 'sesgos', label: 'Cerebro vs IA', title: 'Los sesgos que te frenan', eyebrow: '05 / Sesgos' },
+      { key: 'claude', label: 'Claude en Acción', title: 'Tu copiloto de negocio', eyebrow: '06 / Herramienta' },
+      { key: 'kit', label: 'Kit Anti-Fugas', title: 'Tu diagnóstico personalizado', eyebrow: '07 / Kit' },
     ]
   },
   {
@@ -100,6 +117,8 @@ const BLOCKS: Block[] = [
       { key: 'psych', label: 'Psicología del Color', title: 'Cada color comunica algo', eyebrow: '08 / Color' },
       { key: 'combine', label: 'Combina y Comunica', title: 'El poder de la combinación', eyebrow: '09 / Color' },
       { key: 'ficha', label: 'Tu Ficha Next Level', title: 'Tu carta de presentación', eyebrow: '10 / Cierre' },
+      { key: 'diagnostico', label: 'Diagnóstico', title: 'Tu diagnóstico de imagen', eyebrow: '11 / Evaluación' },
+      { key: 'checklist', label: 'Checklist Visual', title: 'Tu checklist de imagen', eyebrow: '12 / Plan de acción' },
     ]
   },
   {
@@ -112,7 +131,8 @@ const BLOCKS: Block[] = [
       { key: 'nonverbal', label: 'No verbal y voz', title: 'Tu cuerpo · Tu instrumento', eyebrow: '02 / Bloque 2' },
       { key: 'storytelling', label: 'Storytelling C·P·A', title: 'Conecta · impacta · convence', eyebrow: '03 / Bloque 3' },
       { key: 'piba', label: 'Pitch P.I.B.A.', title: 'Tu pitch irresistible', eyebrow: '04 / Pitch' },
-      { key: 'download', label: 'Descargar Workbook', title: 'Tu workbook completado', eyebrow: '05 / Cierre' },
+      { key: 'frases', label: 'Frases de Venta', title: 'Frases que venden', eyebrow: '05 / Herramientas' },
+      { key: 'download', label: 'Descargar Workbook', title: 'Tu workbook completado', eyebrow: '06 / Cierre' },
     ]
   },
 ]
@@ -138,6 +158,20 @@ const INITIAL_DATA: HubData = {
   story: { contexto: '', problema: '', aprendizaje: '' },
   audience: {},
   piba: { problema: '', implicacion: '', beneficio: '', accion: '' },
+  diagAnswers: {},
+  checklist: [],
+  // IA modules
+  chain: { resultado: '', accion: '', emocion: '', pensamiento: '', creencia: '', nuevaCreencia: '' },
+  areasScore: { marketing: 0, ventas: 0, entrega: 0, operaciones: 0 },
+  areaAccion: '',
+  fugasScore: { scopeCreep: 0, retrabajo: 0, tiempo: 0, herramientas: 0, sops: 0 },
+  matrizFuga: '',
+  matrizAccion: '',
+  matrizPlan: '',
+  sesgosCheck: { control: false, confirmacion: false, impostor: false, esfuerzo: false },
+  sesgoPrincipal: '',
+  sesgoCosto: '',
+  kitAnswers: {},
 }
 
 function renderTitle(t: string) {
@@ -167,14 +201,13 @@ function Sidebar({
     <aside className="hub-sidebar">
       {/* Brand */}
       <div>
-        <div style={{ fontFamily: 'var(--serif)', fontSize: 22, fontWeight: 400, letterSpacing: '-0.02em' }}>
-          <span style={{ color: block.accent }}>Next</span> <span style={{ opacity: 0.3 }}>·</span> Level
-        </div>
-        <div style={{ fontSize: 28, fontWeight: 700, lineHeight: 1.15, marginTop: 4 }}>
-          Hub<br />de la <em style={{ fontFamily: 'var(--serif)', fontStyle: 'italic' }}>clase</em>.
+        <div style={{ fontFamily: 'var(--mono-font)', fontSize: 11, letterSpacing: '0.22em', color: 'var(--hub-whisper)', textTransform: 'uppercase' }}>HUB</div>
+        <div style={{ fontFamily: 'var(--serif)', fontSize: 26, fontWeight: 500, lineHeight: 1.15, marginTop: 4, letterSpacing: '-0.02em' }}>
+          <span style={{ color: block.accent }}>Next Level</span><br />
+          <em style={{ fontStyle: 'italic' }}>Experience</em>
         </div>
         <div style={{ fontFamily: 'var(--mono-font)', fontSize: 9, letterSpacing: '0.2em', color: 'var(--hub-whisper)', marginTop: 8, textTransform: 'uppercase' }}>
-          3 bloques · 3 expertos · 17 módulos
+          3 bloques · 3 expertos · 25 módulos
         </div>
       </div>
 

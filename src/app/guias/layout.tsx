@@ -5,7 +5,7 @@ import { SignOutButton } from './sign-out-button'
 
 export const metadata: Metadata = {
   title: 'Hub Interactivo | Next Level Experience',
-  description: 'Hub interactivo del evento Next Level Experience. 3 bloques, 3 expertos, 17 módulos de IA, Imagen y Comunicación.',
+  description: 'Hub interactivo del evento Next Level Experience. 3 bloques, 3 expertos, 22 módulos de IA, Imagen y Comunicación.',
 }
 
 export default async function GuiasLayout({ children }: { children: React.ReactNode }) {

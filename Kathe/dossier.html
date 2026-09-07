@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kathe · Dossier de oferta — El humor no se improvisa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --midnight:#0a0820; --bone:#f4f1ea; --shell:#ebe7dd; --ink:#1a1612;
+  --electric:#f6cf2f; --magenta:#f3259a; --gold:#b08d4a;
+  --serif:'Instrument Serif',Georgia,serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);background:var(--midnight);color:#fff;font-size:16px;line-height:1.65;font-weight:300}
+
+section{padding:88px 32px}
+.wrap{max-width:1080px;margin:0 auto}
+.dark{background:var(--midnight);color:#fff}
+.light{background:var(--bone);color:var(--ink)}
+.light .muted{color:#6b6355}
+.muted{color:rgba(255,255,255,.55)}
+
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--electric);margin-bottom:20px;display:block}
+.light .eyebrow{color:var(--gold)}
+
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(38px,6.4vw,76px);line-height:1.03;letter-spacing:-.02em}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,4vw,46px);line-height:1.1;letter-spacing:-.015em;margin-bottom:14px}
+h3{font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:.02em;margin-bottom:10px}
+.it{font-style:italic}
+.lede{font-size:clamp(17px,2vw,20px);line-height:1.6;max-width:64ch;margin-bottom:44px}
+.light .lede{color:#4a4338}
+
+/* HERO */
+.hero{min-height:88vh;display:flex;align-items:center;position:relative;overflow:hidden;
+  border-bottom:1px solid rgba(246,207,47,.16)}
+.orb{position:absolute;border-radius:50%;filter:blur(110px);opacity:.16;pointer-events:none}
+.orb-a{width:520px;height:520px;background:var(--magenta);top:-140px;right:-120px}
+.orb-b{width:440px;height:440px;background:var(--electric);bottom:-160px;left:-100px}
+.hero .wrap{position:relative;z-index:2}
+.hero h1 em{font-style:italic;color:var(--electric)}
+.tag{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.16);
+  border-radius:100px;padding:7px 16px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(255,255,255,.72);margin-bottom:32px}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--magenta)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:36px;margin-top:52px;padding-top:30px;
+  border-top:1px solid rgba(255,255,255,.1)}
+.hero-meta div{min-width:110px}
+.hero-meta .k{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(255,255,255,.4);margin-bottom:5px}
+.hero-meta .v{font-size:15px;font-weight:500}
+
+/* QUOTE / PROMISE */
+.promise{border-left:3px solid var(--electric);padding:26px 0 26px 30px;margin:38px 0;
+  font-family:var(--serif);font-style:italic;font-size:clamp(21px,2.9vw,30px);line-height:1.34;max-width:58ch}
+.light .promise{border-left-color:var(--magenta)}
+
+/* TABLES */
+table{width:100%;border-collapse:collapse;font-size:14px;margin:26px 0}
+th{text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  font-weight:500;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.5)}
+td{padding:14px;border-bottom:1px solid rgba(255,255,255,.07);vertical-align:top;font-weight:300}
+.light th{border-bottom-color:rgba(26,22,18,.2);color:#8a8073}
+.light td{border-bottom-color:rgba(26,22,18,.09)}
+td strong,th strong{font-weight:600}
+.yes{color:var(--electric);font-weight:500}
+.light .yes{color:#9a7a1f;font-weight:600}
+.no{color:rgba(255,255,255,.35)}
+.light .no{color:#a89e90}
+
+/* CARDS */
+.grid{display:grid;gap:18px;margin-top:36px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.card{border:1px solid rgba(255,255,255,.12);border-radius:3px 18px 3px 18px;padding:26px 24px;
+  background:rgba(255,255,255,.025)}
+.light .card{border-color:rgba(26,22,18,.14);background:rgba(255,255,255,.5)}
+.card .n{font-family:var(--serif);font-style:italic;font-size:44px;line-height:1;color:var(--electric);
+  display:block;margin-bottom:14px}
+.light .card .n{color:var(--magenta)}
+.card p{font-size:14px;line-height:1.6}
+.card .out{margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);
+  font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--electric)}
+.light .card .out{border-top-color:rgba(26,22,18,.12);color:#9a7a1f}
+
+/* KIT */
+.kit{font-family:var(--mono);font-size:12.5px;line-height:1.95;white-space:pre;overflow-x:auto;
+  border:1px solid rgba(26,22,18,.18);border-radius:4px;padding:26px;background:rgba(255,255,255,.6)}
+
+/* PRICE */
+.tier{border:1px solid rgba(255,255,255,.13);border-radius:3px 18px 3px 18px;padding:30px 26px;position:relative}
+.tier.hot{border-color:var(--electric);background:rgba(246,207,47,.05)}
+.tier .badge{position:absolute;top:-11px;right:20px;background:var(--electric);color:var(--midnight);
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;padding:4px 11px;border-radius:100px;font-weight:500}
+.tier .name{font-family:var(--mono);font-size:11px;letter-spacing:.17em;text-transform:uppercase;
+  color:rgba(255,255,255,.5);margin-bottom:14px}
+.tier .price{font-family:var(--serif);font-size:40px;line-height:1;margin-bottom:4px}
+.tier .usd{font-family:var(--mono);font-size:12px;color:var(--magenta);margin-bottom:20px}
+.tier ul{list-style:none;font-size:13.5px;line-height:1.75}
+.tier li{padding-left:18px;position:relative;margin-bottom:5px;color:rgba(255,255,255,.75)}
+.tier li::before{content:'—';position:absolute;left:0;color:var(--electric)}
+
+/* TIMELINE */
+.tl{margin-top:36px;border-left:1px solid rgba(26,22,18,.16);padding-left:0}
+.tl-row{display:grid;grid-template-columns:88px 1fr;gap:24px;padding:18px 0 18px 26px;
+  border-bottom:1px solid rgba(26,22,18,.08);position:relative}
+.tl-row::before{content:'';position:absolute;left:-4.5px;top:26px;width:8px;height:8px;border-radius:50%;
+  background:var(--shell);border:1.5px solid var(--gold)}
+.tl-row.key::before{background:var(--magenta);border-color:var(--magenta)}
+.tl-min{font-family:var(--mono);font-size:12px;color:var(--gold);padding-top:2px;font-weight:500}
+.tl-row.key .tl-min{color:var(--magenta)}
+.tl-b{font-weight:600;font-size:15px;margin-bottom:4px}
+.tl-d{font-size:13.5px;color:#5c554a;line-height:1.55}
+.tl-o{font-family:var(--mono);font-size:11px;color:#9a7a1f;margin-top:7px;letter-spacing:.03em}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);margin-top:36px}
+.stat{background:var(--midnight);padding:28px 22px}
+.stat .big{font-family:var(--serif);font-size:42px;line-height:1;color:var(--electric);margin-bottom:9px}
+.stat .lbl{font-size:12.5px;line-height:1.5;color:rgba(255,255,255,.62)}
+.stat .src{font-family:var(--mono);font-size:9.5px;color:rgba(255,255,255,.3);margin-top:9px;letter-spacing:.05em}
+
+/* STEPS */
+.steps{counter-reset:s;margin-top:32px}
+.step{counter-increment:s;display:grid;grid-template-columns:52px 1fr;gap:22px;padding:20px 0;
+  border-bottom:1px solid rgba(26,22,18,.1)}
+.step::before{content:counter(s,decimal-leading-zero);font-family:var(--mono);font-size:13px;
+  color:var(--magenta);padding-top:3px}
+
+/* MISC */
+.flag{border:1px solid rgba(243,37,154,.4);background:rgba(243,37,154,.06);border-radius:4px;
+  padding:22px 24px;margin-top:32px;font-size:14px;line-height:1.65}
+.light .flag{border-color:rgba(243,37,154,.35);background:rgba(243,37,154,.045)}
+.flag b{color:var(--magenta)}
+footer{background:var(--midnight);color:rgba(255,255,255,.42);padding:56px 32px;font-size:12.5px;
+  border-top:1px solid rgba(255,255,255,.09)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.divider{height:1px;background:rgba(255,255,255,.1);margin:52px 0}
+.light .divider{background:rgba(26,22,18,.12)}
+
+@media(max-width:640px){
+  section{padding:60px 20px}
+  .hero{min-height:auto;padding:100px 20px 70px}
+  .tl-row{grid-template-columns:1fr;gap:6px}
+  table{font-size:13px}
+  td,th{padding:10px 8px}
+}
+@media print{
+  body{background:#fff;color:#000}
+  section{padding:26px 0;page-break-inside:avoid}
+  .dark,.light{background:#fff!important;color:#000!important}
+  .dark *,.light *{color:#000!important}
+  .orb{display:none}
+  .eyebrow,.tl-min,.card .n,.stat .big{color:#8a6d1a!important}
+  .card,.tier,.stat{border:1px solid #ccc!important;background:#fff!important}
+  h1{font-size:34px}h2{font-size:24px}
+  .hero{min-height:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero dark">
+  <div class="orb orb-a"></div><div class="orb orb-b"></div>
+  <div class="wrap">
+    <span class="tag"><span class="dot"></span>Dossier de oferta · Septiembre 2026</span>
+    <h1>El humor<br>no se <em>improvisa</em></h1>
+    <p class="lede" style="margin-top:26px">
+      Investigación de mercado y diseño de una oferta hiperespecífica sobre comunicación y humor
+      para coaches, consultores, marcas personales y expertos. Entregable: un taller en vivo de
+      2 horas 30 minutos.
+    </p>
+    <div class="hero-meta">
+      <div><div class="k">Categoría</div><div class="v">Comunicación + Humor</div></div>
+      <div><div class="k">Cliente</div><div class="v">Experto con marca personal</div></div>
+      <div><div class="k">Formato</div><div class="v">2 h 30 en vivo</div></div>
+      <div><div class="k">Ticket</div><div class="v">$34.900 CLP · US$37</div></div>
+      <div><div class="k">Mecanismo</div><div class="v">Método R.I.S.A.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HALLAZGO -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">01 · El hallazgo central</span>
+    <h2>El humor no es una promesa.<br><span class="it">Es un mecanismo.</span></h2>
+    <p class="lede">Nadie paga por “ser gracioso”. Pagan por lo que ser gracioso les consigue.
+      Los cinco negocios que hoy facturan con humor —sin excepción— venden un resultado
+      comercial y usan el humor como el <em>cómo</em>.</p>
+    <table>
+      <tr><th>Quién</th><th>Qué vende de verdad</th><th>Dónde aparece el humor</th></tr>
+      <tr><td><strong>Humor That Works</strong> (EE.UU.)</td><td>Liderazgo y resultados de negocio</td><td class="muted">La herramienta</td></tr>
+      <tr><td><strong>Jon Selig</strong> (Canadá)</td><td>Más reuniones agendadas en prospección B2B</td><td class="muted">El formato del mensaje</td></tr>
+      <tr><td><strong>Stanford GSB</strong></td><td>Confianza, creatividad, liderazgo</td><td class="muted">La asignatura</td></tr>
+      <tr><td><strong>Humor Positivo</strong> (España)</td><td>Clima laboral, creatividad, bienestar</td><td class="muted">La metodología</td></tr>
+      <tr><td><strong>David Nihill</strong></td><td>Hablar en público mejor</td><td class="muted">Las 7 técnicas</td></tr>
+    </table>
+    <div class="flag">
+      <b>Consecuencia de diseño:</b> los que venden “humor” a secas (cursos de stand-up) atraen
+      aspirantes a comediantes, no coaches. Otro cliente, otro ticket, otro resultado.
+      La oferta de Kathe tiene que prometer un resultado comercial y entregar humor como método.
+    </div>
+  </div>
+</section>
+
+<!-- HUECO -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">02 · El hueco de mercado</span>
+    <h2>La demanda existe.<br><span class="it">Está mal atendida.</span></h2>
+    <p class="lede">Hay oferta de humor en español. Toda mal calzada para este cliente.</p>
+    <table>
+      <tr><th>Lo que hay hoy</th><th>Por qué no le sirve a un coach o consultor</th></tr>
+      <tr><td>Formación corporativa de humor<br><span class="muted" style="font-size:12px">Second City · Humor That Works · Humor Positivo</span></td><td>Ticket de miles de dólares, se vende a RR.HH. de empresas grandes. Un solopreneur no es el cliente</td></tr>
+      <tr><td>Cursos de stand-up<br><span class="muted" style="font-size:12px">Comedy Lab CR · Señales de Humor · Crehana · Udemy</span></td><td>El resultado es “hacer 5 minutos de monólogo en un bar”. No es lo que quiere un experto</td></tr>
+      <tr><td>Escritura de humor literario<br><span class="muted" style="font-size:12px">Escuela de Escritores · 141 €/mes × 3 meses</span></td><td>Largo, caro, literario, no comercial</td></tr>
+      <tr><td>Oratoria y hablar en público<br><span class="muted" style="font-size:12px">Mercado enorme en español</span></td><td>El humor es un módulo suelto de 20 minutos dentro de 20 horas de curso</td></tr>
+      <tr><td>Contenido, ganchos, reels</td><td>Enseñan estructura y ganchos, pero <strong>evitan el humor</strong> porque no saben enseñarlo</td></tr>
+    </table>
+    <div class="promise" style="border-left-color:var(--magenta)">
+      Nadie vende, en español, humor como activo comercial de una marca personal,
+      empaquetado como taller corto con material escrito de salida.
+    </div>
+  </div>
+</section>
+
+<!-- LA OFERTA -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">03 · La oferta</span>
+    <h2>El humor no se improvisa</h2>
+    <p style="font-family:var(--serif);font-style:italic;font-size:24px;color:#5c554a;margin-bottom:10px">
+      Tu Kit de 10 líneas que te hacen memorable (y vendible)</p>
+    <div class="promise">
+      Sales del taller con 10 líneas de humor tuyas —escritas, afiladas y probadas en voz alta—
+      listas para usar mañana en un reel, en tu charla y en una llamada de venta.
+      Sin dejar de ser la autoridad de tu tema.
+    </div>
+    <h3 style="margin-top:44px">Por qué esta promesa se sostiene y otras no</h3>
+    <table>
+      <tr><th>Requisito de una promesa que vende</th><th style="width:80px">¿Cumple?</th><th>Cómo</th></tr>
+      <tr><td>Es específica: un número, un objeto</td><td class="yes">Sí</td><td>10 líneas, un Kit</td></tr>
+      <tr><td>Se verifica el mismo día</td><td class="yes">Sí</td><td>El alumno cuenta sus líneas al terminar</td></tr>
+      <tr><td>No depende de terceros (algoritmo, público, cliente)</td><td class="yes">Sí</td><td>El resultado es material propio</td></tr>
+      <tr><td>Ataca el dolor principal: ser olvidable</td><td class="yes">Sí</td><td>“memorable”</td></tr>
+      <tr><td>Neutraliza el miedo principal: perder autoridad</td><td class="yes">Sí</td><td>“sin dejar de ser la autoridad”</td></tr>
+      <tr><td>Es entregable de verdad en 2 h 30</td><td class="yes">Sí</td><td>4 ejercicios × 20 min = 10 líneas</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">04 · El mecanismo</span>
+    <h2>Método <span class="it">R.I.S.A.</span></h2>
+    <p class="lede">El humor de negocios no se improvisa: se extrae, se gira, se recorta y se coloca.</p>
+    <div class="grid g4">
+      <div class="card"><span class="n">R</span><h3>Reconocimiento</h3>
+        <p class="muted" style="font-style:italic;margin-bottom:10px">Si no se reconocen, no se ríen.</p>
+        <p>El humor que funciona no viene de un chiste: viene de una verdad incómoda que tu cliente
+        ya vivió y nunca dijo en voz alta.</p>
+        <div class="out">→ 10 verdades incómodas</div></div>
+      <div class="card"><span class="n">I</span><h3>Inversión</h3>
+        <p class="muted" style="font-style:italic;margin-bottom:10px">La risa vive en el giro.</p>
+        <p>Preparación honesta + giro que rompe la expectativa. Cuatro giros: auto-ironía,
+        exageración honesta, comparación imposible, verdad no dicha.</p>
+        <div class="out">→ 5 líneas con giro</div></div>
+      <div class="card"><span class="n">S</span><h3>Síntesis</h3>
+        <p class="muted" style="font-style:italic;margin-bottom:10px">El remate va al final. Y nada va después.</p>
+        <p>La palabra graciosa va última. Corta el 30% de las palabras. No expliques el chiste.</p>
+        <div class="out">→ 5 líneas afiladas</div></div>
+      <div class="card"><span class="n">A</span><h3>Aplicación</h3>
+        <p class="muted" style="font-style:italic;margin-bottom:10px">Una línea, tres canales.</p>
+        <p>Gancho, apertura, puente, rescate y firma. La misma línea vale tres veces si sabes
+        dónde ponerla.</p>
+        <div class="out">→ Kit de 10 líneas ubicadas</div></div>
+    </div>
+    <div class="flag" style="margin-top:36px">
+      <b>La línea roja</b> (bloque obligatorio de 5 minutos): el humor va hacia dentro y hacia arriba,
+      nunca hacia abajo. Sobre ti, sobre el problema, sobre los rituales absurdos de la industria.
+      Nunca sobre el cliente, sobre una persona presente, ni sobre un grupo por lo que es.
+      <em>Prueba de los 3 segundos: si tienes que pensar más de 3 segundos si se puede decir, no se dice.</em>
+    </div>
+  </div>
+</section>
+
+<!-- KIT -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">05 · El entregable</span>
+    <h2>El Kit de Humor</h2>
+    <p class="lede">No son apuntes. Es un activo. Se entrega en blanco en el minuto 12 y sale lleno.</p>
+<div class="kit">╔══════════════════════════════════════════════════════════╗
+║  MI KIT DE HUMOR · [nombre] · [fecha]                    ║
+╠══════════════════════════════════════════════════════════╣
+║  BLOQUE R · Mis 10 verdades incómodas         [ 10 ]     ║
+║  BLOQUE I · Mis líneas con giro               [  5 ]     ║
+║  BLOQUE S · Mis líneas afiladas               [  5 ]     ║
+║  BLOQUE A · Mis 10 líneas ubicadas                       ║
+║     ├─ Gancho    ×3   →  reel / post                     ║
+║     ├─ Apertura  ×2   →  charla / webinar / live         ║
+║     ├─ Puente    ×2   →  parte densa                     ║
+║     ├─ Rescate   ×2   →  el momento incómodo             ║
+║     └─ Firma     ×1   →  la que te van a repetir         ║
+╠══════════════════════════════════════════════════════════╣
+║  MI LÍNEA ROJA: sobre qué NO hago humor jamás            ║
+╚══════════════════════════════════════════════════════════╝</div>
+    <div class="flag">
+      <b>Por qué importa que sea un objeto:</b> el alumno puede fotografiarlo y publicarlo.
+      Cada Kit lleno que un alumno muestra es prueba social que vende la siguiente edición sola.
+      Es también lo que hace posible la garantía.
+    </div>
+  </div>
+</section>
+
+<!-- PRECIO -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">06 · Precio y garantía</span>
+    <h2>Tres tiers, <span class="it">un cupo real</span></h2>
+    <div class="grid g3">
+      <div class="tier"><div class="name">Early bird · 48 h</div>
+        <div class="price">$24.900</div><div class="usd">US$27 · 15 cupos</div>
+        <ul><li>Clase en vivo 2 h 30</li><li>Plantilla del Kit</li><li>Grabación 7 días</li></ul></div>
+      <div class="tier hot"><span class="badge">Recomendado</span><div class="name">General</div>
+        <div class="price">$34.900</div><div class="usd">US$37 · 40 cupos</div>
+        <ul><li>Clase en vivo 2 h 30</li><li>Plantilla del Kit</li><li>Grabación 7 días</li></ul></div>
+      <div class="tier"><div class="name">VIP</div>
+        <div class="price">$79.900</div><div class="usd">US$87 · 12 cupos</div>
+        <ul><li>Todo lo anterior</li><li><strong>Revisión escrita de tu Kit</strong></li><li>Banco de 50 plantillas por industria</li><li>Sesión de afinado a los 7 días</li></ul></div>
+    </div>
+    <div class="divider"></div>
+    <div class="promise">
+      “Si al terminar el taller no tienes al menos 5 líneas que te atreverías a publicar,
+      me escribes ese mismo día y te devuelvo el 100%. Sin formularios.”
+    </div>
+    <p class="lede" style="margin-bottom:0">
+      Esta garantía es agresiva y segura a la vez: el entregable se produce <em>dentro</em> de la clase.
+      Quien asiste y hace los ejercicios termina con las líneas por definición.
+      Ninguna oferta de “hablar mejor” o “más engagement” puede darla, porque su resultado ocurre
+      después y depende de terceros. <strong style="color:var(--electric);font-weight:500">Ese es el foso.</strong>
+    </p>
+  </div>
+</section>
+
+<!-- AGENDA -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">07 · El taller</span>
+    <h2>2 h 30 minuto a minuto</h2>
+    <p class="lede">Regla de diseño: nunca más de 12 minutos sin que el alumno escriba algo.
+      Tiempo de escritura real: 60 minutos, el 40% de la clase. Ese ratio es lo que hace que
+      se perciba como taller y no como webinar.</p>
+    <div class="tl">
+      <div class="tl-row key"><div class="tl-min">00 — 06</div><div>
+        <div class="tl-b">El golpe</div>
+        <div class="tl-d">Abres con una línea tuya con giro: demuestras antes de explicar. Luego los tres datos duros.</div>
+        <div class="tl-o">→ Permiso para tomarse esto en serio</div></div></div>
+      <div class="tl-row"><div class="tl-min">06 — 12</div><div>
+        <div class="tl-b">La creencia</div>
+        <div class="tl-d">“El humor no es un don, es una estructura.” Misma línea antes y después del método. Se entrega el Kit en blanco.</div></div></div>
+      <div class="tl-row"><div class="tl-min">12 — 20</div><div>
+        <div class="tl-b">La línea roja</div>
+        <div class="tl-d">Se llena la última casilla del Kit primero, a propósito: baja el miedo antes de escribir.</div>
+        <div class="tl-o">→ Su línea roja escrita</div></div></div>
+      <div class="tl-row"><div class="tl-min">20 — 25</div><div>
+        <div class="tl-b">Demo R</div>
+        <div class="tl-d">Extraes 3 verdades incómodas de un nicho ajeno, en vivo, pidiendo el nicho al chat.</div></div></div>
+      <div class="tl-row key"><div class="tl-min">25 — 45</div><div>
+        <div class="tl-b">Ejercicio R · escritura</div>
+        <div class="tl-d">Cronómetro visible, música, tú en silencio. Este es el minuto donde se decide si esto es taller o webinar.</div>
+        <div class="tl-o">→ 10 verdades</div></div></div>
+      <div class="tl-row key"><div class="tl-min">45 — 52</div><div>
+        <div class="tl-b">Primera lectura</div>
+        <div class="tl-d">Salas de 3, dos minutos cada uno, sin feedback. El alumno descubre que su verdad le resuena a otro: ahí nace la confianza.</div></div></div>
+      <div class="tl-row"><div class="tl-min">52 — 60</div><div>
+        <div class="tl-b">Demo I · los 4 giros</div>
+        <div class="tl-d">Tomas una verdad del chat y la giras en vivo por los cuatro caminos.</div></div></div>
+      <div class="tl-row"><div class="tl-min">60 — 75</div><div>
+        <div class="tl-b">Ejercicio I · escritura</div>
+        <div class="tl-d">Cinco verdades, un giro cada una.</div>
+        <div class="tl-o">→ 5 líneas con giro</div></div></div>
+      <div class="tl-row"><div class="tl-min">75 — 82</div><div>
+        <div class="tl-b">Pausa · 7 minutos</div>
+        <div class="tl-d">Cronómetro en pantalla. No se negocia.</div></div></div>
+      <div class="tl-row"><div class="tl-min">82 — 90</div><div>
+        <div class="tl-b">Demo S · el recorte</div>
+        <div class="tl-d">Afilas una línea larga del chat contando palabras en voz alta.</div></div></div>
+      <div class="tl-row"><div class="tl-min">90 — 105</div><div>
+        <div class="tl-b">Ejercicio S · escritura</div>
+        <div class="tl-d">Recortar 30% y mandar el remate al final. Versión 2 al lado de la 1.</div>
+        <div class="tl-o">→ 5 líneas afiladas</div></div></div>
+      <div class="tl-row key"><div class="tl-min">105 — 112</div><div>
+        <div class="tl-b">Micrófono abierto</div>
+        <div class="tl-d">Cinco o seis voluntarios leen. Afinas una en vivo. Este es el clip que van a compartir: ten dos personas listas para partir.</div></div></div>
+      <div class="tl-row"><div class="tl-min">112 — 122</div><div>
+        <div class="tl-b">Bloque A · ubicación</div>
+        <div class="tl-d">Gancho, apertura, puente, rescate, firma.</div>
+        <div class="tl-o">→ Kit de 10 líneas ubicadas</div></div></div>
+      <div class="tl-row"><div class="tl-min">122 — 130</div><div>
+        <div class="tl-b">La firma</div>
+        <div class="tl-d">Cuál de tus líneas quieres que te repitan. Se escribe grande.</div></div></div>
+      <div class="tl-row"><div class="tl-min">130 — 140</div><div>
+        <div class="tl-b">Qué hacer mañana</div>
+        <div class="tl-d">Plan de 7 días: día 1 publicas el gancho, día 3 usas la apertura en un live, día 7 mides qué se guardó.</div></div></div>
+      <div class="tl-row key"><div class="tl-min">140 — 150</div><div>
+        <div class="tl-b">Cierre + oferta</div>
+        <div class="tl-d">“Cuenta las líneas de tu Kit y escribe el número en el chat.” El chat se llena de 10, 12, 9: la garantía cumpliéndose delante de todos. Recién ahí presentas el siguiente escalón, en 3 minutos.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVIDENCIA -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow">08 · Evidencia de demanda</span>
+    <h2>Por qué esto <span class="it">ya se compra</span></h2>
+    <p class="lede">Demanda probada en tres niveles simultáneos: institucional, comercial y de consumidor.
+      Entre US$27 y US$7.000, en al menos ocho países, con proveedores operando hace 10 a 30 años.</p>
+    <div class="stats">
+      <div class="stat"><div class="big">+27%</div><div class="lbl">Más motivadores y admirados son percibidos los líderes con sentido del humor</div><div class="src">Aaker &amp; Bagdonas · McKinsey</div></div>
+      <div class="stat"><div class="big">+15%</div><div class="lbl">Más dispuesta está la gente a pagar cuando la oferta incluye una línea con humor</div><div class="src">Investigación citada en Humor, Seriously</div></div>
+      <div class="stat"><div class="big">122.974</div><div class="lbl">Coaches en el mundo, un 15% más que en 2023, compitiendo por el mismo cliente</div><div class="src">ICF Global Coaching Study 2025</div></div>
+      <div class="stat"><div class="big">26%</div><div class="lbl">De consumidores prefiere hoy contenido de creador hecho con IA. Era 60% en 2023</div><div class="src">Informes de creator economy 2026</div></div>
+    </div>
+    <table style="margin-top:44px">
+      <tr><th>Señal</th><th>Evidencia</th><th style="width:90px">Confianza</th></tr>
+      <tr><td>Categoría monetizada hace 20+ años</td><td>Humor Positivo (España) opera desde 2004 con IKEA, SONY, BBVA, Oracle, Sanitas</td><td class="yes">Alta</td></tr>
+      <tr><td>Validación académica de élite</td><td>Stanford GSB dicta “Humor: Serious Business”, con cupo de 40 y lista de espera</td><td class="yes">Alta</td></tr>
+      <tr><td><strong>Validación en el gremio del cliente</strong></td><td>La ICF programa el workshop “Lighten Up! The Serious Business of Humor in Coaching” para coaches</td><td class="yes">Alta</td></tr>
+      <tr><td>Ticket corporativo alto y sostenido</td><td>Humor That Works: talleres ~US$4.500 y keynotes ~US$7.000; +35.000 personas en +250 organizaciones</td><td class="no">Media</td></tr>
+      <tr><td>Un nicho aún más específico ya se vende caro</td><td>Jon Selig: US$5.000 por clase privada de comedy writing para equipos comerciales</td><td class="no">Media</td></tr>
+      <tr><td>Demanda masiva a nivel consumidor</td><td>David Nihill: +34.000 alumnos, 4,9/5, libro superventas</td><td class="no">Media</td></tr>
+      <tr><td>El humor mejora el recuerdo</td><td>Investigación académica consistente: el humor <em>pertinente</em> mejora retención; el inapropiado o desconectado no</td><td class="yes">Alta</td></tr>
+    </table>
+    <p class="muted" style="font-size:12.5px;margin-top:20px">
+      Fuentes completas con enlace en <span style="font-family:var(--mono)">06-FUENTES-Y-EVIDENCIA.md</span>.
+      Los datos marcados como Media provienen de fuentes secundarias y deben verificarse antes de usarse en copy público.
+    </p>
+  </div>
+</section>
+
+<!-- SIGUIENTE PASO -->
+<section class="light">
+  <div class="wrap">
+    <span class="eyebrow">09 · Antes de producir nada</span>
+    <h2>Test de validación<br><span class="it">de 72 horas</span></h2>
+    <p class="lede">La investigación demuestra que la categoría tiene demanda probada.
+      Falta confirmar que <em>tu</em> audiencia la quiere. No produzcas la clase hasta pasar esto.</p>
+    <div class="steps">
+      <div class="step"><div><div class="tl-b">Día 1 · La pieza</div>
+        <div class="tl-d">Publica un reel o post aplicando R.I.S.A. a tu propio nicho: una línea con giro sobre coaches.
+        Cierra con: “Estoy armando un taller de 2 horas donde sales con 10 líneas como esta, escritas por ti. ¿Te aviso?”</div></div></div>
+      <div class="step"><div><div class="tl-b">Día 2 · El precio</div>
+        <div class="tl-d">Historia con encuesta: “¿Qué te pasa cuando publicas? A) Me leen y no compran · B) Ni me leen”,
+        seguida de “¿Pagarías $34.900 por salir con 10 líneas escritas?”</div></div></div>
+      <div class="step"><div><div class="tl-b">Día 3 · El vocabulario</div>
+        <div class="tl-d">DM a los 10 que más interactuaron: “¿Qué te cuesta más: que se te ocurra, o atreverte a publicarlo?”
+        La respuesta te da las palabras exactas para el copy.</div></div></div>
+    </div>
+    <table style="margin-top:38px">
+      <tr><th>Resultado en 72 h</th><th>Decisión</th></tr>
+      <tr><td><strong>30 o más</strong> pidiendo aviso</td><td>Produce y lanza. Abre carrito en 7 días</td></tr>
+      <tr><td><strong>Entre 15 y 29</strong></td><td>La oferta sirve, falta audiencia. Lanza con cupo de 20 y haz 2 semanas de contenido previo</td></tr>
+      <tr><td><strong>Menos de 15</strong></td><td>No es la oferta: es el canal o el titular. Prueba el titular alternativo antes de descartar</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Kathe · Dossier de oferta · Comunicación + Humor · Septiembre 2026</div>
+    <div style="font-family:var(--mono);font-size:11px">
+      Detalle completo en la carpeta <span style="color:var(--electric)">/Kathe</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

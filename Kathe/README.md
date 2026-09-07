@@ -29,6 +29,7 @@
 | `05-COPY-Y-LANZAMIENTO.md` | Titulares, ganchos, correos, DMs, plan de 14 días, métricas y **qué NO decir** | Vas a vender los cupos |
 | `06-FUENTES-Y-EVIDENCIA.md` | Cada cifra con enlace y nivel de confianza + los huecos declarados | Quieres verificar algo |
 | `07-POSICIONAMIENTO-DE-KATHE.md` | Por qué su cruce actriz + humorista + comunicadora es el foso, y **dónde va exactamente el humor** | Vas a definir su marca |
+| `08-ENCAJE-CON-LAS-OTRAS-MENTORAS.md` | Cómo se reparten el territorio Yoselvia, Lavri y Kathe: las 3 fronteras calientes, el handoff entre las tres y qué confirmar antes de anunciar | Van las tres en el mismo evento |
 | `ANEXO-investigacion-humor.md` | La investigación previa del mercado del humor. Archivada, no descartada | Quieres el material sobre humor |
 | `dossier.html` | Dossier visual imprimible con todo lo esencial | Vas a presentarlo |
 
@@ -59,3 +60,15 @@ US$7.300 millones creciendo al 7% anual.
 
 La investigación sobre humor se conservó completa en `ANEXO-investigacion-humor.md`, y su rol
 dentro del negocio quedó definido en `07-POSICIONAMIENTO-DE-KATHE.md`, sección 3.
+
+---
+
+## Contexto del evento
+
+Kathe no va sola: comparte instancia con **Yoselvia** (sistemas e IA) y **Lavri** (marca personal y
+ventas). El reparto de territorio está en `08-ENCAJE-CON-LAS-OTRAS-MENTORAS.md`, y tiene una
+consecuencia que ya se aplicó a la oferta: **Kathe no enseña a vender.** Enseña cómo se comporta
+la voz y el cuerpo en el momento del precio. *Lavri entrega el qué decir; Kathe, el cómo suena.*
+
+⚠️ No pude abrir `sistema-lavri.vercel.app` (bloqueo de red de la sesión), así que el reparto está
+construido sobre lo que se me indicó de su oferta. **Confírmalo antes de anunciar nada.**

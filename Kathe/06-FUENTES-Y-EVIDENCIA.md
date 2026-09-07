@@ -146,3 +146,52 @@
 > **Sirven para decidir dónde poner el esfuerzo, no para citarlas en público.** La única que usaría
 > en una conversación con un cliente es el benchmark de conversión de ecommerce en España,
 > que viene de un estudio con metodología publicada.
+
+---
+
+## 11. Competidores (para `10-COMPETIDORES.md`)
+
+> ⚠️ **Los precios de la mayoría de los competidores no están publicados.** Es la práctica estándar
+> del sector: se piden por formulario o WhatsApp. Donde no hay precio, lo digo. **No estimé ninguno.**
+
+### Chile
+
+| Competidor | Fuente | Conf. |
+|---|---|---|
+| **Escuela Chilena de Oratoria (ECOratoria)** — 10+ años, 50 mil estudiantes, parte de Grupo ECO (5 empresas en Chile/Bolivia/Colombia, +100 mil personas). Programas de 6 o 12 sesiones, Certificación de Entrenador, Diplomado Speaker Virtual, 3 cursos especializados, programas infantiles | [ecoratoria.com](https://www.ecoratoria.com/) · [Quiénes somos](https://www.ecoratoria.com/quienes-somos) · [Emagister](https://www.emagister.cl/escuela-chilena-oratoria-cursos-184288-centrodetalles.htm) | 🟢 estructura · ⚪ precio no publicado |
+| **SpeakerCoach.cl** — Zoom y presencial en Las Condes. Credenciales: Ing. Comercial UAI, Máster en Finanzas UAI, Diploma en Coaching de Cambridge, entrenador del Executive MBA de Cambridge, Queen's Young Leaders, "100 Jóvenes Líderes de Chile" | [speakercoach.cl](https://www.speakercoach.cl/trainer) | 🟡 |
+| **Academia Nacional de Artes** — Coaching en Comunicación presencial, 3 módulos: expresión oral, presencia, ansiedad | [academianacionaldeartes.cl](https://www.academianacionaldeartes.cl/capacitaciones) | 🟡 |
+| **Curso de Oratoria®** (Mike Cellamare) — marca registrada, clases en vivo con feedback | [cursodeoratoria.com Santiago](https://www.cursodeoratoria.com/curso-de-oratoria-en-santiago-de-chile/) | 🟡 |
+| **Superprof** — 238 profesores de oratoria en Santiago, **desde $5.000 CLP/hora** | [superprof.cl](https://www.superprof.cl/clases/oratoria/santiago/) | 🟡 |
+| **La Teatral Chile** — actriz licenciada en Estética, diplomada en Teatro y Educación, certificada en Método Alba Emoting; docencia en pedagogía teatral y capacitaciones | [lateatralchile.com](https://www.lateatralchile.com/nuestro-equipo) | 🟡 |
+
+### España y LATAM
+
+| Competidor | Fuente | Conf. |
+|---|---|---|
+| **Nelson Guevara** — CEO de @master.expresion, **+10.000 alumnos**, ~17K en Instagram, activo en TikTok. Promesa: hablar con poder y vender más. Curso gratuito como imán | [Instagram](https://www.instagram.com/_nelsonguevara_/) · [LinkedIn](https://pe.linkedin.com/in/nelson-guevara-a32809124) · [TikTok](https://www.tiktok.com/@_nelsonguevara_) | 🟡 |
+| **Instituto Internacional de Oratoria y Coaching** (Norberto Malatesta + Begoña Serra) — 100% online, horarios USA y LATAM. Pilares: técnica + coaching para autoconfianza, síndrome del impostor y gestión emocional | [institutodeoratoriaycoaching.com](https://www.institutodeoratoriaycoaching.com/) · [LinkedIn](https://ar.linkedin.com/company/instituto-internacional-de-oratoria-y-coaching) | 🟢 estructura |
+| **Sebastián Rodríguez Lora** — curso online de 5 lecciones sobre hablar en público por internet; kit gratuito como imán | [sebastianlora.com/cursos](https://sebastianlora.com/cursos/) · [Curso online](https://sebastianlora.com/curso-oratoria-online/) | 🟡 |
+| **Dr. César Lozano** — Certificación "El Arte de Hablar en Público"; financiamiento hasta 12 cuotas en MX, PE, CL, CO | [seminario.cesarlozano.com](https://seminario.cesarlozano.com/certificacion-2026) | 🟡 |
+| **MiExcelencia** (Juan Carlos Martínez, UNAM) — **$3.000 MXN** (4 × 3 h) · **$8.000 MXN** (diplomado 10 × 3 h) | [miexcelencia.com](https://miexcelencia.com/) | 🟡 |
+| **UNIR** — "Oratoria y puesta en escena", 2 meses online, **550 €** | [escueladehumanidades.unir.net](https://escueladehumanidades.unir.net/oferta-academica/curso-oratoria/) | 🟡 |
+| **Escuela Europea de Oratoria** — 12+ años en España, presencial y online | [escueladeoratoria.com](https://www.escueladeoratoria.com/) | 🟡 |
+| **Academy Formación** — 60 h autoservicio con tutor, **79 €** | [academyformacion.com](https://www.academyformacion.com/curso-de-oratoria/) | 🟡 |
+| **Esther Martín** (Talavera de la Reina) · **Zu Camargo** · **Miguel Zambrano** (oratoria + liderazgo + marca personal) | [Esther Martín IG](https://www.instagram.com/esther_martin_coach/) · [Zu Camargo IG](https://www.instagram.com/zu_camargo/) | 🔴 |
+| **Matias Yabar** (@coachsocialmatias) — **775K seguidores.** Vence la timidez y crea relaciones sociales. Adyacente, no directo | [Instagram](https://www.instagram.com/coachsocialmatias/) | 🟡 |
+
+### Los que usan el mismo mecanismo (técnica de actuación)
+
+| Competidor | Fuente | Conf. |
+|---|---|---|
+| ⭐ **Casa de Porras · Universidad de Granada** — *"Coaching en Oratoria: el arte de hablar con elocuencia aplicando humor y técnicas teatrales"*, prof. Alfredo Mantovani, módulos trimestrales (grupo 2: 23 de enero a 27 de marzo de 2026) | [casadeporras.ugr.es](https://casadeporras.ugr.es/curso-taller/coaching-en-oratoria-ii-el-arte-de-hablar-con-elocuencia-aplicando-humor-y-tecnicas-teatrales/) · [Canal UGR](https://canal.ugr.es/convocatoria/talleres-casa-de-porras-curso-2025-2026-modulo-ii-enero-marzo-2026/) | 🟢 |
+| **Santander Open Academy + Escuela Universitaria de Artes TAI** — "Hablar en público con técnicas de actuación" | [Santander Open Academy](https://app.santanderopenacademy.com/es/course/public-speaking-with-acting-techniques) | 🟢 |
+| **Abilways España** — "Hablar en Público con Técnicas de Teatro" (empresas) | [abilways.es](https://www.abilways.es/formaciones/eficacia-y-desarrollo-personal-y-profesional/hablar-en-publico-con-teatro/) | 🟡 |
+| **PlayTeatro** (Amaia Zárate) · **Teatro Asura** · **Scena Málaga** | [playteatro.es](https://www.playteatro.es/cursos-abiertos/teatro-hablar-en-publico/) · [teatroasura.com](https://teatroasura.com/escenica-para-empresas/) · [scenamalaga.com](https://scenamalaga.com/tecnicas-teatrales-para-hablar-en-publico-con-seguridad-como-el-teatro-te-convierte-en-mejor-comunicador/) | 🟡 |
+| **Tu Voz Americana** (Ana Pose) — 15+ años; publica sobre aplicar técnicas de actuación a la oratoria profesional "sin interpretar un personaje falso". Producto: oratoria **en inglés** para hispanohablantes | [tuvozamericana.com](https://www.tuvozamericana.com/) · [Artículo](https://www.tuvozamericana.com/post/tecnicas-actuacion-oratoria-profesional) | 🟡 |
+| **CEUVOZ** (México) — técnica vocal y expresión verbal; instructoras de INBA y UNAM, 13+ años | Citado en resultados de búsqueda sobre técnica vocal en LATAM | 🔴 |
+| **Vozalia · VocalCoach2.0 · Ruth Suárez · A Voz Academia** (España) — coaching vocal individual, presencial y por videoconferencia | [vozalia.com](https://www.vozalia.com/) · [vocalcoach.es](https://vocalcoach.es/) · [ruthsuarez.com](https://www.ruthsuarez.com/) · [avozacademia.com](https://www.avozacademia.com/) | 🟡 |
+
+> **El hueco de este análisis:** ningún precio de los competidores chilenos está publicado.
+> Se consiguen en dos horas pidiendo cotización como cliente, y **vale la pena hacerlo antes de
+> fijar el precio final del taller.** Es la acción #1 de `10-COMPETIDORES.md`, sección 7.

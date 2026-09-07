@@ -18,6 +18,10 @@
 > ## Sabes más que el que está hablando. Y al que le hacen caso es a él.
 > ### No es tu contenido. Es tu primer minuto.
 
+**Variante D (bolsillo — la más comercial, para audiencia que ya vende):**
+> ## Se te quiebra la voz justo cuando dices el precio
+> ### Y ahí es donde te bajan la tarifa. En 2 h 30 arreglamos tu primer minuto — y tu frase de precio.
+
 ---
 
 ## 2. El bloque "espejo"
@@ -72,6 +76,7 @@
 | 8 | "Lo que hacen los actores los 4 minutos antes de salir a escena. Funciona igual antes de una reunión." | Reel protocolo |
 | 9 | "El power posing no replicó. Te cuento qué sí sirvió de todo eso." | Reel autoridad científica |
 | 10 | "No es carisma. Es aire, cuerpo, tono y ojos. Cuatro cosas. Se entrenan." | Reel método |
+| 11 | ⭐ "Di el precio en tono descendente. Punto. Y cállate. El que llena ese silencio, negocia contra sí mismo." | Reel venta — el de mayor conversión esperada |
 
 ---
 

@@ -25,8 +25,9 @@
 | **38-50** | **🧍 C · CUERPO** | Anclaje y punto cero. Las manos. La entrada al espacio (sala, escenario y encuadre). Aviso honesto sobre el *power posing* que no replicó | Postura base calibrada |
 | **50-57** | ☕ **Pausa 7 min** | Cronómetro en pantalla. No se negocia | — |
 | **57-75** | **🎙️ T · TONO** | El bloque más espectacular de la clase. Colocación garganta→pecho (se oye el cambio en 90 segundos). Ritmo. **La pausa de 3 segundos**, practicada en silencio con toda la sala. El final de frase que sube y quita autoridad | 3 ajustes vocales anotados |
-| **75-85** | **👁️ O · OJOS** | Triángulo de anclaje. Una idea, una persona. Dónde mirar en cámara y por qué verte a ti misma te delata. El segundo de silencio antes de la primera palabra | Patrón de foco definido |
-| **85-110** | **🖊️ ESCRIBIR LA ENTRADA** | Los 4 tiempos, uno por uno, con cronómetro: Ancla (5 min) → Grieta (6 min) → **Derecho a hablar (9 min, el más difícil)** → Contrato (5 min). Kathe pasa por el chat resolviendo el tiempo 3, que es donde todos se atascan | **Guion de 90 seg escrito** |
+| **75-81** | **💰 EL EJERCICIO DEL PRECIO** | Cada uno dice su precio en voz alta tres veces: como lo dice hoy · en tono descendente · con los tres segundos de silencio. Seis minutos, y es el momento que más se comenta después | **Su frase de precio calibrada** |
+| **81-89** | **👁️ O · OJOS** | Triángulo de anclaje. Una idea, una persona. Dónde mirar en cámara y por qué verte a ti misma te delata. El segundo de silencio antes de la primera palabra | Patrón de foco definido |
+| **89-110** | **🖊️ ESCRIBIR LA ENTRADA** | Los 4 tiempos, uno por uno, con cronómetro: Ancla (5 min) → Grieta (6 min) → **Derecho a hablar (9 min, el más difícil)** → Contrato (5 min). Kathe pasa por el chat resolviendo el tiempo 3, que es donde todos se atascan | **Guion de 90 seg escrito** |
 | **110-122** | **🎭 ENSAYO** | Salas de 3. Cada uno lee su Entrada dos veces: la primera para sacarla, la segunda aplicando A.C.T.O. El compañero solo marca **una** cosa: qué cambió | La Entrada en la boca, no en el papel |
 | **122-130** | ⭐ **VIDEO DESPUÉS** | Protocolo pre-escena de 4 minutos (todos juntos, en silencio) y graban. Una sola toma | **El video DESPUÉS** |
 | **130-138** | ⭐ **EL VEREDICTO** | *"Abre los dos videos. Uno al lado del otro."* Silencio de 3 minutos. Luego: al chat, una palabra sobre qué cambió | **La garantía cumpliéndose delante de todos** |
@@ -72,7 +73,7 @@
 | 1 | **Min 0-8, la demo de contraste** | Si la sala no ve la diferencia en los primeros 3 minutos, la clase pierde autoridad para siempre | Guion escrito y ensayado. **Nunca improvisar la apertura** |
 | 2 | **Min 8, el video ANTES** | Es el activo del que depende todo el producto. Si alguien no graba, no tiene resultado | Instrucciones en pantalla + Kathe grabando también + "nadie lo verá salvo tú", repetido dos veces |
 | 3 | **Min 57-75, la colocación vocal** | Es donde el cambio se vuelve audible. Es el "wow" de la clase | Audio de referencia + hacerlo todos a la vez con micrófonos abiertos 20 segundos |
-| 4 | **Min 94-103, el "derecho a hablar"** | Todos se atascan aquí. Es donde el experto quiere poner su CV | Banco de modelos listo + Kathe interviniendo en el chat con ejemplos concretos |
+| 4 | **Min 98-107, el "derecho a hablar"** | Todos se atascan aquí. Es donde el experto quiere poner su CV | Banco de modelos listo + Kathe interviniendo en el chat con ejemplos concretos |
 | 5 | **Min 130, el veredicto** | Es la garantía, el testimonio y la prueba social, todo en el mismo momento | Silencio real de 3 minutos. No hables. Deja que lo vean |
 
 ---

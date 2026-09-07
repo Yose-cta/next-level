@@ -124,6 +124,51 @@ El instrumento sin texto no sirve. La Entrada de 90 segundos se escribe así:
 
 ---
 
+## 5.b El puente a la venta (lo que convierte autoridad en dinero)
+
+> **Hueco detectado:** la oferta prometía autoridad, pero no cerraba el circuito hacia el ingreso.
+> Un experto no compra "que me tomen en serio" como fin último: lo compra porque cree que eso
+> le trae clientes. Si no haces ese puente explícito, lo hace él — y muchas veces no lo hace.
+
+La Entrada de Autoridad ya sirve para tres escenarios. **El cuarto es el que paga la clase:**
+
+| Escenario | Dónde | Qué cambia |
+|---|---|---|
+| 1 · Sala | Reunión, comité, panel | Dejan de interrumpirte |
+| 2 · Cámara | Reel, live, webinar | Dejan de pasarte de largo |
+| 3 · Escenario | Charla, congreso, clase | Te vuelven a llamar |
+| ⭐ **4 · Conversación de venta** | **Llamada, DM de voz, propuesta, el momento del precio** | **Dejas de justificarte** |
+
+### Los tres momentos de una venta donde la técnica decide
+
+| Momento | Lo que pasa hoy | La herramienta |
+|---|---|---|
+| **La apertura de la llamada** | Se abre pidiendo permiso: "bueno, cuéntame un poquito de ti…". El cliente asigna el mando ahí mismo | La misma Entrada, en versión 45 segundos. Marca quién dirige la conversación |
+| ⭐ **Decir el precio** | Se acelera, sube el tono al final ("son ochocientos mil… ¿te parece?") y se sigue hablando para llenar el silencio | **Tono + pausa.** El precio se dice en tono descendente, punto, y **se calla**. La pausa que sigue es del cliente, no tuya. Es el ejercicio más rentable de toda la clase |
+| **La objeción** | El cuerpo se contrae, la voz se adelgaza y suena a disculpa | **Aire + anclaje.** El apoyo sostiene la voz cuando el cuerpo quiere achicarse |
+
+> **La regla que se enseña en 90 segundos y vale la clase entera:**
+> *Di el precio en tono descendente. Punto. Y cállate hasta que hable el otro.*
+> Quien llena ese silencio, negocia contra sí mismo.
+
+**Respaldo:** la investigación sobre tono vocal muestra que las voces de tono más grave se perciben
+como más competentes y con mayor integridad (ver `01`, sección 4). El momento del precio es
+exactamente donde el nervio sube el tono — y donde más caro cuesta.
+
+### Qué se agrega a la clase
+
+- **En el bloque T (min 57-75):** el ejercicio del precio. Cada uno dice su precio en voz alta tres veces:
+  como lo dice hoy, con tono descendente, y con los tres segundos de silencio. Toma 6 minutos y es
+  el momento que más se comenta después.
+- **En el entregable:** una quinta casilla — *"Mi frase de precio"*, escrita y calibrada.
+- **En el copy:** un titular alternativo que ataca directo al bolsillo (ver `05`, sección 1, variante D).
+
+> ⚠️ **Lo que NO se hace:** convertir esto en un taller de ventas. Es un bloque de 6 minutos dentro de
+> una clase de presencia. Si el peso se corre a ventas, la oferta pierde su hiperespecificidad y entra
+> a competir en la categoría más saturada del mercado hispano. El puente se muestra; no se cruza.
+
+---
+
 ## 6. El entregable
 
 ```
@@ -142,7 +187,10 @@ El instrumento sin texto no sirve. La Entrada de 90 segundos se escribe así:
 ║  3 · PROTOCOLO PRE-ESCENA · 4 minutos                         ║
 ║      Respiración → cuerpo → voz → foco                        ║
 ║                                                               ║
-║  4 · MIS DOS VIDEOS            ⭐ LA PRUEBA                    ║
+║  4 · MI FRASE DE PRECIO                                       ║
+║      Escrita, en tono descendente, con los 3 seg de silencio  ║
+║                                                               ║
+║  5 · MIS DOS VIDEOS            ⭐ LA PRUEBA                    ║
 ║      ANTES  (grabado en el minuto 8, sin técnica)             ║
 ║      DESPUÉS (grabado en el minuto 130, con A.C.T.O.)         ║
 ╚═══════════════════════════════════════════════════════════════╝

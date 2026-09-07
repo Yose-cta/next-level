@@ -195,3 +195,23 @@
 > **El hueco de este análisis:** ningún precio de los competidores chilenos está publicado.
 > Se consiguen en dos horas pidiendo cotización como cliente, y **vale la pena hacerlo antes de
 > fijar el precio final del taller.** Es la acción #1 de `10-COMPETIDORES.md`, sección 7.
+
+---
+
+## 12. El problema real del cliente (para `11-EL-PROBLEMA-DE-LAS-3AM.md`)
+
+| Dato usado | Fuente | Conf. |
+|---|---|---|
+| ⭐ **95%** de los solopreneurs vive con ansiedad continua ligada a la impredecibilidad del ingreso; **62%** cita el ingreso irregular como principal estresor | [Founder Reports · Solopreneur Statistics 2026](https://founderreports.com/solopreneur-statistics/) · [The Lonely Entrepreneur](https://lonelyentrepreneur.com/solopreneur-statistics-2026/) | 🟡 |
+| ⭐ **34% ha considerado seriamente rendirse**, y de esos el **72% cita estrés financiero e ingresos inconsistentes**. 35% reporta estrés alto (vs 26% de dueños con empleados); solo 35% alta satisfacción (vs 44%); **48%** reporta problemas de salud mental ligados a trabajar solo | [MentorMe · Solopreneur Statistics 2026](https://mentorme.com/blog/solopreneur-statistics-2026) · [Gitnux](https://gitnux.org/solopreneur-statistics/) | 🟡 |
+| La brecha que produce el insomnio: creen necesitar **US$219.000/año** para sentirse exitosos; la mediana real es **US$47.000-65.000**. 57% dice que la inflación lo forzó a buscar ingresos adicionales | [Founder Reports](https://founderreports.com/solopreneur-statistics/) · [Lettuce Report](https://www.selfemployed.com/news/lettuce-solopreneur-perspective-report-2026/) | 🟡 |
+| **Coaching:** ingreso mediano ≈ **US$52.800/año**; coach activo promedio **US$49.283/año** con **11,6 h de coaching por semana** y **12,4 clientes activos**; tarifa promedio **US$256/hora** (US$234 en Norteamérica) | [Simply.Coach · ICF Statistics 2026](https://simply.coach/blog/icf-coaching-statistics-industry-insights/) · [Tandem Coach](https://tandemcoach.co/coaching-industry-statistics/) · [Luisa Zhou](https://luisazhou.com/blog/coaching-statistics/) | 🟡 |
+| ⭐ **El hallazgo que define la oferta:** *"los coaches que prosperan no son necesariamente los más credencializados ni los más experimentados: son los que dominaron la adquisición de clientes… separada de su capacidad como coach"* | [Simply.Coach](https://simply.coach/blog/icf-coaching-statistics-industry-insights/) · [LeadResponse](https://leadresponse.co/blog/coaching-industry-statistics) | 🟡 |
+| **Síndrome del impostor:** 87% de los emprendedores lo ha experimentado; **86% de los emprendedores exitosos** (con +US$10k en ventas) también → **el éxito no lo cura**. 78% de líderes de negocio lo experimenta y **59% ha considerado dejar su rol** por eso | [Kajabi · Impostor Phenomenon Study](https://kajabi.com/blog/impostor-phenomenon-study) · [March8 / Lev8](https://lev8media.com/articles/78-of-business-leaders-experience-imposter-syndrome) · [Storyboard18](https://www.storyboard18.com/brand-makers/entrepreneurial-stress-31-of-founders-suffer-from-imposter-syndrome-survey-reveals-49809.htm) | 🟡 |
+| **LATAM:** en México el 75% de los emprendimientos cierra tras el segundo año; ~40% de las empresas nuevas falla por finanzas débiles, y entre esas la falta de ingresos es la causa más citada (**65%**) | [El Financiero](https://www.elfinanciero.com.mx/empresas/fracasan-en-mexico-75-de-emprendimientos/) · [Entrepreneur en Español](https://spanish.entrepreneur.com/iniciar-un-negocio/por-que-fracasan-la-mayoria-de-las-startups-y-como-los-emprendedores-en-serie-desafian-las-estadisticas) | 🟡 |
+
+> ⚠️ **El cálculo de la brecha de 3x** (US$256/hora × 11,6 h/semana ≈ US$142.000 esperados contra
+> US$49.283 reales) **es mío, cruzando dos cifras de la misma fuente.** No viene publicado así.
+> Se sostiene como argumento —las horas de coaching no son las horas trabajadas, y esa es
+> exactamente la tesis— pero **no lo presentes como un dato citable de la ICF.** Preséntalo como
+> lo que es: dos números públicos puestos uno al lado del otro.

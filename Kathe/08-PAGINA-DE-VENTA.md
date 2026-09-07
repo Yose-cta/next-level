@@ -14,7 +14,8 @@
 
 > # Los primeros 90 segundos
 >
-> ## Te preparas el contenido. Improvisas el minuto que decide todo.
+> ## Gente que sabe menos que tú está cobrando el triple.
+> ## La diferencia no es lo que saben.
 >
 > Taller en vivo de 2 horas 30. Sales con tu primer minuto **escrito, montado con técnica de
 > actuación y grabado en video** — con tu "antes" y tu "después" en el mismo archivo.
@@ -53,25 +54,34 @@
 
 ## 2 · EL ESPEJO
 
-> ## Esto ya te pasó
+> ## Lo que te tiene despierta no es tu oratoria
 >
-> Te sabes el tema de memoria. Abres la boca y te sale una voz que no reconoces.
+> Cerraste dos este mes. El próximo no sabes.
 >
-> Te tiembla la voz los primeros treinta segundos. Después te compones — pero ya perdiste la sala.
+> Trabajas todo el día y facturas menos de lo que ganabas empleada.
 >
-> Grabas el reel catorce veces y lo terminas borrando.
+> Y a las tres de la mañana aparece la pregunta completa:
+> **¿y si esto no funciona y tengo que volver — después de que todos me vieron irme?**
 >
-> Llega el momento de decir el precio y se te quiebra la voz justo ahí.
+> Mientras tanto, alguien de tu mismo nicho anuncia su lanzamiento.
+> Y tú sabes —lo sabes de verdad— que sabes más que esa persona.
 >
-> Dices lo mismo que él. Y a él le hacen caso.
+> Te dices que es que no sabes venderte. Y te lo dices como si fuera un defecto de carácter,
+> de esos que no tienen arreglo.
 >
-> **Y lo peor: sabes que sabes. Por eso duele.**
+> ### No es eso.
+>
+> El coach promedio cobra 256 dólares la hora y factura 49 mil al año.
+> Le sobra tarifa. Le faltan horas llenas. **No es un problema de precio: es de conversión.**
+>
+> Y la conversión no empieza en tu propuesta, ni en tu método, ni en tu precio.
+> Empieza en el primer minuto. **El único que no preparaste.**
 
 ---
 
 ## 3 · EL GIRO
 
-> ## No es falta de carácter. Es falta de apoyo.
+> ## Y el primer minuto no es carácter. Es técnica.
 >
 > Cuando llegan los nervios pasa algo físico y medible: la respiración se te sube al pecho
 > y la voz empieza a salir de la garganta en vez del diafragma.
@@ -326,12 +336,17 @@
 
 ## 13 · CIERRE
 
-> ## El lunes vas a hablar en algún lado
+> ## Esto no te va a llenar la agenda
 >
-> En una reunión, en un live, en una llamada. Va a pasar igual.
+> Te va a arreglar el minuto donde la estás perdiendo.
 >
-> La única pregunta es si vas a improvisar ese minuto otra vez, o si lo vas a tener escrito,
-> ensayado y grabado.
+> No te voy a prometer que vas a cobrar más ni que vas a cerrar más clientes. No lo puedo
+> garantizar y tú ya no te lo crees — te lo prometieron tres cursos atrás.
+>
+> Lo que sí te puedo dar es una pieza, completa, y demostrada antes de que cierres el Zoom.
+>
+> El lunes vas a hablar en algún lado. En una reunión, en un live, en una llamada.
+> Va a pasar igual. La única pregunta es si vas a improvisar ese minuto otra vez.
 >
 > **[FECHA] · [HORA] Chile · [N] cupos**
 >

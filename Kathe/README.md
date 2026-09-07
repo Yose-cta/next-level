@@ -32,6 +32,7 @@
 | `08-PAGINA-DE-VENTA.md` | ⭐ **La página de venta completa, redactada.** Copy listo para copiar y pegar, sección por sección, más las 8 reglas de oficio que lo gobiernan y lo que falta para publicar | Vas a construir la landing |
 | `09-EMBUDO-Y-CONVERSION.md` | ⭐ **Cómo se vende esto de verdad en Chile.** El embudo de dos carriles (página y WhatsApp), medios de pago y cuotas, order bump, qué le falta a la página con el impacto de cada cosa, y números realistas | Vas a lanzar |
 | `10-COMPETIDORES.md` | ⭐ **Quién ya vende esto, qué vende y a qué precio.** El mapa completo (Chile, España, LATAM), los 5 arquetipos de competidor con cómo se le gana a cada uno, el mapa de posicionamiento, las 5 diferencias de Kathe ordenadas por qué tan copiables son, y sus 3 debilidades honestas | Quieres ver contra quién compites |
+| `11-EL-PROBLEMA-DE-LAS-3AM.md` | ⭐ **Por qué compra de verdad.** El dolor real bajo el síntoma, cuantificado; la cadena de 4 eslabones que va del miedo a la compra; la tensión honesta de un taller de US$47; y el copy reescrito | **Léelo antes que el 08** |
 | `ANEXO-investigacion-humor.md` | La investigación previa del mercado del humor. Archivada, no descartada | Quieres el material sobre humor |
 | `dossier.html` | Dossier visual imprimible con todo lo esencial | Vas a presentarlo |
 

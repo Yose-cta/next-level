@@ -30,6 +30,28 @@
 
 ---
 
+## 1.b El problema de las 3 de la mañana (leer antes que la tabla de dolores)
+
+> Los cinco dolores de abajo son **síntomas**. Se dicen en voz alta y son ciertos, pero nadie
+> compra por ellos. Lo que la despierta a las 3 am es esto:
+>
+> ### *"Este mes cerré dos. El próximo no sé. Y si esto no funciona voy a tener que volver — y todos me vieron irme."*
+
+| Eslabón | Qué se dice |
+|---|---|
+| **El miedo** | Que el proyecto se caiga **en público** |
+| ⭐ **La evidencia con la que se tortura** | *"Gente que sabe menos que yo está cobrando el triple"* |
+| **La explicación que se da** | *"Es que yo no sé venderme"* — dicho como defecto de carácter, por eso no lo resuelve |
+| **La explicación real (= la oferta)** | No es que no sepa venderse: es que **en el primer minuto no le asignan autoridad, y sin autoridad no hay precio** |
+
+**Respaldo:** 95% de los solopreneurs vive con ansiedad continua por lo impredecible del ingreso;
+34% ha considerado seriamente rendirse, y de esos el 72% por estrés financiero. El coach promedio
+declara una tarifa de US$256/hora y factura US$49.283 al año: **le sobra tarifa y le faltan horas llenas.**
+
+Desarrollo completo en `11-EL-PROBLEMA-DE-LAS-3AM.md`.
+
+---
+
 ## 2. Los cinco dolores, por intensidad de compra
 
 | # | Dolor | Cómo lo dice | Intensidad |

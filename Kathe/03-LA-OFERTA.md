@@ -1,244 +1,247 @@
 # 03 · La oferta hiperespecífica
-### Definición completa: nombre, promesa, mecanismo, entregable, precio y validación
 
 ---
 
-## 1. La oferta en una ficha
+## 1. Ficha
 
 | Campo | Definición |
 |---|---|
-| **Nombre público** | **El humor no se improvisa** |
-| **Subtítulo** | *Tu Kit de 10 líneas que te hacen memorable (y vendible)* |
-| **Formato** | Taller en vivo, online, 2 h 30 min, con trabajo escrito durante la clase |
-| **Para quién** | Coaches, consultores, mentores, formadores y expertos con marca personal que ya venden pero pasan desapercibidos |
-| **Mecanismo** | **Método R.I.S.A.** (4 pasos) |
-| **Entregable** | El **Kit de Humor**: plantilla que sale llena de la clase con 10 líneas propias ubicadas por canal |
-| **Precio** | $34.900 CLP / US$37 general · $79.900 CLP / US$87 VIP |
-| **Garantía** | 100% si al terminar no tienes 5 líneas que te atreverías a publicar |
-| **Cupos** | 40 general · 12 VIP (el límite del VIP es real: la revisión escrita del Kit toma ~20 min por persona) |
+| **Nombre público** | **LOS PRIMEROS 90 SEGUNDOS** |
+| **Subtítulo** | *Cómo entrar a una sala, una cámara o un escenario y que te asignen autoridad antes de que digas tu mejor idea* |
+| **Formato** | 2 h 30 en vivo, online, **cámara obligatoria** |
+| **Para quién** | Expertos, coaches, consultores y profesionales con marca personal que saben de lo suyo pero pierden la sala en el primer minuto |
+| **Mecanismo** | **Método A.C.T.O.** (Aire · Cuerpo · Tono · Ojos) + la estructura de la Entrada en 4 tiempos |
+| **Entregable** | **Tu Entrada de Autoridad**: guion de 90 s + video antes/después + ficha de calibración + protocolo pre-escena |
+| **Precio** | $44.900 CLP / US$47 general · $99.000 CLP / US$105 VIP |
+| **Garantía** | 100% si tu video "después" no suena distinto al "antes" |
+| **Cupos** | 40 general · **12 VIP** (límite real: cada revisión de video toma ~25 min) |
 
 ---
 
-## 2. La promesa (el resultado soñado)
+## 2. La promesa
 
-> ### Sales del taller con 10 líneas de humor tuyas —escritas, afiladas y probadas en voz alta— listas para usar mañana en un reel, en tu charla y en una llamada de venta. Sin dejar de ser la autoridad de tu tema.
+> ### Sales del taller con tu Entrada de Autoridad: 90 segundos escritos, montados con técnica de actuación, ensayados y grabados en video — con tu "antes" y tu "después" en el mismo archivo, para que la diferencia no te la cuente nadie.
 
-**Por qué esta promesa funciona y otras no:**
+**Por qué se sostiene:**
 
-| Requisito de una buena promesa | ¿Lo cumple? |
-|---|---|
-| Es **específica** (un número, un objeto) | ✅ 10 líneas, un Kit |
-| Se puede **verificar el mismo día** | ✅ El alumno cuenta sus líneas al terminar |
-| **No depende de terceros** (algoritmo, público, cliente) | ✅ El resultado es material propio |
-| Ataca el dolor #1 del avatar (ser olvidable) | ✅ "memorable" |
-| Neutraliza el miedo #1 (perder autoridad) | ✅ "sin dejar de ser la autoridad" |
-| Es **entregable en 2,5 horas** de verdad | ✅ 4 ejercicios × ~20 min = 10 líneas |
-
----
-
-## 3. El mecanismo: Método R.I.S.A.
-
-> El humor de negocios no se improvisa: se **extrae**, se **gira**, se **recorta** y se **coloca**.
-
-### R — RECONOCIMIENTO
-**Principio:** *Si no se reconocen, no se ríen.*
-
-El humor que funciona en negocios no viene de un chiste: viene de una **verdad incómoda que tu cliente
-ya vivió y nunca dijo en voz alta**. Por eso el material tiene que salir de tu nicho, no de un banco
-de chistes prestados.
-
-Esto no es una opinión: la investigación sobre humor y memoria es consistente en que el humor
-**integrado y pertinente** al contenido mejora el recuerdo, mientras que el humor ajeno o inapropiado
-**no produce ese efecto**.
-
-**Produce:** 10 verdades incómodas del nicho del alumno.
-
----
-
-### I — INVERSIÓN
-**Principio:** *La risa vive en el giro.*
-
-Toda línea con humor tiene dos partes: una **preparación honesta** que la persona acepta sin resistencia,
-y un **giro** que rompe la expectativa que esa preparación creó. Sin giro no hay risa: hay observación.
-
-Los cuatro giros que se enseñan (son los únicos cuatro que necesita un experto):
-
-| Giro | Qué hace | Ejemplo genérico |
+| Requisito | ¿Cumple? | Cómo |
 |---|---|---|
-| **Auto-ironía** | Te bajas del pedestal antes de que te bajen | "Llevo 10 años enseñando productividad. Mi escritorio es un crimen" |
-| **Exageración honesta** | Llevas la verdad al absurdo sin mentir | "Mi cliente probó 14 embudos. Catorce. Como una carrera de obstáculos que él mismo construyó" |
-| **Comparación imposible** | Traes un mundo ajeno al tema | "Contratar sin proceso es como cocinar con los ojos cerrados: a veces sale, pero no lo repites" |
-| **Verdad no dicha** | Dices en voz alta lo que todos piensan | "Nadie ha leído el plan estratégico completo. Ni el que lo escribió" |
-
-**Produce:** 5 líneas con giro.
-
----
-
-### S — SÍNTESIS
-**Principio:** *El remate va al final. Y nada va después.*
-
-El 90% de las líneas de humor de un principiante fallan por lo mismo: **sobran palabras y el remate
-está en la mitad**. Este paso es puro recorte quirúrgico.
-
-Las tres reglas:
-1. **La palabra graciosa va última.** Si está en el medio, reordena la frase.
-2. **Corta el 30% de las palabras.** Si sobrevive, era grasa.
-3. **No expliques el chiste.** Explicarlo es pedir perdón por haberlo dicho.
-
-**Produce:** 5 líneas afiladas al hueso.
+| Específica (un número, un objeto) | ✅ | 90 segundos, un video, un guion |
+| Verificable el mismo día | ✅ | El alumno compara sus dos videos |
+| No depende de terceros | ✅ | El resultado es material propio, no la reacción de un público |
+| Ataca el dolor #1 (no me toman en serio) | ✅ | "que te asignen autoridad" |
+| Cabe entera en 2 h 30 | ✅ | 90 segundos es un objeto acabable |
+| Respaldada por evidencia | ✅ | Ambady & Rosenthal, efecto de primacía, investigación en tono vocal |
 
 ---
 
-### A — APLICACIÓN
-**Principio:** *Una línea, tres canales.*
+## 3. El argumento que abre la venta
 
-La misma línea vale tres veces si sabes dónde ponerla. Aquí se arma el Kit final:
-
-| Ubicación | Cuántas | Para qué sirve |
-|---|---|---|
-| **Gancho** (primeros 3 segundos de un reel / primera línea de un post) | 3 | Frenar el scroll |
-| **Apertura** (primeros 60 segundos de una charla, webinar o live) | 2 | Comprar la atención de la sala |
-| **Puente** (para bajar tensión antes de un tema difícil) | 2 | Sostener la atención en la parte densa |
-| **Rescate** (la línea que salvas el momento incómodo: se cayó el audio, silencio, objeción de precio) | 2 | No quedarte en blanco |
-| **Firma** (tu línea recurrente, la que te van a repetir) | 1 | Que te citen sin ti |
-
-**Produce:** el Kit de 10 líneas ubicadas.
+> **La ciencia dice que deciden si eres la autoridad en menos de 60 segundos.**
+>
+> En 1993, Ambady y Rosenthal mostraron a evaluadores clips **mudos de 10 segundos** —y después de 2
+> segundos— de profesores universitarios. Sin oír una palabra, esos evaluadores predijeron las
+> calificaciones que los alumnos les darían **al final del semestre completo**.
+>
+> Y en el meta-análisis previo: alargar el clip de 30 a 300 segundos **no mejoró la predicción**.
+> Toda la información decisiva ya estaba en los primeros segundos.
+>
+> **Tu contenido es excelente. El problema es que ese minuto lo estás improvisando.**
 
 ---
 
-## 4. La línea roja (bloque obligatorio, 5 minutos)
+## 4. El mecanismo: Método A.C.T.O.
 
-Sin esto la clase es un riesgo reputacional para el alumno. Es un módulo corto y no negociable.
+> Las cuatro herramientas de una actriz, aplicadas a tu primer minuto.
+> No se trata de personalidad. Se trata de tu instrumento: **aire, cuerpo, tono y ojos.**
 
-> **El humor va hacia dentro y hacia arriba. Nunca hacia abajo.**
+### A — AIRE
+**Corrige:** la voz que sube, se adelgaza y tiembla.
 
-| ✅ Sí | ❌ Nunca |
-|---|---|
-| Sobre ti | Sobre tu cliente |
-| Sobre el problema | Sobre una persona presente |
-| Sobre la industria y sus rituales absurdos | Sobre un grupo por lo que es (género, raza, cuerpo, religión, país) |
-| Sobre lo que compartes con la audiencia | Sobre algo que la audiencia sufre y tú no |
-| Sobre tu error de hace 5 años | Sobre el error del cliente de ayer |
+Cuando llegan los nervios, la respiración se va al pecho y la voz se emite desde la garganta.
+Ahí es donde tiembla. **No es un problema de confianza: es un problema de apoyo.**
 
-**La prueba de los 3 segundos:** si tienes que pensar más de 3 segundos si se puede decir, no se dice.
+- Apoyo diafragmático: dónde nace el sonido y cómo sostenerlo
+- **El protocolo de 30 segundos antes de entrar:** suspiro fisiológico — dos inhalaciones nasales seguidas + una exhalación larga por la boca
+  > Respaldo: ensayo aleatorizado de Stanford (Balban, Huberman y Spiegel, *Cell Reports Medicine*, 2023, n=111). Cinco minutos diarios redujeron la activación fisiológica y mejoraron el ánimo **más que la meditación mindfulness** de igual duración
+- La regla del aire de sobra: nunca empieces una frase con el último aire
 
-Además vale para el humor cultural: lo que da risa en Chile puede no darla en México o España.
-Como el material sale del propio nicho y país del alumno (paso R), este riesgo baja solo.
+**Se lleva:** su protocolo pre-escena de 4 minutos, escrito.
 
 ---
 
-## 5. El entregable: el Kit de Humor
+### C — CUERPO
+**Corrige:** el cuerpo que te delata antes de que hables.
 
-No son apuntes. Es un activo. La plantilla se entrega en blanco al minuto 12 y sale llena.
+- **El anclaje:** peso repartido, base estable, el "punto cero" al que el actor vuelve siempre
+- **Las manos:** la pregunta que hace todo el mundo. Dónde van, cuándo se mueven, cuándo descansan
+- **La entrada:** cómo se llega al lugar donde vas a hablar (en sala, en escenario y en encuadre de cámara)
+- ⚠️ **Honestidad científica que suma autoridad:** aquí se aclara que el famoso *power posing* de Amy Cuddy **falló la replicación** — su coautora se retractó en 2016 y los efectos hormonales no se sostuvieron. Lo único que sobrevivió es que las posturas expansivas **aumentan tu sensación subjetiva de poder**. Se enseña como herramienta de estado propio, nunca como truco hormonal
+
+**Se lleva:** su postura base calibrada y grabada.
+
+---
+
+### T — TONO
+**Corrige:** que no te tomen en serio.
+
+- **Colocación:** bajar el sonido de la garganta al pecho. El tono baja **como consecuencia de la técnica**, no imitando a nadie
+  > Respaldo: en estudios experimentales la versión de tono más grave de la misma voz obtuvo entre **60% y 76%** de las preferencias, percibida como más competente y con mayor integridad. **Y aplica también a mujeres.** Ojo con la honestidad: la evidencia dice que la voz grave *gana preferencia*, no que lidere mejor
+- **Ritmo:** el nervio acelera. Cómo bajar 20 palabras por minuto sin sonar lento
+- ⭐ **La pausa:** el arma de autoridad más subestimada. Quien puede callarse tres segundos delante de una sala, manda
+- **El final de frase:** la entonación que sube al final convierte una afirmación en una pregunta. Es lo que más autoridad quita, y se corrige en minutos
+
+**Se lleva:** sus tres ajustes vocales anotados en la ficha de calibración.
+
+---
+
+### O — OJOS
+**Corrige:** la sala que se te dispersa.
+
+- **El triángulo de anclaje:** tres puntos fijos en la sala, y cómo rotar entre ellos
+- **La regla de una idea, una persona:** no barrer la sala; terminar cada frase en alguien
+- **En cámara:** dónde mirar realmente, y por qué mirarte a ti misma en pantalla te delata
+- **Antes de la primera palabra:** el segundo de silencio mirando a la sala. Es el gesto que más autoridad transmite de todo el taller
+
+**Se lleva:** su patrón de foco definido para sala y para cámara.
+
+---
+
+## 5. El texto: la Entrada en 4 tiempos
+
+El instrumento sin texto no sirve. La Entrada de 90 segundos se escribe así:
+
+| Tiempo | Nombre | Segundos | Qué hace |
+|---|---|---|---|
+| 1 | **El ancla** | 0-15 | Una frase que sitúa al otro **en su problema**, no en tu currículum |
+| 2 | **La grieta** | 15-40 | La tensión: qué está pasando y por qué duele. Aquí se compra la atención |
+| 3 | **El derecho a hablar** | 40-70 | Por qué tú — **con un hecho, no con un CV**. Una prueba concreta vale más que cinco títulos |
+| 4 | **El contrato** | 70-90 | Qué se llevan en los próximos minutos. Explícito |
+
+> **El tiempo 3 es el que cambia vidas.** La mayoría de los expertos abre con credenciales
+> ("soy licenciada en, tengo un máster en") y eso **baja** la autoridad: suena a justificarse.
+> Un hecho la sube. Se trabaja en clase, uno por uno.
+
+---
+
+## 6. El entregable
 
 ```
-╔══════════════════════════════════════════════════════════╗
-║  MI KIT DE HUMOR · [nombre] · [fecha]                    ║
-╠══════════════════════════════════════════════════════════╣
-║  BLOQUE R · Mis 10 verdades incómodas         [ 10 ]     ║
-║  BLOQUE I · Mis líneas con giro               [  5 ]     ║
-║  BLOQUE S · Mis líneas afiladas               [  5 ]     ║
-║  BLOQUE A · Mis 10 líneas ubicadas                       ║
-║     ├─ Gancho    ×3   →  reel / post                     ║
-║     ├─ Apertura  ×2   →  charla / webinar / live         ║
-║     ├─ Puente    ×2   →  parte densa                     ║
-║     ├─ Rescate   ×2   →  el momento incómodo             ║
-║     └─ Firma     ×1   →  la que te van a repetir         ║
-╠══════════════════════════════════════════════════════════╣
-║  MI LÍNEA ROJA: sobre qué NO hago humor jamás            ║
-╚══════════════════════════════════════════════════════════╝
+╔═══════════════════════════════════════════════════════════════╗
+║  MI ENTRADA DE AUTORIDAD · [nombre] · [fecha]                 ║
+╠═══════════════════════════════════════════════════════════════╣
+║  1 · EL GUION                                                 ║
+║      Ancla · Grieta · Derecho a hablar · Contrato   [90 seg]  ║
+║                                                               ║
+║  2 · FICHA DE CALIBRACIÓN                                     ║
+║      Aire   → mi apoyo y mi protocolo de 30 seg               ║
+║      Cuerpo → mi postura base y qué hago con las manos        ║
+║      Tono   → mis 3 ajustes (colocación · ritmo · final)      ║
+║      Ojos   → mi patrón de foco (sala / cámara)               ║
+║                                                               ║
+║  3 · PROTOCOLO PRE-ESCENA · 4 minutos                         ║
+║      Respiración → cuerpo → voz → foco                        ║
+║                                                               ║
+║  4 · MIS DOS VIDEOS            ⭐ LA PRUEBA                    ║
+║      ANTES  (grabado en el minuto 8, sin técnica)             ║
+║      DESPUÉS (grabado en el minuto 130, con A.C.T.O.)         ║
+╚═══════════════════════════════════════════════════════════════╝
 ```
 
-**Por qué importa que sea un objeto:** el alumno puede fotografiarlo y publicarlo. Cada Kit lleno
-que un alumno muestra es una prueba social que vende la siguiente edición sola.
+**Por qué el video antes/después es el corazón del producto:**
+
+1. **Cumple la garantía delante de sus ojos.** No hay discusión posible.
+2. **Es la mejor prueba social que existe.** Un alumno publicando su antes/después vende la siguiente edición sola.
+3. **Es la mejor pieza de venta de Kathe.** Su propio antes/después es el anuncio más barato y convincente que puede hacer.
 
 ---
 
-## 6. Precio y estructura
+## 7. Precio
 
-| Tier | Chile (CLP) | Internacional (USD) | Qué incluye | Cupos |
+| Tier | Chile (CLP) | Internacional | Incluye | Cupos |
 |---|---|---|---|---|
-| **Early bird** (48 h) | $24.900 | US$27 | Clase en vivo + plantilla del Kit + grabación 7 días | 15 |
-| **General** | $34.900 | US$37 | Lo mismo | 40 |
-| **VIP** | $79.900 | US$87 | Todo lo anterior + **revisión escrita de tu Kit** + banco de 50 plantillas de líneas por industria + sesión grupal de afinado a los 7 días (45 min) | **12** |
+| **Early bird** (48 h) | $29.900 | US$32 | Clase 2 h 30 + Entrada de Autoridad + protocolo + grabación 7 días | 15 |
+| **General** | $44.900 | US$47 | Lo mismo | 40 |
+| **VIP** | $99.000 | US$105 | Todo + **revisión individual escrita de tu video** + **ajuste vocal 1:1 de 15 min** + banco de 20 entradas modelo por profesión | **12** |
 
-**Fundamentos del precio:**
-- El mercado hispano ya paga **US$27-60** por taller corto en vivo sin fricción (ver `01`, sección 4).
-- Tu propia audiencia ya validó **$67.000 CLP** por medio día presencial → un online de 2,5 h
-  tiene que quedar claramente por debajo para no canibalizar.
-- El VIP no es "más contenido": es **la única forma de que alguien te lea el Kit**. Eso justifica el 2,3x.
-- Tipo de cambio referencial usado: ~950 CLP/USD. Ajústalo el día del lanzamiento.
+**Fundamentos:**
+- El taller en vivo con feedback se paga entre **US$35 y 60** en el mundo hispano sin fricción (ver `01`, sección 7).
+- Referencia directa: **MiExcelencia (México) cobra ≈ US$37 por sesión de 3 horas.**
+- La oratoria tolera más precio que otras categorías: la consecuencia percibida es económica, no estética.
+- Se posiciona por debajo de tu half-day presencial de $67.000 CLP para no canibalizarlo.
+- Tipo de cambio referencial ~950 CLP/USD. Ajústalo el día del lanzamiento.
 
-**Proyección conservadora de una edición:**
+**Proyección conservadora por edición:**
 
 | Escenario | General | VIP | Ingreso CLP |
 |---|---|---|---|
-| Bajo | 20 | 3 | $938.000 |
-| Medio | 40 | 8 | $2.035.200 |
-| Alto | 60 (2 sesiones) | 12 | $3.052.800 |
+| Bajo | 20 | 3 | $1.195.000 |
+| Medio | 40 | 8 | $2.588.000 |
+| Alto | 60 (2 sesiones) | 12 | $3.882.000 |
 
 ---
 
-## 7. La garantía
+## 8. La garantía
 
-> **"Si al terminar el taller no tienes al menos 5 líneas que te atreverías a publicar,
-> me escribes ese mismo día y te devuelvo el 100%. Sin formularios."**
+> **"Si al final del taller tu video 'después' no suena y no se ve distinto a tu 'antes',
+> me escribes ese mismo día y te devuelvo el 100%. Y tú tienes los dos archivos para juzgarlo."**
 
-Esta garantía es agresiva **y segura al mismo tiempo**, por una razón estructural: el entregable
-se produce *dentro* de la clase. Quien asiste y hace los ejercicios **termina con las líneas por
-definición**. El único que pide reembolso es el que no participó — y ese, además, no era tu cliente.
-
-Ninguna oferta de "hablar mejor" o "más engagement" puede dar esta garantía, porque su resultado
-ocurre después y depende de terceros. **Ese es tu foso.**
+Es agresiva y a la vez segura, por una razón técnica: **el apoyo, la colocación y el anclaje producen
+cambio audible y visible en una sola sesión.** Eso es lo que hace un director de actores en un ensayo.
+Lo que no se promete —y hay que decirlo— es que el cambio se sostenga solo: por eso el entregable
+incluye el protocolo, y por eso existe el escalón siguiente.
 
 ---
 
-## 8. Test de validación de 72 horas (hazlo ANTES de producir)
+## 9. Test de validación de 72 horas
 
-La investigación demuestra que la **categoría** tiene demanda probada. Falta confirmar que **tu
-audiencia** la quiere. No produzcas nada hasta pasar este test.
+**No produzcas la clase hasta pasar esto.**
 
 | Día | Acción | Qué mide |
 |---|---|---|
-| **1** | Publica un reel/post aplicando R.I.S.A. a tu propio nicho: una línea con giro sobre coaches. Cierre: *"Estoy armando un taller de 2 h donde sales con 10 líneas como esta, escritas por ti. ¿Te aviso?"* | ¿El humor funciona en tu voz y en tu audiencia? |
-| **2** | Historia con encuesta: *"¿Qué te pasa cuando publicas? A) Me leen y no compran B) Ni me leen"* + *"¿Pagarías $34.900 por salir con 10 líneas escritas?"* | Disposición a pagar |
-| **3** | DM personal a los 10 que más interactuaron: *"¿Qué es lo que más te cuesta: que se te ocurra, o atreverte a publicarlo?"* | Vocabulario real + cuál de los dos dolores pesa más |
-
-**Semáforo:**
+| **1** | Kathe publica **su propio antes/después de 30 segundos**: la misma frase, primero sin técnica y después con apoyo, colocación y pausa. Cierre: *"En 2 horas armamos tu primer minuto. ¿Te aviso?"* | Si el mecanismo se entiende **sin explicarlo**. Esta pieza es el test y el anuncio a la vez |
+| **2** | Encuesta en historias: *"¿Qué te pasa en el primer minuto? A) Me tiembla la voz · B) Hablo muy rápido · C) Me quedo en blanco · D) Nada, lo tengo resuelto"* + *"¿Pagarías $44.900 por salir con tu primer minuto grabado?"* | Cuál de los tres dolores lidera **en su audiencia** + disposición a pagar |
+| **3** | DM a los 10 que más interactuaron: *"¿En cuál te pasa más: reunión, cámara o escenario?"* | Qué escenario priorizar en los ejemplos de clase |
 
 | Resultado en 72 h | Decisión |
 |---|---|
-| 🟢 **30+ pidiendo aviso** | Produce y lanza. Abre carrito en 7 días |
-| 🟡 **15-29** | La oferta sirve, falta audiencia. Lanza igual pero con cupo de 20 y haz 2 semanas de contenido previo |
-| 🔴 **menos de 15** | No es la oferta: es el canal o el titular. Prueba el titular alternativo (`05`, sección 2) antes de descartar |
+| 🟢 **30+** pidiendo aviso | Produce y lanza. Carrito en 7 días |
+| 🟡 **15-29** | La oferta sirve, falta audiencia. Cupo de 20 y dos semanas de contenido previo |
+| 🔴 **menos de 15** | Revisa el canal y el titular antes de descartar la oferta. Prueba la variante C de `05`, sección 2 |
 
 ---
 
-## 9. Nombres alternativos evaluados
-
-Recomiendo **"El humor no se improvisa"** porque el nombre mismo destruye la objeción principal
-("es un don que no tengo") y promete sistema. Los otros quedan como respaldo para test A/B:
+## 10. Nombres evaluados
 
 | Nombre | A favor | En contra | Veredicto |
 |---|---|---|---|
-| **El humor no se improvisa** | Rompe la creencia limitante desde el título. Suena a método | Requiere el subtítulo para explicar el resultado | ⭐ **Recomendado** |
-| Memorable en 10 líneas | Muy concreto, promete el resultado | Pierde la palabra "humor", que es el diferenciador | Alternativo A/B |
-| Deja de ser el experto aburrido | Alto CTR, duele | Insulta al prospecto. Riesgo de rechazo en LinkedIn | Solo para anuncio, no para la página |
-| Autoridad con chispa | Bonito, elegante | Vago. No dice qué te llevas | Descartado |
-| Kit de Humor para Expertos | Nombra el activo | Suena a recurso descargable gratis, baja el valor percibido | Descartado como nombre público (sirve como nombre del entregable) |
+| **Los primeros 90 segundos** | Hiperespecífico, medible, respaldado por ciencia, no suena a curso de oratoria | Requiere el subtítulo para explicar el resultado | ⭐ **Recomendado** |
+| Entrada de Autoridad | Nombra el entregable, suena premium | Más abstracto como titular | ⭐ Úsalo como **nombre del entregable** |
+| Despierta tu autoridad | Aspiracional, es tu idea original | Genérico: hay cien ofertas que empiezan con "despierta". No dice qué te llevas | Sirve como **paraguas de la marca de Kathe**, no como nombre del taller |
+| Que te tomen en serio | Altísimo CTR, duele | Puede leerse como acusación al prospecto | Solo para **anuncio frío**, no para la página |
+| El instrumento | Elegante, muy actoral | Nadie sabe qué es hasta que se lo explicas | Descartado |
+| Autoridad Escénica | Bonito, describe bien a Kathe | No es una oferta, es una categoría | Sirve como **nombre de su método completo** |
+
+**Arquitectura recomendada:**
+- **Marca de Kathe:** Autoridad Escénica (o "Despierta tu autoridad" si le tiene cariño)
+- **Método:** A.C.T.O.
+- **Taller de entrada:** Los primeros 90 segundos
+- **Entregable:** tu Entrada de Autoridad
 
 ---
 
-## 10. Cómo escala esto después del taller (no es parte del encargo, pero define el techo)
-
-El taller de 2,5 h es la puerta. Lo que sigue, si funciona:
+## 11. Cómo escala (define el techo del negocio)
 
 | Producto | Formato | Precio referencial |
 |---|---|---|
-| **Taller** (esto) | 2,5 h en vivo | US$37 |
-| **Banco de Humor** | Programa de 4 semanas: pasar de 10 líneas a 40 y publicarlas | US$297 |
-| **Humor de Escenario** | Aplicar el Kit a tu charla signature completa | US$697 |
-| **Corporativo** | El mismo método para equipos comerciales | US$1.500-3.000/sesión |
+| **Los primeros 90 segundos** (esto) | 2 h 30 en vivo | US$47 |
+| **Instrumento** | 4 semanas: aire, cuerpo, tono y ojos a fondo, con práctica grabada semanal | US$297 |
+| **Tu charla** | Aplicar A.C.T.O. a una charla completa de 20 min | US$697 |
+| **Corporativo** | El mismo método para equipos comerciales y comités ejecutivos | US$1.500 – 3.500 por sesión |
 
-Diseña el taller sabiendo que existe el escalón siguiente, pero **no lo vendas dentro de la clase
-más allá de 3 minutos al cierre**. El taller tiene que cumplir solo: es lo que sostiene la garantía.
+Referencia de techo: Vinh Giang vende su curso a US$997 y Ultraspeaking entre US$1.995 y 7.995.
+**El escalón corporativo es el que paga de verdad** — y es exactamente el mercado que RADA Business
+y Ariel Group llevan décadas atendiendo con este mismo mecanismo.
+
+Diseña el taller sabiendo que existe el escalón siguiente, pero **véndelo en 3 minutos al cierre, no más**.
+El taller tiene que cumplir solo: es lo que sostiene la garantía.

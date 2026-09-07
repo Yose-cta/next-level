@@ -1,123 +1,121 @@
 # 02 · Avatar, dolores y objeciones
-### A quién le hablamos y con qué palabras
 
 ---
 
-## 1. El avatar primario: "El experto invisible"
+## 1. El avatar primario: "El experto que no se hace escuchar"
 
 | Campo | Detalle |
 |---|---|
-| **Quién es** | Coach, consultor, terapeuta, mentor, formador o especialista técnico con marca personal |
-| **Edad** | 32 – 52 |
-| **Facturación** | US$1.500 – 10.000/mes. Ya vende, pero le cuesta cada venta |
-| **Antigüedad** | 2 – 8 años en el negocio. No es principiante |
-| **Dónde vive comercialmente** | Instagram y/o LinkedIn, además de escenarios, webinars y llamadas 1:1 |
-| **Qué ya compró antes** | Cursos de contenido, de oratoria, de ventas, de marca personal, mentorías grupales |
-| **Cómo se ve a sí mismo** | "Sé mucho de lo mío. El problema es que no se nota" |
-| **Capacidad de inversión en un taller corto** | US$27 – 90 sin consultarlo con nadie |
+| **Quién es** | Coach, consultor/a, terapeuta, abogada, médico, ingeniero, formadora, especialista técnico. Gente con conocimiento real |
+| **Edad** | 33 – 55 |
+| **Género** | Sesgo femenino en el mercado de marca personal — y la glosofobia severa aparece al **doble de tasa en mujeres** (12,2% vs 5,8%) |
+| **Situación** | Ya tiene la experticia. Ya la contratan por lo que sabe. **Pero no la escuchan cuando habla** |
+| **Dónde le duele** | Reuniones · escenario · cámara (reels, lives, webinars) · llamadas de venta · paneles |
+| **Qué ya compró** | Cursos de oratoria, libros de comunicación, quizá terapia. Sabe el "qué". No tiene el "cómo" físico |
+| **Capacidad de inversión** | US$40 – 150 en un taller corto sin consultarlo con nadie |
 
-### Qué está pasando en su cabeza a las 11 de la noche
+### Qué está pasando en su cabeza
 
-> *"Publico, publico y publico. Me dicen que les encanta. Nadie compra."*
+> *"Sé más que el que está hablando. Y al que le hacen caso es a él."*
 >
-> *"Cuando hablo me pongo en modo profesor. Me escucho y hasta a mí me da lata."*
+> *"Me sé el tema de memoria. Abro la boca y me sale una voz que no reconozco."*
 >
-> *"Los que venden menos que yo tienen el doble de seguidores. Y son menos buenos que yo."*
+> *"Me tiembla la voz en los primeros 30 segundos. Después me compongo, pero ya perdí la sala."*
 >
-> *"Yo en persona soy divertida. Pero apenas prendo la cámara me pongo seria y aburrida."*
+> *"Grabo el reel 14 veces y lo termino borrando."*
 >
-> *"Ahora todos escriben con IA y todos suenan igual. Yo también sueno igual."*
+> *"Cuando llega el momento de decir el precio, se me quiebra la voz. Y ahí ya sé que no cierro."*
+>
+> *"Me dicen 'qué dulce eres'. Nadie le dice eso a alguien a quien considera una autoridad."*
 
 ---
 
-## 2. Los cinco dolores, ordenados por intensidad de compra
+## 2. Los cinco dolores, por intensidad de compra
 
-| # | Dolor | Cómo lo dice él/ella | Intensidad |
+| # | Dolor | Cómo lo dice | Intensidad |
 |---|---|---|---|
-| 1 | **Se olvidan de mí** | "Me escuchan, asienten, se van y no vuelven" | 🔥🔥🔥🔥🔥 |
-| 2 | **Sueno igual que todos** | "Somos 500 coaches diciendo exactamente lo mismo" | 🔥🔥🔥🔥🔥 |
-| 3 | **Me pongo acartonado** | "En la vida real soy chistoso, frente a la cámara soy un manual" | 🔥🔥🔥🔥 |
-| 4 | **Vendo tieso** | "Cuando toca hablar de precio se me pone la voz rara" | 🔥🔥🔥🔥 |
-| 5 | **La IA me borró la voz** | "Escribo con IA, sale correcto, y no se parece a mí" | 🔥🔥🔥 |
+| 1 | **No me toman en serio** | "Digo lo mismo que él y a él le hacen caso" | 🔥🔥🔥🔥🔥 |
+| 2 | **El cuerpo me traiciona** | "Me tiembla la voz, se me seca la boca, hablo rapidísimo" | 🔥🔥🔥🔥🔥 |
+| 3 | **Pierdo la sala al principio** | "Los primeros dos minutos son un desastre, después me suelto" | 🔥🔥🔥🔥🔥 |
+| 4 | **Me quedo en blanco** | "Se me borró todo. Y lo tenía preparadísimo" | 🔥🔥🔥🔥 |
+| 5 | **Odio verme y oírme** | "No soporto mi voz grabada" | 🔥🔥🔥🔥 |
 
-**El dolor #1 y el #2 son la misma moneda:** ser olvidable en un mercado saturado.
-Ahí es donde debe pegar todo el copy.
+> **Los dolores 1, 2 y 3 son el mismo evento visto desde tres ángulos: el primer minuto.**
+> Ahí es donde el cuerpo está más activado, donde la sala está decidiendo, y donde el experto
+> está improvisando. Todo el copy pega ahí.
 
 ---
 
-## 3. El deseo real (lo que compra de verdad)
+## 3. El deseo real
 
-El cliente **dice** que quiere ser más divertido. Lo que **compra** es esto:
-
-| Lo que dice | Lo que realmente quiere |
+| Lo que dice | Lo que compra de verdad |
 |---|---|
-| "Quiero ser más divertida" | Que me recuerden cuando cierren la app |
-| "Quiero que mi contenido enganche" | Que dejen de pasarme de largo |
-| "Quiero soltarme al hablar" | Dejar de sentir que estoy actuando de experto |
-| "Quiero diferenciarme" | Poder cobrar más sin justificarme |
-| "Quiero sonar humana" | Que no me confundan con un texto de ChatGPT |
+| "Quiero hablar mejor" | Que dejen de interrumpirme |
+| "Quiero perder el miedo" | Que no se me note el miedo (no es lo mismo, y esto sí se logra en 2 h) |
+| "Quiero sonar más segura" | Que me tomen en serio sin tener que subir el volumen |
+| "Quiero grabarme sin sufrir" | Publicar sin repetir 14 tomas |
+| "Quiero posicionarme" | Que me presenten como *la* referente, no como *una* más |
 
-> **El resultado soñado en una frase (usar tal cual en el copy):**
+> **El resultado soñado, en imagen concreta (usar tal cual en copy):**
 >
-> ### *"Que te repitan una frase tuya en una reunión donde tú no estabas."*
-
-Eso es memorabilidad convertida en imagen concreta. Es el momento que el cliente quiere vivir.
+> ### *"Que dejen el teléfono en los primeros 90 segundos."*
 
 ---
 
-## 4. Las creencias que hay que romper en la clase
+## 4. Creencias que hay que romper (y dónde se rompen en clase)
 
-| Creencia limitante | Qué la reemplaza | En qué bloque del taller se rompe |
+| Creencia | Qué la reemplaza | Bloque |
 |---|---|---|
-| "El humor es un don, se nace con él" | El humor tiene estructura y se escribe | Apertura (min 0-10) |
-| "Si hago humor pierdo autoridad" | El humor **construye** autoridad: +27% más motivador, +15% de disposición a pagar | Apertura (min 0-10) |
-| "Tengo que ser gracioso todo el tiempo" | Necesitas 10 líneas, no una personalidad nueva | Apertura + entrega del Kit |
-| "Mi tema es muy serio para el humor" | Mientras más serio el tema, más desarma el humor. Se hace sobre el problema y sobre ti, nunca sobre el cliente | Bloque R |
-| "No se me ocurre nada" | No se te ocurre porque estás buscando chistes. Vamos a buscar verdades | Bloque R |
-| "Me da miedo ofender" | Regla de la línea roja: hacia dentro y hacia arriba, nunca hacia abajo | Bloque I |
+| "La presencia se tiene o no se tiene" | La presencia es técnica física. Los actores no nacen con ella: la entrenan | Apertura, min 0-8 |
+| "Tengo que perder los nervios primero" | No. Los nervios no se van: se **canalizan**. Los actores profesionales también los tienen | Bloque A |
+| "Si bajo la voz sueno impostada" | No se trata de imitar un tono. Se trata de dejar de emitir desde la garganta | Bloque T |
+| "Necesito más contenido / más credenciales" | El problema no es tu contenido: es que no llegan a él. Y el CV no da autoridad, la da el cuerpo | Bloque del texto |
+| "Yo es que soy tímida, es mi personalidad" | La timidez es un rasgo. La presencia es una habilidad. No compiten | Apertura |
+| "Grabarme me da vergüenza" | Nadie ve tu video salvo tú. Y esa vergüenza es exactamente el músculo que venimos a entrenar | Min 8 |
 
 ---
 
-## 5. Objeciones de venta y respuestas
+## 5. Objeciones y respuestas
 
-| Objeción | Respuesta corta (para DM, comentarios y página) |
+| Objeción | Respuesta |
 |---|---|
-| **"Es que yo no soy graciosa"** | Perfecto. Esta clase es de escritura, no de improvisación. Si fueras graciosa ya no la necesitarías |
-| **"¿En 2 horas y media qué voy a lograr?"** | Sales con 10 líneas escritas. No con apuntes: con material que puedes publicar mañana |
-| **"¿Y si mi nicho es muy serio?"** | Los nichos serios son los que mejor funcionan: hay más contraste. Trabajamos con finanzas, salud y derecho |
-| **"Ya hice un curso de oratoria"** | La oratoria te enseña **cómo** decirlo. Esto te da **qué** decir |
-| **"¿Me van a hacer actuar frente a todos?"** | No. Se escribe. Leer en voz alta es opcional y en grupos pequeños |
-| **"¿Sirve para LinkedIn o solo para Instagram?"** | El paso A del método ubica cada línea en tres canales: reel, escenario y conversación de venta |
-| **"Prefiero esperar la próxima edición"** | El precio de lanzamiento no se repite, y los cupos VIP con revisión de tu Kit son [N] |
-| **"¿Queda grabado?"** | Sí, 7 días. Pero el Kit se llena en vivo: si lo ves grabado te llevas la teoría, no el material |
+| **"¿En 2 horas y media qué voy a lograr?"** | Vas a salir con tu primer minuto escrito, montado y grabado. Y con dos videos: cómo entrabas antes y cómo entras ahora. La diferencia no te la cuento yo, la ves tú |
+| **"Ya hice un curso de oratoria"** | Un curso de oratoria te enseña a estructurar. Esto entrena tu instrumento: aire, cuerpo, tono y ojos. Es técnica de actriz, no teoría de comunicación |
+| **"Es que yo soy muy tímida"** | Perfecto. La técnica existe justamente para los que no tienen el don. El que tiene labia no la necesita |
+| **"¿Me van a hacer actuar delante de todos?"** | No. Grabas en tu propio dispositivo, en privado. Compartir es voluntario |
+| **"¿Y si mi problema es el miedo, no la técnica?"** | Esto no es terapia y no lo va a reemplazar. Lo que sí hacemos es que el miedo **deje de notarse**: aire, apoyo y anclaje son técnica física, y funcionan aunque el miedo siga ahí |
+| **"No tengo escenario, yo grabo reels"** | La cámara es uno de los tres escenarios del taller. Es más exigente que un auditorio, no menos |
+| **"¿Sirve si hablo en reuniones de trabajo?"** | Es donde más rápido se nota. Tu primer minuto en una reunión decide si te interrumpen el resto del año |
+| **"¿Queda grabado?"** | Sí, 7 días. Pero tu antes/después se produce en vivo: si lo ves grabado te llevas la técnica, no la prueba |
+| **"Prefiero esperar"** | El precio de lanzamiento no se repite y el VIP con revisión individual de tu video son 12 cupos, porque cada revisión me toma 25 minutos |
 
 ---
 
-## 6. Vocabulario del avatar (usar estas palabras, no las tuyas)
+## 6. Vocabulario del avatar
 
-**Palabras que SÍ usa el cliente:**
-memorable · que se me note · soltarme · acartonado · tieso · sonar humano · que me recuerden ·
-diferenciarme · que enganche · aburrida · modo profesor · plancha · chiste que no cae · sin filtro ·
-que la gente conecte
+**Palabras que SÍ usa:**
+que me tomen en serio · me tiembla la voz · me quedo en blanco · hablo muy rápido · me pongo nerviosa ·
+no me escuchan · me interrumpen · no proyecto · sueno insegura · odio mi voz grabada · me da vergüenza ·
+autoridad · presencia · seguridad · que se me note lo que sé
 
-**Palabras que NO le hablan (evitar en copy):**
-storytelling cómico · dispositivos retóricos · técnicas de improvisación · timing cómico ·
-metodología integral · comunicación asertiva · desarrollo de competencias blandas · resiliencia
+**Palabras que NO le hablan (evitar):**
+comunicación asertiva · habilidades blandas · programación neurolingüística · lenguaje corporal 7-38-55
+(*la regla de Mehrabian es una mala lectura del estudio original: no la uses*) · empoderamiento ·
+inteligencia emocional · resiliencia · storytelling transformacional
 
 ---
 
-## 7. Avatar secundario (no es el foco, pero compra)
+## 7. Avatar secundario
 
-**"El que ya está en el escenario"** — speaker, conferencista o formador que ya cobra por hablar
-y quiere subir de tarifa. Compra el tier VIP sin pensarlo.
+**"La que ya está en el escenario y no sube de tarifa"** — formadora, conferencista o docente que ya
+habla en público pero no la vuelven a llamar.
 
-- **Su dolor:** "Me contratan una vez y no me repiten."
-- **Su deseo:** que el organizador diga *"esta persona movió la sala"*.
-- **Ajuste necesario:** para él, el paso A pesa más hacia escenario que hacia reel.
-  No cambia la clase; cambia el ejemplo que usas al explicarlo.
+- **Su dolor:** "me contratan una vez y no me repiten"
+- **Su deseo:** que el organizador diga *"movió la sala"*
+- **Ajuste:** para ella el bloque O (ojos y foco en sala grande) pesa más que la cámara. No cambia la clase, cambia el ejemplo
 
-**A quién NO le vendas esto** (evita reembolsos y malas reseñas):
+### A quién NO venderle (evita reembolsos y malas reseñas)
 
-- Al que quiere ser comediante → mándalo a un curso de stand-up.
-- Al que aún no tiene oferta ni audiencia → primero necesita oferta, no humor.
-- A empresas para "animar al equipo" → ese es el mercado corporativo, otro producto y otro precio.
+- A quien tiene **glosofobia incapacitante** (el 5-10% severo): necesita apoyo clínico primero. Dilo en la página; decirlo construye confianza.
+- A quien busca "tips de carisma" sin querer trabajar el cuerpo.
+- A empresas para capacitar equipos: ese es otro producto y otro precio (ver `03`, sección 10).

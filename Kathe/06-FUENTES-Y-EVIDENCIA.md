@@ -1,108 +1,122 @@
 # 06 · Fuentes y evidencia
-### Cada cifra, con su origen y su nivel de confianza
 
 > 🟢 Alta · 🟡 Media · 🔴 Baja
-> **"No verificado en sitio"** = el dato viene de resultados de búsqueda; el entorno de investigación
-> no pudo abrir directamente la página del proveedor (bloqueo de red saliente). Confírmalo tú antes
-> de usarlo en copy público.
+> **"No verificado en sitio"** = dato tomado de resultados de búsqueda; el entorno de investigación
+> no pudo abrir la página del proveedor (bloqueo de red saliente). Confírmalo antes de usarlo en copy público.
 
 ---
 
-## 1. Tamaño y estado del mercado del cliente (coaches / consultores)
+## 1. La ventana del primer minuto (la evidencia que sostiene la oferta)
 
 | Dato usado | Fuente | Conf. |
 |---|---|---|
-| 122.974 coaches en el mundo, +15% vs 2023; US$5.340M de facturación; 8-9% CAGR proyectado a 2028; encuesta PwC con +10.000 participantes en 127 países; competencia creciente en todas las regiones | [ICF Global Coaching Study 2025 — Resumen ejecutivo](https://coachingfederation.org/resource/2025-icf-global-coaching-study-executive-summary/) · [PDF](https://wfpma.org/files/news/2025-ICF-Global-Coaching-Study_EXECUTIVE-SUMMARY.pdf) · [Nota de prensa ICF](https://coachingfederation.org/blog/coaching-industry-continues-global-growth-with-5-34-billion-usd-revenue-new-research-reveals/) | 🟢 |
-| Saturación del mercado, "todos suenan igual", el punto de vista propio como ticket de entrada en 2026 | [Searchlab · Marketing for Coaches 2026](https://searchlab.nl/en/guides/marketing-for-coaches) · [Entrepreneurs HQ · Branding for Coaches](https://entrepreneurshq.com/branding-for-coaches/) · [Luisa Zhou](https://luisazhou.com/blog/make-your-coaching-business-stand-out/) | 🟡 |
+| ⭐ Clips **mudos de 10 s y de 2 s** de conducta no verbal permitieron predecir con alta correlación las evaluaciones de fin de semestre de profesores | Ambady & Rosenthal, *Half a Minute: Predicting Teacher Evaluations From Thin Slices of Nonverbal Behavior and Physical Attractiveness* (1993) — [ResearchGate](https://www.researchgate.net/publication/232554260_Half_a_Minute_Predicting_Teacher_Evaluations_From_Thin_Slices_of_Nonverbal_Behavior_and_Physical_Attractiveness) | 🟢 |
+| En el meta-análisis de 38 estudios, **alargar el fragmento de 30 a 300 s no aumentó la correlación predictiva** | Ambady & Rosenthal (1992), revisado en [PMC · Capturing Behavior in Small Doses](https://pmc.ncbi.nlm.nih.gov/articles/PMC8116694/) · [Simply Psychology](https://www.simplypsychology.org/thin-slicing-psychology.html) | 🟢 |
+| Las personas deciden sobre **autoridad y expertise en menos de 60 segundos** | Investigación en comunicación (Stanford) citada en [Moxie Institute](https://www.moxieinstitute.com/how-to-start-a-presentation-for-a-great-first-impression/) | 🟡 — **cita secundaria; verifica el estudio primario antes de usarla** |
+| **Efecto de primacía:** formamos la impresión rápido y luego confirmamos | [Duarte](https://www.duarte.com/blog/why-and-how-to-care-about-the-first-30-seconds-of-your-talk/) · [Winning Presentations](https://winningpresentations.com/first-30-seconds-presentation/) | 🟡 |
+| Las audiencias deciden en 30 s si un orador merece ser escuchado (Universidad de Minnesota) | Fuente en español: [Formación Gerencial](https://blog.formaciongerencial.com/la-importancia-del-primer-minut/) | 🔴 |
+| 62% de las decisiones de contratación y validación de propuestas influido por los primeros 30 s | Fuente secundaria en español | 🔴 — **no usar sin verificar** |
+| Estudio reciente sobre cómo los primeros segundos verbales y no verbales moldean el juicio de la audiencia | [arXiv · The Moment of Capture](https://arxiv.org/html/2602.23920) | 🟡 |
 
 ---
 
-## 2. Validación institucional del humor como contenido de negocio
+## 2. El dolor: miedo a hablar en público
 
 | Dato usado | Fuente | Conf. |
 |---|---|---|
-| Stanford GSB dicta "Humor: Serious Business"; cupo de 40 incluyendo lista de espera; creado por Jennifer Aaker y Naomi Bagdonas | [Stanford GSB — Humor: Serious Business](https://www.gsb.stanford.edu/experience/news-history/humor-serious-business) · [Sitio del curso](https://humor-seriousbusiness.stanford.edu/) · [Ficha de facultad](https://gsb-faculty.stanford.edu/jennifer-aaker/courses/humor-serious-business/) · [Poets&Quants](https://poetsandquants.com/2024/03/16/newest-stanford-course-the-humor-of-business/) | 🟢 |
-| Libro *Humor, Seriously* (2021) | [Stanford GSB](https://www.gsb.stanford.edu/faculty-research/books/humor-seriously) · [Penguin Random House](https://www.penguinrandomhouse.com/books/611544/humor-seriously-by-jennifer-aaker-and-naomi-bagdonas/) | 🟢 |
-| **La ICF programa "Lighten Up! The Serious Business of Humor in Coaching"** para coaches | [ICF Events](https://www.icf-events.org/icw/lighten-up-the-serious-business-of-humor-in-coaching/) | 🟢 |
+| **75%** tiene algún miedo a hablar en público; **5-10%** en forma incapacitante | [Crown Counseling](https://crowncounseling.com/statistics/fear-of-public-speaking-statistics/) · [Teleprompter](https://www.teleprompter.com/blog/public-speaking-statistics) | 🟡 |
+| **77%** de los adultos: la fobia más reportada del mundo | [VoxBooster · Public Speaking Statistics 2026](https://voxbooster.com/blog/public-speaking-statistics-2026/) | 🟡 |
+| 21,2% de adultos en EE.UU. reporta miedo a hablar en público a lo largo de la vida | National Comorbidity Survey Replication, citado en [Boston University](https://sites.bu.edu/ombs/2017/11/27/what-is-glossophobia) | 🟢 |
+| ⭐ **Mujeres al doble de tasa que hombres (12,2% vs 5,8%)** | Estadísticas de prevalencia recopiladas en [Crown Counseling](https://crowncounseling.com/statistics/fear-of-public-speaking-statistics/) | 🟡 |
+| Síntomas físicos y cognitivos + el círculo vicioso del control | [El Prado Psicólogos](https://elpradopsicologos.es/miedo/hablar-publico/) · [Santiago Cid Psicología](https://santiagocidpsicologia.com/tratamientos/hablar-en-publico/) · [Natalia Gómez del Pozuelo](https://nataliagomezdelpozuelo.com/temblor-de-voz-al-hablar-en-publico/) | 🟢 |
 
 ---
 
-## 3. Proveedores que ya cobran por esto (precio y escala)
+## 3. La voz como señal de autoridad
 
 | Dato usado | Fuente | Conf. |
 |---|---|---|
-| Humor That Works: keynote ~US$7.000, taller ~US$4.500, charla ~US$3.500; +35.000 personas en +250 organizaciones; TEDx +11M vistas | [Crain's New York Business](https://www.crainsnewyork.com/article/20170712/SMALLBIZ/170719969/andrew-tarvin-brings-corporate-approved-comedy-to-workplaces) · [humorthatworks.com](https://www.humorthatworks.com/) · [drewtarvin.com](https://drewtarvin.com/about/) | 🟡 — **cifras de precio de 2017; verifícalas antes de citarlas** |
-| Jon Selig: clase privada / 1 participante US$5.000; grupos de 3-5; instructor en General Assembly | [jonselig.com/liveclass](https://jonselig.com/liveclass/) *(no verificado en sitio)* · [Offerings](https://jonselig.com/offerings/) · [General Assembly](https://generalassemb.ly/instructors/jon-selig/18047) | 🟡 |
-| David Nihill: +34.000 alumnos; 4,9/5 con ~7.233 valoraciones; ganador del San Francisco International Comedy Competition; libro *Do You Talk Funny?* | [davidnihill.com](https://davidnihill.com/) · [Class Central](https://www.classcentral.com/course/udemy-7-comedic-habits-to-be-consistently-funnier-presenting-25673) · [Goodreads](https://www.goodreads.com/book/show/25898541-do-you-talk-funny) | 🟡 |
-| Second City Works: +30 años de operación corporativa; 20.000 alumnos en su centro; clientes tipo MetLife y McKinsey | [secondcity.com/second-city-works](https://www.secondcity.com/second-city-works) · [Nutshell](https://www.nutshell.com/blog/sell-like-an-improv-comic-second-city-works) | 🟡 |
-| "Humor Detector": cohorte virtual de 6 semanas de humor estratégico para keynotes | Resultado de búsqueda agregado; sin sitio primario confirmado | 🔴 |
-| Stage Time University · Train the Trainer, 3 días, sept. 2026, con facultad de humor; paquete "Be Funnier!" | [Stage Time University](https://www.stagetimeuniversity.com/workshops/train-the-trainer/) | 🟡 |
+| La versión de **tono más grave** ganó entre **60% y 76%** de las preferencias | [American Scientist](https://www.americanscientist.org/article/how-voice-pitch-influences-our-choice-of-leaders) · [Duke Today](https://today.duke.edu/2015/08/whydeepvoicesgetvotes) | 🟢 |
+| Se los percibe **más fuertes, más competentes y con mayor integridad**; la competencia pesó más que la edad | [PLOS One · Perceptions of Competence, Strength, and Age…](https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0133779) · [PMC](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4529252/) | 🟢 |
+| ⭐ **Aplica también a candidatas mujeres**, con votantes de ambos géneros | PLOS One (mismo estudio) | 🟢 |
+| ⚠️ **Matiz obligatorio:** la voz grave predice elegibilidad, **no** capacidad real de liderazgo | [ScienceDirect · Voice pitch predicts electability, but does not signal leadership ability](https://www.sciencedirect.com/science/article/abs/pii/S1090513817301770) | 🟢 |
 
 ---
 
-## 4. Mercado hispanohablante
+## 4. Lo que sí funciona · lo que no debe enseñarse
 
 | Dato usado | Fuente | Conf. |
 |---|---|---|
-| Humor Positivo (España, fundada 2004 por Eduardo Jáuregui y Jesús Damián Fernández); clientes IKEA, SONY, General Motors, BBVA, Oracle, Sanitas, Gas Natural, TOUS, Olympus | [humorpositivo.com](https://humorpositivo.com/) · [Formación](https://humorpositivo.com/formacion/) · [Quiénes somos](https://humorpositivo.com/quienes-somos/) · [eduardojauregui.com](https://eduardojauregui.com/humor-positivo/) | 🟢 (precios no publicados) |
-| Escuela de Escritores · "Escribir (con) Humor": online, 141 €/mes, 3 meses, máx. 15 alumnos, inicio feb. 2026 | [escueladeescritores.com](https://escueladeescritores.com/curso/online/escribir-con-humor/) | 🟡 |
-| Comedy Lab Costa Rica: humor corporativo, comunicación con humor, escritura de humor N1, humor observacional, clases en vivo | [comedylabcr.com](https://comedylabcr.com/producto/comedia-limpia-taller-de-humor-corporativo/) · [Escritura de Humor N1](https://comedylabcr.com/producto/curso-de-escritura-de-humor-n1-nuevo-programa/) | 🟡 |
-| Narrativa Digital (MX) · Stand-Up Comedy Empresarial | [narrativa.digital/stand-up-comedy](https://narrativa.digital/stand-up-comedy/) | 🔴 |
-| Paradigma Consultora (AR) · "Stand Up Empresarial: humor para aprender, vender y divertirse" | [paradigmaconsultora.com](https://paradigmaconsultora.com/stand-up-empresarial/) | 🔴 |
-| Señales de Humor (AR) · curso de stand-up para empresas + curso online gratuito de 32 clases | [senalesdehumor.com.ar](http://www.senalesdehumor.com.ar/curso-de-stand-up-para-empresas) | 🟡 |
-| Crehana · "Stand up comedy para no comediantes" | [Crehana](https://www.crehana.com/cursos-online-lifestyle/stand-up-comedy-para-no-comediantes/) | 🟡 |
-| Udemy (ES) · monólogos de humor, con módulo de marca personal | [Udemy](https://www.udemy.com/course/curso-escritura-e-interpretacion-de-monologos-de-humor/) | 🟡 |
-| SpeakerMasters · certificación de *signature talk* para coaches, consultores y comunicadores en LATAM | [speakermasters.com](https://speakermasters.com/) | 🟡 |
+| ⭐ **Suspiro fisiológico / cyclic sighing:** ensayo aleatorizado, n=111, 5 min/día durante un mes → menor activación fisiológica, menos estrés percibido y mejor ánimo; **superó a la meditación mindfulness** de igual duración | Balban, Yilmaz; Huberman; Spiegel — *Cell Reports Medicine* (2023): [PubMed](https://pubmed.ncbi.nlm.nih.gov/36630953/) · [Stanford Medicine](https://stanmed.stanford.edu/cyclic-sighing-stress-relief/) · [Global Wellness Institute](https://globalwellnessinstitute.org/global-wellness-institute-blog/2023/03/09/new-stanford-study-released-on-how-brief-breath-practice-can-enhance-mood/) | 🟢 |
+| ⚠️ **Power posing:** falló la replicación. Carney (coautora original) abandonó la teoría en 2016. Penn no encontró soporte para los efectos originales. **Solo sobrevivió** el efecto de retroalimentación postural sobre la *sensación* de poder | [Penn Today](https://penntoday.upenn.edu/news/power-poses-dont-help-could-potentially-backfire-penn-study-shows) · [British Psychological Society · A decade of power posing](https://www.bps.org.uk/psychologist/decade-power-posing-where-do-we-stand) · [Encyclopedia MDPI](https://encyclopedia.pub/entry/37582) | 🟢 |
+| Marco **Mind, Body, Breath, Voice** como base del entrenamiento actoral aplicado | [RADA Business · The RADA approach](https://www.radabusiness.com/about-us/rada-approach/) | 🟢 |
 
 ---
 
-## 5. Referencias de precio para talleres cortos en español
+## 5. Tamaño de mercado
 
 | Dato usado | Fuente | Conf. |
 |---|---|---|
-| Oratoria Training Camp: taller intensivo 5 h, 57 € en promoción (lista 147 €) | [oratoriatrainingcamp.es](https://www.oratoriatrainingcamp.es/en/cursos/taller-presencial-intensivo-tu-puedes-hablar-en-publico/) | 🟡 |
-| Fuentetaja: taller "Biendecir", 125 € | [fuentetajaliteraria.com](https://fuentetajaliteraria.com/talleres/biendecir-hablar-en-publico/) | 🟡 |
-| Isabel Moya Psicólogos: 190 € (160 € anticipado), con materiales, certificado y evaluación | [imoyapsicologos.es](https://www.imoyapsicologos.es/talleres/habla-en-publico-con-confianza/) | 🟡 |
-| Escuela Literaria: taller hablar en público, 200 € | [escuelaliteraria.com](https://www.escuelaliteraria.com/producto/taller-hablar-publico/) | 🟡 |
-| Formación Carpediem: curso 150 h online, 49 € | [formacioncarpediem.com](https://www.formacioncarpediem.com/curso/2049/curso-hablar-en-publico) | 🟡 |
-| Workshop LATAM para coaches: US$47 (167 soles) versión con sesión en vivo; US$27 (97 soles) versión grabada | [andresquispe.com](https://andresquispe.com/) | 🔴 |
-| Next Level Experience: $67.000 CLP general / $147.000 CLP VIP | Memoria del propio proyecto (`.claude/memory/user/yoselvia.md`) | 🟢 |
+| Formación en oratoria: **US$7.300 M en 2026**; otra estimación US$7.800 M (2025) → US$14.600 M (2034), 7,2% CAGR | [Gitnux](https://gitnux.org/public-speaking-statistics/) · [Dataintelo](https://dataintelo.com/report/public-speaking-training-market) · [Marketintelo](https://marketintelo.com/report/public-speaking-training-market) | 🟡 |
+| *Speech & presentation coaching*: US$6.390 M (2026) → US$11.020 M (2035), 6,2% CAGR | [Business Research Insights](https://www.businessresearchinsights.com/market-reports/speech-presentation-coaching-market-117755) | 🟡 |
+| Coaching ejecutivo y desarrollo de liderazgo: **US$112.980 M (2026)** → US$174.530 M (2031), 9,11% CAGR | [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/executive-coaching-and-leadership-development-market) | 🟡 |
+| Gasto corporativo en desarrollo de liderazgo +US$366.000 M; 88% planea mejorar programas | [Stratos Coaching](https://stratoscoaching.com/executive-coaching-statistics.html) | 🔴 |
 
 ---
 
-## 6. Evidencia del retorno del humor (los datos que se usan en la clase y en el copy)
+## 6. Los jugadores
 
 | Dato usado | Fuente | Conf. |
 |---|---|---|
-| Líderes con sentido del humor: **+27% más motivadores y admirados**; equipos **+15% más comprometidos**; **más del doble** de probabilidad de resolver un reto creativo | [McKinsey · Humor and leadership](https://www.mckinsey.com/featured-insights/leadership/laugh-more-lead-better) · [CNBC](https://www.cnbc.com/2022/07/14/stanford-experts-workplace-humor-is-the-secret-to-great-leadership.html) | 🟡 |
-| Una línea con humor en una oferta hace que la gente esté dispuesta a **pagar más de 15% adicional** | Citado por Aaker & Bagdonas; línea de investigación O'Quin & Aronoff (experimento de la "rana de mascota" en negociación) | 🟡 |
-| La risa y la sonrisa **caen bruscamente alrededor de los 23 años** (análisis sobre datos Gallup: 1,4M de personas, 166 países) | [CNBC](https://www.cnbc.com/2022/07/14/stanford-experts-workplace-humor-is-the-secret-to-great-leadership.html) · [TED · Aaker & Bagdonas](https://www.ted.com/) | 🟡 |
-| **El humor integrado y pertinente mejora retención y recuerdo; el humor inapropiado, cruel o desconectado NO** | [Fitzpatrick, Texas A&M — tesis doctoral](https://oaktrust.library.tamu.edu/items/8da4d376-a784-4e24-8c30-a512ca5385f9) · [ScienceDirect · The Effect of Humour and Mood on Memory Recall](https://www.sciencedirect.com/science/article/pii/S1877042813036756) · [Yale · tesis](https://psychology.yale.edu/sites/default/files/stavatir_spring2010_seniorthesis.pdf) · [Edutopia](https://www.edutopia.org/blog/laughter-learning-humor-boosts-retention-sarah-henderson) | 🟢 |
-| El humor de un comprador **aumenta la probabilidad de aceptación** de la oferta por parte del vendedor; el humor baja la tensión en negociación de precio | [Keld Jensen](https://keldjensen.com/in-negotiations-humor-is-serious-business/) · [Michael Kerr](https://mikekerr.com/free-articles/humour-in-the-workplace-articles/the-power-of-humor-to-drive-sales-he-who-laughs-last-buys-more/) · [ResearchGate](https://www.researchgate.net/publication/227740904_Laughing_Matters_A_Case_Study_of_Humor_in_Multicultural_Business_Negotiations) | 🟡 |
+| **RADA Business:** brazo corporativo de la Royal Academy of Dramatic Art (fundada en 1904); marco Mind/Body/Breath/Voice; programas de impacto personal, presentaciones, confianza y oratoria; media training de 2 días para c-suite | [radabusiness.com](https://www.radabusiness.com/) · [Programmes for individuals](https://www.radabusiness.com/programmes-individuals/) · [Media training](https://www.radabusiness.com/about-us/news-and-blogs/media-performance-training-book-our-new-person-course/) | 🟢 |
+| **Ariel Group:** entrenamiento actoral aplicado a *leadership presence*; alianza con Pearson para *Presence Essentials* | [arielgroup.com/presence](https://www.arielgroup.com/presence/) · [Training Industry](https://trainingindustry.com/articles/leadership/making-connections-pearson-and-ariel-group-partner-to-help-organizations-develop-employee-presence/) | 🟢 |
+| **Vinh Giang:** mago → coach de comunicación. 100.000+ formados en 45+ países; Stage Academy US$997 (con descuento US$499); clientes Microsoft, Google, HSBC, Siemens; 100M+ visitas en YouTube | [vinhgiang.com](https://vinhgiang.com/) · [Stage Academy](https://vinhgiang.com/programs/stage-academy) · [Review con precios](https://www.guruscoach.com/vinh-stage-academy-review/) | 🟡 |
+| **Ultraspeaking:** Fundamentals L2 US$1.995; Creator Cohort US$7.995; Unlimited US$2.995; reservas "temporalmente no disponibles" | [ultraspeaking.com](https://ultraspeaking.com/) · [Creator Cohort](https://ultraspeaking.com/creators/) · [Fundamentals L2](https://ultraspeaking.com/fundamentals-l2/) | 🟡 |
+| **Second City Works:** +30 años de operación corporativa; clientes MetLife, McKinsey | [secondcity.com](https://www.secondcity.com/second-city-works) | 🟡 |
 
 ---
 
-## 7. Contexto social: humor, contenido e IA
+## 7. Mercado hispanohablante
 
 | Dato usado | Fuente | Conf. |
 |---|---|---|
-| Publicaciones con reacción emocional (incluida la risa): **4-6x más comentarios**; publicaciones con humor: **2-3x más interacción**, solo dentro de límites de tono B2B estrechos | [ConnectSafely · Funny LinkedIn Posts 2026](https://connectsafely.ai/articles/funny-linkedin-posts-engagement-guide-2026) | 🟡 |
-| **87% de compradores B2B** cree que el liderazgo de opinión puede ser riguroso y divertido a la vez; 73% lo considera más confiable que el marketing de producto | [Edelman-LinkedIn B2B Thought Leadership Study](https://business.linkedin.com/marketing-solutions/b2b-thought-leadership-research) | 🟡 |
-| Solo **26%** de consumidores prefiere contenido de creador generado con IA (era 60% en 2023) | [Nurdd · Made by Humans](https://www.nurdd.club/blogs/made-by-humans-authentic-content-ai-slop) | 🟡 |
-| Convergencia lingüística medible en contenido generado con IA (investigación Universidad de Washington) | [Entrepreneur](https://www.entrepreneur.com/growing-a-business/everyone-has-access-to-ai-now-heres-what-will-actually/497716) | 🟡 |
-| Contenido humano: **5,44x más tráfico** que el generado por IA | [Averi.ai](https://www.averi.ai/blog/the-ai-content-crisis-why-your-brand-voice-sounds-like-everyone-else-s) | 🔴 |
-| El humor y el matiz local (lenguaje, referencias, festividades) aumentan tiempo de visualización y recordación; se recomienda tono humorístico para video corto | [Metricool · Tendencias 2025](https://metricool.com/es/tendencias-redes-sociales-2025/) · [IAmanos](https://iamanos.com/blog/redes-sociales-en-mexico-2024-2025) | 🟡 |
+| ⭐ **"Hablar en público con técnicas de actuación"** — Santander Open Academy + Escuela Universitaria de Artes TAI | [Santander Open Academy](https://app.santanderopenacademy.com/es/course/public-speaking-with-acting-techniques) | 🟢 |
+| **Abilways España** · "Hablar en Público con Técnicas de Teatro" | [abilways.es](https://www.abilways.es/formaciones/eficacia-y-desarrollo-personal-y-profesional/hablar-en-publico-con-teatro/) | 🟡 |
+| **PlayTeatro** (Amaia Zárate) · teatro para hablar en público, cursos abiertos y para empresas | [playteatro.es](https://www.playteatro.es/cursos-abiertos/teatro-hablar-en-publico/) | 🟡 |
+| **Teatro Asura** · "Escénica para empresas" | [teatroasura.com](https://teatroasura.com/escenica-para-empresas/) | 🔴 |
+| **Palabrart** · "Chau miedo escénico": oratoria, storytelling y no verbal; edición sept. 2026 | [palabrart.com](https://palabrart.com/) | 🟡 |
+| **MiExcelencia** (Juan Carlos Martínez, UNAM) · 4 sesiones de 3 h por **$3.000 MXN**; diplomado 10 sesiones de 3 h por $8.000 MXN | [miexcelencia.com](https://miexcelencia.com/) | 🟡 |
+| **Cursodeoratoria.com** (Mike Cellamare) · clases en vivo con feedback directo | [cursodeoratoria.com](https://www.cursodeoratoria.com/) | 🟡 |
+| **Dr. César Lozano** · Certificación "El Arte de Hablar en Público", financiamiento a 12 cuotas en MX/PE/CL/CO | [seminario.cesarlozano.com](https://seminario.cesarlozano.com/certificacion-2026) | 🟡 |
+| **SpeakerMasters** · certificación de *signature talk* para coaches y consultores | [speakermasters.com](https://speakermasters.com/) | 🟡 |
+| Cursos "pierde el miedo a la cámara" dirigidos a **psicólogos, terapeutas y coaches**; ediciones grupales ene-mar y may-jul 2026 | [Anabelle Blum](https://www.anabelleblum.com/pierdeelmiedohablarencamara) · [Alicia Ro](https://www.aliciaro.com/curso-hablar-en-publico-video/) · [Sandra Llinares](https://www.escuelaemprenderconexito.com/superar-miedo-camara/) | 🟡 |
+| Contenido gratuito abundante sobre "los primeros 60 segundos" — la demanda existe, **la oferta pagada no** | [El Simple Arte de Comunicar](https://www.elsimpleartedecomunicar.com/storytelling/primeros-60-segundos-presentacion/) · [Game of Talks](https://gameoftalks.substack.com/p/el-poder-del-primer-minuto) | 🟢 |
 
 ---
 
-## 8. Qué NO pude verificar (huecos honestos de esta investigación)
+## 8. Referencias de precio en español
 
-| Hueco | Impacto en la decisión | Cómo cerrarlo |
+| Referencia | Precio | Fuente | Conf. |
+|---|---|---|---|
+| Escuela Literaria (ES) · taller hablar en público | 200 € | [escuelaliteraria.com](https://www.escuelaliteraria.com/producto/taller-hablar-publico/) | 🟡 |
+| Isabel Moya Psicólogos (ES) · taller con certificado | 190 € / 160 € anticipado | [imoyapsicologos.es](https://www.imoyapsicologos.es/talleres/habla-en-publico-con-confianza/) | 🟡 |
+| Fuentetaja (ES) · taller "Biendecir" | 125 € | [fuentetajaliteraria.com](https://fuentetajaliteraria.com/talleres/biendecir-hablar-en-publico/) | 🟡 |
+| Oratoria Training Camp (ES) · intensivo 5 h | 57 € promo (lista 147 €) | [oratoriatrainingcamp.es](https://www.oratoriatrainingcamp.es/en/cursos/taller-presencial-intensivo-tu-puedes-hablar-en-publico/) | 🟡 |
+| Academy Formación (ES) · 60 h online autoservicio | 79 € | [academyformacion.com](https://www.academyformacion.com/curso-de-oratoria/) | 🟡 |
+| MiExcelencia (MX) · 4 × 3 h | $3.000 MXN (**≈ US$37/sesión**) | [miexcelencia.com](https://miexcelencia.com/) | 🟡 |
+| **Next Level Experience** (Chile) · half-day presencial | $67.000 CLP / $147.000 VIP | Memoria del proyecto | 🟢 |
+
+---
+
+## 9. Lo que NO pude verificar
+
+| Hueco | Impacto | Cómo cerrarlo |
 |---|---|---|
-| Precios exactos y actuales de Humor Positivo, Comedy Lab CR, Second City Works y el "Humor Detector" | Bajo. El rango de precio ya quedó fijado por otras 8 referencias | Escribir como cliente potencial y pedir cotización |
-| Volumen de búsqueda real de "humor" + "marca personal" en español (Google Trends / Keyword Planner) | **Medio.** Confirmaría el titular óptimo | 30 min en Google Keyword Planner con: "cómo ser más gracioso", "humor para hablar en público", "cómo hacer contenido divertido" |
-| Si existe alguna oferta idéntica en español que no salió en los buscadores (por ejemplo, vendida solo por Instagram y sin sitio web indexado) | **Medio.** Es el punto ciego real de esta investigación | 20 min buscando en Instagram/TikTok: #humorparaemprendedores, #comunicacionconhumor, "taller de humor" + coaches |
-| Tasa de conversión típica de este formato en la audiencia específica de la marca | Alto para proyectar ingresos | El test de 72 h de `03-LA-OFERTA.md` lo resuelve con datos propios |
+| Precios exactos de RADA Business, Ariel Group y los talleres teatrales en España | Bajo. El rango de precio del taller ya está fijado por 7 referencias hispanas | Pedir cotización como cliente |
+| El estudio primario de Stanford sobre "autoridad decidida en 60 segundos" | **Medio.** Es una cita secundaria y va en el copy | 20 min buscando la publicación original; si no aparece, usa solo Ambady & Rosenthal, que es 🟢 |
+| Si alguien ya vende "los primeros 60/90 segundos" como oferta pagada en español y no está indexado | **Medio.** Punto ciego real | 20 min en Instagram/TikTok: "primer minuto", "primeros 60 segundos", "presencia escénica" + coach |
+| Volumen de búsqueda en español de "miedo a hablar en público", "presencia escénica", "hablar con autoridad" | **Medio.** Confirmaría el titular óptimo | 30 min en Google Keyword Planner |
+| Conversión típica de este formato en la audiencia de Kathe | Alto para proyectar ingresos | El test de 72 h lo resuelve con datos propios |
 
-> **Recomendación honesta:** los dos huecos marcados como Medio se cierran en menos de una hora
-> de trabajo manual y valen la pena antes de invertir en producir la clase.
+> Los tres huecos marcados como Medio se cierran en menos de una hora y valen la pena antes de invertir
+> en producir la clase — sobre todo el segundo, porque esa cita va en la página de venta.

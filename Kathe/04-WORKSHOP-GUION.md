@@ -1,91 +1,88 @@
 # 04 · Guion del workshop
-### "El humor no se improvisa" · Versión 2 h 30 min (principal) y 3 h (extendida)
+### "Los primeros 90 segundos" · Versión 2 h 30 (principal) y 3 h (extendida)
 
 ---
 
-## Reglas de diseño de esta clase
+## Reglas de diseño
 
-1. **Nunca más de 12 minutos sin que el alumno escriba algo.** Es un taller de producción, no una charla.
-2. **El Kit se entrega en blanco al minuto 12** y se llena en vivo. Es el hilo conductor visible.
-3. **Nadie actúa.** Se escribe y, opcionalmente, se lee. Leer es voluntario y en salas pequeñas.
-4. **Cada bloque termina con un número**, no con una reflexión: "ahora tienes 10 verdades", "ahora tienes 5 líneas".
-5. **La venta del siguiente producto ocupa 3 minutos al final.** Ni uno más.
+1. **El video "ANTES" se graba en el minuto 8**, antes de enseñar absolutamente nada. Si se enseña primero, se pierde la prueba.
+2. **Cada uno graba en su propio dispositivo, en privado.** Nunca en pantalla compartida. Compartir es voluntario.
+3. **Cámara obligatoria** durante toda la clase. Se anuncia en la venta y en los tres recordatorios.
+4. **Nunca más de 10 minutos sin que el cuerpo del alumno haga algo.** Esto es entrenamiento físico, no una charla.
+5. **Cada bloque de A.C.T.O. termina con una línea escrita en la ficha de calibración.**
+6. La oferta del siguiente producto ocupa **3 minutos al final**. Ni uno más.
 
 ---
 
-## Versión principal · 2 h 30 min
+## Versión principal · 2 h 30
 
-| Min | Bloque | Qué pasa | Al final el alumno tiene |
+| Min | Bloque | Qué pasa | Lo que queda |
 |---|---|---|---|
-| **00-06** | **El golpe** | Abres con una línea tuya con giro (demuestras antes de explicar). Luego los 3 datos duros: +27% más motivador · +15% de disposición a pagar · el humor pertinente mejora el recuerdo | Permiso para tomarse esto en serio |
-| **06-12** | **La creencia** | "El humor no es un don, es una estructura." Muestras la misma línea antes y después de aplicar el método. Se entrega el Kit en blanco | Claridad de qué se lleva |
-| **12-20** | **La línea roja** | Hacia dentro y hacia arriba, nunca hacia abajo. La prueba de los 3 segundos. Se llena la última casilla del Kit primero (a propósito: baja el miedo) | Su línea roja escrita |
-| **20-25** | **Demo R** | Explicas Reconocimiento y muestras cómo extraes 3 verdades incómodas de un nicho ajeno en vivo (pide un nicho al chat) | El modelo mental |
-| **25-45** | **🖊️ EJERCICIO R** | *"10 verdades incómodas de tu nicho."* Solos, cronómetro visible, música. Prompt en pantalla: "Lo que mi cliente hace y no admite / lo que la industria dice y nadie cumple / lo que yo hacía mal y ya no" | **10 verdades** |
-| **45-52** | **Compartir R** | Salas de 3 personas, 2 min cada uno: leen su mejor verdad. Sin feedback, solo leer | Confianza (descubre que su verdad resuena) |
-| **52-60** | **Demo I** | Los 4 giros con ejemplo de cada uno. Tomas una verdad del chat y la giras en vivo, mostrando los 4 caminos | El repertorio |
-| **60-75** | **🖊️ EJERCICIO I** | *"Elige 5 verdades y aplícales un giro."* Uno por giro, el quinto libre | **5 líneas con giro** |
-| **75-82** | ☕ **Pausa 7 min** | Cronómetro en pantalla. Música. No se negocia | — |
-| **82-90** | **Demo S** | Las 3 reglas de recorte. Tomas una línea larga del chat y la afilas en vivo, contando palabras | Ver el corte en acción |
-| **90-105** | **🖊️ EJERCICIO S** | *"Recorta tus 5 líneas un 30% y manda el remate al final."* Se escribe la versión 2 al lado de la 1 | **5 líneas afiladas** |
-| **105-112** | **Micrófono** | 5-6 voluntarios leen su mejor línea al grupo completo. Reaccionas y afilas una en vivo | Prueba social + un momento memorable |
-| **112-122** | **Demo + Ejercicio A** | Las 5 ubicaciones (gancho, apertura, puente, rescate, firma). Cada uno reparte sus líneas en el Kit y completa las que falten | **Kit de 10 líneas ubicadas** |
-| **122-130** | **La firma** | Bloque corto y de alto impacto: cuál de tus líneas es la que quieres que te repitan. Cada uno elige una y la escribe grande | Su línea firma |
-| **130-140** | **Qué hacer mañana** | Plan de 7 días: día 1 publica el gancho, día 3 usa la apertura en un live, día 7 mide qué se guardó. Foto del Kit + etiqueta | Plan concreto |
-| **140-145** | **Cierre + oferta** | Recuerdas la garantía cumplida ("cuenta tus líneas") y presentas el siguiente escalón en 3 min | Decisión |
-| **145-150** | **Preguntas** | Libre | — |
+| **00-08** | **La apuesta** | Kathe entra en modo "sin técnica" 30 segundos, y repite lo mismo con técnica. La sala ve la diferencia antes de oír una explicación. Luego el dato: clips mudos de 10 segundos predicen evaluaciones de un semestre completo | La creencia rota: *esto es técnica, no don* |
+| **08-16** | ⭐ **VIDEO ANTES** | *"Graba 60-90 segundos presentándote como lo harías hoy. No lo pienses, no lo repitas, no lo borres. Nadie lo va a ver salvo tú."* Cada uno en su teléfono | **El video ANTES** |
+| **16-24** | **El mapa** | Se entrega la ficha. Se explica A.C.T.O. en 4 minutos y la Entrada en 4 tiempos en 4 minutos. Nada más de teoría en toda la clase | Claridad del recorrido |
+| **24-38** | **🫁 A · AIRE** | Diagnóstico (mano en pecho / mano en abdomen). Apoyo diafragmático. **Suspiro fisiológico**: dos inhalaciones nasales + exhalación larga, practicado en vivo con la ciencia detrás. La regla del aire de sobra | Protocolo de 30 seg escrito |
+| **38-50** | **🧍 C · CUERPO** | Anclaje y punto cero. Las manos. La entrada al espacio (sala, escenario y encuadre). Aviso honesto sobre el *power posing* que no replicó | Postura base calibrada |
+| **50-57** | ☕ **Pausa 7 min** | Cronómetro en pantalla. No se negocia | — |
+| **57-75** | **🎙️ T · TONO** | El bloque más espectacular de la clase. Colocación garganta→pecho (se oye el cambio en 90 segundos). Ritmo. **La pausa de 3 segundos**, practicada en silencio con toda la sala. El final de frase que sube y quita autoridad | 3 ajustes vocales anotados |
+| **75-85** | **👁️ O · OJOS** | Triángulo de anclaje. Una idea, una persona. Dónde mirar en cámara y por qué verte a ti misma te delata. El segundo de silencio antes de la primera palabra | Patrón de foco definido |
+| **85-110** | **🖊️ ESCRIBIR LA ENTRADA** | Los 4 tiempos, uno por uno, con cronómetro: Ancla (5 min) → Grieta (6 min) → **Derecho a hablar (9 min, el más difícil)** → Contrato (5 min). Kathe pasa por el chat resolviendo el tiempo 3, que es donde todos se atascan | **Guion de 90 seg escrito** |
+| **110-122** | **🎭 ENSAYO** | Salas de 3. Cada uno lee su Entrada dos veces: la primera para sacarla, la segunda aplicando A.C.T.O. El compañero solo marca **una** cosa: qué cambió | La Entrada en la boca, no en el papel |
+| **122-130** | ⭐ **VIDEO DESPUÉS** | Protocolo pre-escena de 4 minutos (todos juntos, en silencio) y graban. Una sola toma | **El video DESPUÉS** |
+| **130-138** | ⭐ **EL VEREDICTO** | *"Abre los dos videos. Uno al lado del otro."* Silencio de 3 minutos. Luego: al chat, una palabra sobre qué cambió | **La garantía cumpliéndose delante de todos** |
+| **138-145** | **Qué hacer mañana** | El plan de 7 días. Y la advertencia honesta: esto se pierde si no se practica; por eso existe el protocolo | Plan concreto |
+| **145-150** | **Cierre + oferta + preguntas** | El siguiente escalón en 3 minutos. Preguntas | Decisión |
 
-**Total: 150 minutos.** Tiempo de escritura real del alumno: **60 minutos (40%).** Ese ratio es el que
-hace que la clase se perciba como taller y no como webinar.
+**Total: 150 minutos.** Tiempo de trabajo físico o escrito del alumno: **~85 minutos (57%).**
 
 ---
 
 ## Versión extendida · 3 h (solo con ≤ 25 personas)
 
-Misma estructura, con estos tres agregados:
-
 | Dónde | Agregado | Duración |
 |---|---|---|
-| Después del min 105 | **Ronda de afinado dirigido:** cada alumno lee una línea y tú la reescribes en vivo delante de todos | +20 min |
-| Después del min 122 | **Ejercicio A2:** adaptar la misma línea a los 3 canales (verla cambiar de forma sin perder el giro) | +8 min |
-| Cierre | **Compromiso público:** cada uno escribe en el chat qué línea publica y qué día | +2 min |
+| Después del min 122 | **Ronda de dirección en vivo:** 6-8 voluntarios hacen su Entrada y Kathe los dirige delante de todos, como un director de actores. Es el bloque que más se recuerda y del que salen los testimonios | +22 min |
+| Después del min 138 | **Traducción a los 3 escenarios:** la misma Entrada adaptada a reunión, cámara y escenario | +6 min |
+| Cierre | **Compromiso público:** cada uno escribe en el chat dónde usa su Entrada esta semana | +2 min |
 
-> ⚠️ Con más de 25 personas, la ronda de afinado destruye el ritmo. Si vendes más cupos,
-> **dicta dos sesiones de 2,5 h en vez de una de 3 h.**
-
----
-
-## Material que hay que producir antes
-
-| Pieza | Formato | Prioridad |
-|---|---|---|
-| **Plantilla Kit de Humor** | PDF editable + versión imprimible | 🔴 Crítica. Es el entregable |
-| Slides | ~25 láminas. Regla: una idea por lámina, cero párrafos | 🔴 Crítica |
-| **Banco de ejemplos por industria** | 3 líneas modelo para: salud, finanzas, RR.HH., tecnología, coaching, derecho, inmobiliaria | 🔴 Crítica — resuelve el "mi nicho es muy serio" |
-| Prompts de ejercicio en pantalla | 4 láminas (una por bloque) con el enunciado y el cronómetro | 🟡 Alta |
-| Playlist de 25 min | Para los bloques de escritura | 🟢 Deseable |
-| Guion de las 3 demos en vivo | Escritas de antemano, aunque se vean improvisadas | 🔴 Crítica |
-| Correo post-clase | Con Kit, grabación y el plan de 7 días | 🟡 Alta |
+> ⚠️ Con más de 25 personas la dirección en vivo destruye el ritmo.
+> Si vendes más cupos, **haz dos sesiones de 2 h 30 en vez de una de 3 h.**
 
 ---
 
-## Los cuatro momentos que hacen o rompen la clase
+## Material a producir antes
 
-| # | Momento | Por qué es crítico | Cómo asegurarlo |
+| Pieza | Prioridad |
+|---|---|
+| **Ficha de Entrada de Autoridad** (PDF editable + imprimible) | 🔴 Crítica: es el entregable |
+| **Guion de la demo de apertura** (los 30 seg sin técnica y los 30 con) — escrito y ensayado, aunque parezca improvisado | 🔴 Crítica: es el momento que vende toda la clase |
+| **Instrucciones de grabación** (encuadre, luz, audio, cómo guardar los dos archivos) — lámina fija | 🔴 Crítica: sin esto se pierden 10 minutos en soporte técnico |
+| **Banco de 20 Entradas modelo por profesión** (salud, derecho, finanzas, tecnología, coaching, RR.HH., inmobiliaria) | 🔴 Crítica: resuelve "no sé qué poner en el tiempo 3" |
+| Slides (~28 láminas, una idea por lámina) | 🔴 Crítica |
+| Audio de referencia: la misma frase en garganta y en pecho | 🟡 Alta — hace audible lo invisible |
+| Cronómetros en pantalla para los 4 tiempos de escritura | 🟡 Alta |
+| Correo post-clase con ficha, grabación y plan de 7 días | 🟡 Alta |
+
+---
+
+## Los cinco momentos que hacen o rompen la clase
+
+| # | Momento | Por qué | Cómo asegurarlo |
 |---|---|---|---|
-| 1 | **Los primeros 6 minutos** | Si no te ríes de algo en el minuto 2, la clase pierde autoridad para siempre | Abre con una línea tuya, ya escrita y probada. **Nunca improvises la apertura** |
-| 2 | **El minuto 25** (empieza a escribir) | Es donde se decide si esto es taller o webinar | Cronómetro en pantalla, música, tú en silencio. No hables durante el ejercicio |
-| 3 | **El minuto 45** (primera lectura) | El alumno descubre que su verdad le resuena a otro. Ahí nace la confianza | Salas de 3, sin feedback. Solo leer. Nadie juzga |
-| 4 | **El minuto 112** (micrófono abierto) | Es el clip que van a compartir | Ten 2 personas "sembradas" listas para partir si nadie se ofrece |
+| 1 | **Min 0-8, la demo de contraste** | Si la sala no ve la diferencia en los primeros 3 minutos, la clase pierde autoridad para siempre | Guion escrito y ensayado. **Nunca improvisar la apertura** |
+| 2 | **Min 8, el video ANTES** | Es el activo del que depende todo el producto. Si alguien no graba, no tiene resultado | Instrucciones en pantalla + Kathe grabando también + "nadie lo verá salvo tú", repetido dos veces |
+| 3 | **Min 57-75, la colocación vocal** | Es donde el cambio se vuelve audible. Es el "wow" de la clase | Audio de referencia + hacerlo todos a la vez con micrófonos abiertos 20 segundos |
+| 4 | **Min 94-103, el "derecho a hablar"** | Todos se atascan aquí. Es donde el experto quiere poner su CV | Banco de modelos listo + Kathe interviniendo en el chat con ejemplos concretos |
+| 5 | **Min 130, el veredicto** | Es la garantía, el testimonio y la prueba social, todo en el mismo momento | Silencio real de 3 minutos. No hables. Deja que lo vean |
 
 ---
 
-## Cómo se demuestra la garantía en vivo
+## Cómo se convierte el veredicto en venta (sin forzarlo)
 
-En el minuto 140, antes de la oferta:
+En el minuto 130 el chat se llena de "no puede ser", "es otra persona", "me da vergüenza el primero".
+**Ese es el momento.** Y el orden importa:
 
-> *"Cuenta las líneas de tu Kit. Escríbelas en el chat: solo el número."*
+1. Primero pides permiso para usar dos o tres antes/después como testimonio (con nombre o sin nombre).
+2. Después, y solo después, presentas el escalón siguiente en 3 minutos.
 
-El chat se llena de "10", "12", "9". **Eso es la garantía cumpliéndose delante de todos**, y es el
-mejor momento posible para presentar el siguiente producto: acabas de demostrar que entregas lo que
-prometes. No presentes la oferta antes de este momento.
+Invertir ese orden convierte el momento más honesto de la clase en un pitch. No lo hagas.

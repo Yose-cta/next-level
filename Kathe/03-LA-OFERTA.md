@@ -130,11 +130,10 @@ El instrumento sin texto no sirve. La Entrada de 90 segundos se escribe así:
 > Un experto no compra "que me tomen en serio" como fin último: lo compra porque cree que eso
 > le trae clientes. Si no haces ese puente explícito, lo hace él — y muchas veces no lo hace.
 >
-> ⚠️ **Límite obligatorio (ventas es territorio de Lavri):** Kathe **no** enseña a vender.
-> No toca estructura de oferta, no toca guion de llamada, no toca manejo de objeciones como
-> estrategia comercial. Lo único que toca es **cómo se comporta el instrumento en el momento
-> del precio**: qué hace la voz, qué hace el cuerpo, qué hace el silencio.
-> **Lavri entrega el qué decir. Kathe entrega el cómo suena.** Ver `08-ENCAJE-CON-LAS-OTRAS-MENTORAS.md`.
+> ⚠️ **Límite obligatorio:** Kathe **no** enseña a vender. No toca estructura de oferta, no toca
+> guion de llamada, no toca manejo de objeciones como estrategia comercial. Lo único que toca es
+> **cómo se comporta el instrumento en el momento del precio**: qué hace la voz, qué hace el cuerpo,
+> qué hace el silencio. Esa frontera es lo que mantiene la oferta hiperespecífica.
 
 La Entrada de Autoridad ya sirve para tres escenarios. **El cuarto es el que paga la clase:**
 
@@ -151,7 +150,7 @@ La Entrada de Autoridad ya sirve para tres escenarios. **El cuarto es el que pag
 |---|---|---|
 | **La apertura de la llamada** | Se abre pidiendo permiso: "bueno, cuéntame un poquito de ti…". El cliente asigna el mando ahí mismo | La misma Entrada, en versión 45 segundos. Marca quién dirige la conversación |
 | ⭐ **Decir el precio** | Se acelera, sube el tono al final ("son ochocientos mil… ¿te parece?") y se sigue hablando para llenar el silencio | **Tono + pausa.** El precio se dice en tono descendente, punto, y **se calla**. La pausa que sigue es del cliente, no tuya. Es el ejercicio más rentable de toda la clase |
-| **La objeción** | El cuerpo se contrae, la voz se adelgaza y suena a disculpa | **Aire + anclaje.** El apoyo sostiene la voz cuando el cuerpo quiere achicarse. *Qué responder es de Lavri; que no te tiemble al responderlo es de Kathe* |
+| **La objeción** | El cuerpo se contrae, la voz se adelgaza y suena a disculpa | **Aire + anclaje.** El apoyo sostiene la voz cuando el cuerpo quiere achicarse. *Qué responder no es de esta clase; que no te tiemble al responderlo, sí* |
 
 > **La regla que se enseña en 90 segundos y vale la clase entera:**
 > *Di el precio en tono descendente. Punto. Y cállate hasta que hable el otro.*
@@ -169,12 +168,11 @@ exactamente donde el nervio sube el tono — y donde más caro cuesta.
 - **En el entregable:** una quinta casilla — *"Mi frase de precio"*, escrita y calibrada.
 - **En el copy:** un titular alternativo que ataca directo al bolsillo (ver `05`, sección 1, variante D).
 
-> ⚠️ **Lo que NO se hace:** convertir esto en un taller de ventas. Es un bloque de 6 minutos dentro de
-> una clase de presencia. Dos razones, y ambas pesan: (1) si el peso se corre a ventas, la oferta pierde
-> su hiperespecificidad y entra a competir en la categoría más saturada del mercado hispano;
-> (2) **ventas es de Lavri**, y pisarse entre mentoras le cuesta credibilidad a las dos.
+> ⚠️ **Lo que NO se hace:** convertir esto en un taller de ventas. Es un bloque de 6 minutos dentro
+> de una clase de presencia. Si el peso se corre a ventas, la oferta pierde su hiperespecificidad y
+> entra a competir en la categoría más saturada del mercado hispano.
 > **El puente se muestra; no se cruza.** Y la frase que lo deja explícito en clase es:
-> *"Lo que dices en esa llamada no es lo mío. Cómo suenas al decirlo, sí."*
+> *"Qué decir en esa llamada no es lo mío. Cómo suenas al decirlo, sí."*
 
 ---
 

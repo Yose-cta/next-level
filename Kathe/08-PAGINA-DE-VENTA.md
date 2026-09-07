@@ -19,11 +19,35 @@
 > Taller en vivo de 2 horas 30. Sales con tu primer minuto **escrito, montado con técnica de
 > actuación y grabado en video** — con tu "antes" y tu "después" en el mismo archivo.
 >
-> **[FECHA] · [HORA] Chile · En vivo por Zoom · Cupos limitados**
+> **[FECHA] · [HORA] Chile · En vivo por Zoom · [N] cupos**
 >
-> ### 〔 Quiero mi primer minuto 〕
+> ### 〔 Quiero mi primer minuto 〕   〔 💬 Tengo una duda 〕
+>
+> **$44.900 · o 3 cuotas sin interés**
 >
 > *Cámara obligatoria. Sin cámara no hay antes/después, y el antes/después es el producto.*
+
+> ### ⬛ AQUÍ VA EL VIDEO
+> **El antes/después de Kathe, 30 segundos, autoplay sin sonido y con subtítulos.**
+> La misma frase dicha sin técnica y con técnica.
+>
+> *No es decorativo: los videos de este tipo suben la conversión alrededor de un 34% y mantienen
+> al visitante 86% más tiempo en la página. Y demuestra el producto sin que nadie tenga que
+> leer un párrafo. **Es el elemento más importante de toda la página.***
+
+> `[N] personas ya pasaron por este taller` ← *(recuento con número real; es la prueba social
+> de mayor palanca, +22%. Si es la primera edición, omite esta línea. **No la inventes.**)*
+
+---
+
+> ⚙️ **Notas de construcción del hero** (para quien arme la página, no van en el texto visible):
+>
+> · **Dos botones, no uno.** El segundo abre WhatsApp. En Chile y LATAM el chat convierte entre
+>   8% y 15%, contra 1,5-3% del correo: es el segundo botón de compra, no un botón de soporte.
+> · **Las cuotas van en el hero**, no escondidas en el checkout. Vale entre +20% y +30%.
+> · **El CTA debe verse en móvil sin hacer scroll.** Si el titular no cabe, se acorta el titular.
+> · Si nadie va a responder el WhatsApp en menos de 15 minutos, **quita ese botón**
+>   y deja la ventana de atención declarada. Ver `09-EMBUDO-Y-CONVERSION.md`, sección 7.
 
 ---
 
@@ -221,6 +245,21 @@
 > *Los cupos VIP son doce porque revisar un video en serio me toma veinticinco minutos.
 > No es escasez de marketing: es aritmética.*
 >
+> **Todo se puede pagar en 3 cuotas sin interés. El VIP, hasta en 12.**
+>
+> ---
+>
+> ⚙️ **Order bump en el checkout** (no va en la página; va en la pantalla de pago):
+>
+> > **☐ Súmale la Biblioteca de Entradas — $9.900**
+> > 20 Entradas de Autoridad ya escritas, una por profesión: salud, derecho, finanzas,
+> > tecnología, coaching, RR.HH., inmobiliaria. Para cuando te trabes en el tiempo 3.
+>
+> *Entre el 20% y el 60% de los compradores toman un bump bien puesto, y sube el valor del
+> carrito alrededor de un 15%. $9.900 es el 22% del ticket, dentro de la regla de mantenerlo
+> bajo el 30%. **Ojo:** hoy ese contenido está prometido dentro del VIP — decide antes de
+> publicar si se mueve al bump. El diferencial real del VIP ya es la revisión del video y el 1:1.*
+>
 > ---
 >
 > Una sesión suelta de coaching de voz cuesta entre [X] y [Y].
@@ -327,5 +366,7 @@ es la diferencia entre una página que informa y una que vende.
 | 1 | **Datos reales de Kathe** para la sección 8 (años, cifras, escenarios, apellido) | Kathe | Una cifra inventada en la sección "quién te enseña" destruye la página entera |
 | 2 | Fecha, hora y número de cupos | Organización | Van en hero y cierre |
 | 3 | Precio de referencia de una sesión suelta de coaching de voz en Chile | Investigación de 20 min | Es el anclaje de precio de la sección 10 |
-| 4 | ⭐ **El video antes/después de Kathe** | Kathe | Va arriba del todo, entre el hero y el espejo. **Es la pieza que más va a vender de toda la página** |
+| 4 | ⭐ **El video antes/después de Kathe** | Kathe | Va dentro del hero. **Es la pieza que más va a vender de toda la página**, y además es el test de validación y el anuncio: una sola grabación hace tres trabajos |
+| 6 | WhatsApp con el mensaje 1 guardado como respuesta rápida | Kathe | Abre el carril que aporta ~40-60% de las ventas en Chile. El guion está en `09`, sección 6 |
+| 7 | Cuotas activadas en Mercado Pago | Organización | Una línea de texto que vale +20-30% de conversión |
 | 5 | Testimonios con antes/después de la primera edición | Después de la clase 1 | La edición 2 se vende sola con esto |

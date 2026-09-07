@@ -120,3 +120,29 @@
 
 > Los tres huecos marcados como Medio se cierran en menos de una hora y valen la pena antes de invertir
 > en producir la clase — sobre todo el segundo, porque esa cita va en la página de venta.
+
+---
+
+## 10. Embudo, conversión y medios de pago (para `09-EMBUDO-Y-CONVERSION.md`)
+
+| Dato usado | Fuente | Conf. |
+|---|---|---|
+| ⭐ WhatsApp Business convierte **8-15% en LATAM** vs 1,5-3% del email marketing (4-5x más eficiente como canal de cierre); catálogo + link de pago directo produce 3-5x más conversiones que formularios web | [ChatDaddy · Marketing por WhatsApp en LATAM 2026](https://chatdaddy.tech/es/blog/whatsapp-marketing-2026) · [Chatsell](https://chatsell.net/whatsapp-business-tendencias-ventas-latam-2026-2/) · [FastStrat](https://faststrat.ai/whatsapp-business-pymes-latam-guia-2026/) | 🟡 |
+| Comunicar el pago en cuotas **en el primer mensaje** sube la conversión **25-40%** en contexto inflacionario | ChatDaddy / Chatsell (íd.) | 🟡 |
+| Migrar de DM de Instagram a Instagram + WhatsApp con catálogo y carrito abandonado: **+40%** de DM a venta | Chatsell (íd.) | 🟡 |
+| Bajar el tiempo de respuesta de 4 h a 3 min: conversión de lead a cita **de 12% a 28%** | Chatsell (íd.) | 🟡 |
+| Integraciones que convierten WhatsApp en terminal de venta: Mercado Pago, Nequi, Yape, DaviPlata, PIX | [Aurora Inbox · comercio conversacional](https://www.aurorainbox.com/2026/05/14/que-es-comercio-conversacional-whatsapp/) | 🟡 |
+| **Chile:** Webpay (Transbank) concentra la mayoría de las tarjetas; Flow, Mercado Pago y Khipu suman transferencia, cuotas y billeteras con una integración. Mercado Pago: **3,19% + IVA**, acreditación instantánea, crédito en 3/6/12 cuotas. La transferencia bancaria tiene comisión mucho más baja y muchos clientes la prefieren | [Riqra · Medios de pago en Chile 2026](https://blog.riqra.com/posts/medios-de-pago-chile) · [Mila Ecommerce](https://www.milaecommerce.com/medios-de-pago-ecommerce-chile) · [Codelan](https://codelan.cl/noticias/stripe-vs-mercadopago-vs-transbank-chile-2026/) | 🟡 |
+| ⭐ Ofrecer **3, 6 o 12 cuotas sin interés sube la conversión 20-30%**; el costo financiero (5-25%) lo absorbe el comercio pero el alza de ticket y conversión lo compensa | [Mila Ecommerce](https://www.milaecommerce.com/medios-de-pago-ecommerce-chile) | 🟡 |
+| Conversión ecommerce España: **1,22%** (estudio Flat 101 2025); **0,9%** en Q2 2026 vs 1,4% global | [Rigol&Co](https://rigolco.com/analisis/conversion-ecommerce-espana-benchmark/) · [YakYak](https://yakyak.tv/tasa-de-conversion-ecommerce/) | 🟡 |
+| **Videos testimoniales:** +34% de conversión promedio (39% en B2B, 61% en B2C); mantienen al visitante **86% más tiempo** en la página | [Levitate Media · Video Conversion Statistics 2026](https://levitatemedia.com/learn/video-conversion-statistics) · [Foundry CRO](https://foundrycro.com/blog/landing-page-video-benchmarks-2026/) | 🟡 |
+| **Recuento de clientes con nombre** es la prueba social de mayor palanca sobre la línea de flotación: **+22%** | [Digital Applied · 2.000 páginas testeadas](https://www.digitalapplied.com/blog/landing-page-conversion-study-2000-pages-tested-2026) | 🟡 |
+| **Order bumps:** los toma entre el **20% y el 60%** de los compradores; suben el valor del carrito ~15% (rango 10-30%). Regla: mantenerlo bajo el 30% del carrito principal y que sea algo que no se consiga de otra forma | [GetWPFunnels](https://getwpfunnels.com/types-of-order-bump/) · [CartFlows](https://cartflows.com/blog/order-bump/) | 🟡 |
+| **Upsells digitales:** 10-20% de aceptación, ~20% de alza en valor promedio de pedido | [UpsellWP](https://upsellwp.com/blog/order-bump-vs-upsell/) | 🟡 |
+| Embudo low ticket = página → checkout → gracias. El comprador de bajo ticket quiere **claridad y velocidad**. Estándar 2026: mobile-first, titulares cortos, CTA visible sin scroll | [Panda Video](https://www.pandavideo.com/blog/low-ticket-funnel) · [NewZenler](https://www.newzenler.com/blog/low-ticket-sales-funnels-that-convert) | 🟡 |
+
+> ⚠️ **Advertencia sobre esta sección entera:** casi todo es 🟡. Son cifras de blogs de la industria
+> (agencias de WhatsApp, plataformas de embudos, medios de ecommerce), no estudios revisados por pares.
+> **Sirven para decidir dónde poner el esfuerzo, no para citarlas en público.** La única que usaría
+> en una conversación con un cliente es el benchmark de conversión de ecommerce en España,
+> que viene de un estudio con metodología publicada.

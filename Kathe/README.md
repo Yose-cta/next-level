@@ -30,6 +30,7 @@
 | `06-FUENTES-Y-EVIDENCIA.md` | Cada cifra con enlace y nivel de confianza + los huecos declarados | Quieres verificar algo |
 | `07-POSICIONAMIENTO-DE-KATHE.md` | Por qué su cruce actriz + humorista + comunicadora es el foso, y **dónde va exactamente el humor** | Vas a definir su marca |
 | `08-PAGINA-DE-VENTA.md` | ⭐ **La página de venta completa, redactada.** Copy listo para copiar y pegar, sección por sección, más las 8 reglas de oficio que lo gobiernan y lo que falta para publicar | Vas a construir la landing |
+| `09-EMBUDO-Y-CONVERSION.md` | ⭐ **Cómo se vende esto de verdad en Chile.** El embudo de dos carriles (página y WhatsApp), medios de pago y cuotas, order bump, qué le falta a la página con el impacto de cada cosa, y números realistas | Vas a lanzar |
 | `ANEXO-investigacion-humor.md` | La investigación previa del mercado del humor. Archivada, no descartada | Quieres el material sobre humor |
 | `dossier.html` | Dossier visual imprimible con todo lo esencial | Vas a presentarlo |
 

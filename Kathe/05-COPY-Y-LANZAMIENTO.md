@@ -131,7 +131,9 @@
 
 | Métrica | Objetivo mínimo | Si falla |
 |---|---|---|
-| Página → compra | 4% | Titular o precio mal calibrado |
+| Página → compra (audiencia tibia) | **3-8%** | Titular o precio mal calibrado. *Con tráfico frío el rango real es 0,9-1,5%: el piso de ecommerce en español es 1,22%. No compares peras con manzanas* |
+| ⭐ **Conversaciones de WhatsApp → compra** | **8-15%** | Tiempo de respuesta. De 4 h a 3 min, la conversión de lead a cita sube de 12% a 28% |
+| Compradores que toman el order bump | 20-35% | El bump no resuelve un dolor real o cuesta más del 30% del ticket |
 | Registrados → asistentes en vivo | 60% | Recordatorios débiles: agrega uno a 1 h y otro a 10 min, ambos recordando la cámara |
 | **Asistentes que graban el video ANTES** | **90%** | 🔴 **La métrica crítica.** Si baja, el problema son las instrucciones del minuto 8, no la clase |
 | Asistentes al minuto 130 | 75% | Revisa el bloque de escritura: probablemente falta banco de modelos |

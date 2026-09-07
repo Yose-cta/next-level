@@ -2,53 +2,55 @@
 
 ---
 
-## 1. El avatar primario: "El experto que no se hace escuchar"
+## 1. El avatar: dos perfiles, un mismo techo
 
-| Campo | Detalle |
-|---|---|
-| **Quién es** | Coach, consultor/a, terapeuta, abogada, médico, ingeniero, formadora, especialista técnico. Gente con conocimiento real |
-| **Edad** | 33 – 55 |
-| **Género** | Sesgo femenino en el mercado de marca personal — y la glosofobia severa aparece al **doble de tasa en mujeres** (12,2% vs 5,8%) |
-| **Situación** | Ya tiene la experticia. Ya la contratan por lo que sabe. **Pero no la escuchan cuando habla** |
-| **Dónde le duele** | Reuniones · escenario · cámara (reels, lives, webinars) · llamadas de venta · paneles |
-| **Qué ya compró** | Cursos de oratoria, libros de comunicación, quizá terapia. Sabe el "qué". No tiene el "cómo" físico |
-| **Capacidad de inversión** | US$40 – 150 en un taller corto sin consultarlo con nadie |
+> ⚠️ **Corrección importante.** Este avatar NO tiene miedo escénico. **Habla bien.**
+> Se defiende en reuniones, puede hablar 40 minutos sin despeinarse y nunca se queda en blanco.
+> El problema es otro: **hace todo bien y no pasa nada.**
+> Desarrollo completo en `11-EL-TECHO-INVISIBLE.md`.
 
-### Qué está pasando en su cabeza
+| | **A · El que quiere ascender** | **B · El que quiere ser referente** |
+|---|---|---|
+| **Dónde está** | Empleado en una empresa: gerencia media, especialista senior, técnico con equipo | Independiente con marca personal: consultor, coach, formador, experto |
+| **Edad** | 32 – 50 | 33 – 55 |
+| **Qué hace bien** | Entrega impecable. Es el que sabe. Lo consultan todos | Contenido bueno, habla bien, la gente lo felicita |
+| **Qué quiere** | El ascenso, el cargo, la mesa donde se decide | Que lo llamen a hablar, que lo citen, poder cobrar más |
+| **Dónde se juega** | Reuniones, comités, presentaciones al directorio, entrevistas internas | Escenario, cámara, webinars, llamadas de venta |
+| **El "no" que recibe** | *"Todavía no estás listo"* · *"buscamos un perfil más senior"* · *"te falta presencia"* | *"Lo voy a pensar"* · *"me encantó tu contenido"* · *"te aviso"* |
+| **Capacidad de inversión** | US$40 – 150 sin consultarlo | US$40 – 150 sin consultarlo |
 
-> *"Sé más que el que está hablando. Y al que le hacen caso es a él."*
->
-> *"Me sé el tema de memoria. Abro la boca y me sale una voz que no reconozco."*
->
-> *"Me tiembla la voz en los primeros 30 segundos. Después me compongo, pero ya perdí la sala."*
->
-> *"Grabo el reel 14 veces y lo termino borrando."*
->
-> *"Cuando llega el momento de decir el precio, se me quiebra la voz. Y ahí ya sé que no cierro."*
->
-> *"Me dicen 'qué dulce eres'. Nadie le dice eso a alguien a quien considera una autoridad."*
+### ⭐ Lo que comparten — y sobre esto va todo el copy
+
+> ## "Hago todo bien y no pasa nada.
+> ## Y nadie me va a decir por qué."
+
+Los dos reciben **un no sin explicación.** Uno de su jefe, el otro de un prospecto.
+Es la misma frase con distinto traje.
 
 ---
 
-## 1.b El problema de las 3 de la mañana (leer antes que la tabla de dolores)
+## 1.b El miedo de las 3 de la mañana
 
-> Los cinco dolores de abajo son **síntomas**. Se dicen en voz alta y son ciertos, pero nadie
-> compra por ellos. Lo que la despierta a las 3 am es esto:
->
-> ### *"Este mes cerré dos. El próximo no sé. Y si esto no funciona voy a tener que volver — y todos me vieron irme."*
+### Perfil A
+> *"La presentación estuvo impecable. Y el ascenso se lo dieron a otro. Otra vez."*
+> *"Llevo cuatro años en el mismo cargo. ¿Y si ya llegué hasta donde iba a llegar?"*
 
-| Eslabón | Qué se dice |
-|---|---|
-| **El miedo** | Que el proyecto se caiga **en público** |
-| ⭐ **La evidencia con la que se tortura** | *"Gente que sabe menos que yo está cobrando el triple"* |
-| **La explicación que se da** | *"Es que yo no sé venderme"* — dicho como defecto de carácter, por eso no lo resuelve |
-| **La explicación real (= la oferta)** | No es que no sepa venderse: es que **en el primer minuto no le asignan autoridad, y sin autoridad no hay precio** |
+### Perfil B
+> *"Todos me dicen que soy buenísima. Y no me llaman."*
+> *"¿Y si nunca voy a ser de los que importan en mi nicho?"*
 
-**Respaldo:** 95% de los solopreneurs vive con ansiedad continua por lo impredecible del ingreso;
-34% ha considerado seriamente rendirse, y de esos el 72% por estrés financiero. El coach promedio
-declara una tarifa de US$256/hora y factura US$49.283 al año: **le sobra tarifa y le faltan horas llenas.**
+### El miedo compartido
 
-Desarrollo completo en `11-EL-PROBLEMA-DE-LAS-3AM.md`.
+> ### *"¿Y si este es mi techo?"*
+
+**No es miedo a hacerlo mal. Es miedo a que su mejor versión no sea suficiente** —
+que es mucho peor, porque no deja nada por mejorar.
+
+**Respaldo:** la presencia ejecutiva pesa **26%** de lo que los líderes senior dicen que se
+necesita para el siguiente ascenso (Hewlett, ~4.000 profesionales), y ella misma aclara que
+**"no es una medida de desempeño: es una medida de imagen"**. Las organizaciones **confunden
+sistemáticamente confianza con competencia**. Y nadie se lo dice: los jefes usan etiquetas
+vagas como *"necesita más presencia ejecutiva"* sin definir jamás qué significan.
 
 ---
 
@@ -56,15 +58,14 @@ Desarrollo completo en `11-EL-PROBLEMA-DE-LAS-3AM.md`.
 
 | # | Dolor | Cómo lo dice | Intensidad |
 |---|---|---|---|
-| 1 | **No me toman en serio** | "Digo lo mismo que él y a él le hacen caso" | 🔥🔥🔥🔥🔥 |
-| 2 | **El cuerpo me traiciona** | "Me tiembla la voz, se me seca la boca, hablo rapidísimo" | 🔥🔥🔥🔥🔥 |
-| 3 | **Pierdo la sala al principio** | "Los primeros dos minutos son un desastre, después me suelto" | 🔥🔥🔥🔥🔥 |
-| 4 | **Me quedo en blanco** | "Se me borró todo. Y lo tenía preparadísimo" | 🔥🔥🔥🔥 |
-| 5 | **Odio verme y oírme** | "No soporto mi voz grabada" | 🔥🔥🔥🔥 |
+| 1 | **Nadie me dice qué arreglar** | "Me dijeron que no estaba listo. ¿Listo para qué?" | 🔥🔥🔥🔥🔥 |
+| 2 | **El que sabe menos avanza más** | "Esa persona no domina el tema ni la mitad que yo" | 🔥🔥🔥🔥🔥 |
+| 3 | **Hago todo bien y no pasa nada** | "Preparo más, entrego mejor, y el resultado es el mismo" | 🔥🔥🔥🔥🔥 |
+| 4 | **Me escuchan y no me siguen** | "Asienten, dicen que buena idea, y hacen otra cosa" | 🔥🔥🔥🔥 |
+| 5 | **No me consideran para lo grande** | "Me llaman para ejecutar, no para decidir" | 🔥🔥🔥🔥 |
 
-> **Los dolores 1, 2 y 3 son el mismo evento visto desde tres ángulos: el primer minuto.**
-> Ahí es donde el cuerpo está más activado, donde la sala está decidiendo, y donde el experto
-> está improvisando. Todo el copy pega ahí.
+> **Los tres primeros son el mismo evento:** un no sin explicación, repetido.
+> Ahí pega todo el copy.
 
 ---
 
@@ -72,15 +73,18 @@ Desarrollo completo en `11-EL-PROBLEMA-DE-LAS-3AM.md`.
 
 | Lo que dice | Lo que compra de verdad |
 |---|---|
-| "Quiero hablar mejor" | Que dejen de interrumpirme |
-| "Quiero perder el miedo" | Que no se me note el miedo (no es lo mismo, y esto sí se logra en 2 h) |
-| "Quiero sonar más segura" | Que me tomen en serio sin tener que subir el volumen |
-| "Quiero grabarme sin sufrir" | Publicar sin repetir 14 tomas |
+| "Quiero comunicar mejor" | Saber **qué** es lo que estoy haciendo mal, de una vez |
+| "Quiero más presencia" | Que dejen de darme excusas y me den el cargo |
 | "Quiero posicionarme" | Que me presenten como *la* referente, no como *una* más |
+| "Quiero que me tomen en serio" | Que me inviten a la conversación donde se decide |
+| "Quiero llegar al siguiente nivel" | **Saber que no llegué a mi techo** |
 
 > **El resultado soñado, en imagen concreta (usar tal cual en copy):**
 >
-> ### *"Que dejen el teléfono en los primeros 90 segundos."*
+> ### *"Que por primera vez alguien me diga la verdad sobre por qué no me eligen."*
+>
+> Y el segundo, el que se dice en voz baja:
+> ### *"Que no sea mi techo."*
 
 ---
 
@@ -88,12 +92,12 @@ Desarrollo completo en `11-EL-PROBLEMA-DE-LAS-3AM.md`.
 
 | Creencia | Qué la reemplaza | Bloque |
 |---|---|---|
-| "La presencia se tiene o no se tiene" | La presencia es técnica física. Los actores no nacen con ella: la entrenan | Apertura, min 0-8 |
-| "Tengo que perder los nervios primero" | No. Los nervios no se van: se **canalizan**. Los actores profesionales también los tienen | Bloque A |
-| "Si bajo la voz sueno impostada" | No se trata de imitar un tono. Se trata de dejar de emitir desde la garganta | Bloque T |
-| "Necesito más contenido / más credenciales" | El problema no es tu contenido: es que no llegan a él. Y el CV no da autoridad, la da el cuerpo | Bloque del texto |
-| "Yo es que soy tímida, es mi personalidad" | La timidez es un rasgo. La presencia es una habilidad. No compiten | Apertura |
-| "Grabarme me da vergüenza" | Nadie ve tu video salvo tú. Y esa vergüenza es exactamente el músculo que venimos a entrenar | Min 8 |
+| ⭐ **"Ya llegué a mi techo"** | No es un techo: es un 26% que nadie te enseñó a ver | Apertura, min 0-8 |
+| **"Si trabajo más y me preparo mejor, va a cambiar"** | Llevas años probando eso. La variable que falta no es esfuerzo | Apertura |
+| **"Es política de oficina, no depende de mí"** | Una parte sí. Pero el 26% de presencia **sí depende de ti**, y es entrenable | Apertura |
+| **"Yo hablo bien, ese no es mi problema"** | Hablas bien. Y aun así no te eligen. Eso significa que el problema **no es hablar bien** | Min 8, cuando ve su video |
+| **"La presencia se tiene o no se tiene"** | Es técnica física. Los actores no nacen con ella: la entrenan | Bloque C |
+| **"Si cambio cómo hablo, dejo de ser yo"** | No vas a interpretar un personaje. Vas a dejar de emitir desde la garganta | Bloque T |
 
 ---
 

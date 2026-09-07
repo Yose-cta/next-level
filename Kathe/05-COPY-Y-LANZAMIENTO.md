@@ -7,6 +7,10 @@
 ## 1. Titulares (test A/B)
 
 **Principal:**
+> ## Nadie te va a decir por qué no te eligieron
+> ### El 26% de esa decisión no tuvo nada que ver con tu trabajo.
+
+**Nombre del taller:**
 > ## LOS PRIMEROS 90 SEGUNDOS
 > ### Taller en vivo de 2 h 30. Sales con tu primer minuto escrito, montado con técnica de actuación y grabado en video — con tu "antes" y tu "después" en el mismo archivo.
 
@@ -78,19 +82,22 @@
 | 10 | "No es carisma. Es aire, cuerpo, tono y ojos. Cuatro cosas. Se entrenan." | Reel método |
 | 11 | ⭐ "Di el precio en tono descendente. Punto. Y cállate. El que llena ese silencio, negocia contra sí mismo." | Reel venta — el de mayor conversión esperada |
 
-### Los tres ganchos del problema real (van primero en la rotación)
+### Los ganchos del problema real (van primero en la rotación)
 
-Estos no hablan de oratoria. Hablan de los tres momentos en que el miedo de las 3 am
-se convierte en decisión de compra. Ver `11-EL-PROBLEMA-DE-LAS-3AM.md`, sección 7.
+No hablan de oratoria. Hablan del techo invisible. El copy central es compartido por los dos
+perfiles; solo el gancho se bifurca. Ver `11-EL-TECHO-INVISIBLE.md`.
 
-| Momento del prospecto | Gancho |
+| Perfil | Gancho |
 |---|---|
-| ⭐ **Vio a alguien de su nicho lanzando** | "Gente que sabe menos que tú está cobrando el triple. Y la diferencia no es lo que saben." |
-| **Le dijeron "lo voy a pensar"** | "¿En qué segundo se cayó esa llamada? Casi siempre es antes de lo que crees." |
-| **Se vio en un video propio** | "Esa versión tuya en el video no es la que eres. Es la que no entrenaste." |
+| ⭐ **Compartido** | "Nadie te va a decir: 'no te elegí porque suenas a subordinado'. Te van a decir otra cosa. Por eso llevas años sin poder arreglarlo." |
+| **Compartido** | "Las organizaciones confunden confianza con competencia. Tú tienes la segunda. Vamos por la primera." |
+| **A · Ascender** | "El 26% de la decisión de ascenderte no tiene nada que ver con tu trabajo." |
+| **A · Ascender** | "'Todavía no estás listo' no es feedback. Es lo que dicen cuando no te quieren decir la verdad." |
+| **B · Referente** | "Todos te dicen que eres buenísima. Y no te llaman. Las dos cosas pueden ser ciertas a la vez." |
+| **B · Referente** | "'Lo voy a pensar' casi nunca es sobre el precio. Es sobre el primer minuto." |
 
-> ⚠️ Ninguno promete ingresos. Nombran el problema de plata; la promesa sigue siendo el primer
-> minuto grabado. Ver la advertencia de `11`, sección 9.
+> ⚠️ Ninguno promete el ascenso ni el cliente. La promesa sigue siendo ver el 26% y salir con
+> el primer minuto grabado. Ver la advertencia de `11`, sección 9.
 
 ---
 
@@ -165,5 +172,6 @@ se convierte en decisión de compra. Ver `11-EL-PROBLEMA-DE-LAS-3AM.md`, secció
 | "Ponte en pose de poder 2 minutos y te sube la testosterona" | Falló la replicación; la coautora se retractó en 2016 | "Las posturas expansivas aumentan tu sensación de poder. Eso sí se sostuvo. Lo hormonal no" |
 | "Vas a perder el miedo" | No es entregable en 2 h 30 y expone a reembolsos | "El miedo puede seguir ahí. Lo que vamos a lograr es que deje de notarse" |
 | "Vas a hablar como locutor" | Suena a impostar | "Vas a sonar como tú, pero apoyada" |
-| ⭐ **"Vas a cobrar más" / "vas a cerrar más clientes"** | **No es entregable en 2 h 30, no se puede garantizar, y prometer resultados económicos es problemático en varios países** | "Esto no te va a llenar la agenda. Te va a arreglar el minuto donde la estás perdiendo" |
-| "Cada día que pasa pierdes más plata" | Nombrar el miedo de alguien es respeto; restregárselo es manipulación | Después de nombrar el problema, la frase que sigue va de alivio y de límite, nunca de urgencia |
+| ⭐ **"Vas a conseguir el ascenso" / "vas a cerrar más clientes"** | **No es entregable en 2 h 30, no se puede garantizar, y prometer resultados de carrera o económicos es problemático** | "Esto no te va a dar el ascenso. Te va a mostrar el 26% que nadie te enseñó a ver" |
+| "Cada día que pasa pierdes una oportunidad" | Nombrar el miedo de alguien es respeto; restregárselo es manipulación | Después de nombrarlo, la frase que sigue va de alivio y de límite, nunca de urgencia |
+| ⭐ **"Presencia ejecutiva" sin matizar** | El término está señalado como ambiguo y cargado de sesgo: históricamente sirvió para excluir a quien no encaja en un molde | "El 26% es real. Y también es cierto que el término se usa para excluir. No te voy a enseñar a encajar en un molde: te voy a dar el control de tu instrumento" |

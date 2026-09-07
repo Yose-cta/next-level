@@ -215,3 +215,23 @@
 > Se sostiene como argumento —las horas de coaching no son las horas trabajadas, y esa es
 > exactamente la tesis— pero **no lo presentes como un dato citable de la ICF.** Preséntalo como
 > lo que es: dos números públicos puestos uno al lado del otro.
+
+---
+
+## 13. El techo invisible · avatar corregido (para `11-EL-TECHO-INVISIBLE.md`)
+
+> ⚠️ **Las secciones 12 y anteriores sobre "ansiedad financiera del solopreneur" quedaron
+> obsoletas como argumento central.** Se construyeron sobre un avatar equivocado. Siguen
+> siendo contexto válido del mercado, pero **no son el dolor de este cliente.**
+
+| Dato usado | Fuente | Conf. |
+|---|---|---|
+| ⭐ **La presencia ejecutiva pesa un 26%** de lo que los líderes senior dicen que se necesita para el siguiente ascenso. Encuesta del Center for Talent Innovation (2012, publicada 2013): ~4.000 profesionales con estudios universitarios, incluidos **268 ejecutivos senior** | Sylvia Ann Hewlett, *Executive Presence* — [Thrive Street Advisors · resumen](https://www.thrivestreetadvisors.com/leadership-library/executive-presence) · [Tandem Coach · análisis del modelo](https://tandemcoach.co/sylvia-hewlett-executive-presence/) | 🟢 |
+| ⭐ Hewlett, textual: **"no es una medida de desempeño… es una medida de imagen"** | [Tandem Coach](https://tandemcoach.co/sylvia-hewlett-executive-presence/) · [Autymate · resumen del libro](https://www.autymate.com/book-summary/executive-presence) | 🟢 |
+| Composición: **gravitas 67% · comunicación 28% · apariencia 5%** | [Tandem Coach](https://tandemcoach.co/what-is-executive-presence/) | 🟢 |
+| ⚠️ **Crítica legítima al concepto:** el término es señalado como **ambiguo y cargado de sesgo inconsciente**, y ha servido para excluir a quien no encaja en un molde | [Tandem Coach](https://tandemcoach.co/sylvia-hewlett-executive-presence/) · [Trina Hamilton · Your Executive Presence Needs a Second Look](https://trinahamilton-69347.medium.com/your-executive-presence-needs-a-second-look-d509eb65c218) | 🟢 |
+| **Las organizaciones confunden sistemáticamente confianza con competencia:** quien proyecta seguridad y comodidad con la autopromoción es percibido como más capaz, aunque la evidencia no lo respalde | [Shirisha Nagendran · Why Less Competent People Get Promoted](https://shirishanagendran.com/articles/why-less-competent-people-get-promoted/) | 🟡 |
+| *"Las organizaciones no recompensan a los mejores: recompensan a los más visibles para quien toma la decisión"*; **la brecha del ascenso** = la distancia entre lo que sabes y lo que los demás saben que sabes | [Sarwar Alam Insights](https://www.sarwaralaminsights.com/professional-visibility-at-work/) · [SLREM · The Promotion Gap](https://www.slremeducation.org/the-promotion-gap-why-great-communicators-often-outperform-greater-experts/) · [Central Washington University · Career Services](https://careerservices.cwu.edu/blog/2026/08/28/why-your-next-promotion-depends-more-on-visibility-than-performance/) | 🟡 |
+| ⭐ **Por qué nadie se lo dice:** los líderes recurren a **etiquetas genéricas como "no es lo suficientemente estratégico" o "necesita más presencia ejecutiva" sin definir qué significan en términos de conducta**; la mayoría evita la conversación honesta y da feedback "lo suficientemente vago" para poder decir que lo dio | [Barnard Bahn · How to Tell Someone Why They're Not Getting Promoted](https://www.barnardbahn.com/post/how-to-tell-someone-why-they-re-not-getting-promoted-without-making-them-want-to-quit) · [Fast Company · Bogus Excuses](https://www.fastcompany.com/3037140/bogus-excuses-the-real-reasons-why-bosses-arent-giving-feedback) | 🟡 |
+| Los reclutadores **dejaron de dar feedback** por riesgo legal y reputacional (correos combativos, pedidos de reconsideración, reseñas negativas) | [Job Search Guide · Why Recruiters Aren't Giving Feedback](https://newsletter.jobsearch.guide/p/why-recruiters-arent-giving-feedback) · [ClientCentric](https://www.clientcentric.com.au/single-post/why-employers-don-t-give-suitable-feedback) | 🟡 |
+| **LATAM/España:** *"otros con menos experiencia pero más visibilidad avanzan más rápido"*. En México, **más de la mitad de los reclutadores prioriza habilidades blandas** para promover (OCCMundial 2024) | [Coformación](https://coformacion.com/por-que-no-consigues-en-tu-trabajo-el-ascenso-que-mereces/) · [UNEA](https://www.unea.edu.mx/blog/por-que-no-me-ascienden-en-mi-trabajo) | 🟡 |

@@ -14,8 +14,8 @@
 
 > # Los primeros 90 segundos
 >
-> ## Gente que sabe menos que tú está cobrando el triple.
-> ## La diferencia no es lo que saben.
+> ## Nadie te va a decir por qué no te eligieron.
+> ## El 26% de esa decisión no tuvo nada que ver con tu trabajo.
 >
 > Taller en vivo de 2 horas 30. Sales con tu primer minuto **escrito, montado con técnica de
 > actuación y grabado en video** — con tu "antes" y tu "después" en el mismo archivo.
@@ -54,50 +54,50 @@
 
 ## 2 · EL ESPEJO
 
-> ## Lo que te tiene despierta no es tu oratoria
+> ## Hiciste todo bien
 >
-> Cerraste dos este mes. El próximo no sabes.
+> La presentación estuvo impecable. Te sabías el tema mejor que nadie en esa sala.
 >
-> Trabajas todo el día y facturas menos de lo que ganabas empleada.
+> Y el ascenso se lo dieron a otro. O te dijeron *"lo voy a pensar"* y no volviste a saber.
 >
-> Y a las tres de la mañana aparece la pregunta completa:
-> **¿y si esto no funciona y tengo que volver — después de que todos me vieron irme?**
+> Te dieron una explicación que no explica nada: **"todavía no estás listo"**,
+> *"buscamos otro perfil"*, *"te aviso"*.
 >
-> Mientras tanto, alguien de tu mismo nicho anuncia su lanzamiento.
-> Y tú sabes —lo sabes de verdad— que sabes más que esa persona.
+> Así que hiciste lo único que sabías hacer: trabajar más. Preparar mejor. Estudiar otra cosa.
 >
-> Te dices que es que no sabes venderte. Y te lo dices como si fuera un defecto de carácter,
-> de esos que no tienen arreglo.
+> Y volvió a pasar.
 >
-> ### No es eso.
+> A las tres de la mañana aparece la pregunta que de verdad asusta:
 >
-> El coach promedio cobra 256 dólares la hora y factura 49 mil al año.
-> Le sobra tarifa. Le faltan horas llenas. **No es un problema de precio: es de conversión.**
->
-> Y la conversión no empieza en tu propuesta, ni en tu método, ni en tu precio.
-> Empieza en el primer minuto. **El único que no preparaste.**
+> ### ¿y si este es mi techo?
 
 ---
 
 ## 3 · EL GIRO
 
-> ## Y el primer minuto no es carácter. Es técnica.
+> ## No es tu techo. Es que nadie te dijo la verdad.
 >
-> Cuando llegan los nervios pasa algo físico y medible: la respiración se te sube al pecho
-> y la voz empieza a salir de la garganta en vez del diafragma.
+> Sylvia Ann Hewlett investigó con cerca de 4.000 profesionales, incluidos 268 ejecutivos senior,
+> qué hace falta para el próximo ascenso.
 >
-> Ahí es donde tiembla. Ahí es donde sube. Ahí es donde se adelgaza.
+> La **presencia ejecutiva pesa un 26%**. Y ella misma lo aclara:
+> **"no es una medida de desempeño. Es una medida de imagen."**
 >
-> **Eso no se arregla con confianza. Se arregla con técnica.**
+> Una cuarta parte de la decisión **no tiene que ver con tu trabajo.** Tiene que ver con cómo
+> suenas y cómo te ves en el primer minuto.
 >
-> Es lo primero que le enseñan a una actriz el primer día — y lo que nadie te enseñó a ti,
-> porque a ti te enseñaron el contenido.
+> Y hay una razón por la que llevas años sin poder arreglarlo: **nadie te lo va a decir así.**
+> Tu jefe no te va a decir *"no te ascendí porque cuando hablas suenas a subordinado"*.
+> Te va a decir que todavía no estás listo. Un prospecto no te va a decir *"no te contraté
+> porque no sonaste como la autoridad"*. Te va a decir que lo va a pensar.
+>
+> **No es que no supieras arreglarlo. Es que nunca supiste qué arreglar.**
 
 ---
 
 ## 4 · LA PRUEBA
 
-> ## Deciden si eres la autoridad en menos de un minuto
+> ## Y ese 26% se juega en el primer minuto
 >
 > En 1993, dos investigadores de Harvard —Nalini Ambady y Robert Rosenthal— les mostraron a un
 > grupo de evaluadores **clips mudos de diez segundos** de profesores universitarios dando clase.
@@ -221,16 +221,19 @@
 
 > ## Esto es para ti si...
 >
-> · Sabes de lo tuyo y te frustra que no se note.
-> · Hablas en reuniones, en cámara o en escenario, y el primer minuto se te hace cuesta arriba.
-> · Ya hiciste cursos de oratoria y te quedaste con la teoría, no con el cuerpo.
-> · Estás dispuesta a grabarte. Aunque te dé vergüenza. Sobre todo si te da vergüenza.
+> · **Hablas bien y aun así no te eligen.** Ese es exactamente el caso.
+> · Te dieron un "todavía no estás listo" y nadie te explicó para qué.
+> · Ves avanzar a gente que domina el tema la mitad que tú, y no te lo puedes explicar.
+> · Ya hiciste cursos de comunicación y te quedaste con la teoría, no con el diagnóstico.
+> · Estás dispuesta a verte en video. Aunque incomode. Sobre todo si incomoda.
 >
 > ## Esto NO es para ti si...
 >
 > · Buscas trucos de carisma sin trabajar el cuerpo. Aquí se respira, se coloca la voz y se ensaya.
-> · Tienes pánico escénico incapacitante. Eso es entre el 5% y el 10% de la población y necesita
->   apoyo clínico antes que técnica. **Te lo digo yo, que vivo de esto.**
+> · Tienes pánico escénico incapacitante. Eso necesita apoyo clínico antes que técnica,
+>   y esto no lo reemplaza. **Te lo digo yo, que vivo de esto.**
+> · Recién empiezas y todavía evitas hablar. Esta clase asume que ya hablas bien y que el
+>   problema es que no te alcanza.
 > · Quieres un taller de ventas o de marca personal. Esto es presencia. Otra cosa, y muy específica.
 > · No piensas encender la cámara. Sin cámara no hay antes/después, y sin antes/después no hay clase.
 
@@ -336,17 +339,18 @@
 
 ## 13 · CIERRE
 
-> ## Esto no te va a llenar la agenda
+> ## Esto no te va a dar el ascenso
 >
-> Te va a arreglar el minuto donde la estás perdiendo.
+> Te va a mostrar el 26% que nadie te enseñó a ver.
 >
-> No te voy a prometer que vas a cobrar más ni que vas a cerrar más clientes. No lo puedo
-> garantizar y tú ya no te lo crees — te lo prometieron tres cursos atrás.
+> No te voy a prometer el cargo ni el cliente. No lo puedo garantizar, y tú ya no te lo crees:
+> te lo prometieron dos cursos atrás.
 >
-> Lo que sí te puedo dar es una pieza, completa, y demostrada antes de que cierres el Zoom.
+> Lo que sí te puedo dar es la conversación que nadie tuvo contigo. Con tu voz, con tu cuerpo
+> y con tu video, antes de que cierres el Zoom.
 >
-> El lunes vas a hablar en algún lado. En una reunión, en un live, en una llamada.
-> Va a pasar igual. La única pregunta es si vas a improvisar ese minuto otra vez.
+> El lunes vas a hablar en algún lado. En una reunión, en una llamada, en una cámara.
+> Va a pasar igual. La única pregunta es si vas a seguir sin saber qué corregir.
 >
 > **[FECHA] · [HORA] Chile · [N] cupos**
 >
